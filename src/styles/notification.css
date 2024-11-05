@@ -1,0 +1,22 @@
+/********** Notification Texteditor ************/
+
+.ckEditor ul, ol, li, p {
+    /* word-break: break-all; */
+}
+
+.uploadFileName, .uploadlist {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.eyeIcon:hover {
+    color: red;
+}
+
+.truncate p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    word-break: break-all;
+}

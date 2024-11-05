@@ -1,0 +1,105 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #232;
+}
+
+.my-editor-wrapper {
+  height: 400px; /* Set the desired height */
+}
+
+.my-editor-content {
+  height: 100%; /* Set the desired height */
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.ck-content {
+  height: 300px;
+  background-color: hsl(var(--b1)) !important;
+}
+.ck-toolbar__items{
+  background-color: hsl(var(--b1)) !important;
+}
+.ck-button{
+  color: hsla(var(--bc)) !important;
+}
+.ck-on{
+  background-color: #808080!important;
+}
+.table {
+  margin: auto;
+}
+.table table,
+.table td {
+  border: 1px solid gray;
+}
+.ckEditor {
+  flex-direction: column;
+}
+
+.ckEditor ol {
+  border-left: 5px solid rgb(255, 255, 255);
+  padding-left: 5px;
+}
+.ckEditor blockquote {
+  border-left: 7px solid rgb(182, 182, 182);
+  padding-left: 10px;
+}
+.p {
+  font-size: 15px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 30px;
+}
+h4 {
+  font-size: 20px;
+}
+
+.highcharts-credits {
+  display: none;
+}
+
+.highcharts-text-outline {
+  stroke-width: 0;
+}

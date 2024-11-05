@@ -1,0 +1,49 @@
+html {
+    font-size: calc(100vw / 593);
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 594px) {
+    html {
+        font-size: 1px;
+    }
+
+    .pdfcontainer {
+      width: 100vw;
+    }
+
+    /* .pdfwrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } */
+
+    .page {
+        width: 593rem;
+        height: 847rem;
+    }
+
+    .font {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 593px) {
+    html {
+        font-size: calc(100vw / 593);
+    }
+
+    .page {
+        font-size: 16rem;
+        width: 100vw;
+    }
+}
+
+.pdfwrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20rem;
+}

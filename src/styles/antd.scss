@@ -1,0 +1,16 @@
+.ant-table-wrapper .ant-table-thead>tr>th,
+.ant-table-wrapper .ant-table-thead>tr>td,
+.ant-table-wrapper .ant-table-thead>tr>th,
+.ant-table-wrapper .ant-table-thead>tr>td,
+.ant-table-wrapper .ant-table-tbody .ant-table-row>.ant-table-cell-row-hover {
+  --tw-bg-opacity: .1;
+  background-color: hsl(var(--b1)) !important;
+
+  transition: none;
+}
+
+.ant-table-wrapper .ant-table-row-indent+.ant-table-row-expand-icon {}
+
+.ant-tree {
+  transition: none;
+}

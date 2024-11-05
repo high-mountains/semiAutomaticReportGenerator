@@ -1,0 +1,5 @@
+.drawer-toggle ~ .drawer-side > .drawer-overlay + * {
+  -webkit-transition: none;
+  transition: none;
+}
+/*# sourceMappingURL=custom.css.map */

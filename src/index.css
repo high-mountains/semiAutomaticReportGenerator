@@ -1,0 +1,239 @@
+@import url(./styles/antd.scss);
+@import url(./styles/custom.scss);
+@import url(./styles/chat.scss);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[data-theme="dark"] {
+  --bc: 220 0% 100%;
+}
+
+html {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  
+  /* color: hsla(var(--bc)/ var(--tw-text-opacity, 1)); */
+}
+
+.loading-indicator:before {
+  content: "";
+  background: #00000000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.loading-indicator:after {
+  content: " ";
+  position: fixed;
+  top: 40%;
+  left: 45%;
+  z-index: 10010;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #0474bf;
+  /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+textarea,
+input {
+  background-color: hsl(var(--b1));
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  /* background-color: curren */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: "auto";
+  opacity: 0.1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--bc) / 0.2);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--bc) / 0.3);
+}
+
+/* .emotic {
+  display: none;
+}
+.emoIcon:hover.emotic {
+  display: block;
+} */
+.chats {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.chats::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  margin-top: -30px;
+  margin-left: 49px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: #7269ef transparent transparent #7269ef;
+  order: 2;
+}
+
+.chats2 {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.chats2::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  margin-right: 49px;
+  margin-top: -30px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: #e6ebf5 #e6ebf5 transparent transparent;
+  order: 2;
+}
+
+.serviceManage {
+  background-image: url("../public/BG3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  /* z-index: -1; */
+}
+
+.bg-pic {
+  background-image: url("../public/bg/background_outrun.jpg");
+  background-size: 100% 100%;
+}
+
+.ant-btn-primary {
+  background-color: rgb(22, 119, 255);
+  box-shadow: none;
+}
+
+/* .drawer-toggle~.drawer-side {
+  display: block;
+} */
+.modalStyle .ant-modal-content {
+  background-color: transparent;
+}
+
+.menu>li>a,
+.menu>li>div {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 2rem;
+}
+
+/* For Chatting */
+div.ant-collapse-content-box {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+:where(.css-dev-only-do-not-override-r04r25).ant-btn-primary {
+  box-shadow: none;
+}
+
+.message-body .message-operation {
+  opacity: 0;
+}
+
+.message-body:hover .message-operation {
+  opacity: 1;
+}
+
+.message-body .message-recommendation {
+  opacity: 0;
+}
+
+.message-body:hover .message-recommendation {
+  opacity: 1;
+}
+
+#chatting-message-input {
+  --tw-text-opacity: 1;
+  color: hsl(var(--bc) / var(--tw-text-opacity));
+}
+
+.p-fileupload-buttonbar {
+  padding-top: 0;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--bc) / var(--tw-text-opacity));
+}
+
+.p-fileupload-content {
+  max-height: 240px;
+  overflow-y: scroll;
+  box-shadow: inset 0 0 4px #0004;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--bc) / var(--tw-text-opacity));
+}
+
+.p-fileupload-file-thumbnail {
+  border-radius: 50%;
+  padding: 4px;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border: dashed 1px #8888
+}
+
+.p-fileupload-filename {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.p-progressbar.p-component.p-progressbar-determinate {
+  display: none;
+}
+
+.p-fileupload-row>div {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.ant-collapse-header-text {
+  width: calc(100% - 24px);
+}
+
+/* for dashboard */
