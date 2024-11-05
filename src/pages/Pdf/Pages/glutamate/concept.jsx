@@ -5,7 +5,7 @@ import Outline from "../../../../components/Pdf/PagesComponents/Concept/Outline"
 import Explanation from "../../../../components/Pdf/PagesComponents/Concept/Explanation";
 import Quality from "../../../../components/Pdf/PagesComponents/Concept/Quality";
 import { useSelector } from "react-redux";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Concept = () => {
     const  [maincolor, setMaincolor] = useState(useSelector(state => state.pdfData.glutamateColor));

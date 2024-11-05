@@ -55,10 +55,10 @@ function Header() {
   }
   return (
     <>
-      <div className="z-10 flex justify-between shadow-md navbar bg-base-100 ">
+      <div className="z-10 flex justify-between shadow-md navbar bg-base-100 py-[8rem]">
         {/* Menu toogle for mobile view or small screen */}
 
-        <div className="">
+        <div>
           {/* <label
             htmlFor="left-sidebar-drawer"
             className="btn btn-primary drawer-button lg:hidden"
@@ -66,8 +66,8 @@ function Header() {
             <Bars3Icon className="inline-block w-5 h-5" />
           </label> */}
 
-          <a
-            className="p-3 transition-all rounded-full cursor-pointer hover:bg-base-300 text-base-content"
+          {/* <a
+            className="p-[20rem] transition-all rounded-full cursor-pointer hover:bg-base-300 text-base-content"
             onClick={() => {
               // if(isOpen)
               // dispatch(toggleOpen());
@@ -79,14 +79,14 @@ function Header() {
               }
             }}
           >
-            <Bars3Icon className="inline-block w-5 h-5" />
-          </a>
+            <Bars3Icon className="inline-block w-[20rem] h-[20rem]" />
+          </a> */}
           {/* <h1 className="ml-2 text-2xl font-semibold">{pageTitle ? pageTitle : 'Dashboard'}</h1> */}
         </div>
 
         <div className="order-last">
-          <Tooltip title="HR Notification v1.7">
-            <a href={'/apps/HR Notification v1.7.exe'} download target="_blank" className="relative w-8 h-8 mr-8 rounded-lg cursor-pointer hover:bg-base-300">
+          {/* <Tooltip title="HR Notification v1.7">
+            <a href={'/apps/HR Notification v1.7.exe'} download target="_blank" className="relative w-[32rem] h-[32rem] mr-[32rem] rounded-lg cursor-pointer hover:bg-base-300">
               <div className="absolute top-0 left-0 w-full h-full bg-red-300 rounded-full animate-pulse " >
                 <img
                   src={'/favicon.ico'}
@@ -95,21 +95,21 @@ function Header() {
                 />
                 <div className="absolute top-0 left-0 w-full h-full bg-green-600 rounded-lg opacity-50 animate-ping" />
               </div>
-              <div className="absolute bottom-[-2px] right-[-30px] font-extrabold text-red-600">v1.7</div>
+              <div className="absolute bottom-[-2rem] right-[-30rem] font-extrabold text-red-600">v1.7</div>
             </a>
-          </Tooltip>
+          </Tooltip> */}
           {/* <Tooltip title={socket.isConnected ? "Socket is connected." : "Socket is disconnected."}>
             <div className="px-4">
               {socket?.isConnected ? <img className="w-8 h-8" src="/assets/chat/network-wired.svg" /> : <img className="w-8 h-8" src="/assets/chat/network-wired-disconnected.svg" />}
             </div>
           </Tooltip> */}
-          <label className="px-4 swap">
+          <label className="px-[10rem] swap">
             <input type="checkbox" />
             <SunIcon
               data-set-theme="light"
               data-act-class="ACTIVECLASS"
               className={
-                "fill-current w-6 h-6 " +
+                "fill-current w-[28rem] h-[28rem] " +
                 (currentTheme === "dark" ? "swap-on" : "swap-off")
               }
             />
@@ -117,7 +117,7 @@ function Header() {
               data-set-theme="dark"
               data-act-class="ACTIVECLASS"
               className={
-                "fill-current w-6 h-6 " +
+                "fill-current w-[28rem] h-[28rem] " +
                 (currentTheme === "light" ? "swap-on" : "swap-off")
               }
             />
@@ -125,13 +125,13 @@ function Header() {
 
           <NotifyPage />
 
-          <div className="ml-4 dropdown dropdown-end">
+          <div className="dropdown dropdown-end">
             <label
               tabIndex={0}
-              className="p-0 px-3 btn btn-ghost btn-full avatar"
+              className="p-[32rem] btn btn-ghost btn-full avatar h-[64rem]"
               onClick={onDropDownBtnClick}
             >
-              <div className="w-10 mr-1 rounded-full">
+              <div className="w-[36rem] h-[36rem] mr-[4rem] rounded-full">
                 {/* <img
                   src={
                     user?.avatar !== "user"
@@ -145,33 +145,37 @@ function Header() {
                   process.env.REACT_APP_FILE_URL +
                   "/download/" +
                   avatar
-                } fallbackSrc='/assets/chat/avatar.png' />
+                } fallbackSrc='avatar.png'/>
               </div>
-              {user?.userId || "unkown"}
+              <p className="text-[14rem]">
+                {user?.userId || "unknown"}
+              </p>
             </label>
             <ul
               tabIndex={0}
-              className={showDropdown ? "menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52" : 'hidden'}
+              className={showDropdown ? "menu menu-compact dropdown-content mt-[12rem] p-[8rem] shadow bg-base-100 rounded-box w-[208rem]" : 'hidden'}
             >
               <li className="justify-between" onClick={onDropDownBtnClick}>
-                <Link to={`/user/${user?._id}`}>
-                  My Page
+                <Link to={`/user/${user?._id}`} className="text-[16rem]">
+                  <p className="text-[14rem]">My Page</p>
                 </Link>
-                <Link to={"/settings/profile"}>
-                  Profile Settings
+                <Link to={"/settings/profile"} className="text-[16rem]">
+                  <p className="text-[14rem]">Profile Settings</p>
                   {/* <span className="badge">New</span> */}
                 </Link>
               </li>
               <li className="justify-between" onClick={onDropDownBtnClick}>
-                <Link to={"/system/my-plan"}>
-                  My Plan
+                <Link to={"/system/my-plan"} className="text-[16rem]">
+                  <p className="text-[14rem]">My Plan</p>
                   {/* <span className="badge">New</span> */}
                 </Link>
               </li>
-              {/* <li className=''><Link to={'/app/settings-billing'}>Bill History</Link></li> */}
               <div className="mt-0 mb-0 divider"></div>
               <li>
-                <a onClick={logoutUser}>Logout</a>
+                <a onClick={logoutUser} className="text-[16rem]">
+                  
+                  Logout
+                  </a>
               </li>
             </ul>
           </div>

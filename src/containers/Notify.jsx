@@ -67,17 +67,17 @@ const NotifyPage = () => {
 
   return (
     <div className="dropdown dropdown-end">
-      <label
+      {/* <label
         tabIndex={0}
-        className="btn btn-ghost btn-full p-0 px-3"
+        className="btn btn-ghost btn-full p-0 px-[12rem]"
       >
         <Badge count={totalCount}>
-          <BellIcon className="h-6 w-6" />
+          <BellIcon className="h-[24rem] w-[24rem]" />
         </Badge>
-      </label>
+      </label> */}
       <ul
         tabIndex={0}
-        className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+        className="menu menu-compact dropdown-content mt-[12rem] p-[8rem] shadow bg-base-100 rounded-box w-[208rem]"
       >
         {
           menu.length ? menu.map((item, index) => (

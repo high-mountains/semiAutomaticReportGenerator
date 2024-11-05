@@ -12,13 +12,6 @@ html {
       width: 100vw;
     }
 
-    /* .pdfwrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    } */
-
     .page {
         width: 593rem;
         height: 847rem;
@@ -37,6 +30,7 @@ html {
     .page {
         font-size: 16rem;
         width: 100vw;
+        height: 847rem;
     }
 }
 

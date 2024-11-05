@@ -28,12 +28,9 @@ const Periodanalyze = (props) => {
                     "規則正しい睡眠習慣を持ち、睡眠を確保する。",
                     "寝る前のリラクゼーションルーティンを設け、睡眠の質を向上させる。",
                 ]}
-            
-                // style={{}}
+                oneColumnStatus={true}
             />
 
-            
-            
             <PageNumber>
                 06
             </PageNumber>

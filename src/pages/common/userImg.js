@@ -36,7 +36,7 @@ class Image extends Component {
     } = this.props;
     return (
       <img
-        className={props.className ? props.className : 'w-16 h-16 object-cover rounded-full border-gray-500'}
+        className={props.className ? props.className : 'w-[64rem] h-[64rem] object-cover rounded-full border-gray-500'}
         src={src}
         onError={this.onError}
         {...props}

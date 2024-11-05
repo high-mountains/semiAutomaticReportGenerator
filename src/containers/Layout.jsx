@@ -1,12 +1,8 @@
 import PageContent from "./PageContent";
-
 import { useSelector, useDispatch } from "react-redux";
 import RightSidebar from "./RightSidebar";
 import { useEffect } from "react";
-import {
-  NotificationContainer,
-  NotificationManager,
-} from "react-notifications";
+import { NotificationContainer } from "react-notifications";
 import "react-notifications/lib/notifications.css";
 import ModalLayout from "./ModalLayout";
 import { useLocation,useNavigate } from "react-router-dom";
@@ -27,20 +23,7 @@ function Layout() {
     emitPageUrl(location.pathname)
   }, [location])
 
-  // const { newNotificationMessage, newNotificationStatus } = useSelector(
-  //   (state) => state.header
-  // );
-
   const { isOpen } = useSelector((store) => store.sidebar);
-
-  // useEffect(() => {
-  //   if (newNotificationMessage !== "") {
-  //     if (newNotificationStatus === 1)
-  //       NotificationManager.success(newNotificationMessage, "Success");
-  //     if (newNotificationStatus === 0)
-  //       NotificationManager.error(newNotificationMessage, "Error");
-  //   }
-  // }, [newNotificationMessage]);
 
   return (
     <>

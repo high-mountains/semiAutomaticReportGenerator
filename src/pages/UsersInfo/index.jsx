@@ -216,10 +216,10 @@ const UsersInfo = () => {
             <UserImg
               className="w-[25px] h-[25px] rounded-full"
               src={
-                record.avatar === 'user' ? '/assets/chat/avatar.png' :
+                record.avatar === 'user' ? 'avatar.png' :
                   process.env.REACT_APP_FILE_URL + "/download/" + record.avatar
               }
-              fallbackSrc='/assets/chat/avatar.png'
+              fallbackSrc='avatar.png'
             />
             <span className="ml-[3px]">{txt}</span>
           </span>

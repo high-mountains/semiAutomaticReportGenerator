@@ -154,9 +154,9 @@ button,
 
 .menu>li>a,
 .menu>li>div {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-left: 2rem;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  padding-left: 32rem;
 }
 
 /* For Chatting */
@@ -236,4 +236,9 @@ div.ant-collapse-content-box {
   width: calc(100% - 24px);
 }
 
+
+/* a {
+  width: 20rem;
+  height: 20rem;
+} */
 /* for dashboard */

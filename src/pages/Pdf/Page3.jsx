@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Text from "../../components/Pdf/Text";
 import PageNumber from "../../components/Pdf/PageNumber";
-
 import pdfData from "../../utils/dummyPdf.json";
 
 function Page3() {

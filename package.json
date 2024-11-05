@@ -91,6 +91,7 @@
     "socket.io": "^4.7.2",
     "socket.io-client": "^4.7.5",
     "socketio": "^1.0.0",
+    "styled-components": "^6.1.13",
     "theme-change": "^2.2.0",
     "use-onclickoutside": "^0.4.0",
     "web-ifc-viewer": "^1.0.218",
@@ -128,6 +129,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@tailwindcss/typography": "^0.5.8",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.19",
