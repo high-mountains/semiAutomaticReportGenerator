@@ -36,8 +36,8 @@ const Periodanalyze = (props) => {
                 "寝る前のリラクゼーションルーティンを設け、睡眠の質を向上させる。",
             ],
             oneColumnStatus: true,
-            liStyle: {lineHeight: 1.083333},
-            ulStyle: "gap-[0rem]"}},
+            liStyle: {lineHeight: 1.083333, fontSize:"12rem", display:"flex", direction:"column", gap:"2rem"},
+            ulStyle: "text-[12rem] flex gap-[0rem]"}},
         {Component: PageNumber, 
         data: {
             children: "09"}}

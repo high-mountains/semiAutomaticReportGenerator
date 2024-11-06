@@ -31,7 +31,7 @@ const Periodanalyze = (props) => {
             oneColumnStatus: true}},
         {Component: PageNumber, 
         data: {
-            children: "05"}}
+            children: "06"}}
     ])
     
     return(<>
