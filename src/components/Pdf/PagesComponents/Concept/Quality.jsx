@@ -18,6 +18,7 @@ const Quality = (props) => {
                     liStyle={props.liStyle && props.liStyle}       // This is the inline style of li lists
                     className={props.className && props.className} // This is the className of li lists
                     liClassName={props.liClassName && props.liClassName}  
+                    ulStyle={props.ulStyle && props.ulStyle}  
                     />
                 {props.qualities2 && <QualitySection
                     qualityArray={props.qualities2}
