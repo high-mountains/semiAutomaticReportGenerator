@@ -11,7 +11,7 @@ function LandingIntro() {
 
           <h1 className='text-3xl text-center font-bold '>
             {/* <img src="/bg/SocialNoFriends.png" className="w-12 inline-block mr-2" alt="dashwind-logo" /> */}
-            HR Management</h1>
+            DNA報告書<br/>半自動生成システム </h1>
 
           <div className="text-center mt-12"><img src="./bg/SocialNoFriends.png" alt="Dashwind Admin Template" className="w-48 inline-block"></img></div>
 
