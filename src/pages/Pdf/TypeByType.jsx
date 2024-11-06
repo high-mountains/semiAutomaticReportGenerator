@@ -6,8 +6,8 @@ const TypeByType = () => {
     return(
         <>
             <Glutamate/>
-            {/*<Catecholamine/>
-            <Histamine/>*/}
+            <Catecholamine/>
+            <Histamine/>
         </>
     )
 }

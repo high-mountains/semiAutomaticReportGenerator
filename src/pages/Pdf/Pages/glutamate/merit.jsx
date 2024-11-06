@@ -155,9 +155,8 @@ const Merit = () => {
                 <PageHeader
                     subtitle={"Glutamate Type"}
                     mainTitle={"グルタメートタイプ"}
-                ></PageHeader>
+                />
                 <EnhancedMerit />
-                {/* <Ablity/> */}
                 <PageNumber>07</PageNumber>
             </PageWrapper>
         </>

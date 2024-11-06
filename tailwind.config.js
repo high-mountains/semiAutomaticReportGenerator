@@ -15,7 +15,8 @@ module.exports = {
           roman: 'upper-roman',
         },
     extend: {letterSpacing: {
-      tightest: '-1rem',
+      tightest: '-0.6rem',
+      moreTightest: '-0.8rem',
     },},
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],

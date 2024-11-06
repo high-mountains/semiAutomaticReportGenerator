@@ -20,7 +20,7 @@ const MeritIntro = (props) => {
                 sidebar= {1}
                 textContent= {props.content2}
                 sidebarColor= {props.maincolor}
-                className={"font-bold leading-[1.448125]"}
+                className={`font-bold leading-[1.448125]`}
                 fontSize={16}
                 sidebarHeight={"23rem"}
             />}
