@@ -7,8 +7,8 @@ const MeritComponent = (props) => {
             {/* {props.data.title} */}
             <div className='bg-[#F8F8F8] w-full h-[29rem] rounded-[5rem]'><p className='font-bold text-[16rem] text-center'>{props.tag}</p></div>
             <div className='w-full flex flex-col gap-[8rem]'>
-                {props.data.map((item, index) => {
-                    return <>
+                {props.data.map((item, index) => (
+                    <>
                         <div className='w-full flex flex-col gap-[3rem] pl-[5rem] pr-[2.5rem]' key={index}>
                             <Text
                                 textContent={item.title}
@@ -21,7 +21,7 @@ const MeritComponent = (props) => {
                             />
                         </div>
                     </>
-                })}
+                ))}
             </div>
         </div>
     );
