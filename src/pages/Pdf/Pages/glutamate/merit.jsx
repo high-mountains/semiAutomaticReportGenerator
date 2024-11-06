@@ -9,9 +9,8 @@ const Merit = () => {
             subtitle={"Glutamate Type"}
             mainTitle={"グルタメートタイプ"}>
         </PageHeader>
-        <p>
-            Glutamate Merit
-        </p>
+        <p>Glutamate merit</p>
+        {/* <Ablity/> */}
         <PageNumber>
             07
         </PageNumber>
