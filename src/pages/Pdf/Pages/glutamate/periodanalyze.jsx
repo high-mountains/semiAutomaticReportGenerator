@@ -9,7 +9,7 @@ const Periodanalyze = (props) => {
     const EnhancedPeriodanalyze = withPeriodanalyze([
         {Component: PageHeader, 
         data: {
-            subtitle: "Glutamate Type Test", 
+            subtitle: "Glutamate Type", 
             mainTitle: "グルタメートタイプ"}},
         {Component: Fourperiod, 
         data: {
