@@ -49,8 +49,8 @@ const ListItem = styled.li`
   align-items: flex-start;
   position: relative;
   padding-left: 1em;
-  font-size: ${(props) => props.liStyle.fontSize || '14rem'}; /* Set default to 14rem if no prop is provided */
-  line-height: ${(props) => props.liStyle.lineHeight || 1.083333}; /* Set default to 14rem if no prop is provided */
+  font-size: ${(props) => props.fontSize || '14rem'}; /* Set default to 14rem if no prop is provided */
+  line-height: ${(props) => props.lineHeight || 1.083333}; /* Set default to 14rem if no prop is provided */
   color: ${pdfData.mainTextColor};
   list-style-type: disc;
   
