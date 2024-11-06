@@ -8,8 +8,8 @@ const Glutamate = () => {
             {/* <withPeriodanalyze
 
             /> */}
-            <Concept />
-            <Periodanalyze />
+            {/*<Concept />
+            <Periodanalyze />*/}
             <Merit />
         </>
     );
