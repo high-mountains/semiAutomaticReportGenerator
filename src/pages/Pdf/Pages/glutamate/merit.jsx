@@ -26,7 +26,7 @@ const Merit = () => {
                 descriptions: [
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
-                        wrapperWidth: "240rem",//rem unit
+                        wrapperWidth: "240rem", //rem unit
                         heading: "GABA（γ-アミノ酪酸）代謝",
                         content:
                             "グルタミン酸をGABAに変換し、神経伝達の抑制を介して脳の興奮状態を調整します。 \n 関連遺伝子：GAD1, GABRA1,  \n GABRA2, GABRG2, ALDH5A1",
@@ -34,14 +34,13 @@ const Merit = () => {
                         posInfo: {
                             top: "11rem",
                             left: "0rem",
-                            width: "240rem"
+                            width: "240rem",
                         },
                         //React DOM Styling of Wrapper paragraph of 2 sentences
-                        etcStyle: {
-                        },
+                        etcStyle: {},
                         //tailwind
-                        etcClassName: "", 
-                        fontSize: 12 // fontsize of text content(description, not header)
+                        etcClassName: "",
+                        fontSize: 12, // fontsize of text content(description, not header)
                     },
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
@@ -53,14 +52,13 @@ const Merit = () => {
                         posInfo: {
                             bottom: "11rem",
                             left: "0rem",
-                            width: "240rem"
+                            width: "240rem",
                         },
                         //React DOM Styling
-                        etcStyle: {
-                        },
+                        etcStyle: {},
                         //tailwind
-                        etcClassName: "", 
-                        fontSize: 12
+                        etcClassName: "",
+                        fontSize: 12,
                     },
                 ],
             },
@@ -73,31 +71,45 @@ const Merit = () => {
                 content2: "グルタミン酸が脳で多すぎることによるデメリット",
             },
         },
-        // {
-        //     Component: MeritDemerit,
-        //     data: {
-        //         merit: [
-        //             {
-        //                 title: "",
-        //                 content: "",
-        //             },
-        //             // {
-        //             //     title:"",
-        //             //     content:""
-        //             // },
-        //             // {
-        //             //     title:"",
-        //             //     content:""
-        //             // },
-        //         ],
-        //         demerit: [
-        //             {
-        //                 title: "",
-        //                 content: "",
-        //             },
-        //         ],
-        //     },
-        // },
+        {
+            Component: MeritDemerit,
+            data: {
+                merit: [
+                    {
+                        title: "記憶力の向上",
+                        content:
+                            "グルタミン酸はシナプスの可塑性を高め、短期記憶と長期記憶の両方を強化します。",
+                    },
+                    {
+                        title: "学習能力の向上",
+                        content:
+                            "学習の際に必要な神経ネットワークの形成と強化に貢献します。",
+                    },
+                    {
+                        title: "集中力の向上",
+                        content:
+                            "グルタミン酸は注意力を高め、情報処理速度を向上させます。",
+                    },
+                ],
+                demerit: [
+                    {
+                        title: "神経細胞の過剰刺激",
+                        content:
+                            "グルタミン酸が過剰に分泌されると、神経細胞が過剰に興奮し、最終的に細胞死（興奮毒性）を引き起こすことがあります。",
+                    },
+                    {
+                        title: "神経変性疾患のリスク",
+                        content:
+                            "長期的に過剰なグルタミン酸は、アルツハイマー病やパーキンソン病などの神経変性疾患のリスクを高めることがあります。",
+                    },
+                    {
+                        title: "精神的健康の問題",
+                        content:
+                            "不安、ストレス、うつ病などの精神的健康問題の悪化に寄与することがあります。",
+                    },
+                ],
+            },
+        },
     ]);
 
     return (
