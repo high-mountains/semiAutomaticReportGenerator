@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MeritDemerit = () => {
+const MeritDemerit = (props) => {
     return (
         <div>
             MeritDemerit

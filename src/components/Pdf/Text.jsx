@@ -10,6 +10,7 @@ const Text = (props) => {
         textContent: "",
         className: "",
         sidebarColor: "",
+        sidebarHeight: "",
         style: {},
     });
 
@@ -21,13 +22,14 @@ const Text = (props) => {
             fontSize: props.fontSize,
             className: props.className,
             sidebarColor: props.sidebarColor,
+            sidebarHeight: props.sidebarHeight,
             style: props.style || {}, // Default to an empty object if props.style is not provided
         });
 
         console.log("sidebarCOlor in Final==>", props.textContent);
     }, []); // Listen for changes in the props object
 
-    const { textContent, textColor, bgColor, fontSize, className, sidebarColor, style } = styleProps;
+    const { textContent, textColor, bgColor, fontSize, className, sidebarColor, sidebarHeight, style } = styleProps;
 
     return (
         <>
@@ -36,7 +38,7 @@ const Text = (props) => {
             {props.sidebar ? props.sidebar && 
                 <>
                     <div className="flex flex-row items-center">
-                        <span style={{backgroundColor: `${sidebarColor}`, paddingLeft:"5rem", paddingTop:"30rem", marginRight:"8rem"}}/>
+                        <span style={{backgroundColor: `${sidebarColor}`, paddingLeft:"5rem", paddingTop:`${sidebarHeight || "30rem"}`, marginRight:"8rem"}}/>
                         <p
                             style={{
                                 ...style, // Spread the incoming style prop

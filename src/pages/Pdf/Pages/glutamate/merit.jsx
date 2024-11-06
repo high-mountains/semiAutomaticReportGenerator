@@ -65,13 +65,14 @@ const Merit = () => {
                 ],
             },
         },
-        // {
-        //     Component: MeritIntro,
-        //     data: {
-        //         maincolor: maincolor,
-        //         content: "",
-        //     },
-        // },
+        {
+            Component: MeritIntro,
+            data: {
+                maincolor: maincolor,
+                content1: "グルタミン酸が脳で多いことによるメリットと",
+                content2: "グルタミン酸が脳で多すぎることによるデメリット",
+            },
+        },
         // {
         //     Component: MeritDemerit,
         //     data: {
