@@ -5,6 +5,9 @@ import Periodanalyze from "./periodanalyze";
 const Glutamate = () => {
     return (
         <>
+            {/* <withPeriodanalyze
+
+            /> */}
             <Concept />
             <Periodanalyze />
             <Merit />
