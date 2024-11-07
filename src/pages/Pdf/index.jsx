@@ -1,15 +1,11 @@
 import { lazy } from "react";
-
 import "./style.css";
 
 const Page1 = lazy(() => import('./Page1'))
 const Page2 = lazy(() => import('./Page2'))
 const Page3 = lazy(() => import('./Page3'))
 const Page4 = lazy(() => import('./Page4'))
-// import Page1 from './Page1';
-// import Page2 from './Page2';
-// import Page3 from './Page3';
-// import Page4 from './Page4';
+
 import TypeByType from './TypeByType';
 import { downloadPDF } from "../../tool/jspdf";
 

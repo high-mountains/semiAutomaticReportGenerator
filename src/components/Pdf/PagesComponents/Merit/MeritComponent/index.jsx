@@ -14,8 +14,7 @@ const MeritComponent = (props) => {
             </div>
             <div className='w-full flex flex-col gap-[8rem]'>
                 {props.data.map((item, index) => (
-                    <>
-                        <div className={`w-full flex flex-col pl-[5rem] pr-[2.5rem] ${props.gap ? "gap-[2rem]": "gap-[3rem]"}`} key={index}>
+                        <div key={index} className={`w-full flex flex-col pl-[5rem] pr-[2.5rem] ${props.gap ? "gap-[2rem]": "gap-[3rem]"}`}>
                             <Text
                                 textContent={item.title}
                                 fontSize={12}
@@ -27,7 +26,6 @@ const MeritComponent = (props) => {
                                 className={`${item.className}`}
                             />
                         </div>
-                    </>
                 ))}
             </div>
         </div>

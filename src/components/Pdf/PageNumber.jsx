@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import pdfJson from "../../utils/dummyPdf.json";
 
 const PageNumber = (props) => {
     const [bottom, setBottom] = useState(15);
@@ -7,11 +8,12 @@ const PageNumber = (props) => {
         setBottom(props.bottom)
     }, [])
     return (
-        <div>
+        <div className="bg-[#F8F8F8]">
             <p className="absolute bottom-0 left-2/4 translate-x-[-50%] text-[9rem]"
                 style={{
-                    marginBottom: `${bottom}rem`
-                }}>{props.children}</p>
+                    marginBottom: `${bottom}rem`,
+                    color: `${pdfJson.mainTextColor}` 
+            }}>{props.children}</p>
         </div>
     )
 }

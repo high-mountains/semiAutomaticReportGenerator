@@ -128,7 +128,7 @@ function Header() {
           <div className="dropdown dropdown-end">
             <label
               tabIndex={0}
-              className="p-[32rem] btn btn-ghost btn-full avatar h-[64rem]"
+              className="pt-[0rem] btn btn-ghost btn-full avatar h-[64rem]"
               onClick={onDropDownBtnClick}
             >
               <div className="w-[36rem] h-[36rem] mr-[4rem] rounded-full">

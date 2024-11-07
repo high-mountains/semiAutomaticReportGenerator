@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import pdfData from "../../utils/dummyPdf.json";
+import { useSelector } from "react-redux";
 import Text from "../../components/Pdf/Text";
-
-
-import { fetchPdfData } from "../../features/common/pdfSlice";
+import pdfData from "../../utils/dummyPdf.json";
 
 function Page2() {
     const { clientName, clientId, articleCategoriesForPath, mainTextColor } = useSelector((state) => state.pdfData);
@@ -32,13 +29,9 @@ function Page2() {
         };
     }, [pdfData]);
 
-    useEffect(() => {
-        console.log("clientName==>", clientName);
-    }, [clientName])
-
     return(
         <>
-            <div className="page font outline outline-1 printUnit">
+            <div className={`page font outline outline-1 outline-[${pdfData.mainTextColor}] printUnit`}>
                 <div className="flex flex-col items-center" style={{marginTop: "175.5rem", marginBottom: "175.5rem"}}>
                     <Text
                         textContent={"目次"}

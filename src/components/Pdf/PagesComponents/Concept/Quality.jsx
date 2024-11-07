@@ -15,20 +15,33 @@ const Quality = (props) => {
                 <QualitySection
                     qualityArray={props.qualities1}
                     oneColumn={props.oneColumn}
-                    liStyle={props.liStyle && props.liStyle}       // This is the inline style of li lists
+                    // liStyle={props.liStyle && props.liStyle}       // This is the inline style of li lists
                     className={props.className && props.className} // This is the className of li lists
                     liClassName={props.liClassName && props.liClassName}  
-                    ulStyle={props.ulStyle && props.ulStyle} 
-                    improveGap={props.improveGap}
+                    // ulStyle={props.ulStyle && props.ulStyle} 
+                    // improveGap={props.improveGap}
+                    inContainerGap={props.inContainerGap && props.inContainerGap}
+                    eachUlWidth={props.eachUlWidth && props.eachUlWidth}
+                    ulStyle={props.ulStyle1 && props.ulStyle1}
+                    liStyle={props.liStyle1 && props.liStyle1}
+                    // ulStyle2={props.ulStyle2 && props.ulStyle2}
+                    // liStyle2={props.liStyle2 && props.liStyle2}
                     />
+                
                 {props.qualities2 && <QualitySection
                     qualityArray={props.qualities2}
                     oneColumn={props.oneColumn}
-                    liStyle={props.liStyle && props.liStyle}       // This is the inline style of li lists
+                    // liStyle={props.liStyle && props.liStyle}       // This is the inline style of li lists
                     className={props.className && props.className} // This is the className of li lists
                     liClassName={props.liClassName && props.liClassName}  
-                    ulStyle={props.ulStyle && props.ulStyle}
-                    improveGap={props.improveGap}
+                    // ulStyle={props.ulStyle && props.ulStyle} 
+                    // improveGap={props.improveGap}
+                    inContainerGap={props.inContainerGap && props.inContainerGap}
+                    eachUlWidth={props.eachUlWidth && props.eachUlWidth}
+                    // ulStyle1={props.ulStyle1 && props.ulStyle1}
+                    // liStyle1={props.liStyle1 && props.liStyle1}
+                    ulStyle={props.ulStyle2 && props.ulStyle2}
+                    liStyle={props.liStyle2 && props.liStyle2}
                 />}
             </div>
         </div>
