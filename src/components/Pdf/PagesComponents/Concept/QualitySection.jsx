@@ -68,13 +68,15 @@ const ListItem = styled.li`
 
 const QualitySectionWrapper = styled.div`
   width: ${(props) => (props.oneColumn ? '100%' : '250rem')};
+  gap:  ${(props) => (props.improveGap ? props.improveGap.contact("rem") : '8rem')}
 `;
 
-function QualitySection(props) {
+const QualitySection = (props) => {
   return (
     <QualitySectionWrapper
       oneColumn={props.oneColumn}
       style={props.wrapperStyle && props.wrapperStyle}
+      gap={props.improveGap && props.improveGap}
     >
       <ul
         style={{ paddingLeft: 0, marginLeft: '5rem', marginTop: '10rem' }}

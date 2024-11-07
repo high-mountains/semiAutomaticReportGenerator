@@ -19,7 +19,7 @@ const Concept = () => {
         {Component: Outline,
             data:{
                 imageURL: "./bg/Glutamate_Avatar.png",
-                concept: "グルタメートタイプは",
+                concept: "グルタメートタイプは、",
                 description: "脳の興奮物質である、グルタミン酸の代謝やその調節がスムーズに行われにくく、脳内にグルタミン酸が多くなりやすい傾向があるタイプです。"
             }
         },

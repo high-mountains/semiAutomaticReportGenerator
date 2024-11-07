@@ -4,37 +4,51 @@ import PageHeader from "../../../../components/Pdf/PageHeader";
 import Outline from "../../../../components/Pdf/PagesComponents/Concept/Outline";
 import Explanation from "../../../../components/Pdf/PagesComponents/Concept/Explanation";
 import Quality from "../../../../components/Pdf/PagesComponents/Concept/Quality";
-
+import { useSelector } from "react-redux";
+import { useState } from "react";
+import withPeriodanalyze from "../../../../components/Pdf/HOC/withperiodanalyze";
 
 const Concept = () => {
 
+    const  [maincolor, setMaincolor] = useState(useSelector(state => state.pdfData.mitochodrialColor));
+    
+    const EnhacedConcept = withPeriodanalyze([
+        {Component: PageHeader,
+            data:{
+                subtitle: "Mitochondrial Type",
+                mainTitle: "ミトコンドリアタイプ"}},
+        {Component: Outline,
+            data:{
+                imageURL: "./bg/mitochondrial.png",
+                concept: "ミトコンドリアタイプは、",
+                description: "体のエネルギーを生成するミトコンドリアの機能が十分に発揮されにくく、エネルギーを作る機能が低下しやすい傾向があるタイプです。"
+            }
+        },
+        {Component: Explanation,
+            data:{
+                question: "ミトコンドリアタイプとは",
+                answer: "ミトコンドリアは、細胞内でエネルギーを生産する「エネルギー工場」として機能し、ATP（アデノシン三リン酸）を生成して体内の細胞活動を支えています。 \n ミトコンドリアが適切に機能していると、驚くほど高いパフォーマンスを発揮することができるタイプです。 \n しかし、ミトコンドリアの機能が十分でない場合、日常的に疲れやすく、疲労からの回復が遅くなることがあり、集中力の低下や記憶力の減退、思考の鈍化といった「Brain Fog（脳の霧）」と呼ばれる症状が現れる可能性があります。また、エネルギー代謝機能の低下により、体重の増加、脂肪肝、血糖値の異常といった問題が生じやすくなるため、注意が必要です。",
+                sidebarColor: maincolor
+            }
+        },
+        {Component: Quality,
+            data:{
+                description: "ミトコンドリアタイプの特性には、以下のような可能性があります。",
+                qualities1: ["夕方になるといつも眠くなる", "朝起きるのがつらかったり、\n 体が重く感じる", "積極的に運動をしない", "頭がぼんやりしてしまう", "体重のコントロールがしづらい", "過食気味になりやすい", "風邪を引きやすい"],
+                qualities2: ["ロングスリーパー"],
+                sidebarColor: maincolor,
+                className: "leading-[1.4478]"
+            }
+        },
+        {Component: PageNumber,
+            data:{
+                children: "15"
+            }
+        }
+    ])
     return(<>
         <PageWrapper>
-
-            <PageHeader subtitle={"Mitochondrial Type"}
-                mainTitle={"ミトコンドリアタイプ"}>
-            </PageHeader>
-            
-            <Outline
-                imageURL={"./bg/histamine.png"}
-                concept={"ミトコンドリアタイプ"}
-                description={"アレルギー症状にも深く関わっているヒスタミンの代謝やその調節がスムーズに行われにくく、脳内にヒスタミンが多くなりやすい傾向があるタイプです。"}
-            />
-            
-            <Explanation
-                question={"ミトコンドリアタイプとは"}
-                answer={"ヒスタミンは、脳内で情報を伝達する神経伝達物質として働き、私たちが目を覚まし、集中力を高め、学習や記憶力を促進する役割を担っています。 \n しかし、ヒスタミンが過剰になると、不安感や頭痛を引き起こしたり、夜眠れなくなることがあります。また、ヒスタミンはアレルギー反応にも関与しており、花粉症や虫刺されの際に鼻水が出たり、かゆみが生じるのは、体内でヒスタミンが働いているためです。 \n ヒスタミンが多すぎる場合、アレルギー症状が悪化し、皮膚や呼吸器に問題が生じやすくなることもあります。さらに、ヒスタミンは消化器にも影響を与え、特に胃で胃酸を増加させることで食べ物の消化を助けます。しかし、過剰なヒスタミンが原因で胃酸が過剰分泌されると、胃痛や胃炎、さらには胃潰瘍などの問題が発生することがあります。"}
-            />
-            
-            <Quality
-                description={"ミトコンドリアタイプの特性には、以下のような可能性があります。"}
-                qualities1={["細かく正確性の求められる作業が得意", "ルーティンワークが得意", "部屋が綺麗", "士業に向いている", "集中力・記憶力が高い", "慎重", "肌荒れやアレルギーに悩む", "頭痛がしやすい"]}
-                qualities2={["騒がしい場所が苦手", "胃腸が痛くなりやすい", "偏食になりやすい", "不安、感覚過敏"]}
-
-            />
-            <PageNumber>
-                05
-            </PageNumber>
+            <EnhacedConcept/>
         </PageWrapper>
     </>)
 }

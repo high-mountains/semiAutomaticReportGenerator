@@ -4,10 +4,7 @@ import Merit from "./merit";
 import Periodanalyze from "./periodanalyze";
 import { useDispatch, useSelector } from "react-redux";
 
-const Catecholamine = () => {
-
-    const mainColor = useSelector(state => state.pdfData);
-
+const Histamine = () => {
     return (
         <>
             <Concept />
@@ -17,4 +14,4 @@ const Catecholamine = () => {
     );
 }
 
-export default Catecholamine;
+export default Histamine;

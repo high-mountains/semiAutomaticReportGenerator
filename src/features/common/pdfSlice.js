@@ -76,7 +76,7 @@ export const pdfDataSlice = createSlice({
     histamineColor: "#E10D19",
     mitochodrialColor: "#56C578",
     detoxColor: "#9881D6",
-    MethylationColor: "#2892DE",
+    methylationColor: "#2892DE",
     isLoading: false,
     isUpdated: true,//new article category is added or updated or deleted.
     error: null,
