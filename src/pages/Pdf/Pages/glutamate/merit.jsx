@@ -60,6 +60,43 @@ const Merit = () => {
                         etcClassName: "",
                         fontSize: 12,
                     },
+                    {
+                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
+                        wrapperWidth: "240rem",
+                        heading: "グルタミン酸の代謝調節",
+                        content:
+                            "グルタミン酸の濃度を調整し、過剰な神経興奮 \n       を防ぎ、脳内の化学バランスを維持し \n                 ます。\n                           関連遺伝子：DAO, DAOA",
+                        contentLineHeight: 1.448333,
+                        posInfo: {
+                            top: "11rem",
+                            right: "0rem",
+                            width: "240rem",
+                        },
+                        //React DOM Styling
+                        etcStyle: {},
+                        //tailwind
+                        etcClassName: "",
+                        fontSize: 12,
+                        contentClassName: "tracking-tightest"
+                    },
+                    {
+                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
+                        wrapperWidth: "240rem",
+                        heading: "                    ホモシステイン代謝",
+                        content: `                            ホモシステインを他の物質に変換 \n                        し、体内の硫黄含有アミノ酸のバラ  \n ンスやメチレーションプロセスをサポートします。\n 関連遺伝子：CBS, CTH`,
+                        contentLineHeight: 1.448333,
+                        posInfo: {
+                            bottom: "19rem",
+                            right: "0rem",
+                            width: "240rem",
+                        },
+                        //React DOM Styling
+                        etcStyle: {},
+                        //tailwind
+                        etcClassName: "",
+                        fontSize: 12,
+                        contentClassName: "tracking-tightest"
+                    },
                 ],
             },
         },
@@ -118,9 +155,8 @@ const Merit = () => {
                 <PageHeader
                     subtitle={"Glutamate Type"}
                     mainTitle={"グルタメートタイプ"}
-                ></PageHeader>
+                />
                 <EnhancedMerit />
-                {/* <Ablity/> */}
                 <PageNumber>07</PageNumber>
             </PageWrapper>
         </>

@@ -14,7 +14,10 @@ module.exports = {
           square: 'square',
           roman: 'upper-roman',
         },
-    extend: {},
+    extend: {letterSpacing: {
+      tightest: '-0.6rem',
+      moreTightest: '-0.8rem',
+    },},
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
