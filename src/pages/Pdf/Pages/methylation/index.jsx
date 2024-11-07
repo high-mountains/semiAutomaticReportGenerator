@@ -2,7 +2,7 @@ import Concept from "./concept";
 import Merit from "./merit";
 import Periodanalyze from "./periodanalyze";
 
-const Glutamate = () => {
+const Methylation = () => {
     return (
         <>
             <Concept />
@@ -12,4 +12,4 @@ const Glutamate = () => {
     );
 }
 
-export default Glutamate;
+export default Methylation;

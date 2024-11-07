@@ -10,9 +10,8 @@ function Outline(props) {
             <div className='w-[360rem] flex flex-col justify-center'>
                 <Text
                     textContent={props.concept}
-                    className={"text-justify mb-[20rem]"}
-                >
-                </Text>
+                    className={"text-justify mb-[1em]"}
+                />
                 <Text
                     textContent={props.description}
                     className={"text-justify"}

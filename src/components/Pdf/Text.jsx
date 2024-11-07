@@ -46,7 +46,7 @@ const Text = (props) => {
                                 color: `${textColor || pdfData.mainTextColor}`,
                                 fontSize: fontSize ? `${fontSize}rem` : "16rem",
                             }}
-                            className={`font font-bold ${className}`}
+                            className={`font font-bold whitespace-pre-line ${className}`}
                         >
                             {textContent}
                         </p>

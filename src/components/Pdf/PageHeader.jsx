@@ -19,14 +19,15 @@ const PageHeader = (props) => {
                 <h6
                     style={{
                         fontSize: "14rem",
-                        lineHeight: 1.25,
-                        color: `${subtitleColor}`
+                        lineHeight: 1.44785,
+                        color: `${subtitleColor}`,
                     }}
                 >{props.subtitle}</h6>
                 <h1 className="font-bold"
                     style={{
                         fontSize: "32rem",
                         lineHeight: 1.25,
+                        marginBottom: "-3rem",
                         color: `${mainTitleColor}`
                 }}>{props.mainTitle}</h1>
         </div>
