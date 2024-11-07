@@ -1,17 +1,10 @@
 import { useEffect, useState } from "react";
-import pdfData from "../../utils/dummyPdf.json"
+import pdfData from "../../utils/dummyPdf.json";
+import { useSelector } from "react-redux";
 
 const PageHeader = (props) => {
-    const [subtitleColor, setSubColor] = useState("");
-    const [mainTitleColor, setMainTitleColor] = useState("");
-
-    useEffect(() => {
-        setSubColor(pdfData.mainColor);
-        setMainTitleColor(pdfData.mainTextColor);
-
-        {props.subTitlecolor && setSubColor(props.subTitlecolor)}
-        {props.mainTitlecolor && setMainTitleColor(props.mainTitlecolor)}
-    }, [])
+    const [subtitleColor, setSubColor] = useState(useSelector(state => state.pdfData.mainColor));
+    const [mainTitleColor, setMainTitleColor] = useState(useSelector(state => state.pdfData.mainTextColor));
 
     return(
         <>

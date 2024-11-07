@@ -27,10 +27,6 @@ function Page1() {
         };
     }, [pdfData]);
 
-    useEffect(() => {
-        console.log("data.mainColor==>", data.mainColor);
-    }, []);
-
     return (
         <>
             <div

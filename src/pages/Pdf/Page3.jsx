@@ -30,7 +30,7 @@ function Page3() {
 
     return(
         <>
-        <div className="page font outline outline-1 relative printUnit">
+        <div className={`page font outline outline-1 outline-[${pdfData.mainTextColor}] relative printUnit`}>
             <div>
                 <div style={{marginTop:"30rem", marginRight: "30rem", marginLeft: "30rem"}}>
                     <Text
@@ -97,16 +97,18 @@ function Page3() {
                         paddingTop: "15rem",
                         paddingLeft: "35rem",
                         paddingRight: "35rem",
-                        paddingBottom: "39.75rem"
+                        paddingBottom: "39.75rem",
+                        marginBottom: ""
                     }} >
                         <Text
                             sidebar={1}
                             sidebarColor={"#00C3D0"}
                             textContent="遺伝子とは？"
                         />
-                        <div className="flex flex-row items-center justify-center" style={{
+                        <div className="flex flex-row items-center justify-center mt-[10rem] mb-[11.47rem]" style={{
                             height: "180rem",
-                            gap: "41rem"
+                            gap: "41rem",
+                            backgroundColor: "#FFF"
                         }}>
                             <Text
                                 textContent={"身体の特徴を左右する「人体の設計図」です。遺伝子によって、人それぞれの特性が異なることが分かっています。\n たとえば、遺伝子の違いによって、ある人は食べ物の消化が得意だったり、ストレスに強かったりするかもしれません。また、遺伝子の情報を知ることで、より効果的な健康管理や病気の予防ができる可能性があります。"}
@@ -125,10 +127,10 @@ function Page3() {
                                 <img className="w-full h-full" src="./bg/woman115.png" alt="" />
                             </div>                            
                         </div>
+                    <PageNumber
+                        bottom={11.75}
+                    >03</PageNumber>
                 </div>
-                <PageNumber
-                    bottom={11.75}
-                >03</PageNumber>
             </div>
         </div>
         

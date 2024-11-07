@@ -43,7 +43,13 @@ const Periodanalyze = (props) => {
                 description: "グルタメートタイプのおすすめ生活改善",
                 gap: 10, //10  only a value     10 (only)  gap between the descriptiona and cols
                 qualities1: [
-                    
+                    // {
+                    //     content:
+                    //         "食品添加物としてグルタミン酸を多く含む食品、ジャンクフードなどの摂取を控える。",
+                    //     liStyle: {
+                    //         //liStyle is Option
+                    //     },
+                    // },
                     {
                         content:
                             "食品添加物としてグルタミン酸を多く含む食品、ジャンクフードなどの摂取を控える。",
@@ -108,19 +114,15 @@ const Periodanalyze = (props) => {
                 eachUlWidth: 255, //default is      250
 
                 ulStyle1: {
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "6rem", //default is      0rem   so it's not defined in there
-                    lineHeight: 1.448333, //default is  ----1.42857---- 20/14
+                    // display: "flex",
+                    // flexDirection: "column",
+                    gap: "6rem", //default is ⚠In this case flex     0rem   so it's not defined in there
+                    lineHeight: 1.44833, //default is  ----1.42857---- 20/14
                     fontSize: "12rem", //default is      16rem
                     // letterSpacing: "3rem", //default is      no     so it's not defined in there
                     // marginTop: "20rem"  //default is 10rem
-                    paddingLeft: "21.5rem"
                 },
-                liStyle1: {
-
-                },
-
+                // liStyle1: {},
                 // ulStyle2: {},
                 // liStyle2: {},
             },

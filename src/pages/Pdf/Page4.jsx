@@ -1,6 +1,8 @@
 import PageWrapper from "../../components/Pdf/PageWrapper";
 import PageNumber from "../../components/Pdf/PageNumber";
 import PageHeader from "../../components/Pdf/PageHeader";
+import Text from "../../components/Pdf/Text";
+import pdfJson from "../../utils/dummyPdf.json";
 
 const Page4 = () => {
     return(<>
@@ -20,9 +22,11 @@ const Page4 = () => {
 あなたの未来をより健康で輝かしいものにするため、私たちの遺伝子検査サービスをご活用ください。`
                 .split('\n')
                 .map((line, index) => (
-                        <p key={index} className="whitespace-pre-wrap text-justify mb-[12rem]">
-                            {line}
-                        </p>
+                        <Text 
+                        key={index} 
+                        className="whitespace-pre-wrap text-justify mb-[16rem]" 
+                        textContent={line}
+                        textColor={pdfJson.mainTextColor} />
                 ))}
                 {/* </p> */}
 

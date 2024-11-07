@@ -25,8 +25,6 @@ const Text = (props) => {
             sidebarHeight: props.sidebarHeight,
             style: props.style || {}, // Default to an empty object if props.style is not provided
         });
-
-        console.log("sidebarCOlor in Final==>", props.textContent);
     }, []); // Listen for changes in the props object
 
     const { textContent, textColor, bgColor, fontSize, className, sidebarColor, sidebarHeight, style } = styleProps;
