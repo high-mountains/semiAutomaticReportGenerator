@@ -129,14 +129,15 @@ const Merit = () => {
             Component: MeritDemerit,
             data: {
                 commonStyle:{
-                    gap: "5rem"  // Here is optional instead of default value 8rem
+                    gap: "5rem",  // Here is optional instead of default value 8rem
+                    // backgroundColor: "#c8c8c8"
                 },
                 inCommonStyle:{
-                    // gap: "2rem"     // Here is optional instead of default value 3rem
+                    gap: "3rem",     // Here is optional instead of default value 3rem
+                    fontSize: 1.4477
                 },
                 titleStyle:{
                     //  HERE  WILL  BE  NO  CHANGE
-
                     fontSize: "12rem", //default value is ---12rem---
                     // lineHeight:1.444444       //default value is ---1.448333---  12/17.38
                 },
@@ -150,9 +151,9 @@ const Merit = () => {
                         title: "認知機能の向上",
                         content:
                             "エネルギー供給が改善されることで、集中力や記憶力、思考力が向上します。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize 12rem could be changed
-                        // },
+                        titleStyle:{
+                            // fontSize: "9rem"  //fontSize 12rem could be changed
+                        },
                         //     contentStyle:{
                         //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
                         // }    
@@ -209,6 +210,17 @@ const Merit = () => {
                         title: "ATP不足",
                         content:
                             "身体のすべての動きや代謝活動がATPに依存しているため、エネルギー不足は身体機能全般に悪影響を与えます。",
+                        titleStyle:{
+                            // fontSize: "9rem"  //fontSize could be changed
+                        },
+                        //     contentStyle:{
+                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
+                        // }
+                    },
+                    {
+                        title: "筋力低下",
+                        content:
+                            "筋肉のエネルギー不足により、筋力が低下し、運動耐性が減少します。",
                         // titleStyle:{
                         //     // fontSize: "9rem"  //fontSize could be changed
                         // },

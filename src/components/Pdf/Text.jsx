@@ -3,8 +3,6 @@ import pdfData from "../../utils/dummyPdf.json";
 import "./sidebarStyle.css";
 
 const Text = (props) => { 
-    console.log("props.style=====>", props.style);
-    
     const [styleProps, setStyleProps] = useState({
         bgColor: "",
         textColor: "",

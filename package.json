@@ -63,6 +63,7 @@
     "moment": "^2.29.4",
     "next": "^12.0.5",
     "off-color": "2.0.0",
+    "papaparse": "^5.4.1",
     "primereact": "^10.2.1",
     "prismjs": "^1.25.0",
     "react": "^18.2.0",

@@ -59,6 +59,9 @@ function Header() {
         {/* Menu toogle for mobile view or small screen */}
 
         <div>
+          {/* <input>
+            Upload .csv
+          </input> */}
           {/* <label
             htmlFor="left-sidebar-drawer"
             className="btn btn-primary drawer-button lg:hidden"
