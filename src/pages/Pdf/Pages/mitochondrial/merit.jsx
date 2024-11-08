@@ -128,44 +128,80 @@ const Merit = () => {
         {
             Component: MeritDemerit,
             data: {
+                commonStyle:{
+                    gap: "5rem"  // Here is optional instead of default value 8rem
+                },
+                inCommonStyle:{
+                    // gap: "2rem"     // Here is optional instead of default value 3rem
+                },
+                titleStyle:{
+                    //  HERE  WILL  BE  NO  CHANGE
+
+                    fontSize: "12rem", //default value is ---12rem---
+                    // lineHeight:1.444444       //default value is ---1.448333---  12/17.38
+                },
+                contentStyle:{
+                    fontSize: "9rem", //default value is ---12rem---
+                    lineHeight:1.444444,       //default value is ---1.448333---  12/17.38
+                    // color: "red"
+                },
                 merit: [
                     {
                         title: "認知機能の向上",
                         content:
                             "エネルギー供給が改善されることで、集中力や記憶力、思考力が向上します。",
-                            className: "leading-[1.44777]",
-                            fontSize: 9,
-                            gap:1
+                        // titleStyle:{
+                        //     // fontSize: "9rem"  //fontSize 12rem could be changed
+                        // },
+                        //     contentStyle:{
+                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
+                        // }    
                     },
                     {
                         title: "気分の安定",
                         content:
                             "十分なエネルギーが供給されることで、精神的な安定が保たれ、不安やうつ症状の軽減が期待されます。",
-                            className: "leading-[1.44777]",
-                            fontSize: 9,
-                            gap:1
-
+                        // titleStyle:{
+                        //     // fontSize: "9rem"  //fontSize could be changed
+                        // },
+                        //     contentStyle:{
+                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
+                        // }
                     },
                     {
                         title: "疲労感の軽減",
                         content:
                             "脳のエネルギーが増えることで、慢性的な疲労感やBrain Fogの症状が緩和されます。",
-                            fontSize: 9,
-                            gap:1
+                        // titleStyle:{
+                        //     // fontSize: "9rem"  //fontSize could be changed
+                        // },
+                        //     contentStyle:{
+                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
+                        // }
                     },
                     {
                         title: "免疫力の向上",
                         content:
                             "免疫細胞へのエネルギーが供給され、免疫力が向上します。",
-                            fontSize: 9,
-                            gap:1
+                        // titleStyle:{
+                        //     // fontSize: "9rem"  //fontSize could be changed
+                        // },
+                            contentStyle:{
+                                // letterSpace: "-0.5rem" // here could be the minus letter spacing
+                                letterSpacing: "-0.09rem"
+                            }
                     },
                     {
                         title: "代謝機能の向上",
                         content:
                             "神経伝達物質の代謝、ホルモン代謝、解毒代謝など体のメカニズムで重要となる代謝が向上し、本来の力を発揮しやすくなります。",
-                            fontSize: 9,
-                            gap:1
+                        // titleStyle:{
+                        //     // fontSize: "9rem"  //fontSize could be changed
+                        // },
+                            // contentStyle:{
+                            //     // letterSpace: "-0.5rem" // here could be the minus letter spacing
+                            //     letterSpacing: "-0.09rem"
+                            // }
                     },
                 ],
                 demerit: [
@@ -173,42 +209,46 @@ const Merit = () => {
                         title: "ATP不足",
                         content:
                             "身体のすべての動きや代謝活動がATPに依存しているため、エネルギー不足は身体機能全般に悪影響を与えます。",
-                        className: "tracking-tightest leading-[1.44777]",
-                        fontSize: 9,
-                        gap:1
-                    },
-                    {
-                        title: "筋力低下",
-                        content:
-                            "筋肉のエネルギー不足により、筋力が低下し、運動耐性が減少します。",
-                            className: "leading-[1.44777]",
-                            fontSize: 9,
-                            gap:1
+                        // titleStyle:{
+                        //     // fontSize: "9rem"  //fontSize could be changed
+                        // },
+                        //     contentStyle:{
+                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
+                        // }
                     },
                     {
                         title: "免疫力低下",
                         content:
                             "エネルギー不足により、免疫細胞の働きが低下し、感染症に対する抵抗力が弱まります。",
-                            className: "tracking-tightest leading-[1.44777]",
-                            fontSize: 9,
-                            gap:1
+                        // titleStyle:{
+                        //     // fontSize: "9rem"  //fontSize could be changed
+                        // },
+                        //     contentStyle:{
+                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
+                        // }
                     },
                     {
                         title: "認知機能の低下",
                         content:
                             "脳の神経細胞は、信号伝達、神経伝達物質の合成など、さまざまな活動に大量のATPを消費するため。",
-                            className: "tracking-tightest leading-[1.44777]",
-                            fontSize: 9,
-                            gap:1
+                        // titleStyle:{
+                        //     // fontSize: "9rem"  //fontSize could be changed
+                        // },
+                        //     contentStyle:{
+                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
+                        // }
                     },
                     {
                         title: "解毒機能の低下",
                         content:
                             "解毒プロセスは、特に肝臓で行われる重要な生理機能で、体内の有害物質を無毒化し、排出するためにエネルギーを必要とされる。",
-                            className: "tracking-tightest leading-[1.44777]",
-                            fontSize: 9,
-                            gap:1
-                    },
+                        // titleStyle:{
+                        //     // fontSize: "9rem"  //fontSize could be changed
+                        // },
+                        //     contentStyle:{
+                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
+                        // }
+                    }
                 ],
             },
         },

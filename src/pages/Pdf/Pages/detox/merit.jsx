@@ -52,7 +52,7 @@ const Merit = () => {
                             top: "0rem",
                             right: "0rem",
                             width: "230rem",
-                       },
+                        },
                         //React DOM Styling
                         etcStyle: {},
                         //tailwind
@@ -76,7 +76,7 @@ const Merit = () => {
                         //tailwind
                         etcClassName: "",
                         fontSize: 10,
-                        contentClassName: "tracking-tightest"
+                        contentClassName: "tracking-tightest",
                     },
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
@@ -94,7 +94,7 @@ const Merit = () => {
                         //tailwind
                         etcClassName: "",
                         fontSize: 10,
-                        contentClassName: "tracking-tightest"
+                        contentClassName: "tracking-tightest",
                     },
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
@@ -112,7 +112,7 @@ const Merit = () => {
                         //tailwind
                         etcClassName: "",
                         fontSize: 10,
-                        contentClassName: "tracking-tightest"
+                        contentClassName: "tracking-tightest",
                     },
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
@@ -130,8 +130,8 @@ const Merit = () => {
                         //tailwind
                         etcClassName: "",
                         fontSize: 10,
-                        contentClassName: "tracking-tightest"
-                    }
+                        contentClassName: "tracking-tightest",
+                    },
                 ],
             },
         },
@@ -139,45 +139,53 @@ const Merit = () => {
             Component: MeritIntro,
             data: {
                 maincolor: maincolor,
-                content1: "解毒力が高いことによるメリットと解毒力を低いことによるデメリット",
+                content1:
+                    "解毒力が高いことによるメリットと解毒力を低いことによるデメリット",
                 // content2: "ヒスタミンが脳で増えすぎることによるデメリット",
             },
         },
         {
             Component: MeritDemerit,
             data: {
+                commonStyle: {
+                    gap: "5rem",
+                },
+                inCommonStyle: {
+                    gap: "2rem", // Here is optional instead of default value 3rem
+                },
+                contentStyle: {
+                    fontSize: "9rem", //default value is ---12rem---
+                    lineHeight: 1.444444,
+                },
+
                 merit: [
                     {
                         title: "炎症の軽減",
                         content:
-                            "脳内の炎症が抑えられることで、認知症の発症リスクを減らすことができます。",
-                            className: "text-[9rem] leading-[1.44777]",
-                            fontSize: 9
+                            "毒素の排泄が促進されることで、脳内の炎症が軽減され、認知機能の低下や精神的な不調を予防することができます。",
+                        contentStyle: {
+                            letterSpacing: "-0.09rem",
+                        },
                     },
                     {
                         title: "認知症のリスク低減",
                         content:
                             "脳内の炎症が抑えられることで、認知症の発症リスクを減らすことができます。",
-                            className: "text-[9rem] leading-[1.44777]",
-                            fontSize: 9
                     },
                     {
                         title: "精神の安定",
                         content:
                             "毒素の蓄積が減少することで、精神的な健康が向上し、不安やうつ症状の軽減につながります。",
-                            fontSize: 9
                     },
                     {
                         title: "体力UP",
                         content:
                             "解毒により酸化ストレスが軽減し、ミトコンドリアによるエネルギー産生の効率がUPし体全体のエネルギーレベルが増加。",
-                            fontSize: 9
                     },
                     {
                         title: "免疫UP",
                         content:
                             "酸化ストレスの軽減により免疫系が整い、自己免疫疾患のリスク軽減や慢性炎症の軽減、さらに感染症に対する抵抗力が増加。",
-                            fontSize: 9
                     },
                 ],
                 demerit: [
@@ -185,46 +193,39 @@ const Merit = () => {
                         title: "神経炎症",
                         content:
                             "毒素の蓄積により脳内で炎症が発生し、神経細胞が損傷を受けることがあります。",
-                        className: "tracking-tightest",
-                        fontSize: 9
                     },
                     {
                         title: "認知機能の低下",
                         content:
                             "脳内の炎症が長期間続くと、記憶力や判断力、集中力などの認知機能が低下する可能性があります。",
-                            fontSize: 9
                     },
                     {
                         title: "精神的な不調",
                         content:
                             "毒素の影響で脳内の化学物質バランスが崩れ、不安やうつ症状が現れることがあります。",
-                            className: "tracking-tightest",
-                            fontSize: 9
                     },
                     {
                         title: "ホルモンバランスの乱れ",
                         content:
                             "環境ホルモンからの影響で月経不順、不妊、更年期症状の悪化や発達の影響、がんのリスクが高まることも。",
-                            className: "tracking-tightest",
-                            fontSize: 9
+                        className: "tracking-tightest",
                     },
                 ],
             },
         },
     ]);
-    return(<>
-    <PageWrapper>
-        <PageHeader 
-            subtitle={"Detox Type"}
-            mainTitle={"デトックスタイプ"}>
-        </PageHeader>
-        <EnhancedMerit />
-        <PageNumber>
-            19
-        </PageNumber>
-    </PageWrapper>
-
-    </>)
-}
+    return (
+        <>
+            <PageWrapper>
+                <PageHeader
+                    subtitle={"Detox Type"}
+                    mainTitle={"デトックスタイプ"}
+                ></PageHeader>
+                <EnhancedMerit />
+                <PageNumber>19</PageNumber>
+            </PageWrapper>
+        </>
+    );
+};
 
 export default Merit;

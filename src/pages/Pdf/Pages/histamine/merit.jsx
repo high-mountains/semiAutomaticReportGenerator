@@ -150,7 +150,10 @@ const Merit = () => {
                         title: "神経系の影響",
                         content:
                             "ヒスタミンが過剰になると、不安症状、頭痛、睡眠障害などを引き起こすことがあります。",
-                        className: "tracking-tightest"
+                        className: "tracking-tightest",
+                        contentStyle: {
+                            letterSpacing: "-0.6rem"
+                        }
                     },
                     {
                         title: "アレルギー反応の悪化",
@@ -161,8 +164,11 @@ const Merit = () => {
                         title: "消化器症状の悪化",
                         content:
                             "ヒスタミンの過剰分泌により、胃酸が増加し、胃痛や胃炎、胃潰瘍のリスクが高まります。",
-                            className: "tracking-tightest"
-                    },
+                            className: "tracking-tightest",
+                            contentStyle: {
+                                letterSpacing: "-0.6rem"
+                            }
+                        },
                 ],
             },
         },
