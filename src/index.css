@@ -4,13 +4,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Import Noto Sans JP font from Google Fonts */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap'); */
 
 [data-theme="dark"] {
   --bc: 220 0% 100%;
 }
 
 html {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 14px;
   
   /* color: hsla(var(--bc)/ var(--tw-text-opacity, 1)); */
