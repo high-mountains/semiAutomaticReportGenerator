@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 
 const Merit = () => {
     const [maincolor, setMaincolor] = useState(
-        useSelector((state) => state.pdfData.histamineColor)
+        useSelector((state) => state.pdfData.catecholamineColor)
     );
 
     const EnhancedMerit = withPeriodanalyze([

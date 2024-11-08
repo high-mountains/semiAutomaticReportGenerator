@@ -11,7 +11,7 @@ const Quality = (props) => {
                 textContent={props.description}
                 // oneColumn={props.oneColumn}
             />
-            <div className='flex flex-row gap-[10rem]'>
+            <div className='flex flex-row justify-center gap-[10rem]'>
                 <QualitySection
                     qualityArray={props.qualities1}
                     oneColumn={props.oneColumn}

@@ -31,12 +31,113 @@ const Concept = () => {
                 sidebarColor: maincolor
             }
         },
+        // {Component: Quality,
+        //     data:{
+        //         description: "カテコラミンタイプの特性には、以下のような可能性があります。",
+        //         qualities1: ["瞬発力があり決断が早い", "行動力がある", "目標を立てることが好き", "リーダー気質", "集中力が高い", "依存症になりやすい（ショッピング、ゲーム、ギャンブルなど）"],
+        //         qualities2: ["瞬発力があり決断が早い", "行動力がある", "目標を立てることが好き", "リーダー気質", "集中力が高い", "依存症になりやすい（ショッピング、ゲーム、ギャンブルなど）"],
+        //         sidebarColor: maincolor
+        //     }
+        // },
         {Component: Quality,
             data:{
+                wrapperWidth: "535rem",
+                sidebarColor: maincolor,
                 description: "カテコラミンタイプの特性には、以下のような可能性があります。",
-                qualities1: ["瞬発力があり決断が早い", "行動力がある", "目標を立てることが好き", "リーダー気質", "集中力が高い", "依存症になりやすい（ショッピング、ゲーム、ギャンブルなど）"],
-                qualities2: ["瞬発力があり決断が早い", "行動力がある", "目標を立てることが好き", "リーダー気質", "集中力が高い", "依存症になりやすい（ショッピング、ゲーム、ギャンブルなど）"],
-                sidebarColor: maincolor
+                qualities1: [
+                    
+                    {
+                        content:
+                            "瞬発力があり決断が早い",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "行動力がある",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "目標を立てることが好き",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "リーダー気質",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content: "集中力が高い",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "依存症になりやすい（ショッピン \n     グ、ゲーム、ギャンブルなど）",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                ], // qualities2: ["瞬発力があり決断が早い", "行動力がある", "目標を立てることが好き", "リーダー気質", "集中力が高い", "依存症になりやすい（ショッピング、ゲーム、ギャンブルなど）"],
+                qualities2: [
+                    
+                    {
+                        content:
+                            "瞬発力があり決断が早い",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "行動力がある",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "目標を立てることが好き",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "リーダー気質",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content: "集中力が高い",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "依存症になりやすい（ショッピン \n     グ、ゲーム、ギャンブルなど）",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                ],
+                ulStyle1: {
+                    // display: "flex",
+                    // flexDirection: "column"
+                    // lineHeight: ""
+                    // paddingLeft: "21.5rem"
+                }
             }
         },
         {Component: PageNumber,

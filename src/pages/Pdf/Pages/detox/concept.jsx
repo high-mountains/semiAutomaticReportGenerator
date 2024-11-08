@@ -34,8 +34,95 @@ const Concept = () => {
         {Component: Quality,
             data:{
                 description: "デトックスタイプの特性には、以下のような可能性があります。",
-                qualities1: ["なにもしていないのに疲れている \n ことがある", "肌の調子が崩れやすい", "アレルギー症状がある", "気分が落ち込みやすい", "食後にお腹が重く感じる", "入浴やサウナが好き", "オーガニック健康食品をよく買う"],
-                qualities2: ["飛行機や新幹線などにのると疲れがでる", "ホテルなどに宿泊すると体調を崩しやすい", "外食すると体調を壊しやすい", "夜間に目が覚める、トイレに行く", "薬味がおおい食事を好む"],
+                qualities1: [
+                    
+                    {
+                        content:
+                            "なにもしていないのに疲れている \n     ことがある",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "肌の調子が崩れやすい",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "アレルギー症状がある",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "気分が落ち込みやすい",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content: "食後にお腹が重く感じる",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "入浴やサウナが好き",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "オーガニック健康食品をよく買う",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    }
+                ], // qualities2: ["瞬発力があり決断が早い", "行動力がある", "目標を立てることが好き", "リーダー気質", "集中力が高い", "依存症になりやすい（ショッピング、ゲーム、ギャンブルなど）"],
+                qualities2: [
+                    
+                    {
+                        content:
+                            "飛行機や新幹線などにのると疲れが \n     でる",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "ホテルなどに宿泊すると体調を崩し \n     やすい",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "外食すると体調を壊しやすい",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "夜間に目が覚める、トイレに行く",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "薬味がおおい食事を好む",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                ],
                 sidebarColor: maincolor
             }
         },

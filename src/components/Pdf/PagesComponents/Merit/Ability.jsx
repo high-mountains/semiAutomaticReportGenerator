@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import AbilityComponent from './AbilityComponent';
 
 const Ability = (props) => {
-    useEffect(() => {
-        console.log("props.description==>", props.descriptions);
-    }, []);
+    // useEffect(() => {
+    //     console.log("props.description==>", props.descriptions);
+    // }, []);
 
     return (
         <div

@@ -24,17 +24,10 @@ const ListItem = (props) => {
     // console.log("===========ListItem====>", props);
 
     return (
-        <li className="list-disc" style={props.data.liStyle || {}}>
-            {/* <span
-                style={{
-                    content: '"•"',
-                    position: "absolute",
-                    left: 0,
-                    fontSize: "1.2em",
-                    lineHeight: "1.2",
-                }}
-            ></span> */}
-            {props.data?.content || "No content"}
+        <li className="list-disc whitespace-pre-wrap" style={props.data.liStyle || {}}>
+            {/* <pre> */}
+                {props.data?.content || "No content"}
+            {/* </pre> */}
         </li>
     );
 };

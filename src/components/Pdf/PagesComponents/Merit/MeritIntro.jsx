@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import Text from '../../Text'
 
 const MeritIntro = (props) => {
-    useEffect(() => {
-        console.log("props.data==>", props);
-    }, []);
+    // useEffect(() => {
+    //     console.log("props.data==>", props);
+    // }, []);
 
     return (
         <>
