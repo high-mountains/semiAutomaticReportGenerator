@@ -43,7 +43,6 @@ const Periodanalyze = (props) => {
                 description: "グルタメートタイプのおすすめ生活改善",
                 gap: 10, //10  only a value     10 (only)  gap between the descriptiona and cols
                 qualities1: [
-                    
                     {
                         content:
                             "食品添加物としてグルタミン酸を多く含む食品、ジャンクフードなどの摂取を控える。",

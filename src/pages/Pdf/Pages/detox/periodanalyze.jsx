@@ -22,33 +22,66 @@ const Periodanalyze = (props) => {
             fourthSenctences: "更年期以降は、代謝が低下し、体内の解毒プロセスが遅くなる傾向があります。ホルモンの変化によって、気分の変動が生じやすく、また、認知機能の低下や体調不良が目立つことがあるかもしれません。さらに、酸化ストレスの増大により、肝臓や腎臓の解毒機能が低下し、慢性的な解毒機能の不全に陥りやすくなる可能性があります。しかし、解毒を意識した食事や、十分なミネラルと水分の摂取、汗をかく習慣、そして十分な睡眠を取り入れることで、年齢を重ねても元気でアクティブな生活を送ることが可能です。"}},
         {Component: Improvement, 
         data: {
-            wrapperWidth: 535,   //default is 525
+            wrapperWidth: "525rem",   //default is 525
             mainColor: mainColor, //no
             description: "デトックスタイプのおすすめ生活改善", 
             gap: 10,
             qualities1:[
-                "新鮮でオーガニックな食品を選び、加工食品や保存料、添加物を避ける。", 
-                "オメガ-抗酸化物質を豊富に含む食品（ベリー類、緑黄色野菜など）を積極的に摂取する。", 
-                "水分、ミネラルをしっかり摂り、体内の毒素を排泄しやすくする。",
-                "グルテンフリー、カゼインフリーで腸内フローラを整える。",
-                "室内の空気清浄機を使用し、環境中の毒素を減らす。",
-                "家庭用品や化粧品の成分を見直し、化学物質を含まないものを選ぶ。",
-                "飲み水は水道にフィルターをつかって。ペットボトル飲料をのまない",
+                {content: "新鮮でオーガニックな食品を選び、加工食品や保存料、添 \n     加物を避ける。"},
+                {content: "抗酸化物質を豊富に含む食品（ベリー類、緑黄色野菜な \n     ど）を積極的に摂取する。",
+                    liStyle: {
+                        // letterSpacing: "-0.09rem"
+                    }
+                },
+                {content: "水分、ミネラルをしっかり摂り、体内の毒素を排泄しやす \n     くする。"},
+                {content: "グルテンフリー、カゼインフリーで腸内フローラを整える。"},
+                {content: "室内の空気清浄機を使用し、環境中の毒素を減らす。"},
+                {content: "家庭用品や化粧品の成分を見直し、化学物質を含まないも \n     のを選ぶ。"},
+                {content: "飲み水は水道にフィルターをつかって。ペットボトル飲料 \n     をのまない",
+                    liStyle: {
+                        // letterSpacing: "-0.01rem"
+                    }
+                },
             ],
             qualities2:[
-                "汗を積極的にかく", 
-                "シャワーではなく、湯船につかる時間を", 
-                "殺虫剤や防虫剤は自然な成分のものを",
-                "睡眠時間を確保する",
-                "毎日しっかりと排便を　排便、排尿、汗をかく　解毒の３つの経路を大事に！",
-                "添加物の入った食事を避ける",
-                "部屋の換気を",
-                "身の回りの洗剤（洗濯洗剤、食器洗剤、風呂掃除の洗剤、床掃除）などは、クエン酸、重曹などを",
-                "シャンプーは　パラベンフリー、合成着色料フリー",
+                {content: "汗を積極的にかく"},
+                {content: "シャワーではなく、湯船につかる時間を"},
+                {content: "殺虫剤や防虫剤は自然な成分のものを"},
+                {content: "睡眠時間を確保する"},
+                {content: "毎日しっかりと排便を　排便、排尿、汗をかく　解毒の３ \n     つの経路を大事に！"},
+                {content: "添加物の入った食事を避ける"},
+                {content: "部屋の換気を"},
+                {content: "身の回りの洗剤（洗濯洗剤、食器洗剤、風呂掃除の洗剤、 \n     床掃除）などは、クエン酸、重曹などを"},
+                {content: "シャンプーは　パラベンフリー、合成着色料フリー"},
             ],
             oneColumnStatus: false,  //Because there are 2 cols
-            liStyle: {lineHeight: 1.2, fontSize:"9rem"},
-            ulStyle: "gap-[2rem] text-[10rem] tracking-tightest"}},
+            inContainerGap: 15, //default is      10    in the case of two cols
+            eachUlWidth: 255,   //default is     250
+
+            ulStyle1: {
+                display: "flex",
+                flexDirection: "column",
+                gap: "4rem", //default is ⚠In this case flex     0rem   so it's not defined in there
+                lineHeight: 1.2222, //default is  ----1.42857---- 20/14
+                fontSize: "9rem", //default is      14rem
+                whiteSpace: "pre-wrap"
+                // letterSpacing: "-0.09rem", //default is      no     so it's not defined in there
+                // marginTop: "20rem"  //default is 10rem
+            },
+            ulStyle2: {
+                display: "flex",
+                flexDirection: "column",
+                gap: "4rem", //default is ⚠In this case flex     0rem   so it's not defined in there
+                lineHeight: 1.2222, //default is  ----1.42857---- 20/14
+                fontSize: "9rem", //default is      14rem
+                whiteSpace: "pre-wrap"
+                // letterSpacing: "-0.09rem", //default is      no     so it's not defined in there
+                // marginTop: "20rem"  //default is 10rem
+            },
+
+            // liStyle: {lineHeight: 1.2, fontSize:"9rem"},
+            // ulStyle: "gap-[2rem] text-[10rem] tracking-tightest"
+        }},
         {Component: PageNumber, 
         data: {
             children: "18"}}
