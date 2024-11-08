@@ -33,9 +33,101 @@ const Concept = () => {
         },
         {Component: Quality,
             data:{
+                // wrapperWidth: "535rem",   //This is blocked as 535 is default value
+                sidebarColor: maincolor,
                 description: "ヒスタミンタイプの特性には、以下のような可能性があります。",
-                qualities1: ["細かく正確性の求められる作業が得意", "ルーティンワークが得意", "部屋が綺麗", "士業に向いている", "集中力・記憶力が高い", "慎重", "肌荒れやアレルギーに悩む", "頭痛がしやすい"],
-                qualities2: ["頭痛がしやすい", "胃腸が痛くなりやすい", "偏食になりやすい", "不安、感覚過敏"],
+                qualities1: [
+                    
+                    {
+                        content:
+                            "細かく正確性の求められる作業が得 \n     意",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "ルーティンワークが得意",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "部屋が綺麗",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "士業に向いている",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content: "集中力・記憶力が高い",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "慎重",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "肌荒れやアレルギーに悩む",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "頭痛がしやすい",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                ], // qualities2: ["瞬発力があり決断が早い", "行動力がある", "目標を立てることが好き", "リーダー気質", "集中力が高い", "依存症になりやすい（ショッピング、ゲーム、ギャンブルなど）"],
+                qualities2: [
+                    
+                    {
+                        content:
+                            "騒がしい場所が苦手",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "胃腸が痛くなりやすい",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "偏食になりやすい",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "不安、感覚過敏",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                ], 
+                ulStyle1: {
+                    // paddingLeft: "21.5rem"
+                },
                 sidebarColor: maincolor
             }
         },

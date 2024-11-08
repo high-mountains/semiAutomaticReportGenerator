@@ -60,7 +60,7 @@ const Periodanalyze = (props) => {
                     },
                     {
                         content:
-                            "オメガ-3脂肪酸（魚類、亜麻仁油、チアシードなど）を含む食品を摂取し、脳の健康をサポートする。",
+                            "オメガ-3脂肪酸（魚類、亜麻仁油、チアシードなど）を含む食品を摂取し、脳の健康をサポー \n    トする。",
                         liStyle: {
                             //liStyle is Option
                         },
@@ -112,10 +112,10 @@ const Periodanalyze = (props) => {
                     flexDirection: "column",
                     gap: "6rem", //default is      0rem   so it's not defined in there
                     lineHeight: 1.448333, //default is  ----1.42857---- 20/14
-                    fontSize: "12rem", //default is      16rem
+                    fontSize: "12rem", //default is      14rem
                     // letterSpacing: "3rem", //default is      no     so it's not defined in there
                     // marginTop: "20rem"  //default is 10rem
-                    paddingLeft: "21.5rem"
+                    // paddingLeft: "21.5rem"
                 },
                 liStyle1: {
 

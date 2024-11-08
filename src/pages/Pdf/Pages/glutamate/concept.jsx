@@ -32,10 +32,63 @@ const Concept = () => {
         },
         {Component: Quality,
             data:{
-                description: "グルタメートタイプの特性には、以下のような可能性があります",
-                qualities1: ["興味のあることに没頭する", "記憶力が良い", "学習欲・知識欲が強い", "繰り返し作業が得意", "リラックスしづらい", "不眠になりやすい", "周囲の雰囲気を気にしない"],
-                // qualities2: ["瞬発力があり決断が早い", "行動力がある", "目標を立てることが好き", "リーダー気質", "集中力が高い", "依存症になりやすい（ショッピング、ゲーム、ギャンブルなど）"],
-                sidebarColor: maincolor
+                // wrapperWidth: "535rem",   //This is blocked as 535 is default value
+                sidebarColor: maincolor,
+                description: "カテコラミンタイプの特性には、以下のような可能性があります。",
+                qualities1: [
+                    {
+                        content:
+                            "瞬発力があり決断が早い",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "行動力がある",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "目標を立てることが好き",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "リーダー気質",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content: "集中力が高い",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    {
+                        content:
+                            "依存症になりやすい（ショッピン \n     グ、ゲーム、ギャンブルなど）",
+                        liStyle: {
+                            //liStyle is Option
+                        },
+                    },
+                    // {
+                    //     content:
+                    //         "周囲の雰囲気を気にしない",
+                    //     liStyle: {
+                    //         //liStyle is Option
+                    //     },
+                    // },
+                ], // qualities2: ["瞬発力があり決断が早い", "行動力がある", "目標を立てることが好き", "リーダー気質", "集中力が高い", "依存症になりやすい（ショッピング、ゲーム、ギャンブルなど）"],
+                oneColumn: true,
+                ulStyle1: {
+                    // paddingLeft: "21.5rem"
+                }
             }
         },
         {Component: PageNumber,

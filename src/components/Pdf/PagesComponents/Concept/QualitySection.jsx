@@ -8,9 +8,8 @@ const QualitySection = (props) => {
         (store) => store.pdfData.mainTextColor
     );
 
-    console.log("useSelector((store) => store.pdfData.mainTextColor)=====>", useSelector((store) => store.pdfData.mainTextColor));
+    // console.log("useSelector((store) => store.pdfData.mainTextColor)=====>", useSelector((store) => store.pdfData.mainTextColor));
     
-
     // Styles previously handled by styled-components
     const qualitySectionWrapperStyle = {
         width: props.oneColumn ? "100%" : props.eachUlWidth || "250rem",
@@ -22,7 +21,7 @@ const QualitySection = (props) => {
 
     const ulStyle = {
         marginTop: "10rem",
-        fontSize: "16rem",
+        fontSize: "14rem",
         lineHeight: "1.42857",
         ...props.ulStyle,
     };
@@ -30,7 +29,7 @@ const QualitySection = (props) => {
     return (
         <div style={qualitySectionWrapperStyle}>
           {/* {(props.qualities1 || props.qualities2) && ( */}
-            <ul style={ulStyle} className={`text-[${mainTextColor}] list-none`}>
+            <ul style={ulStyle} className={`text-[${mainTextColor}] list-none list-inside`}>
               {props.qualityArray.length && props.qualityArray.map((item, index) => (
                 <ListItem key={index} data={item} />
               ))}

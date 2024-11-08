@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Text from '../../../Text'
 
 const MeritComponent = (props) => {
+    const [inCommonStyle, setInCommonStyle] = useState(props.inCommonStyle);
+
     return (
         <div className='w-[247.5rem] flex flex-col gap-[8rem] mt-[15rem]'>
             {/* {props.data.title} */}
@@ -12,18 +14,21 @@ const MeritComponent = (props) => {
                     className={"font-bold text-[16rem] text-center"}
                 />
             </div>
-            <div className='w-full flex flex-col gap-[8rem]'>
+
+            {/* The commonStyle is for control the gap instead of defaul value 8rem as in 5rem */}
+            <div className='w-full flex flex-col gap-[8rem]' style={props.commonStyle}>  
                 {props.data.map((item, index) => (
-                        <div key={index} className={`w-full flex flex-col pl-[5rem] pr-[2.5rem] ${props.gap ? "gap-[2rem]": "gap-[3rem]"}`}>
+                        <div key={index} className="w-full flex flex-col pl-[5rem] pr-[2.5rem] gap-[3rem]" style={inCommonStyle}>
                             <Text
                                 textContent={item.title}
                                 fontSize={12}
                                 className={"font-bold"}
+                                style={item.titleStyle && item.titleStyle}
                             />
                             <Text
                                 textContent={item.content}
                                 fontSize={item.fontSize ? item.fontSize : 12}
-                                className={`${item.className}`}
+                                style={item.contentStyle && item.contentStyle}
                             />
                         </div>
                 ))}
