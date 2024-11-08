@@ -3,6 +3,8 @@ import pdfData from "../../utils/dummyPdf.json";
 import "./sidebarStyle.css";
 
 const Text = (props) => { 
+    console.log("props.style=====>", props.style);
+    
     const [styleProps, setStyleProps] = useState({
         bgColor: "",
         textColor: "",
@@ -25,7 +27,7 @@ const Text = (props) => {
             sidebarHeight: props.sidebarHeight,
             style: props.style || {}, // Default to an empty object if props.style is not provided
         });
-    }, []); // Listen for changes in the props object
+    }, [props]); // Listen for changes in the props object
 
     const { textContent, textColor, bgColor, fontSize, className, sidebarColor, sidebarHeight, style } = styleProps;
 
@@ -39,10 +41,10 @@ const Text = (props) => {
                         <span style={{backgroundColor: `${sidebarColor}`, paddingLeft:"5rem", paddingTop:`${sidebarHeight || "30rem"}`, marginRight:"8rem"}}/>
                         <p
                             style={{
-                                ...style, // Spread the incoming style prop
                                 backgroundColor: bgColor ? `${bgColor}` : undefined,
                                 color: `${textColor || pdfData.mainTextColor}`,
                                 fontSize: fontSize ? `${fontSize}rem` : "16rem",
+                                ...style, // Spread the incoming style prop
                             }}
                             className={`font font-bold whitespace-pre-line ${className}`}
                         >
@@ -51,10 +53,10 @@ const Text = (props) => {
                     </div>
                 </> : <p
                         style={{
-                            ...style, // Spread the incoming style prop
                             backgroundColor: bgColor ? `${bgColor}` : undefined,
                             color: `${textColor || pdfData.mainTextColor}`,
                             fontSize: fontSize ? `${fontSize}rem` : "16rem",
+                            ...style, // Spread the incoming style prop
                         }}
                         className={`font ${className}`}
                         >

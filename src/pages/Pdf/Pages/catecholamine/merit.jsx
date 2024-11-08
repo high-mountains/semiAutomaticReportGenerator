@@ -18,8 +18,8 @@ const Merit = () => {
         {
             Component: Ability,
             data: {
-                width: "540.91",
-                height: "345",
+                width: "525",
+                height: "300",
                 imageURL: "bg/abilityGlutamate.svg",
                 contentFontSize: "12rem", //The contentSize is same among a page so have to be global
                 commonStyle: {},
@@ -129,35 +129,90 @@ const Merit = () => {
         {
             Component: MeritDemerit,
             data: {
+                commonStyle:{
+                    // gap: "5rem"  // Here is optional instead of default value 8rem
+                },
+                inCommonStyle:{
+                    // gap: "2rem"     // Here is optional instead of default value 3rem
+                },
+                titleStyle:{
+                    //  HERE  WILL  BE  NO  CHANGE
+
+                    // fontSize: "9rem", //default value is ---12rem---
+                    // lineHeight:1.444444       //default value is ---1.448333---  12/17.38
+                },
+                contentStyle:{
+                    // fontSize: "9rem", //default value is ---12rem---
+                    // lineHeight:1.444444       //default value is ---1.448333---  12/17.38
+                },
                 merit: [
                     {
-                        title: "覚醒と注意力の向上",
+                        title: "集中力の向上",
                         content:
-                            "ヒスタミンは覚醒状態を維持し、注意力や集中力を高めます。",
+                            "カテコラミンは注意力と集中力を高め、認知機能を向上させます。",
+                        // titleStyle:{
+                        //     // fontSize: "9rem"  //fontSize could be changed
+                        // },
+                        //     contentStyle:{
+                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
+                        // }    
                     },
                     {
-                        title: "記憶と学習のサポート",
+                        title: "瞬発力の向上",
                         content:
-                            "ヒスタミンは脳のシナプス可塑性に影響を与え、記憶の形成と学習能力を支援します。",
+                            "カテコラミンはストレス状況下での迅速な反応や瞬発力を高め、緊急時の対応能力を向上させます。",
+                        // titleStyle:{
+                        //     // fontSize: "9rem"  //fontSize could be changed
+                        // },
+                        //     contentStyle:{
+                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
+                        // }
+                    },
+                    {
+                        title: "モチベーションの向上",
+                        content:
+                            "ドーパミンは目標達成への意欲を高め、行動を促進します。",
+                        // titleStyle:{
+                        //     // fontSize: "9rem"  //fontSize could be changed
+                        // },
+                        //     contentStyle:{
+                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
+                        // }
                     },
                 ],
                 demerit: [
                     {
-                        title: "神経系の影響",
+                        title: "情緒の不安定",
                         content:
-                            "ヒスタミンが過剰になると、不安症状、頭痛、睡眠障害などを引き起こすことがあります。",
-                            className: "tracking-tightest"
+                            "ノルアドレナリンとアドレナリンが高すぎると、イライラや攻撃的な行動（「キレる」状態）を引き起こすことがあります。",
+                        // titleStyle:{
+                        //     // fontSize: "9rem"  //fontSize could be changed
+                        // },
+                        //     contentStyle:{
+                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
+                        // }
                     },
                     {
-                        title: "アレルギー反応の悪化",
+                        title: "不安やストレスの増加",
                         content:
-                            "ヒスタミンが多すぎると、アレルギー反応が過剰に起こり、慢性的な鼻炎、皮膚炎、喘息などの症状が悪化します。",
+                            "高いカテコラミンレベルは慢性的な不安やストレスを引き起こし、心身の健康に悪影響を与えることがあります。",
+                        // titleStyle:{
+                        //     // fontSize: "9rem"  //fontSize could be changed
+                        // },
+                        //     contentStyle:{
+                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
+                        // }
                     },
                     {
-                        title: "消化器症状の悪化",
+                        title: "睡眠障害",
                         content:
-                            "ヒスタミンの過剰分泌により、胃酸が増加し、胃痛や胃炎、胃潰瘍のリスクが高まります。",
-                        className: "tracking-tightest"
+                            "過剰なカテコラミンは覚醒状態を維持しすぎ、睡眠の質を低下させることがあります。",
+                        // titleStyle:{
+                        //     // fontSize: "9rem"  //fontSize could be changed
+                        // },
+                        //     contentStyle:{
+                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
+                        // }
                     },
                 ],
             },

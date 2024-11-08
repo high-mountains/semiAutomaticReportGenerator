@@ -117,13 +117,23 @@ const Merit = () => {
                 inCommonStyle:{
                     // gap: "2rem"     // Here is optional instead of default value 3rem
                 },
+                titleStyle:{
+                    //  HERE  WILL  BE  NO  CHANGE
+
+                    // fontSize: "9rem", //default value is ---12rem---
+                    // lineHeight:1.444444       //default value is ---1.448333---  12/17.38
+                },
+                contentStyle:{
+                    // fontSize: "9rem", //default value is ---12rem---
+                    // lineHeight:1.444444       //default value is ---1.448333---  12/17.38
+                },
                 merit: [
                     {
                         title: "記憶力の向上",
                         content:
                             "グルタミン酸はシナプスの可塑性を高め、短期記憶と長期記憶の両方を強化します。",
                         // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
+                        //     // fontSize: "9rem"  //fontSize 12rem could be changed
                         // },
                         //     contentStyle:{
                         //         // letterSpace: "-0.5rem" // here could be the minus letter spacing

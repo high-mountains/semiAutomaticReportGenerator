@@ -17,8 +17,8 @@ const Merit = () => {
         {
             Component: Ability,
             data: {
-                width: "527",
-                height: "322",
+                width: "525",
+                height: "269",
                 imageURL: "bg/abilityGlutamate.svg",
                 contentFontSize: "10rem", //The contentSize is same among a page so have to be global
                 commonStyle: {},
@@ -110,81 +110,66 @@ const Merit = () => {
         {
             Component: MeritDemerit,
             data: {
+                commonStyle:{
+                    gap: "5rem"
+                },
+                contentStyle:{
+                    fontSize: "9rem", //default value is ---12rem---
+                    lineHeight:1.444444,       //default value is ---1.448333---  12/17.38
+                    // color: "red"
+                },
                 merit: [
                     {
                         title: "認知機能の向上",
                         content:
                             "メチレーションは神経伝達物質の合成に関与し、認知機能の向上に寄与します。",
-                            className: "text-[9rem] leading-[1.44777]",
-                            fontSize: 9
                     },
                     {
                         title: "気分の安定",
                         content:
                             "適切なメチレーションは、セロトニンやドーパミンなどの神経伝達物質のバランスを保ち、気分の安定に役立ちます。",
-                            className: "text-[9rem] leading-[1.44777]",
-                            fontSize: 9
                     },
                     {
                         title: "ストレス耐性の向上",
                         content:
                             "メチレーションが改善されると、ストレス反応を調節するホルモンのバランスも整いやすくなります。",
-                            fontSize: 9
                     },
                     {
                         title: "免疫機能の向上",
                         content:
                             "T細胞やB細胞などの免疫細胞の発達や機能が正常化し免疫機能がUP",
-                            fontSize: 9
                     },
-                    // {
-                    //     title: "免疫UP",
-                    //     content:
-                    //         "酸化ストレスの軽減により免疫系が整い、自己免疫疾患のリスク軽減や慢性炎症の軽減、さらに感染症に対する抵抗力が増加。",
-                    //         fontSize: 9
-                    // },
                 ],
                 demerit: [
                     {
                         title: "神経系の機能低下",
                         content:
                             "神経伝達物質の合成が不十分になることで、認知機能や気分の不安定が生じる可能性があります。",
-                        // className: "tracking-tightest",
-                        fontSize: 9
                     },
                     {
                         title: "ホルモン産生低下",
                         content:
                             "ホルモンバランスが崩れやすくなり、月経不順や更年期障害などの問題が発生しやすくなります。",
-                            fontSize: 9
                     },
                     {
                         title: "解毒力低下",
                         content:
                             "メチレーションは肝臓の解毒機能にも関与しており、その力が低下すると体内に有害物質が蓄積しやすくなります。",
-                            // className: "tracking-tightest",
-                            fontSize: 9
                     },
                     {
                         title: "感染症にかかりやすい",
                         content:
                             "免疫応答に関与する遺伝子が不適切にメチル化されると免疫系が低下し感染のリスク⇑",
-                            // className: "tracking-tightest",
-                            fontSize: 9
                     },
                     {
                         title: "癌のリスク",
                         content:
                             "エピジェネティックな修復や調整が不完全により遺伝子の発現や抑制が適性の行われずがんのリスク⇑",
-                            // className: "tracking-tightest",
-                            fontSize: 9
                     },
                     {
                         title: "慢性炎症",
                         content:
                             "免疫応答するサイトカインの生成に影響し炎症が遷延したり過剰に反応する。",
-                            // className: "tracking-tightest",
-                            fontSize: 9
                     },
                 ],
             },
