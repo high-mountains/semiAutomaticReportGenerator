@@ -4,8 +4,6 @@ import axios from "axios";
 export const fetchPdfData = createAsyncThunk(
   "/pdf/fetchData",
   async () => {
-    // let query = "";
-    // if (payload) query += `?view=${payload}`;
     const res = await axios.get("/fetchPdfData");
     return res.data;
   }
