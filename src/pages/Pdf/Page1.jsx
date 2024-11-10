@@ -79,7 +79,7 @@ function Page1() {
 
                 <div className="mb-[16rem]">
                     <img
-                        src="/pages/page01/JENELogo.png"
+                        src="/bg/JENE_Logo.svg"
                         alt="JENE仮ロゴ横_0604 1"
                     />
                 </div>

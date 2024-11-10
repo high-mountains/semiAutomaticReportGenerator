@@ -11,13 +11,6 @@ const PageHeader = (props) => {
     const [mainTitleColor, setMainTitleColor] = useState(mainTextColor);
     const [mainTitleStyle, setMainTitleStyle] = useState(props.mainTitleStyle || {});
     
-    useEffect(() => {
-        if(props.mainTitleStyle) {
-            console.log("props.mainTitleStyel====>", props.mainTitleStyle);
-            
-        }
-    }, []);
-
     return (
         <div className="flex flex-col font-bold mb-[30rem]">
             <h6
