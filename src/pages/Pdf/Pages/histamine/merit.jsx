@@ -19,7 +19,7 @@ const Merit = () => {
             data: {
                 width: "540.91",
                 height: "345",
-                imageURL: "bg/abilityGlutamate.svg",
+                imageURL: "bg/abilityHistamine.svg",
                 contentFontSize: "12rem", //The contentSize is same among a page so have to be global
                 commonStyle: {},
                 descriptions: [
@@ -31,8 +31,8 @@ const Merit = () => {
                             "アミノ酸であるヒスチジンをヒスタミンに変換することでヒスタミンを合成する。 \n 　　　関連遺伝子：HDC",
                         contentLineHeight: 1.448333, //lineheight of text
                         posInfo: {
-                            top: "11rem",
-                            left: "74rem",
+                            top: "13.4rem",
+                            left: "76rem",
                             width: "177rem",
                         },
                         //React DOM Styling of Wrapper paragraph of 2 sentences

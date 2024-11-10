@@ -19,7 +19,7 @@ const Merit = () => {
             data: {
                 width: "525",
                 height: "269",
-                imageURL: "bg/abilityGlutamate.svg",
+                imageURL: "bg/abilityMethylation.svg",
                 contentFontSize: "10rem", //The contentSize is same among a page so have to be global
                 commonStyle: {},
                 descriptions: [
@@ -39,14 +39,14 @@ const Merit = () => {
                         etcStyle: {},
                         //tailwind
                         etcClassName: "",
-                        fontSize: 10, // fontsize of text content(description, not header)
+                        fontSize: 12, // fontsize of text content(description, not header)
                     },
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "240rem",
                         heading: "ホモシステイン代謝",
                         content:
-                            "ホモシステインというアミノ酸を他の物質に \n 　　　　変えることで、体内のバランスを保つ \n 　　　　　のに重要な役割を果たす遺伝子 \n 　　　　　　です。\n 　　　　　　関連遺伝子：AHCY, BHMT, CBS",
+                            "ホモシステインというアミノ酸を他の物質に\n　　　　変えるこ<span style='color: blue; font-weight: bold; background-color:red'>とで、体内のバランスを保つ\n　　　　　のに重要な役割を果たす遺伝子\n　　　　　　です。</span>\n　　　　　　関連遺伝子：AHCY, BHMT, CBS",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             top: "0rem",
@@ -54,38 +54,41 @@ const Merit = () => {
                             width: "240rem",
                        },
                         //React DOM Styling
-                        etcStyle: {},
+                        etcStyle: {
+                            // tracking
+                        },
                         //tailwind
-                        etcClassName: "",
-                        fontSize: 10,
+                        etcClassName: "tracking-[-0.6rem]",
+                        fontSize: 12,
+                        contentClassName: "tracking-tightest bg-red-400 leading-[1.4483]",
                     },
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
-                        wrapperWidth: "240rem",
-                        heading: "硫黄アミノ酸代謝",
+                        wrapperWidth: "242rem",
+                        heading: "　　　　硫黄アミノ酸代謝",
                         content:
-                            "　　　　シスタチオンからシステインという \n 　　アミノ酸を作るのを助け、体の中の硫黄を含むアミノ酸のバランスを保つ遺伝子です。 \n 関連遺伝子：CTH, GCLC",
+                            "　　　　シスタチオンからシステインという \n　　アミノ酸を作るのを助け、体の中の硫黄を含むアミノ酸のバランスを保つ遺伝子です。\n関連遺伝子：CTH, GCLC",
                         contentLineHeight: 1.448,
                         posInfo: {
-                            bottom: "0rem",
+                            bottom: "8rem", 
                             right: "0rem",
                             width: "240rem",
                         },
                         //React DOM Styling
-                        etcStyle: {},
+                        etcStyle: {color: "green"},
                         //tailwind
-                        etcClassName: "",
-                        fontSize: 10,
-                        contentClassName: "tracking-tightest"
+                        etcClassName: "flex flex-col gap-[3rem]",
+                        fontSize: 12,   
+                        contentClassName: "tracking-[-0.5rem] bg-red-400 leading-[1.4483]",
                     },
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "240rem",
                         heading: "葉酸の取り込み・代謝",
-                        content: `葉酸というビタミンを細胞に取り込ん \n で利用するのを助ける遺伝子です。 \n 関連遺伝子：FOLR1, FOLR2, SLC19A1`,
+                        content: `葉酸というビタミンを細胞に取り込ん\nで利用するのを助ける遺伝子です。\n関連遺伝子：FOLR1, FOLR2, SLC19A1`,
                         contentLineHeight: 1.448333,
                         posInfo: {
-                            bottom: "0rem",
+                            bottom: "25rem",
                             left: "0rem",
                             width: "240rem",
                         },
@@ -93,7 +96,7 @@ const Merit = () => {
                         etcStyle: {},
                         //tailwind
                         etcClassName: "",
-                        fontSize: 10,
+                        fontSize: 12,
                         contentClassName: "tracking-tightest"
                     },
                 ],
@@ -178,8 +181,8 @@ const Merit = () => {
     return(<>
     <PageWrapper>
         <PageHeader 
-            subtitle={"Detox Type"}
-            mainTitle={"デトックスタイプ"}>
+            subtitle={"Methylation Type"}
+            mainTitle={"メチレーションタイプ"}>
         </PageHeader>
         <EnhancedMerit />
         <PageNumber>

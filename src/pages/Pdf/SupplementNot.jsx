@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import PageWrapper from "../../components/Pdf/PageWrapper";
-import PageHeader from "../../components/Pdf/PageHeader";
-import PageNumber from "../../components/Pdf/PageNumber";
-import Text from "../../components/Pdf/Text";
+import PageWrapper from "../../components/Pdf/PageWrapper.jsx";
+import PageHeader from "../../components/Pdf/PageHeader.jsx";
+import PageNumber from "../../components/Pdf/PageNumber.jsx";
+import Text from "../../components/Pdf/Text.jsx";
 import Table from "../../components/Pdf/Table.jsx";
 import { useSelector } from "react-redux";
 
-const Supplement = () => {
+const SupplementNot = () => {
     const [sidbarColor, setSidebarColor] = useState(
         useSelector((store) => store.pdfData.mainColor)
     );
@@ -14,7 +14,7 @@ const Supplement = () => {
         <PageWrapper>
             <PageHeader
                 subtitle={"Supplement"}
-                mainTitle={"あなたにおすすめのサプリメントや生活習慣"}
+                mainTitle={"おすすめしないサプリメントや生活習慣"}
                 subTitleStyle={{
                     marginBottom:"5rem"
                 }}
@@ -79,4 +79,4 @@ const Supplement = () => {
     );
 };
 
-export default Supplement;
+export default SupplementNot;
