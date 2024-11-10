@@ -19,7 +19,7 @@ const Merit = () => {
             data: {
                 width: "527",
                 height: "322",
-                imageURL: "bg/abilityGlutamate.svg",
+                imageURL: "bg/abilityDetox.svg",
                 contentFontSize: "10rem", //The contentSize is same among a page so have to be global
                 commonStyle: {},
                 descriptions: [

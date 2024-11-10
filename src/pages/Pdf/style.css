@@ -3,6 +3,14 @@ html {
     box-sizing: border-box;
 }
 
+.pdfwrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20rem;
+}
+
 @media only screen and (min-width: 594px) {
     html {
         font-size: 1px;
@@ -13,8 +21,11 @@ html {
     }
 
     .page {
-        width: 593rem;
+        width: 595rem;
         height: 847rem;
+        /* border: 1rem rgba(0, 0, 0, 0.1); */
+        /* border: 1rem rgb(255, 0, 0); */
+        border-radius: 2rem;
     }
 
     .font {
@@ -31,13 +42,6 @@ html {
         font-size: 16rem;
         width: 100vw;
         height: 847rem;
+        border: 1rem rgba(0, 0, 0, 0.1);
     }
-}
-
-.pdfwrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20rem;
 }

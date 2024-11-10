@@ -44,7 +44,7 @@ const Text = (props) => {
                                 fontSize: fontSize ? `${fontSize}rem` : "16rem",
                                 ...style, // Spread the incoming style prop
                             }}
-                            className={`font font-bold whitespace-pre-line ${className}`}
+                            className={`font font-bold whitespace-pre-line ${styleProps.className}`}
                         >
                             {textContent}
                         </p>
@@ -56,9 +56,10 @@ const Text = (props) => {
                             fontSize: fontSize ? `${fontSize}rem` : "16rem",
                             ...style, // Spread the incoming style prop
                         }}
-                        className={`font ${className}`}
+                        className={`font ${styleProps.className}`}
+                        dangerouslySetInnerHTML={{ __html: textContent }}
                         >
-                            {textContent}
+                            {/* {textContent} */}
                         </p>
             }
 

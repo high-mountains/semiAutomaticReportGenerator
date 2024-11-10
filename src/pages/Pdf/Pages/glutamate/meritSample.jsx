@@ -38,8 +38,8 @@ const Merit = () => {
                         },
                         //React DOM Styling of Wrapper paragraph of 2 sentences
                         etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
+                        //tailwind The add style of content paragraph have to be here.
+                        etcClassName: "", 
                         fontSize: 12, // fontsize of text content(description, not header)
                     },
                     {
@@ -73,11 +73,11 @@ const Merit = () => {
                             width: "240rem",
                         },
                         //React DOM Styling
-                        etcStyle: {},
+                        etcStyle: {}, // etc means posInfo(Wrapper)'s etc.
+                        etcClassName: "", //etc also means posInfo(Wrapper)'s etc.
                         //tailwind
-                        etcClassName: "",
-                        fontSize: 12,
-                        contentClassName: "tracking-tightest"
+                        contentClassName: "tracking-tightest ", //this is for contentClassName
+                        fontSize: 12, // fontSize of content
                     },
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component

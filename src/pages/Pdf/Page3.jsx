@@ -30,7 +30,8 @@ function Page3() {
 
     return(
         <>
-        <div className={`page font outline outline-1 outline-[${pdfData.mainTextColor}] relative printUnit`}>
+        {/* <div className={`page font outline outline-1 outline-[${pdfData.mainTextColor}] relative printUnit`}> */}
+        <div className={`page font border-[1rem] border-[rgba(0,0,0,0.1)] rounded-[2rem] relative printUnit`}>
             <div>
                 <div style={{marginTop:"30rem", marginRight: "30rem", marginLeft: "30rem"}}>
                     <Text

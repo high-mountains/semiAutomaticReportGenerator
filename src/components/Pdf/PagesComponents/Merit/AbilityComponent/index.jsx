@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Text from '../../../Text';
 import pdfData from "../../../../../utils/dummyPdf.json";
+import { color } from 'highcharts';
 
 const AbilityComponent = (props) => {
     
@@ -23,6 +24,9 @@ const AbilityComponent = (props) => {
                     textColor={textColor}
                     fontSize={props.data.fontSize}
                     className={`whitespace-pre-wrap ${props.data.contentClassName}`}
+                    style={{
+                        // lineHeight: `${props.contentLineHeight}`
+                    }}
                 />
             </div>
         </>

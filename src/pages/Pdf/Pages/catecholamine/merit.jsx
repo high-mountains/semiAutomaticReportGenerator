@@ -20,21 +20,21 @@ const Merit = () => {
             data: {
                 width: "525",
                 height: "300",
-                imageURL: "bg/abilityGlutamate.svg",
+                imageURL: "bg/abilityCatecholamine.svg",
                 contentFontSize: "12rem", //The contentSize is same among a page so have to be global
                 commonStyle: {},
                 descriptions: [
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
-                        wrapperWidth: "177rem", //rem unit
-                        heading: "ヒスタミンの合成",
+                        wrapperWidth: "240rem", //rem unit
+                        heading: "カテコラミンの分解・代謝",
                         content:
-                            "アミノ酸であるヒスチジンをヒスタミンに変換することでヒスタミンを合成する。 \n 　　　関連遺伝子：HDC",
+                            "体が過剰なストレスや興奮状態から平常に戻るために、カテコラミンを分解・代謝\nする重要なプロセスです。\n関連遺伝子：COMT, MAOA, MAOB, \nALDH2, SULT1A3, DBH, SLC6A2",
                         contentLineHeight: 1.448333, //lineheight of text
                         posInfo: {
                             top: "11rem",
-                            left: "74rem",
-                            width: "177rem",
+                            left: "0rem",
+                            width: "240rem",
                         },
                         //React DOM Styling of Wrapper paragraph of 2 sentences
                         etcStyle: {},
@@ -44,33 +44,33 @@ const Merit = () => {
                     },
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
-                        wrapperWidth: "160.79rem",
-                        heading: "抗炎症作用",
+                        wrapperWidth: "240rem",
+                        heading: "カテコラミン受容体",
                         content:
-                            "ステロイドの産出を行う。 \n 関連遺伝子：CYP21A2",
+                            "カテコラミンが結合して信号を細胞に伝える\n　　ことで、体内の様々な反応を引き起こし\n　　　　ます\n　　　　　　関連遺伝子：DRD1, DRD2, \n　　　　　　　　　　　　DRD4,ADRA2A",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             top: "11rem",
-                            right: "106.12rem",
-                            width: "160.79rem",
-                        },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
-                        fontSize: 12,
-                    },
-                    {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
-                        wrapperWidth: "177.45rem",
-                        heading: "ヒスタミンの代謝・分解",
-                        content:
-                            "ヒスタミンを無効化し、排出することで、体内のヒスタミンレベルが適切に調整する。 \n 関連遺伝子：HNMT, NAT2,  \n                 ALDH2, UGT1A4",
-                        contentLineHeight: 1.448333,
-                        posInfo: {
-                            top: "107rem",
                             right: "0rem",
-                            width: "177.45rem",
+                            width: "240rem",
+                        },
+                        //React DOM Styling
+                        etcStyle: {},
+                        //tailwind
+                        etcClassName: "",
+                        fontSize: 12,
+                    },
+                    {
+                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
+                        wrapperWidth: "240rem",
+                        heading: "　　　　一酸化窒素 (NO) 合成",
+                        content:
+                            "　　　　　血管の拡張や神経伝達を調整する\n　　　　働きを持ちます\n　　関連遺伝子：NOS2, NOS3",
+                        contentLineHeight: 1.448333,
+                        posInfo: {
+                            bottom: "53rem",
+                            right: "0rem",
+                            width: "240rem",
                         },
                         //React DOM Styling
                         etcStyle: {},
@@ -81,32 +81,14 @@ const Merit = () => {
                     },
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
-                        wrapperWidth: "304.54rem",
-                        heading: "グルテン過敏症/乳糖不耐性/電磁波感受性",
-                        content: `グルテンや乳製品に対して過敏性や不耐症をおこす。  \n 関連遺伝子：HLA-DQ2.2,  HLA-DQ2.5 , HLA-DQ8, \n 　　　　　　MCM6, CACNA1C`,
+                        wrapperWidth: "240rem",
+                        heading: "カテコラミンの合成",
+                        content: `アミノ酸から作られ、脳や副腎で\n生成されます。\n関連遺伝子：TH, GCH1, DHFR`,
                         contentLineHeight: 1.448333,
                         posInfo: {
-                            bottom: "1rem",
-                            right: "87.46rem",
-                            width: "304.54rem",
-                        },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
-                        fontSize: 12,
-                        contentClassName: "tracking-tightest"
-                    },
-                    {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
-                        wrapperWidth: "181.54rem",
-                        heading: "ヒスタミンの作用を \n 仲介する受容体関連",
-                        content: `特定の受容体に結合することで、 \n アレルギー反応などさまざまな \n 生理的反応を引き起こす。 \n 関連遺伝子：HRH1, HRH2, \n 　　　　　　HRH3, HRH4`,
-                        contentLineHeight: 1.448333,
-                        posInfo: {
-                            bottom: "75rem",
+                            bottom: "51rem",
                             left: "0rem",
-                            width: "181.54rem",
+                            width: "240rem",
                         },
                         //React DOM Styling
                         etcStyle: {},
@@ -114,7 +96,7 @@ const Merit = () => {
                         etcClassName: "",
                         fontSize: 12,
                         contentClassName: "tracking-tightest"
-                    }
+                    },
                 ],
             },
         },
