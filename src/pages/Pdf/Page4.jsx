@@ -31,7 +31,7 @@ const Page4 = () => {
                 {/* </p> */}
 
                 <div className="w-[60rem] h-[60rem] absolute mb-[58rem] bottom-0 left-2/4 translate-x-[-50%]">
-                    <img src="./bg/logo.png" alt="" className="w-full h-full" />
+                    <img src="./bg/logo.svg" alt="" className="w-full h-full" />
                 </div>
             <PageNumber>
                 04
