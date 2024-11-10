@@ -15,6 +15,7 @@ const MeritDemerit = (props) => {
                 inCommonStyle={props.inCommonStyle}
                 titleStyle={props.titleStyle}
                 contentStyle={props.contentStyle}
+                wrapperStyle={props.wrapperStyle}
             ></Rit>
             <Rit
                 tag="デメリット"
@@ -23,6 +24,7 @@ const MeritDemerit = (props) => {
                 inCommonStyle={props.inCommonStyle}
                 titleStyle={props.titleStyle}
                 contentStyle={props.contentStyle}
+                wrapperStyle={props.wrapperStyle}
             ></Rit>
         </div>
     );

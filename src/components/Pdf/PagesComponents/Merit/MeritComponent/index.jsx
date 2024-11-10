@@ -16,8 +16,10 @@ const MeritComponent = (props) => {
     const [titleStyle, setTitleStyle] = useState(props.titleStyle || {});
     const [contentStyle, setContentStyle] = useState(props.contentStyle || {}); // Here means that ***child*** of data object in merit component not ***Descendants***
                                                                             // That's different from the Text component's style object
+    
+    const [wrapperStyle, setWrapperStyle] = useState(props.wrapperStyle || {});
     return (
-        <div className='w-[247.5rem] flex flex-col gap-[8rem] mt-[15rem]'>
+        <div className='w-[247.5rem] flex flex-col gap-[8rem] mt-[15rem]' style={wrapperStyle}>
             {/* {props.data.title} */}
             <div className='bg-[#F8F8F8] w-full h-[29rem] rounded-[5rem] flex flex-col items-center justify-center'>
                 {/* <p className='font-bold text-[16rem] text-center'>{props.tag}</p> */}

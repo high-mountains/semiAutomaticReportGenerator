@@ -2,14 +2,13 @@ import React from "react";
 import { useSelector } from "react-redux";
 import ListItem from "./ListItem";
 import PropTypes from "prop-types";
+import pdfData from "../../../../utils/dummyPdf.json";
 
 const QualitySection = (props) => {
     const [mainTextColor, setMainTextColor] = useSelector(
         (store) => store.pdfData.mainTextColor
     );
 
-    // console.log("useSelector((store) => store.pdfData.mainTextColor)=====>", useSelector((store) => store.pdfData.mainTextColor));
-    
     // Styles previously handled by styled-components
     const qualitySectionWrapperStyle = {
         width: props.oneColumn ? "100%" : props.eachUlWidth || "250rem",
@@ -27,17 +26,12 @@ const QualitySection = (props) => {
     };
 
     return (
-        <div style={qualitySectionWrapperStyle}>
-          {/* {(props.qualities1 || props.qualities2) && ( */}
+        <div style={qualitySectionWrapperStyle} className={`text-[${pdfData.mainTextColor}]`}>
             <ul style={ulStyle} className={`text-[${mainTextColor}] list-none list-inside`}>
               {props.qualityArray.length && props.qualityArray.map((item, index) => (
                 <ListItem key={index} data={item} />
               ))}
-              {/* {props.qualityArray && props.qualityArray.map((item, index) => (
-                <ListItem key={index} data={item} color={mainTextColor} />
-              ))} */}
             </ul>
-          {/* )} */}
         </div>
     );
 };

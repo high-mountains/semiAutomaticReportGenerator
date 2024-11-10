@@ -11,6 +11,7 @@ import TypeByType from './TypeByType';
 const GenCategory = lazy(() => import('./GenCategory'));
 const Supplement = lazy(() => import('./Supplement'));
 const SupplementNot = lazy(() => import('./SupplementNot'));
+const References = lazy(() => import('./References.jsx'));
 
 import { downloadPDF } from "../../tool/jspdf";
 
@@ -19,14 +20,16 @@ const Pdf = () => {
         <>
             <div className="pdfcontainer">
                 <div className="pdfwrapper" id="downloadTest">
-                    {/* <Page1/>
+                    <Page1/>
                     <Page2/>
                     <Page3/>
-                    <Page4/> */}
+                    <Page4/>
                     <TypeByType/>
-                    {/* <GenCategory/>
+                    <GenCategory/>
                     <Supplement/>
-                    <SupplementNot/> */}
+                    <SupplementNot/>
+
+                    <References/>
                 </div>
                 <button
                     className="font bg-red-600 w-[200rem] h-[60rem]"

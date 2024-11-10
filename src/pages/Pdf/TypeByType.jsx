@@ -7,16 +7,14 @@ const Mitochondrial = lazy(() => import('./Pages/mitochondrial'));
 const Detox = lazy(() => import('./Pages/detox'));
 const Methylation = lazy(() => import('./Pages/methylation'));
 
-// import Glutamate from "./Pages/glutamate";
-
 const TypeByType = () => {
     return(
         <>
-            {/* <Glutamate/>
+            <Glutamate/>
             <Catecholamine/>
             <Histamine/>
             <Mitochondrial/>
-            <Detox/> */}
+            <Detox/>
             <Methylation/>
         </>
     )

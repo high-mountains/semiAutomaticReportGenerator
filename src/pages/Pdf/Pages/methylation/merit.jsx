@@ -46,7 +46,7 @@ const Merit = () => {
                         wrapperWidth: "240rem",
                         heading: "ホモシステイン代謝",
                         content:
-                            "ホモシステインというアミノ酸を他の物質に\n　　　　変えるこ<span style='color: blue; font-weight: bold; background-color:red'>とで、体内のバランスを保つ\n　　　　　のに重要な役割を果たす遺伝子\n　　　　　　です。</span>\n　　　　　　関連遺伝子：AHCY, BHMT, CBS",
+                            "ホモシステインというアミノ酸を他の物質に\n　　　　変えるこ<span style='color: blue; font-weight: bold; background-color:red'>とで、体内のバランスを保つ\n　　　　　のに重要な役割を果たす遺伝子\n　　　　　　です。\n　　　　　　関連遺伝子：AHCY, BHMT, CBS</span>",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             top: "0rem",
@@ -120,6 +120,12 @@ const Merit = () => {
                     fontSize: "9rem", //default value is ---12rem---
                     lineHeight:1.444444,       //default value is ---1.448333---  12/17.38
                     // color: "red"
+                },
+                inCommonStyle:{
+                    gap: "2rem"     // Here is optional instead of default value 3rem
+                },
+                wrapperStyle: {
+                    gap: "5rem"
                 },
                 merit: [
                     {
