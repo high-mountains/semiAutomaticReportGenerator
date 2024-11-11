@@ -139,7 +139,7 @@ button,
 
 .bg-pic {
   background-image: url("../public/bg/background_outrun.jpg");
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 .ant-btn-primary {

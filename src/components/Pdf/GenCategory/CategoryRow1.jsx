@@ -11,7 +11,7 @@ const CategoryRow1 = (props) => {
             {props.data.map(
                 ({ borderstatus, text, subContent1, subContent2 }, index) => (
                     <Cell1
-                        kye={index}
+                        key={index}
                         borderStatus={borderstatus}
                         content={text}
                         subContent1={subContent1}

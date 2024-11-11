@@ -64,7 +64,7 @@ function Login() {
   return (
     <div className="min-h-screen bg-pic flex items-center">
       <div className="card mx-auto w-full max-w-5xl  shadow-xl">
-        <div className="grid  md:grid-cols-2 grid-cols-1 opacity-90 bg-base-100 rounded-xl">
+        <div className="grid  md:grid-cols-2 grid-cols-1 opacity-80 bg-base-100 rounded-xl">
           <div className="">
             <LandingIntro />
           </div>
@@ -94,7 +94,7 @@ function Login() {
 
               <div className="text-right">
                 <Link replace to="/forgot-password">
-                  <span className="text-sm  inline-block  hover:text-primary underline hover:cursor-pointer transition duration-200">
+                  <span className="text-sm  inline-block  hover:text-[#00C3D0] underline hover:cursor-pointer transition duration-200">
                     Forgot Password?
                   </span>
                 </Link>
@@ -104,7 +104,7 @@ function Login() {
               <button
                 type="submit"
                 className={
-                  "btn mt-2 w-full btn-primary"
+                  "btn mt-2 w-full btn-primary bg-[#00C3D0] border-[#00C3D0]"
                 }
               >
                 Login
@@ -113,7 +113,7 @@ function Login() {
               <div className="text-center  mt-4">
                 Are you new here?{" "}
                 <Link to="/register" replace>
-                  <span className="  inline-block  hover:text-primary underline hover:cursor-pointer transition duration-200">
+                  <span className="  inline-block  hover:text-[#00C3D0] underline hover:cursor-pointer transition duration-200">
                     Register
                   </span>
                 </Link>
