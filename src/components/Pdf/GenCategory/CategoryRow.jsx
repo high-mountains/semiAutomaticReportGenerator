@@ -9,10 +9,6 @@ const CategoryRow = ({bgColor, data}) => {
         
     }, [data]);
     
-    useEffect(() => {
-        console.log("categoryData--->", categoryData);
-    }, [categoryData])
-
     return (
         <div
             className={`w-full py-[5rem] flex flex-wrap items-center justify-start gap-[5rem]`}
