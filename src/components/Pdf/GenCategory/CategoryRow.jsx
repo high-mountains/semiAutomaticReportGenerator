@@ -1,21 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Cell from "./Cell";
 
-const CategoryRow = (props) => {
+const CategoryRow = ({bgColor, data}) => {
+    const [categoryData, setCategoryData] = useState([]);
 
+    useEffect(() => {
+        setCategoryData(data);
+        
+    }, [data]);
+    
     return (
         <div
             className={`w-full py-[5rem] flex flex-wrap items-center justify-start gap-[5rem]`}
-            style={{ backgroundColor: `${props.bgColor}` }}
+            style={{ backgroundColor: `${bgColor}` }}
         >
-            {props.data.map(
+            {categoryData.map(
                 ({ borderstatus, text, subContent1, subContent2 }, index) => (
                     <Cell
-                        kye={index}
-                        borderStatus={borderstatus}
-                        content={text}
-                        subContent1={subContent1}
-                        subContent2={subContent2}
+                        key={index}
+                        borderStatus={borderstatus && borderstatus}
+                        content={text && text}
+                        subContent1={subContent1 && subContent1}
+                        subContent2={subContent2 && subContent2}
                     />
                 )
             )}

@@ -2,11 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 const Cell = (props) => {
-    // const borderClass = "";
-    // if(props.)
     const [color, setColor] = useState(useSelector((store) => store.pdfData.mainTextColor))
     const [borderColor, setBorderColor] = useState("border-[#C5C5C5]");
-    // console.log("props.content====>", props.borderStatus);
     
     useEffect(() => {
         if (props.borderStatus === 0) {
@@ -16,10 +13,10 @@ const Cell = (props) => {
         } else {
             setBorderColor("border-[#C5C5C5] border-[1rem]")
         }
-    }, [])
+    }, [props]);
     
     return (
-        <div className={`w-[82.5rem] h-[40rem] flex items-center justify-center ${borderColor}`}>
+        <div className={`w-[82.5rem] h-[40rem] flex items-center justify-center ${borderColor} text-[${color}]`}>
             <p className={`text-[${color}] text-[12rem] text-center leading-[1.44833] inline-grid`}>
                 {props.content && props.content}
                 <span className='text-[10rem] leading-[1.448] inline-block my-[-1rem]'>

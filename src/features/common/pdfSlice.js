@@ -25,34 +25,40 @@ export const pdfDataSlice = createSlice({
     detoxColor: "#9881D6",
     methylationColor: "#2892DE",
 
+    categoryData: [],
     isLoading: false,
     isUpdated: true,//new article category is added or updated or deleted.
     error: null,
   },
   reducers: {
     loadArticleSuccessCategory: (state, { payload }) => {},
+
+    csvDataUpload: (state, {payload}) => {
+      const category_data = payload.find(file => file.fileName === "category_data.csv");
+      state.categoryData = category_data.data
+    }
   },
   extraReducers: {
-    [fetchPdfData.pending]: (state) => {
-      state.isLoading = true;
-    },
-    [fetchPdfData.fulfilled]: (state, { payload }) => {
-        payload?.data?.length?
-        state.clientName = payload.data.clientName: state.clientName = "clientName undefined yet"
+    // [fetchPdfData.pending]: (state) => {
+    //   state.isLoading = true;
+    // },
+    // [fetchPdfData.fulfilled]: (state, { payload }) => {
+    //     payload?.data?.length?
+    //     state.clientName = payload.data.clientName: state.clientName = "clientName undefined yet"
 
-        payload?.data?.length?
-        state.clientId = payload.data.clientId: state.clientId = "clientId undefined yet"
+    //     payload?.data?.length?
+    //     state.clientId = payload.data.clientId: state.clientId = "clientId undefined yet"
 
-        payload?.data?.length?
-        state.mainColor = payload.data.mainColor: state.mainColor = "mainColor undefined yet"
+    //     payload?.data?.length?
+    //     state.mainColor = payload.data.mainColor: state.mainColor = "mainColor undefined yet"
 
-        payload?.data?.length?
-        state.mainColor = payload.data.mainColor: state.mainColor = "mainColor undefined yet"
+    //     payload?.data?.length?
+    //     state.mainColor = payload.data.mainColor: state.mainColor = "mainColor undefined yet"
             
-    },
-    [fetchPdfData.rejected]: (state) => {
-      state.isLoading = false;
-    },
+    // },
+    // [fetchPdfData.rejected]: (state) => {
+    //   state.isLoading = false;
+    // },
 
     // [addFirstCategory.pending]: (state) => {
     //   state.isLoading = true;
@@ -70,5 +76,5 @@ export const pdfDataSlice = createSlice({
   },
 });
 
-export const { loadArticleSuccessCategory } = pdfDataSlice.actions;
+export const { loadArticleSuccessCategory, csvDataUpload } = pdfDataSlice.actions;
 export default pdfDataSlice.reducer;

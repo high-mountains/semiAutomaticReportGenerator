@@ -9,6 +9,7 @@ import SunIcon from "@heroicons/react/24/outline/SunIcon";
 import { toggleOpen } from "../features/common/sidebarSlice";
 import { Tooltip } from 'antd';
 import { logOut } from "../features/user/userSlice";
+import { csvDataUpload } from "../features/common/pdfSlice";
 import UserImg from "../pages/common/userImg";
 import NotifyPage from "./Notify";
 import { Link, useNavigate } from "react-router-dom";
@@ -25,17 +26,12 @@ function Header() {
     localStorage.getItem("theme")
   );
 
-  const [csvData, setCsvData] = useState([]);
-
-  useEffect(() => {
-    console.log("csvData===>", csvData);
-  }, [csvData])
-
   useEffect(() => {
     if (user) {
       setAvatar(user.avatar)
     }
-  }, [user])
+  }, [user]);
+  
   useEffect(() => {
     themeChange(false);
     if (currentTheme === null) {
@@ -64,7 +60,7 @@ function Header() {
     const files = Array.from(event.target.files);
 
         // Define the specific file names we want to select
-        const allowedFileNames = ["category_data.csv", "gene_data.csv", "recommend_data.csv"];
+        const allowedFileNames = ["category_data.csv", "gene_data.csv", "recommend_data.csv", "rsid_data.csv", "type_data.csv"];
 
         // Filter for only the specific files we're interested in
         const specificCsvFiles = files.filter(file => 
@@ -85,7 +81,8 @@ function Header() {
                         
                         // Once all files are processed, update the state
                         if (allData.length === specificCsvFiles.length) {
-                            setCsvData(allData);
+                            // setCsvData(allData);
+                            dispatch(csvDataUpload(allData));
                         }
                     }
                 });
@@ -99,14 +96,13 @@ function Header() {
       <div className="z-10 flex justify-between shadow-md navbar bg-base-100 py-[8rem]">
         {/* Menu toogle for mobile view or small screen */}
 
-        <div className="w-50rem h-30rem" >
+        <div className="font ml-[10rem]" >
           <input
                 type="file"
                 webkitdirectory="true"
                 directory=""
                 multiple
                 onChange={handleFolderUpload}
-                className="w-full h-full"
             />
         </div>
 
@@ -171,7 +167,6 @@ function Header() {
               <div className="mt-0 mb-0 divider"></div>
               <li>
                 <a onClick={logoutUser} className="text-[16rem]">
-                  
                   Logout
                   </a>
               </li>
