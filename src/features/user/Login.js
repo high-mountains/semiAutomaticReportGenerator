@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from '../../context/AuthContext'
 import InputText from "../../components/Input/InputText";
 import ErrorText from "../../components/Typography/ErrorText";
 import LandingIntro from "./LandingIntro";
@@ -8,6 +9,8 @@ import { signin, resetError } from "./userSlice";
 
 function Login() {
   const navigate = useNavigate();
+  const { login, setPending } = useAuth()
+  
   const INITIAL_LOGIN_OBJ = {
     password: "",
     userId: "",
@@ -36,20 +39,26 @@ function Login() {
   const submitForm = async (e) => {
     try {
       e.preventDefault();
-      // setErrorMessage("");
-      // if (loginObj.userId.trim() === "")
-      //   return setErrorMessage("Email Id is required!");
-      // if (loginObj.password.trim() === "")
-      //   return setErrorMessage("Password is required!");
-      // else {
-      //   setLoading(true);
-      //   // Call API to check user credentials and save token in localstorage
-      //   const res = await dispatch(signin(loginObj));
-      //   // localStorage.setItem("token", "DumyTokenHere")
-      //   setLoading(false);
-      //   // window.location.href = '/app/welcome'
-      // }
-      navigate('/pdf', { replace: true });
+
+      const credential = {
+        email: loginObj.userId,
+        password: loginObj.password
+      }
+      
+      if (login) {
+        if (setPending) setPending(true)
+        login(
+            credential,
+            () => {
+                navigate('/pdf')
+                setErrorMessage('')
+            },
+            () => {
+                setErrorMessage('メールアドレスまたはパスワードが正しくありません。')
+            },
+        )
+        if (setPending) setPending(false)
+    }
     } catch (error) {
       console.log(error);
     }

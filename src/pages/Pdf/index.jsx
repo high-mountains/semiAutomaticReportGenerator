@@ -8,6 +8,7 @@ const Page4 = lazy(() => import('./Page4'))
 
 import TypeByType from './TypeByType';
 
+import AuthLayout from "../../layout/AuthLayout";
 const GenCategory = lazy(() => import('./GenCategory'));
 const Supplement = lazy(() => import('./Supplement'));
 const SupplementNot = lazy(() => import('./SupplementNot'));
@@ -18,19 +19,19 @@ import { downloadPDF } from "../../tool/jspdf";
 
 const Pdf = () => {
     return (
-        <>
+        <AuthLayout>
             <div className="pdfcontainer">
                 <div className="pdfwrapper" id="downloadTest">
-                    <Page1/>
+                    {/* <Page1/>
                     <Page2/>
                     <Page3/>
                     <Page4/>
                     <TypeByType/>
-                    <GenCategory/>
+                    <GenCategory/> */}
                     <Supplement/>
                     <SupplementNot/>
                     <SupplementTable/>
-                    <References/>
+                    {/* <References/> */}
                 </div>
                 <button
                     className="font bg-red-600 w-[200rem] h-[60rem]"
@@ -40,7 +41,7 @@ const Pdf = () => {
                 </button>
             </div>
             
-        </>
+        </AuthLayout>
     )
   }
 

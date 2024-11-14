@@ -43,3 +43,7 @@ html {
         border: 1rem rgba(0, 0, 0, 0.1);
     }
 }
+
+table, th, td {
+    border-bottom: 1rem solid #C5C5C5
+}
