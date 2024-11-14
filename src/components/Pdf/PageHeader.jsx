@@ -12,7 +12,7 @@ const PageHeader = (props) => {
     const [mainTitleStyle, setMainTitleStyle] = useState(props.mainTitleStyle || {});
     
     return (
-        <div className="flex flex-col font-bold mb-[30rem]">
+        <div className="flex flex-col font-bold mb-[30rem]" style={props.containerStyle}>
             <h6
                 className="text-[14rem]"
                 style={{

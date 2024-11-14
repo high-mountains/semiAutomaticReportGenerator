@@ -44,6 +44,50 @@ html {
     }
 }
 
-table, th, td {
-    border-bottom: 1rem solid #C5C5C5
+table.supplement {
+    color: #34495E;
+    line-height: 1.4477;
+}
+
+table.supplement, table.supplement th, table.supplement td {
+    border: 1rem solid #C5C5C5
+}
+
+table.supplement th:nth-child(1) {
+    width: 155rem;
+    
+}
+
+table.supplement th:nth-child(2) {
+    width: 50rem;
+    text-align: center;
+}
+
+table.supplement th:nth-child(3) {
+    width: 65rem;
+    text-align: center;
+}
+table.supplement th:nth-child(4) {
+    width: 185rem;
+}
+
+table.supplement th:nth-child(5) {
+    width: 80rem;
+}
+
+table.supplement th {
+    font-size: 10rem;
+    line-height: 1.448;
+    font-weight: 400;
+    height: 30rem;
+    background-color: #f8f8f8;
+}
+
+table.supplement td {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+table tr {
+    height: 31rem;
 }
