@@ -11,7 +11,8 @@ import TypeByType from './TypeByType';
 const GenCategory = lazy(() => import('./GenCategory'));
 const Supplement = lazy(() => import('./Supplement'));
 const SupplementNot = lazy(() => import('./SupplementNot'));
-const References = lazy(() => import('./References.jsx'));
+const SupplementTable = lazy(() => import('./SupplementTable'));
+const References = lazy(() => import('./References'));
 
 import { downloadPDF } from "../../tool/jspdf";
 
@@ -28,7 +29,7 @@ const Pdf = () => {
                     <GenCategory/>
                     <Supplement/>
                     <SupplementNot/>
-
+                    <SupplementTable/>
                     <References/>
                 </div>
                 <button
