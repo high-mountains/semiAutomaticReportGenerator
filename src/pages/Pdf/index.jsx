@@ -19,7 +19,7 @@ import { downloadPDF } from "../../tool/jspdf";
 
 const Pdf = () => {
     return (
-        <AuthLayout>
+        // <AuthLayout>
             <div className="pdfcontainer">
                 <div className="pdfwrapper" id="downloadTest">
                     {/* <Page1/>
@@ -28,8 +28,8 @@ const Pdf = () => {
                     <Page4/>
                     <TypeByType/>
                     <GenCategory/> */}
-                    <Supplement/>
-                    <SupplementNot/>
+                    {/* <Supplement/>
+                    <SupplementNot/> */}
                     <SupplementTable/>
                     {/* <References/> */}
                 </div>
@@ -41,7 +41,7 @@ const Pdf = () => {
                 </button>
             </div>
             
-        </AuthLayout>
+        // </AuthLayout>
     )
   }
 

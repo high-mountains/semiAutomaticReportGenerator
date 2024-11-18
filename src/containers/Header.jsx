@@ -103,6 +103,7 @@ function Header() {
                 directory=""
                 multiple
                 onChange={handleFolderUpload}
+                className="w-full h-[45rem]"
             />
         </div>
 

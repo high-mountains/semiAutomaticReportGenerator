@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import PageWrapper from "../../../components/Pdf/PageWrapper";
 import PageNumber from "../../../components/Pdf/PageNumber";
 import PageHeader from "../../../components/Pdf/PageHeader";
-// import Table from "../../../components/Pdf/Supplements/Table";
 import TableNew from "../../../components/Pdf/Supplements/TableNew";
 
 const Supplement1 = (props) => {
-    const [tableData, setTableData] = useState();
 
     return (
         <PageWrapper>
@@ -25,288 +23,201 @@ const Supplement1 = (props) => {
                     lineHeight: 1.6,
                 }}
             />
-            {/* <Table
-                tHeader={{
-                    headerContent: [
-                        "カテゴリー",
-                        "遺伝子",
-                        "変異の大きさ",
-                        "摂取すべきもの",
-                        "避けるべきもの",
-                    ],
-                    headerWidth: [1, 2], //There will be default width
-                }}
-                tBody={[    
+            <TableNew
+                tBody={[
                     {
-                        // trHeight: 40, //default is 30(rem)
-                        // rowSpan: 5, //default is 1
                         thContent: {
                             main: "グルタミン酸合成",
-                            content: "興奮性神経伝達物質の生成に関わる",
-                            mainStyle: "", //optional
-                            contentStyle: "", //optional
+                            sub: "興奮性神経伝達物質の生成に関わる",
                         },
-                        tdContent: [
-                            { tag: "GLS2", style: {} },
-                            { tag: -2, style: {} },
-                            {
-                                tag: "グルタミン, Lグルタミン, NAC, ビタミンB群",
-                                style: {}
-                            },
-                            { tag: "-" },
-                        ],
+                        tdContent: {
+                            gen: "GLS2",
+                            danger: 6,  // Dynamically updated based on state
+                            description: "グルタミン, L-グルタミン, NAC, ビタミンB群",
+                        }
                     },
                     {
-                        rowSpan: 7, //default is 1
+                        rowSpan: 7,
                         thContent: {
                             main: "グルタミン酸代謝",
-                            content: "興奮性神経伝達物質の分解に関わる",
-                            mainStyle: "", //optional
-                            contentStyle: "", //optional
+                            sub: "興奮性神経伝達物質の分解に関わる",
                         },
-                        tdContent: [
-                            { tag: "CBS" },
-                            { tag: 0 },
-                            {
-                                tag: "ビタミンB6（補因子）, ヘム（補因子）, メチルビタミンB12, 5MTHF, NAC, ベタイン",
-                                style: {}
-                            },
-                            { tag: "-" },
-                        ],
+                        tdContent: {
+                            gen: "CBS",
+                            danger: 0,
+                            description: "ビタミンB6（補因子）, ヘム（補因子）, メチルビタミンB12, 5MTHF, NAC, ベタイン",
+                        }
                     },
                     {
-                        tdContent: [
-                            { tag: "CTH" },
-                            { tag: -1 },
-                            {
-                                tag: "ビタミンB6（補因子）, NAC, メチルフォレート, メチルビタミンB12",
-                                style: {}
-                            },
-                            { tag: "-" },
-                        ],
+                        tdContent: {
+                            gen: "CTH",
+                            danger: 0,
+                            description: "ビタミンB6（補因子）, NAC, メチルフォレート, メチルビタミンB12",
+                        }
                     },
                     {
-                        tdContent: [
-                            { tag: "DAO" },
-                            { tag: -1 },
-                            {
-                                tag: "リボフラビン（補因子）, NAC, セレン, オメガ3, ビタミンB6",
-                            },
-                            { tag: "-" },
-                        ],
+                        // rowSpan: 7,
+                        tdContent: {
+                            gen: "DAO",
+                            danger: 4,
+                            description: "リボフラビン（補因子）, NAC, セレン, オメガ3, ビタミンB6",
+                        }
                     },
                     {
-                        tdContent: [
-                            { tag: "DAOA" },
-                            { tag: -2 },
-                            {
-                                tag: "リボフラビン（補因子）, NAC, セレン, オメガ3, ビタミンB6",
-                            },
-                            { tag: "-" },
-                        ],
+                        // rowSpan: 7,
+                        tdContent: {
+                            gen: "DAOA",
+                            danger: 4,
+                            description: "リボフラビン（補因子）, NAC, セレン, オメガ3, ビタミンB6",
+                        }
                     },
                     {
-                        tdContent: [
-                            { tag: "GAD1" },
-                            { tag: -2 },
-                            {
-                                tag: "P5P（補因子）, L-グルタミン, GABA, L-テアニン, マグネシウム",
-                            },
-                            { tag: "-" },
-                        ],
+                        tdContent: {
+                            gen: "GAD1",
+                            danger: 1,
+                            description: "P5P（補因子）, L-グルタミン, GABA, L-テアニン, マグネシウム",
+                        }
                     },
                     {
-                        tdContent: [
-                            { tag: "GLUD1" },
-                            { tag: -2 },
-                            {
-                                tag: "NAD+（補因子）, L-グルタミン, NAC, ビタミンB群",
-                            },
-                            { tag: "-" },
-                        ],
+                        tdContent: {
+                            gen: "GLUD1",
+                            danger: 1,
+                            description: "NAD+（補因子）, L-グルタミン, NAC, ビタミンB群",
+                        }
                     },
                     {
-                        tdContent: [
-                            { tag: "GAD1" },
-                            { tag: -2 },
-                            {
-                                tag: "NAC, ビタミンB群, αリポ酸",
-                            },
-                            { tag: "-" },
-                        ],
+                        tdContent: {
+                            gen: "GLUL",
+                            danger: 1,
+                            description: "NAC, ビタミンB群, αリポ酸",
+                        }
                     },
                     {
                         thContent: {
                             main: "グルタミン酸輸送体",
-                            content: "興奮性神経伝達物質の移動に関わる",
+                            sub: "興奮性神経伝達物質の移動に関わる",
                         },
-                        tdContent: [
-                            { tag: "SLC1A1", style: {} },
-                            { tag: -2, style: {} },
-                            {
-                                tag: "ナトリウム, カリウム, マグネシウム, ビタミンB群, オメガ3",
-                                style: {}
-                            },
-                            { tag: "-" },
-                        ],
+                        tdContent: {
+                            gen: "SLC1A1",
+                            danger: 2,  // Dynamically updated based on state
+                            description: "ナトリウム, カリウム, マグネシウム, ビタミンB群, オメガ3",
+                        }
                     },
                     {
                         thContent: {
                             main: "GABA代謝",
-                            content: "リラックス成分の代謝に関わる",
+                            sub: "リラックス成分の代謝に関わる",
                         },
-                        tdContent: [
-                            { tag: "ALDH5A1", style: {} },
-                            { tag: -2, style: {} },
-                            {
-                                tag: "銅, 鉄, L-カルニチン, ビタミンB群, NAD+, リボフラビン, αリポ酸, CoQ10",
-                                style: {}
-                            },
-                            { tag: "-" },
-                        ],
+                        tdContent: {
+                            gen: "ALDH5A1",
+                            danger: 3,  // Dynamically updated based on state
+                            description: "銅, 鉄, L-カルニチン, ビタミンB群, NAD+, リボフラビン, αリポ酸, CoQ10",
+                        }
                     },
                     {
                         rowSpan: 3,
                         thContent: {
                             main: "GABA受容体",
-                            content: "リラックス成分の感度に関わる",
+                            sub: "リラックス成分の感度に関わる",
                         },
-                        tdContent: [
-                            { tag: "GABRA1", style: {} },
-                            { tag: -2, style: {} },
-                            {
-                                tag: "GABA, マグネシウム, タウリン, L-テアニン",
-                                style: {}
-                            },
-                            { tag: "-" },
-                        ],
+                        tdContent: {
+                            gen: "GABRA1",
+                            danger: 0,
+                            description: "GABA, マグネシウム, タウリン, L-テアニン",
+                        }
                     },
                     {
-                        tdContent: [
-                            { tag: "GABRA2", style: {} },
-                            { tag: -1, style: {} },
-                            {
-                                tag: "GABA, マグネシウム, タウリン, L-テアニン",
-                                style: {}
-                            },
-                            { tag: "-" },
-                        ],
+                        tdContent: {
+                            gen: "GABRA2",
+                            danger: 0,
+                            description: "GABA, マグネシウム, タウリン, L-テアニン",
+                        }
                     },
                     {
-                        tdContent: [
-                            { tag: "GABRG2", style: {} },
-                            { tag: -1, style: {} },
-                            {
-                                tag: "GABA, マグネシウム, タウリン, L-テアニン",
-                                style: {}
-                            },
-                            { tag: "-" },
-                        ],
+                        tdContent: {
+                            gen: "GABRG2",
+                            danger: 0,
+                            description: "GABA, マグネシウム, タウリン, L-テアニン",
+                        }
                     },
                     {
                         rowSpan: 3,
                         thContent: {
                             main: "カテコラミン合成",
-                            content: "ストレス反応や覚醒に影響する神経伝達物質の生成に関わる",
+                            sub: "ストレス反応や覚醒に影響する神経伝達物質の生成に関わる",
                         },
-                        tdContent: [
-                            { tag: "DHFR", style: {} },
-                            { tag: -2, style: {} },
-                            {
-                                tag: "NAD+（補因子）, ビタミンB12, メチルフォレート",
-                                style: {}
-                            },
-                            { tag: "-" },
-                        ],
+                        tdContent: {
+                            gen: "DHFR",
+                            danger: 0,
+                            description: "NAD+（補因子）, ビタミンB12, メチルフォレート",
+                        }
                     },
                     {
-                        tdContent: [
-                            { tag: "GCH1", style: {} },
-                            { tag: -1, style: {} },
-                            {
-                                tag: "L-フェニルアラニン, L-チロシン, 5-HTP, ビタミンB群, NAC",
-                                style: {}
-                            },
-                            { tag: "-" },
-                        ],
+                        tdContent: {
+                            gen: "GCH1",
+                            danger: 0,
+                            description: "L-フェニルアラニン, L-チロシン, 5-HTP, ビタミンB群, NAC",
+                        }
                     },
                     {
-                        tdContent: [
-                            { tag: "TH", style: {} },
-                            { tag: -1, style: {} },
-                            {
-                                tag: "BH4（補因子）, L-チロシン, ビタミンB群, メチルフォレート",
-                                style: {}
-                            },
-                            { tag: "-" },
-                        ],
+                        tdContent: {
+                            gen: "TH",
+                            danger: 0,
+                            description: "BH4（補因子）, L-チロシン, ビタミンB群, メチルフォレート",
+                        }
                     },
                     {
                         rowSpan: 3,
                         thContent: {
                             main: "カテコラミン代謝",
-                            content: "ストレス反応や覚醒に影響する神経伝達物質の分解に関わる",
+                            sub: "ストレス反応や覚醒に影響する神経伝達物質の分解に関わる",
                         },
-                        tdContent: [
-                            { tag: "COMT", style: {} },
-                            { tag: -2, style: {} },
-                            {
-                                tag: "マグネシウム, ビタミンB6, ビタミンB12, メチルフォレート, SAMe（補因子）, NAC",
-                                style: {}
-                            },
-                            { tag: "便秘, ピル" },
-                        ],
+                        tdContent: {
+                            gen: "COMT",
+                            danger: 0,
+                            description: "マグネシウム, ビタミンB6, ビタミンB12, メチルフォレート, SAMe（補因子）, NAC",
+                            etc: "便秘, ピル"
+                        }
                     },
                     {
-                        tdContent: [
-                            { tag: "MAOA", style: {} },
-                            { tag: -2, style: {} },
-                            {
-                                tag: "リボフラビン（補因子）, マグネシウム, ビタミンB2, ビタミンB6, ビタミンB12, フォレート",
-                                style: {}
-                            },
-                            { tag: "-" },
-                        ],
+                        tdContent: {
+                            gen: "MAOA",
+                            danger: 0,
+                            description: "リボフラビン（補因子）, マグネシウム, ビタミンB2, ビタミンB6, ビタミンB12, フォレート",
+                        }
                     },
                     {
-                        tdContent: [
-                            { tag: "MAOB", style: {} },
-                            { tag: -1, style: {} },
-                            {
-                                tag: "マグネシウム, ビタミンB2, ビタミンB6, ビタミンB12, フォレート",
-                                style: {}
-                            },
-                            { tag: "-" },
-                        ],
+                        tdContent: {
+                            gen: "MAOB",
+                            danger: 0,
+                            description: "マグネシウム, ビタミンB2, ビタミンB6, ビタミンB12, フォレート",
+                        }
                     },
                     {
-                        rowSpan: 2,
+                        rowSpan: 3,
                         thContent: {
                             main: "ドーパミン受容体",
-                            content: "快楽や覚醒に影響する興奮性神経伝達物質の感度に関わる",
+                            sub: "快楽や覚醒に影響する興奮性神経伝達物質の感度に関わる",
                         },
-                        tdContent: [
-                            { tag: "DRD1", style: {} },
-                            { tag: -2, style: {} },
-                            {
-                                tag: "L-チロシン, ビタミンB6, オメガ3, フォスファチジルコリン, ビタミンD, マグネシウム",
-                            },
-                            { tag: "-" },
-                        ],
+                        tdContent: {
+                            gen: "DRD1",
+                            danger: 0,
+                            description: "L-チロシン, ビタミンB6, オメガ3, フォスファチジルコリン, ビタミンD, マグネシウム",
+                        }
                     },
                     {
-                        tdContent: [
-                            { tag: "DRD2", style: {} },
-                            { tag: -1, style: {} },
-                            {
-                                tag: "L-チロシン, ビタミンB6, オメガ3, フォスファチジルコリン, ビタミンD, マグネシウム",
-                            },
-                            { tag: "-" },
-                        ],
-                    },
+                        tdContent: {
+                            gen: "DRD2",
+                            danger: 0,
+                            description: "L-チロシン, ビタミンB6, オメガ3, フォスファチジルコリン, ビタミンD, マグネシウム",
+                        }
+                    }
                 ]}
-            /> */}
-            <PageNumber>XXX</PageNumber>
+            />
+            {/* Old Table code can be safely removed if no longer needed */}
+            <PageNumber>
+                XXX
+            </PageNumber>
         </PageWrapper>
     );
 };
