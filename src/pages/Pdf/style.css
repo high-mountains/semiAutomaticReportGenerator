@@ -40,6 +40,65 @@ html {
         font-size: 16rem;
         width: 100vw;
         height: 847rem;
-        border: 1rem rgba(0, 0, 0, 0.1);
+        border: 1px rgba(0, 0, 0, 0.1);
     }
+}
+
+table.supplement {
+    color: #34495E;
+    line-height: 1.4477;
+}
+
+table.supplement, table.supplement th, table.supplement td {
+    border: 1px solid #C5C5C5
+}
+
+table.supplement th:nth-child(1) {
+    width: 155rem;
+    
+}
+
+table.supplement th:nth-child(2) {
+    width: 50rem;
+    text-align: center;
+}
+
+table.supplement th:nth-child(3) {
+    width: 65rem;
+    text-align: center;
+}
+table.supplement th:nth-child(4) {
+    width: 185rem;
+}
+
+table.supplement th:nth-child(5) {
+    width: 80rem;
+}
+
+table.supplement th {
+    font-size: 10rem;
+    line-height: 1.448;
+    font-weight: 400;
+    height: 30rem;
+    background-color: #f8f8f8;
+}
+
+table.supplement td {
+    padding-left: 3.25rem;
+    padding-right: 3.25rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+table.supplement td:nth-last-child(5) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+table.supplement td:nth-last-child(4) {
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+
+table tr {
+    height: 30rem;
 }

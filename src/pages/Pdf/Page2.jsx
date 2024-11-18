@@ -31,7 +31,7 @@ function Page2() {
 
     return(
         <>
-            <div className={`page font outline outline-1 outline-[${pdfData.mainTextColor}] printUnit`}>
+            <div className={`page font border-[1rem] border-[rgba(0,0,0,0.1)] rounded-[2rem] printUnit`}>
                 <div className="flex flex-col items-center" style={{marginTop: "175.5rem", marginBottom: "175.5rem"}}>
                     <Text
                         textContent={"目次"}

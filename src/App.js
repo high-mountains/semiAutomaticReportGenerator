@@ -27,19 +27,19 @@ initializeApp();
 checkAuth();
 
 function App() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const token = localStorage.getItem('token')
 
-  useEffect(() => {
-    if (token) {
-      axios.defaults.headers.common["Authorization"] = token;
-      try {
-        dispatch(getUser());
-      } catch (e) {
-        window.location.href = "/login";
-      }
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (token) {
+  //     axios.defaults.headers.common["Authorization"] = token;
+  //     try {
+  //       dispatch(getUser());
+  //     } catch (e) {
+  //       window.location.href = "/login";
+  //     }
+  //   }
+  // }, []);
 
   const PUBLIC_ROUTES = [
     "login",
@@ -50,10 +50,10 @@ function App() {
   const isPublicPage = PUBLIC_ROUTES.some((r) =>
     window.location.href.includes(r)
   );
-  if (!token && !isPublicPage) {
-    delete axios.defaults.headers.common["Authorization"];
-    window.location.href = "/login";
-  }
+  // if (!token && !isPublicPage) {
+  //   delete axios.defaults.headers.common["Authorization"];
+  //   window.location.href = "/login";
+  // }
   useEffect(() => {
     // 👆 daisy UI themes initialization
     themeChange(false);
