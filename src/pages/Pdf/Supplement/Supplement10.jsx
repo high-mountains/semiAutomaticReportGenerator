@@ -185,7 +185,7 @@ const Supplement10 = (props) => {
             />
             {/* Old Table code can be safely removed if no longer needed */}
             <PageNumber>
-                XXX10
+                35
             </PageNumber>
         </PageWrapper>
     );

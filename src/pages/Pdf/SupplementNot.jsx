@@ -74,7 +74,7 @@ const SupplementNot = () => {
                     },
                 ]}
             />
-            <PageNumber>24</PageNumber>
+            <PageNumber>25</PageNumber>
         </PageWrapper>
     );
 };

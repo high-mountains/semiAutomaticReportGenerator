@@ -1,6 +1,7 @@
 html {
     font-size: calc(100vw / 593);
     box-sizing: border-box;
+    font-family: "Noto Sans JP"
 }
 
 .pdfwrapper {
@@ -55,7 +56,6 @@ table.supplement, table.supplement th, table.supplement td {
 
 table.supplement th:nth-child(1) {
     width: 155rem;
-    
 }
 
 table.supplement th:nth-child(2) {
@@ -101,4 +101,26 @@ table.supplement td:nth-last-child(4) {
 
 table tr {
     height: 30rem;
+}
+
+table.geneInfo {
+    text-align: center;
+    line-height: 1.4483;
+}
+table.geneInfo, table.geneInfo th, table.geneInfo td {
+    border: 1px solid #C5C5C5;
+}
+
+table.geneInfo th, table.geneInfo td {
+    width: 33.33%;
+}
+
+table.geneInfo th {
+    background-color: #f8f8f8;
+    font-weight: 400;
+    padding: 5.9rem 10rem;
+}
+
+table.geneInfo td {
+    padding: 8.4rem 0rem;
 }

@@ -4,14 +4,6 @@ import Text from "../../Text"
 const Explanation = (props) => {
     const [gap, setGap] = useState(10);
     
-    useEffect(() => {
-        {props.gap ? setGap(props.gap * 1.0): setGap(10)}
-        // console.log("sidebarColor in Explanation==>", props.sidebarColor)
-
-        // console.log("props.sidebarColor==>", props.sidebarColor);
-        
-    }, [props]);
-
     return (
         <div className='flex flex-col my-[30rem] gap-[10rem]'>
             <Text

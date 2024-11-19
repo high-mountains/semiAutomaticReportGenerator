@@ -111,55 +111,21 @@ const Merit = () => {
         {
             Component: MeritDemerit,
             data: {
-                commonStyle:{
-                    // gap: "5rem"  // Here is optional instead of default value 8rem
-                },
-                inCommonStyle:{
-                    // gap: "2rem"     // Here is optional instead of default value 3rem
-                },
-                titleStyle:{
-                    //  HERE  WILL  BE  NO  CHANGE
-
-                    // fontSize: "9rem", //default value is ---12rem---
-                    // lineHeight:1.444444       //default value is ---1.448333---  12/17.38
-                },
-                contentStyle:{
-                    // fontSize: "9rem", //default value is ---12rem---
-                    // lineHeight:1.444444       //default value is ---1.448333---  12/17.38
-                },
                 merit: [
                     {
                         title: "集中力の向上",
                         content:
                             "カテコラミンは注意力と集中力を高め、認知機能を向上させます。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }    
                     },
                     {
                         title: "瞬発力の向上",
                         content:
                             "カテコラミンはストレス状況下での迅速な反応や瞬発力を高め、緊急時の対応能力を向上させます。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }
                     },
                     {
                         title: "モチベーションの向上",
                         content:
                             "ドーパミンは目標達成への意欲を高め、行動を促進します。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }
                     },
                 ],
                 demerit: [
@@ -167,34 +133,16 @@ const Merit = () => {
                         title: "情緒の不安定",
                         content:
                             "ノルアドレナリンとアドレナリンが高すぎると、イライラや攻撃的な行動（「キレる」状態）を引き起こすことがあります。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }
                     },
                     {
                         title: "不安やストレスの増加",
                         content:
                             "高いカテコラミンレベルは慢性的な不安やストレスを引き起こし、心身の健康に悪影響を与えることがあります。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }
                     },
                     {
                         title: "睡眠障害",
                         content:
                             "過剰なカテコラミンは覚醒状態を維持しすぎ、睡眠の質を低下させることがあります。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }
                     },
                 ],
             },
@@ -210,7 +158,7 @@ const Merit = () => {
         <EnhancedMerit />
 
         <PageNumber>
-            13
+            10
         </PageNumber>
     </PageWrapper>
 

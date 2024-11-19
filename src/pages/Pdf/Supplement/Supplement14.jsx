@@ -201,7 +201,7 @@ const Supplement14 = (props) => {
                 ]}
             />
             {/* Old Table code can be safely removed if no longer needed */}
-            <PageNumber>XXX14</PageNumber>
+            <PageNumber>39</PageNumber>
         </PageWrapper>
     );
 };

@@ -4,7 +4,6 @@ import TableHeader from "./TableHeader";
 const TableNew = (props) => {
     const [tBody, setTBody] = useState(props.tBody || {});
     useEffect(() => {
-        console.log("props.tBody==>", props.tBody);
         setTBody(props.tBody)
     },[props.tBody])
 

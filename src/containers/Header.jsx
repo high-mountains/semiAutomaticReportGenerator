@@ -93,7 +93,7 @@ function Header() {
 
   return (
     <>
-      <div className="z-10 flex justify-between shadow-md navbar bg-base-100 py-[8rem]">
+      <div className="z-10 flex justify-between shadow-md navbar bg-base-100">
         {/* Menu toogle for mobile view or small screen */}
 
         <div className="font ml-[10rem]" >
@@ -109,7 +109,7 @@ function Header() {
 
         <div className="order-last">
           
-          <label className="px-[10rem] swap">
+          {/* <label className="px-[10rem] swap">
             <input type="checkbox" />
             <SunIcon
               data-set-theme="light"
@@ -127,11 +127,11 @@ function Header() {
                 (currentTheme === "light" ? "swap-on" : "swap-off")
               }
             />
-          </label>
+          </label> */}
 
-          <NotifyPage />
+          {/* <NotifyPage /> */}
 
-          <div className="dropdown dropdown-end">
+          {/* <div className="dropdown dropdown-end">
             <label
               tabIndex={0}
               className="pt-[0rem] btn btn-ghost btn-full avatar h-[64rem]"
@@ -172,7 +172,7 @@ function Header() {
                   </a>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div >
     </>
