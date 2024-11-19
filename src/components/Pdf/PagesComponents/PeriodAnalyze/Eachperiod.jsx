@@ -8,16 +8,14 @@ const Eachperiod = (props) => {
             <div className="w-[60rem] h-[70rem]">
                 <img src={props.imgURL} alt=""  className="w-full h-full"/>
             </div>
-            {/* <div> */}
                 <Text
                     textContent={props.sentences}
-                    fontSize={10}
+                    fontSize={12}
                     className={"text-justify w-[456rem]"}
                     style={{
                         lineHeight:1.448
                     }}
                 />
-            {/* </div> */}
         </div>
     );
 };

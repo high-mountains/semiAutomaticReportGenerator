@@ -26,9 +26,9 @@ const Merit = () => {
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "269rem", //rem unit
-                        heading: "脳の解毒",
+                        heading: "<span class='blue'>細胞質</span>の解毒",
                         content:
-                            "神経細胞を保護し、酸化ストレスを減らすための独自の解毒システムを持っています。 \n 関連遺伝子：SOD1, SOD2, NOX1, NOX4",
+                            "体内の酸化ストレス管理において中心的な役割を果たし、細胞や組織の健康維持に不可欠です。\n関連遺伝子：SOD1",
                         contentLineHeight: 1.448333, //lineheight of text
                         posInfo: {
                             top: "0rem",
@@ -46,8 +46,8 @@ const Merit = () => {
                         wrapperWidth: "230rem",
                         heading: "肺の解毒",
                         content:
-                            "吸入された毒素や微粒子を体外に排出するためのフィルターの役割を果たします。 \n 関連遺伝子：SOD3",
-                        contentLineHeight: 1.448333,
+                            "肺において酸化ストレスの制御と組織保護に不可欠な役割を果たします。\n関連遺伝子：SOD3",
+                        contentLineHeight: 1.448,
                         posInfo: {
                             top: "0rem",
                             right: "0rem",
@@ -57,14 +57,14 @@ const Merit = () => {
                         etcStyle: {},
                         //tailwind
                         etcClassName: "",
-                        fontSize: 10,
+                        fontSize: 10
                     },
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "169rem",
                         heading: "肝臓の解毒",
                         content:
-                            "体内で最も主要な解毒器官であり、薬物や有害物質を代謝して無害化します。 \n 関連遺伝子: SULT1A1, UGT1A1, NAT1, 　　　　　　NAT2, CYP450",
+                            "体内で最も主要な解毒器官であり、薬物や有害物質を代謝して無害化します。\n関連遺伝子: SULT1A1, UGT1A1, NAT1, 　　　　　　NAT2, CYP450, PON1等",
                         contentLineHeight: 1.448,
                         posInfo: {
                             top: "99rem",
@@ -76,16 +76,16 @@ const Merit = () => {
                         //tailwind
                         etcClassName: "",
                         fontSize: 10,
-                        contentClassName: "tracking-tightest",
+                        contentClassName: "tracking-tightest"
                     },
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "240rem",
                         heading: "腎臓の解毒",
-                        content: `血液をろ過して尿を生成し、毒素や老廃物を体外に排出します。水溶性の物質を効果的に除去する能力が高いです。 \n 関連遺伝子: PON1, GPX3`,
+                        content: `血液をろ過して尿を生成し、毒素や老廃物を体外に排出します。水溶性の物質を効果的に除去する能力が高いです。\n関連遺伝子: GPX3,  NOX4`,
                         contentLineHeight: 1.448333,
                         posInfo: {
-                            bottom: "3rem",
+                            bottom: "-5rem",
                             right: "0rem",
                             width: "240rem",
                         },
@@ -94,13 +94,13 @@ const Merit = () => {
                         //tailwind
                         etcClassName: "",
                         fontSize: 10,
-                        contentClassName: "tracking-tightest",
+                        contentClassName: "tracking-tightest"
                     },
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "240rem",
                         heading: "腸の解毒",
-                        content: `食物から吸収される有害物質を排出する役割があります。また、腸内細菌も毒素の代謝に寄与します。\n 関連遺伝子: GPX2`,
+                        content: `食物から吸収される有害物質を排出する役割があります。また、腸内細菌も毒素の代謝に寄与します。\n関連遺伝子: GPX2, NOX1`,
                         contentLineHeight: 1.448333,
                         posInfo: {
                             bottom: "3rem",
@@ -112,13 +112,13 @@ const Merit = () => {
                         //tailwind
                         etcClassName: "",
                         fontSize: 10,
-                        contentClassName: "tracking-tightest",
+                        contentClassName: "tracking-tightest"
                     },
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "173rem",
-                        heading: "皮膚の解毒",
-                        content: `紫外線や汚染物質からの酸化ストレスを防ぎ、汗を通じて一部の毒素を排出します。\n 関連遺伝子：GSTA1, GSTP1, NQ01`,
+                        heading: "ミトコンドリアの解毒",
+                        content: `エネルギー代謝が活発な組織で酸化ストレスを防ぎます。\n関連遺伝子：SOD2`,
                         contentLineHeight: 1.448333,
                         posInfo: {
                             top: "102rem",
@@ -130,7 +130,7 @@ const Merit = () => {
                         //tailwind
                         etcClassName: "",
                         fontSize: 10,
-                        contentClassName: "tracking-tightest",
+                        contentClassName: "tracking-tightest"
                     },
                 ],
             },
@@ -154,7 +154,7 @@ const Merit = () => {
                     gap: "2rem", // Here is optional instead of default value 3rem
                 },
                 contentStyle: {
-                    fontSize: "9rem", //default value is ---12rem---
+                    fontSize: "10rem", //default value is ---12rem---
                     lineHeight: 1.444444,
                 },
 
@@ -164,51 +164,30 @@ const Merit = () => {
                         content:
                             "毒素の排泄が促進されることで、脳内の炎症が軽減され、認知機能の低下や精神的な不調を予防することができます。",
                         contentStyle: {
-                            letterSpacing: "-0.09rem",
-                        },
+                            // letterSpacing: "-0.09rem",
+                        }
                     },
                     {
                         title: "認知症のリスク低減",
                         content:
-                            "脳内の炎症が抑えられることで、認知症の発症リスクを減らすことができます。",
+                            "脳内の炎症が抑えられることで、認知症の発症リスクを減らすことができます。"
                     },
                     {
                         title: "精神の安定",
                         content:
                             "毒素の蓄積が減少することで、精神的な健康が向上し、不安やうつ症状の軽減につながります。",
-                    },
-                    {
-                        title: "体力UP",
-                        content:
-                            "解毒により酸化ストレスが軽減し、ミトコンドリアによるエネルギー産生の効率がUPし体全体のエネルギーレベルが増加。",
-                    },
-                    {
-                        title: "免疫UP",
-                        content:
-                            "酸化ストレスの軽減により免疫系が整い、自己免疫疾患のリスク軽減や慢性炎症の軽減、さらに感染症に対する抵抗力が増加。",
-                    },
+                    }
                 ],
                 demerit: [
                     {
                         title: "神経炎症",
                         content:
-                            "毒素の蓄積により脳内で炎症が発生し、神経細胞が損傷を受けることがあります。",
-                    },
-                    {
-                        title: "認知機能の低下",
-                        content:
-                            "脳内の炎症が長期間続くと、記憶力や判断力、集中力などの認知機能が低下する可能性があります。",
-                    },
-                    {
-                        title: "精神的な不調",
-                        content:
-                            "毒素の影響で脳内の化学物質バランスが崩れ、不安やうつ症状が現れることがあります。",
+                            "毒素の蓄積により脳内で炎症が発生し、神経細胞が損傷を受けることがあります。"
                     },
                     {
                         title: "ホルモンバランスの乱れ",
                         content:
-                            "環境ホルモンからの影響で月経不順、不妊、更年期症状の悪化や発達の影響、がんのリスクが高まることも。",
-                        className: "tracking-tightest",
+                            "環境ホルモンからの影響で、月経不順・不妊・更年期症状の悪化・がんのリスクが高まることがあります。"
                     },
                 ],
             },
@@ -218,7 +197,7 @@ const Merit = () => {
         <>
             <PageWrapper>
                 <PageHeader
-                    subtitle={"Detox Type"}
+                    subtitle={"Detoxification Type"}
                     mainTitle={"デトックスタイプ"}
                 ></PageHeader>
                 <EnhancedMerit />

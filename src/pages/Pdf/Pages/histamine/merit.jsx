@@ -21,7 +21,6 @@ const Merit = () => {
                 height: "345",
                 imageURL: "bg/abilityHistamine.svg",
                 contentFontSize: "12rem", //The contentSize is same among a page so have to be global
-                commonStyle: {},
                 descriptions: [
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
@@ -46,7 +45,7 @@ const Merit = () => {
                         wrapperWidth: "160.79rem",
                         heading: "抗炎症作用",
                         content:
-                            "ステロイドの産出を行う。 \n 関連遺伝子：CYP21A2",
+                            "<span class='blue'>ステロイド</span>の産出を行う。 \n 関連遺伝子：CYP21A2",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             top: "11rem",
@@ -139,11 +138,6 @@ const Merit = () => {
                         content:
                             "ヒスタミンは脳のシナプス可塑性に影響を与え、記憶の形成と学習能力を支援します。",
                     },
-                    // {
-                    //     title: "集中力の向上",
-                    //     content:
-                    //         "グルタミン酸は注意力を高め、情報処理速度を向上させます。",
-                    // },
                 ],
                 demerit: [
                     {

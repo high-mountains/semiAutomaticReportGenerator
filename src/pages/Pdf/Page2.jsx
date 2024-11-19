@@ -53,6 +53,7 @@ function Page2() {
                                 lineHeight: 2,
                             }}
                         />
+                        <span className="dots"></span>
                         <Text
                             textContent={"P03"}
                             textColor={`${data.mainTextColor}`}
@@ -74,6 +75,7 @@ function Page2() {
                                 marginLeft: "11rem"
                             }}
                         />
+                        <span className="dots"></span>
                         <Text
                             textContent={"P04"}
                             textColor={`${data.mainTextColor}`}
@@ -95,6 +97,7 @@ function Page2() {
                                 marginLeft: "11rem"
                             }}
                         />
+                        <span className="dots"></span>
                         <Text
                             textContent={"P05"}
                             textColor={`${data.mainTextColor}`}
@@ -116,6 +119,7 @@ function Page2() {
                                 marginLeft: "11rem"
                             }}
                         />
+                        <span className="dots"></span>
                         <Text
                             textContent={"P08"}
                             textColor={`${data.mainTextColor}`}
@@ -137,6 +141,7 @@ function Page2() {
                                 marginLeft: "11rem"
                             }}
                         />
+                        <span className="dots"></span>
                         <Text
                             textContent={"P11"}
                             textColor={`${data.mainTextColor}`}
@@ -158,6 +163,7 @@ function Page2() {
                                 marginLeft: "11rem"
                             }}
                         />
+                        <span className="dots"></span>
                         <Text
                             textContent={"P14"}
                             textColor={`${data.mainTextColor}`}
@@ -179,6 +185,7 @@ function Page2() {
                                 marginLeft: "11rem"
                             }}
                         />
+                        <span className="dots"></span>
                         <Text
                             textContent={"P17"}
                             textColor={`${data.mainTextColor}`}
@@ -200,6 +207,7 @@ function Page2() {
                                 marginLeft: "11rem"
                             }}
                         />
+                        <span className="dots"></span>
                         <Text
                             textContent={"P20"}
                             textColor={`${data.mainTextColor}`}
@@ -222,6 +230,7 @@ function Page2() {
                                 lineHeight: 2,
                             }}
                         />
+                        <span className="dots"></span>
                         <Text
                             textContent={"P00"}
                             textColor={`${data.mainTextColor}`}
@@ -243,6 +252,7 @@ function Page2() {
                                 marginLeft: "11rem"
                             }}
                         />
+                        <span className="dots"></span>
                         <Text
                             textContent={"P20"}
                             textColor={`${data.mainTextColor}`}
@@ -264,6 +274,7 @@ function Page2() {
                                 marginLeft: "11rem"
                             }}
                         />
+                        <span className="dots"></span>
                         <Text
                             textContent={"P20"}
                             textColor={`${data.mainTextColor}`}
@@ -286,6 +297,7 @@ function Page2() {
                                 lineHeight: 2,
                             }}
                         />
+                        <span className="dots"></span>
                         <Text
                             textContent={"P00"}
                             textColor={`${data.mainTextColor}`}
@@ -307,6 +319,7 @@ function Page2() {
                                 marginLeft: "11rem"
                             }}
                         />
+                        <span className="dots"></span>
                         <Text
                             textContent={"P20"}
                             textColor={`${data.mainTextColor}`}
@@ -328,6 +341,7 @@ function Page2() {
                                 lineHeight: 2,
                             }}
                         />
+                        <span className="dots"></span>
                         <Text
                             textContent={"P00"}
                             textColor={`${data.mainTextColor}`}

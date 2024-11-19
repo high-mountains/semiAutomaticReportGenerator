@@ -29,7 +29,7 @@ const Merit = () => {
                         wrapperWidth: "240rem", //rem unit
                         heading: "GABA（γ-アミノ酪酸）代謝",
                         content:
-                            "グルタミン酸をGABAに変換し、神経伝達の抑制を介して脳の興奮状態を調整します。 \n関連遺伝子：GAD1, GABRA1,  \nGABRA2, GABRG2, ALDH5A1",
+                            "グルタミン酸を<span class='blue'>GABA</span>に変換し、<span class='blue'>神経伝達</span>の抑制を介して脳の興奮状態を調整します。 \n関連遺伝子：GAD1, GABRA1,  \nGABRA2, GABRG2, ALDH5A1",
                         contentLineHeight: 1.448333, //lineheight of text
                         posInfo: {
                             top: "11rem",
@@ -83,7 +83,7 @@ const Merit = () => {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "240rem",
                         heading: "                    ホモシステイン代謝",
-                        content: `                            ホモシステインを他の物質に変換 \n                        し、体内の硫黄含有アミノ酸のバラ  \n ンスやメチレーションプロセスをサポートします。\n 関連遺伝子：CBS, CTH`,
+                        content: `                        <span class='blue'>ホモシステイン</span>を他の物質に変換 \n                   し、体内の<span class='blue'>硫黄含有アミノ酸</span>のバラ  \n    ンスや<span class='blue'>メチレーションプロセス</span>をサポートします。\n 関連遺伝子：CBS, CTH`,
                         contentLineHeight: 1.448333,
                         posInfo: {
                             bottom: "19rem",
@@ -111,45 +111,21 @@ const Merit = () => {
         {
             Component: MeritDemerit,
             data: {
-                commonStyle:{
-                    // gap: "5rem"  // Here is optional instead of default value 8rem
-                },
-                inCommonStyle:{
-                    // gap: "2rem"     // Here is optional instead of default value 3rem
-                },
                 merit: [
                     {
                         title: "記憶力の向上",
                         content:
-                            "グルタミン酸はシナプスの可塑性を高め、短期記憶と長期記憶の両方を強化します。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }    
+                            "グルタミン酸は<span class='blue'>シナプスの可塑性</span>を高め、短期記憶と長期記憶の両方を強化します。",
                     },
                     {
                         title: "学習能力の向上",
                         content:
                             "学習の際に必要な神経ネットワークの形成と強化に貢献します。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }
                     },
                     {
                         title: "集中力の向上",
                         content:
                             "グルタミン酸は注意力を高め、情報処理速度を向上させます。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }
                     },
                 ],
                 demerit: [
@@ -157,34 +133,16 @@ const Merit = () => {
                         title: "神経細胞の過剰刺激",
                         content:
                             "グルタミン酸が過剰に分泌されると、神経細胞が過剰に興奮し、最終的に細胞死（興奮毒性）を引き起こすことがあります。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }
                     },
                     {
                         title: "神経変性疾患のリスク",
                         content:
                             "長期的に過剰なグルタミン酸は、アルツハイマー病やパーキンソン病などの神経変性疾患のリスクを高めることがあります。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }
                     },
                     {
                         title: "精神的健康の問題",
                         content:
                             "不安、ストレス、うつ病などの精神的健康問題の悪化に寄与することがあります。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }
                     },
                 ],
             },

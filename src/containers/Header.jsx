@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Bars3Icon from "@heroicons/react/24/outline/Bars3Icon";
 import MoonIcon from "@heroicons/react/24/outline/MoonIcon";
 import SunIcon from "@heroicons/react/24/outline/SunIcon";
+import ArrowDownTrayIcon from "@heroicons/react/24/outline/ArrowDownTrayIcon"
 import { toggleOpen } from "../features/common/sidebarSlice";
 import { Tooltip } from 'antd';
 import { logOut } from "../features/user/userSlice";
@@ -14,6 +15,8 @@ import UserImg from "../pages/common/userImg";
 import NotifyPage from "./Notify";
 import { Link, useNavigate } from "react-router-dom";
 import Papa from "papaparse";
+
+import { downloadPDF } from "../tool/jspdf";
 
 function Header() {
   const navigate = useNavigate();
@@ -34,16 +37,16 @@ function Header() {
   
   useEffect(() => {
     themeChange(false);
-    if (currentTheme === null) {
-      if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        setCurrentTheme("dark");
-      } else {
-        setCurrentTheme("light");
-      }
-    }
+    // if (currentTheme === null) {
+    //   if (
+    //     window.matchMedia &&
+    //     window.matchMedia("(prefers-color-scheme: dark)").matches
+    //   ) {
+    //     setCurrentTheme("dark");
+    //   } else {
+    //     setCurrentTheme("light");
+    //   }
+    // }
     // 👆 false parameter is required for react project
   }, []);
 
@@ -96,18 +99,27 @@ function Header() {
       <div className="z-10 flex justify-between shadow-md navbar bg-base-100">
         {/* Menu toogle for mobile view or small screen */}
 
-        <div className="font ml-[10rem]" >
+        <div className="font ml-[10rem] pt-[10rem] pl-[10rem]" >
           <input
                 type="file"
                 webkitdirectory="true"
                 directory=""
                 multiple
                 onChange={handleFolderUpload}
-                className="w-full h-[45rem]"
+                className="w-[230rem] h-[30rem] bg-[#00C3D0] text-[#fff] hover:bg-[#b4eeef] hover:text-[#00C3D0]"
             />
         </div>
 
-        <div className="order-last">
+        <div>
+          <button
+              className="font bg-[#00C3D0] text-[#fff] hover:bg-[#b4eeef] hover:text-[#00C3D0] w-[200rem] h-[60rem] rounded-[5rem] flex flex-row items-center justify-center"
+              onClick={() => downloadPDF()}
+          >
+              <ArrowDownTrayIcon className={"fill-current w-[28rem] h-[28rem] ml-[10rem]"}/><p className="my-[5rem]">Download PDF</p>
+          </button>
+        </div>
+
+        {/* <div className="order-last"> */}
           
           {/* <label className="px-[10rem] swap">
             <input type="checkbox" />
@@ -173,7 +185,7 @@ function Header() {
               </li>
             </ul>
           </div> */}
-        </div>
+        {/* </div> */}
       </div >
     </>
   );

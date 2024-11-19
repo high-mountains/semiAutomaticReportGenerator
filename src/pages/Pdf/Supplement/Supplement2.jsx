@@ -14,49 +14,49 @@ const Supplement2 = (props) => {
                     {
                         thContent: {
                             main: "ドーパミン受容体",
-                            sub: "快楽や覚醒に影響する興奮性神経伝達物質の感度に関わる",
+                            sub: "快楽や覚醒に影響する興奮性神経伝達物質の感度に関わる"
                         },
                         tdContent: {
                             gen: "DRD4",
-                            danger: 3,  // Dynamically updated based on state
-                            description: "L-チロシン, ビタミンB6, オメガ3, フォスファチジルコリン, ビタミンD, マグネシウム",
+                            danger: 0,  // Dynamically updated based on state
+                            description: "L-チロシン, ビタミンB6, オメガ3, フォスファチジルコリン, ビタミンD, マグネシウム"
                         }
                     },
                     {
                         rowSpan: 2,
                         thContent: {
                             main: "セロトニン",
-                            sub: "感情調整や幸福感に影響する神経伝達物質の調節に関わる",
+                            sub: "感情調整や幸福感に影響する神経伝達物質の調節に関わる"
                         },
                         tdContent: {
                             gen: "HTR2A",
                             danger: 0,
-                            description: "5-HTP, オメガ3",
+                            description: "5-HTP, オメガ3"
                         }
                     },
                     {
                         tdContent: {
                             gen: "MAOA",
                             danger: 0,
-                            description: "リボフラビン（補因子）, マグネシウム, ビタミンB2, ビタミンB6, ビタミンB12, フォレート",
+                            description: "リボフラビン（補因子）, マグネシウム, ビタミンB2, ビタミンB6, ビタミンB12, フォレート"
                         }
                     },
                     {
                         thContent: {
                             main: "ヒスタミン生成",
-                            sub: "アレルギー反応や覚醒に影響する物質の生成に関わる",
+                            sub: "アレルギー反応や覚醒に影響する物質の生成に関わる"
                         },
                         tdContent: {
                             gen: "HDC",
                             danger: 0,
-                            description: "P5P（補因子）, ケルセチン, NAC",
+                            description: "P5P（補因子）, ケルセチン, NAC"
                         }
                     },
                     {
                         rowSpan: 8,
                         thContent: {
                             main: "ヒスタミン代謝",
-                            sub: "アレルギー反応や覚醒に影響する物質の分解に関わる",
+                            sub: "アレルギー反応や覚醒に影響する物質の分解に関わる"
                         },
                         tdContent: {
                             gen: "ALDH2",
@@ -69,14 +69,14 @@ const Supplement2 = (props) => {
                         tdContent: {
                             gen: "MAOA",
                             danger: 0,
-                            description: "リボフラビン（補因子）, マグネシウム, ビタミンB2, ビタミンB6, ビタミンB12, フォレート",
+                            description: "リボフラビン（補因子）, マグネシウム, ビタミンB2, ビタミンB6, ビタミンB12, フォレート"
                         }
                     },
                     {
                         tdContent: {
                             gen: "MAOB",
                             danger: 0,
-                            description: "マグネシウム, ビタミンB2, ビタミンB6, ビタミンB12, フォレート",
+                            description: "マグネシウム, ビタミンB2, ビタミンB6, ビタミンB12, フォレート"
                         }
                     },
                     {
@@ -115,14 +115,14 @@ const Supplement2 = (props) => {
                         tdContent: {
                             gen: "CYP21A2",
                             danger: 0,
-                            description: "NAD+（補因子）, ヘム（補因子）, ビタミンB群, αリポ酸, マグネシウム（補因子）, 亜鉛, アシュワガンダ",
+                            description: "NAD+（補因子）, ヘム（補因子）, ビタミンB群, αリポ酸, マグネシウム（補因子）, 亜鉛, アシュワガンダ"
                         }
                     },
                     {
                         rowSpan: 4,
                         thContent: {
                             main: "ヒスタミン受容体",
-                            sub: "アレルギー反応や覚醒に影響する物質の感度に関わる",
+                            sub: "アレルギー反応や覚醒に影響する物質の感度に関わる"
                         },
                         tdContent: {
                             gen: "HRH1",
@@ -159,47 +159,47 @@ const Supplement2 = (props) => {
                         rowSpan: 6,
                         thContent: {
                             main: "ミトコンドリア",
-                            sub: "細胞内小器官で、エネルギーの生成と代謝に関わる",
+                            sub: "細胞内小器官で、エネルギーの生成と代謝に関わる"
                         },
                         tdContent: {
                             gen: "ACAT1",
                             danger: 0,
-                            description: "コエンザイムA（補因子）, MCTオイル, L-カルニチン, オメガ3, αリポ酸",
+                            description: "コエンザイムA（補因子）, MCTオイル, L-カルニチン, オメガ3, αリポ酸"
                         }
                     },
                     {
                         tdContent: {
                             gen: "ACAT2",
                             danger: 0,
-                            description: "オメガ3, ビタミンE, レスベラトロール, αリポ酸",
+                            description: "オメガ3, ビタミンE, レスベラトロール, αリポ酸"
                         }
                     },
                     {
                         tdContent: {
                             gen: "ATP5F1A",
                             danger: 0,
-                            description: "CoQ10, L-カルニチン, NAD+, ビタミンB群, αリポ酸",
+                            description: "CoQ10, L-カルニチン, NAD+, ビタミンB群, αリポ酸"
                         }
                     },
                     {
                         tdContent: {
                             gen: "ATP5F1E",
                             danger: 0,
-                            description: "CoQ10, NAD+, リボフラビン, ビタミンB群",
+                            description: "CoQ10, NAD+, リボフラビン, ビタミンB群"
                         }
                     },
                     {
                         tdContent: {
                             gen: "COQ2",
                             danger: 0,
-                            description: "CoQ10, リボフラビン, L-カルニチン, ビタミンB6, αリポ酸, NAD+",
+                            description: "CoQ10, リボフラビン, L-カルニチン, ビタミンB6, αリポ酸, NAD+"
                         }
                     },
                     {
                         tdContent: {
                             gen: "COQ3",
                             danger: 0,
-                            description: "CoQ10, リボフラビン, L-カルニチン, ビタミンB6, αリポ酸, NAD+",
+                            description: "CoQ10, リボフラビン, L-カルニチン, ビタミンB6, αリポ酸, NAD+"
                         }
                     },
                 ]}

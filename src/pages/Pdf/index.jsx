@@ -16,8 +16,6 @@ const SupplementTable = lazy(() => import('./SupplementTable'));
 const GeneInformationList = lazy(() => import('./GeneInformationList'));
 const References = lazy(() => import('./References'));
 
-import { downloadPDF } from "../../tool/jspdf";
-
 const Pdf = () => {
     return (
         // <AuthLayout>
@@ -35,12 +33,6 @@ const Pdf = () => {
                     <GeneInformationList/>
                     {/* <References/> */}
                 </div>
-                <button
-                    className="font bg-red-600 w-[200rem] h-[60rem]"
-                    onClick={() => downloadPDF()}
-                >
-                    Download PDF
-                </button>
             </div>
             
         // </AuthLayout>
