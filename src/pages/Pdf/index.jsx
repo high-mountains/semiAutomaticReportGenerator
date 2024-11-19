@@ -13,6 +13,7 @@ const GenCategory = lazy(() => import('./GenCategory'));
 const Supplement = lazy(() => import('./Supplement'));
 const SupplementNot = lazy(() => import('./SupplementNot'));
 const SupplementTable = lazy(() => import('./SupplementTable'));
+const GeneInformationList = lazy(() => import('./GeneInformationList'));
 const References = lazy(() => import('./References'));
 
 import { downloadPDF } from "../../tool/jspdf";
@@ -22,15 +23,16 @@ const Pdf = () => {
         // <AuthLayout>
             <div className="pdfcontainer">
                 <div className="pdfwrapper" id="downloadTest">
-                    {/* <Page1/>
+                    <Page1/>
                     <Page2/>
                     <Page3/>
                     <Page4/>
                     <TypeByType/>
-                    <GenCategory/> */}
-                    {/* <Supplement/>
-                    <SupplementNot/> */}
+                    <GenCategory/>
+                    <Supplement/>
+                    <SupplementNot/>
                     <SupplementTable/>
+                    <GeneInformationList/>
                     {/* <References/> */}
                 </div>
                 <button

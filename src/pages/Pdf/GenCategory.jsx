@@ -8,7 +8,7 @@ import CategoryRow1 from "../../components/Pdf/GenCategory/CategoryRow1";
 import { useDispatch, useSelector } from "react-redux";
 
 const GenCategory = () => {
-    const categoryData = useSelector((store) => store.pdfData.categoryData);
+    const categoryData = useSelector((state) => state.pdfData.categoryData);
 
     const initialGlutamateData = [
         { borderstatus: 0, subContent1: "グルタメート\nタイプ" },
@@ -115,20 +115,11 @@ const GenCategory = () => {
 
     useEffect(() => {
         const redValues = new Set(categoryData.map((item) => item.Red));
-        console.log("redValues==>" , redValues);
 
         const updateBorderStatus = (data) => 
             data.map((item) => 
                 redValues.has(item.tag) ? { ...item, borderstatus: 2 } : item
             );
-
-        // const updateDetox2Data = (data) => 
-        //     data.map((item, index) => {
-        //         // if(item.tag)
-        //         return { ...item, borderstatus: 2 }
-        //     }  
-        //     )
-                // redValues.has("グルタチ") ? { ...item, borderstatus: 2 } : item
 
         setGlutamateData(updateBorderStatus(initialGlutamateData));
         setCatecholamineData(updateBorderStatus(initialCatecholamineData));                         
@@ -136,7 +127,6 @@ const GenCategory = () => {
         setMitochondriaData(updateBorderStatus(initialMitochondriaData));
         setDetoxData1(updateBorderStatus(initialDetoxData1));
         setDetoxData2(updateBorderStatus(initialDetoxData2));
-        // setDetoxData2(updateDetox2Data(initialDetoxData2));
         setDetoxData3(updateBorderStatus(initialDetoxData3));
         setMethylationData(updateBorderStatus(initialMethylationData));
         setEtcData(updateBorderStatus(initialEtcData));

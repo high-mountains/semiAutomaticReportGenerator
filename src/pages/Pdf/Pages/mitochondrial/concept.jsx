@@ -101,7 +101,7 @@ const Concept = () => {
         },
         {Component: PageNumber,
             data:{
-                children: "15"
+                children: "14"
             }
         }
     ])

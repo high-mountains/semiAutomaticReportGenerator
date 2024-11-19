@@ -12,6 +12,7 @@ const Text = (props) => {
         sidebarColor: "",
         sidebarHeight: "",
         style: {},
+        containerStyle: {}
     });
 
     useEffect(() => {
@@ -24,10 +25,11 @@ const Text = (props) => {
             sidebarColor: props.sidebarColor,
             sidebarHeight: props.sidebarHeight,
             style: props.style || {}, // Default to an empty object if props.style is not provided
+            containerStyle: props.containerStyle,
         });
     }, [props]); // Listen for changes in the props object
 
-    const { textContent, textColor, bgColor, fontSize, className, sidebarColor, sidebarHeight, style } = styleProps;
+    const { textContent, textColor, bgColor, fontSize, className, sidebarColor, sidebarHeight, style, containerStyle } = styleProps;
 
     return (
         <>
@@ -35,8 +37,8 @@ const Text = (props) => {
 
             {props.sidebar ? props.sidebar && 
                 <>
-                    <div className="flex flex-row items-center">
-                        <span style={{backgroundColor: `${sidebarColor}`, paddingLeft:"5rem", paddingTop:`${sidebarHeight || "30rem"}`, marginRight:"8rem"}}/>
+                    <div className="flex flex-row items-center" style={{...containerStyle}}>
+                        <span style={{backgroundColor: `${sidebarColor || "#00C3D0"}`, paddingLeft:"5rem", paddingTop:`${sidebarHeight || "30rem"}`, marginRight:"8rem"}}/>
                         <p
                             style={{
                                 backgroundColor: bgColor ? `${bgColor}` : undefined,
@@ -59,11 +61,8 @@ const Text = (props) => {
                         className={`font ${styleProps.className}`}
                         dangerouslySetInnerHTML={{ __html: textContent }}
                         >
-                            {/* {textContent} */}
                         </p>
             }
-
-            {/* {props.sidebar && <span style={{backgroundColor: `${sidebarColor}`, paddingLeft:"5rem", paddingTop:"30rem"}}/>} */}
 
             {props.children && <div className={`font ${className}`}>{props.children}</div>}
         </>

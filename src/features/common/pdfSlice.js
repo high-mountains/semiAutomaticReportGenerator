@@ -26,6 +26,8 @@ export const pdfDataSlice = createSlice({
     methylationColor: "#2892DE",
 
     categoryData: [],
+    geneInformationListData: {},
+    // geneInformationListData: {},
     isLoading: false,
     isUpdated: true,//new article category is added or updated or deleted.
     error: null,
@@ -35,7 +37,21 @@ export const pdfDataSlice = createSlice({
 
     csvDataUpload: (state, {payload}) => {
       const category_data = payload.find(file => file.fileName === "category_data.csv");
-      state.categoryData = category_data.data
+      state.categoryData = category_data.data;
+      
+      
+      const geneInformationList_data = payload.find(file => file.fileName === "rsid_data.csv");
+      const geneInformationListData = geneInformationList_data.data;
+
+      const processedGeneInformationListData = geneInformationListData.reduce((acc, { rsid, Result }) => {
+        acc[rsid] = Result;
+        return acc;
+      }, {});
+
+      // state.geneInformationListData = {...state.geneInformationListData, processedGeneInformationListData}
+
+      state.geneInformationListData = processedGeneInformationListData
+      // console.log("processedGeneInformationListData==>", processedGeneInformationListData);
     }
   },
   extraReducers: {

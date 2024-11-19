@@ -3,9 +3,7 @@ import modal from "../features/common/modalSlice";
 import sidebar from "../features/common/sidebarSlice";
 import user from "../features/user/userSlice";
 import common from "../features/common/commonSlice";
-// for socket
 import pdfSlice from "../features/common/pdfSlice";
-
 
 const combinedReducer = {
   pdfData: pdfSlice,
