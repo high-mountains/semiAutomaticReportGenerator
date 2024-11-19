@@ -5,7 +5,7 @@ import GenePageNumber from "../../../components/Pdf/GenePageNumber.jsx";
 import GeneInformationMiddle from "../../../components/Pdf/GeneInformationList/GeneInformationMiddle.jsx";
 import Text from "../../../components/Pdf/Text.jsx";
 
-const Gene91 = () => {
+const Gene93 = () => {
     return (
         <PageWrapper>
             <Text
@@ -52,4 +52,4 @@ const Gene91 = () => {
     );
 };
 
-export default Gene91;
+export default Gene93;

@@ -46,7 +46,7 @@ const Merit = () => {
                         wrapperWidth: "240rem",
                         heading: "ホモシステイン代謝",
                         content:
-                            "ホモシステインというアミノ酸を他の物質に\n　　　　変えるこ<span style='color: blue; font-weight: bold; background-color:red'>とで、体内のバランスを保つ\n　　　　　のに重要な役割を果たす遺伝子\n　　　　　　です。\n　　　　　　関連遺伝子：AHCY, BHMT, CBS</span>",
+                            "ホモシステインというアミノ酸を他の物質に\n　　　　変えるこ<span style='letter-spacing: -0.6rem;'>とで、体内のバランスを保つ\n　　　　　のに重要な役割を果たす遺伝子\n　　　　　　です。\n　　　　　　関連遺伝子：AHCY, BHMT, CBS</span>",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             top: "0rem",
@@ -60,7 +60,7 @@ const Merit = () => {
                         //tailwind
                         etcClassName: "tracking-[-0.6rem]",
                         fontSize: 12,
-                        contentClassName: "tracking-tightest bg-red-400 leading-[1.4483]",
+                        contentClassName: "tracking-tightest leading-[1.4483]",
                     },
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
@@ -75,11 +75,11 @@ const Merit = () => {
                             width: "240rem",
                         },
                         //React DOM Styling
-                        etcStyle: {color: "green"},
+                        etcStyle: {color: "yellow"},
                         //tailwind
                         etcClassName: "flex flex-col gap-[3rem]",
                         fontSize: 12,   
-                        contentClassName: "tracking-[-0.5rem] bg-red-400 leading-[1.4483]",
+                        contentClassName: "tracking-[-0.5rem] leading-[1.4483]",
                     },
                     {
                         // the width and fontSize of MainHeader is fixed, so ti will be described in that component
@@ -95,7 +95,7 @@ const Merit = () => {
                         //React DOM Styling
                         etcStyle: {},
                         //tailwind
-                        etcClassName: "",
+                        etcClassName: "flex flex-col gap-[3rem]",
                         fontSize: 12,
                         contentClassName: "tracking-tightest"
                     },
