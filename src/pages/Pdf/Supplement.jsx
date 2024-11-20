@@ -4,17 +4,16 @@ import PageHeader from "../../components/Pdf/PageHeader";
 import PageNumber from "../../components/Pdf/PageNumber";
 import Text from "../../components/Pdf/Text";
 import Table from "../../components/Pdf/Table.jsx";
+
 import pdfData from "../../utils/dummyPdf.json"
 import { useSelector } from "react-redux";
 
 const Supplement = () => {
     const [sidbarColor, setSidebarColor] = useState(pdfData.mainColor);
-    // const [tableData, setTableData] = useState(useSelector((state) => state.pdfData.supplementedData));
     const [tableData, setTableData] = useState([]);
     const tt = useSelector((state) => state.pdfData.supplementedData)
     
     useEffect(() => {
-        console.log("tableData in frontend===>", tt);
         setTableData(tt)
     }, [tt]);
     

@@ -29,7 +29,7 @@ export const pdfDataSlice = createSlice({
     geneInformationListData: {},
     typeData: [5,5,5,5,5,5],
 
-    supplementedData: [{Lifestyle: "testlifestyle", When: "testWhen", Explanation: "testExplanation", Categories: "testCategoriese"}],
+    supplementedData: [],
     unsupplementedData: [],
 
     // geneInformationListData: {},
@@ -75,8 +75,11 @@ export const pdfDataSlice = createSlice({
       state.supplementedData = supplementedData;
       console.log("supplemendtedData in Store====>", supplementedData);
       
-      // const unsupplementedData = payload.find(file => file.fileName === "not_recommend_data.csv").data;
-      // state.unsupplementedData = unsupplementedData;
+      const unsupplementedData = payload.find(file => file.fileName === "not_recommend_data.csv").data;
+      
+      state.unsupplementedData = unsupplementedData;
+      
+      console.log("not_recommend_data in Store====>", unsupplementedData);
     }
   },
   extraReducers: {

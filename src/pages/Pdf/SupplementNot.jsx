@@ -1,15 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PageWrapper from "../../components/Pdf/PageWrapper.jsx";
 import PageHeader from "../../components/Pdf/PageHeader.jsx";
 import PageNumber from "../../components/Pdf/PageNumber.jsx";
 import Text from "../../components/Pdf/Text.jsx";
 import Table from "../../components/Pdf/Table.jsx";
+
+import pdfData from "../../utils/dummyPdf.json"
 import { useSelector } from "react-redux";
 
 const SupplementNot = () => {
-    const [sidbarColor, setSidebarColor] = useState(
-        useSelector((store) => store.pdfData.mainColor)
-    );
+    const [sidbarColor, setSidebarColor] = useState(pdfData.mainColor);
+    const [tableData, setTableData] = useState([]);
+    const tt = useSelector((state) => state.pdfData.unsupplementedData)
+    
+    useEffect(() => {
+        console.log("tableData in frontend===>", tt);
+        setTableData(tt)
+    }, [tt]);
+
     return (
         <PageWrapper>
             <PageHeader
@@ -47,32 +55,7 @@ const SupplementNot = () => {
                         width: "131.25rem",
                     },
                 ]}
-                bodyData={[  //  Here, the data will be from csv file
-                    {
-                        habit: "クレイ",
-                        time: "起床時",
-                        detail: "サプリメントの説明",
-                        referCategory: "マイコトキシン",
-                    },
-                    {
-                        habit: "クレイ",
-                        time: "起床時",
-                        detail: "サプリメントの説明",
-                        referCategory: "マイコトキシン",
-                    },
-                    {
-                        habit: "クレイ",
-                        time: "起床時",
-                        detail: "サプリメントの説明",
-                        referCategory: "マイコトキシン",
-                    },
-                    {
-                        habit: "クレイ",
-                        time: "起床時",
-                        detail: "サプリメントの説明",
-                        referCategory: "マイコトキシン",
-                    },
-                ]}
+                bodyData={tableData}
             />
             <PageNumber>25</PageNumber>
         </PageWrapper>

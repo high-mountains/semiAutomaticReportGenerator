@@ -3,10 +3,10 @@ import React, { useEffect, useState } from "react";
 const Table = (props) => {
     const [headerData, setHeaderData] = useState(props.headerData);
     const [bodyData, setBodyData] = useState(props.bodyData);
-
     useEffect(() => {
         setBodyData(props.bodyData)
-    }, [props])
+    }, [props]);
+    
     return (
         <div className="mt-[15rem]">
             <table style={{ width: "100%", textAlign: "center", color:"#484F51"}} className="whitespace-pre-wrap">
