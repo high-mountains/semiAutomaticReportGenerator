@@ -27,7 +27,7 @@ const Concept = () => {
         {Component: Explanation,
             data:{
                 question: "ヒスタミンタイプとは",
-                answer: "ヒスタミンは、脳内で情報を伝達する神経伝達物質として働き、私たちが目を覚まし、集中力を高め、学習や記憶力を促進する役割を担っています。 \n しかし、ヒスタミンが過剰になると、不安感や頭痛を引き起こしたり、夜眠れなくなることがあります。また、ヒスタミンはアレルギー反応にも関与しており、花粉症や虫刺されの際に鼻水が出たり、かゆみが生じるのは、体内でヒスタミンが働いているためです。 \n ヒスタミンが多すぎる場合、アレルギー症状が悪化し、皮膚や呼吸器に問題が生じやすくなることもあります。さらに、ヒスタミンは消化器にも影響を与え、特に胃で胃酸を増加させることで食べ物の消化を助けます。しかし、過剰なヒスタミンが原因で胃酸が過剰分泌されると、胃痛や胃炎、さらには胃潰瘍などの問題が発生することがあります。",
+                answer: "ヒスタミンは、脳内で情報を伝達する神経伝達物質として働き、私たちが目を覚まし、集中力を高め、<span class='bold'>学習</span>や<span class='bold'>記憶力</span>を促進する役割を担っています。\nしかし、ヒスタミンが過剰になると、不安感や頭痛を引き起こしたり、夜眠れなくなることがあります。また、ヒスタミンは<span class='bold'>アレルギー反応</span>にも関与しており、花粉症や虫刺されの際に鼻水が出たり、かゆみが生じるのは、体内でヒスタミンが働いているためです。 \n ヒスタミンが多すぎる場合、<span class='bold'>アレルギー症状</span>が悪化し、<span class='bold'>皮膚</span>や<span class='bold'>呼吸</span>器に問題が生じやすくなることもあります。さらに、ヒスタミンは<span class='bold'>消化器</span>にも影響を与え、特に胃で胃酸を増加させることで食べ物の消化を助けます。しかし、過剰なヒスタミンが原因で胃酸が過剰分泌されると、<span class='bold'>胃痛</span>や<span class='bold'>胃炎</span>、さらには<span class='bold'>胃潰瘍</span>などの問題が発生することがあります。",
                 sidebarColor: maincolor
             }
         },
@@ -40,94 +40,55 @@ const Concept = () => {
                     
                     {
                         content:
-                            "細かく正確性の求められる作業が得 \n     意",
-                        liStyle: {
-                            //liStyle is Option
-                        },
+                            "細かく正確性の求められるタスクに\n     向いている"
                     },
                     {
                         content:
-                            "ルーティンワークが得意",
-                        liStyle: {
-                            //liStyle is Option
-                        },
+                            "ルーティンワークが得意"
                     },
                     {
                         content:
-                            "部屋が綺麗",
-                        liStyle: {
-                            //liStyle is Option
-                        },
+                            "部屋が綺麗"
                     },
                     {
                         content:
-                            "士業に向いている",
-                        liStyle: {
-                            //liStyle is Option
-                        },
+                            "集中力や記憶力が高い"
                     },
                     {
-                        content: "集中力・記憶力が高い",
-                        liStyle: {
-                            //liStyle is Option
-                        },
+                        content: "何事にも慎重なタイプ"
                     },
                     {
                         content:
-                            "慎重",
-                        liStyle: {
-                            //liStyle is Option
-                        },
+                            "士業に向いている"
                     },
-                    {
-                        content:
-                            "肌荒れやアレルギーに悩む",
-                        liStyle: {
-                            //liStyle is Option
-                        },
-                    },
-                    {
-                        content:
-                            "頭痛がしやすい",
-                        liStyle: {
-                            //liStyle is Option
-                        },
-                    },
-                ], // qualities2: ["瞬発力があり決断が早い", "行動力がある", "目標を立てることが好き", "リーダー気質", "集中力が高い", "依存症になりやすい（ショッピング、ゲーム、ギャンブルなど）"],
+                ],
                 qualities2: [
                     
                     {
                         content:
-                            "騒がしい場所が苦手",
-                        liStyle: {
-                            //liStyle is Option
-                        },
+                            "肌荒れやアレルギーに悩む"
                     },
                     {
                         content:
-                            "胃腸が痛くなりやすい",
-                        liStyle: {
-                            //liStyle is Option
-                        },
+                            "頭痛がしやすい"
                     },
                     {
                         content:
-                            "偏食になりやすい",
-                        liStyle: {
-                            //liStyle is Option
-                        },
+                            "騒がしい場所が苦手"
                     },
                     {
                         content:
-                            "不安、感覚過敏",
-                        liStyle: {
-                            //liStyle is Option
-                        },
+                            "胃腸が痛くなりやすい"
+                    },
+                    {
+                        content:
+                            "偏食になりやすい"
+                    },
+                    {
+                        content:
+                            "不安や感覚過敏に悩む"
                     },
                 ], 
-                ulStyle1: {
-                    // paddingLeft: "21.5rem"
-                },
                 sidebarColor: maincolor
             }
         },

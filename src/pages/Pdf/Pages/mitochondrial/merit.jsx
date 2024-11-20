@@ -28,7 +28,7 @@ const Merit = () => {
                         wrapperWidth: "229rem", //rem unit
                         heading: "エネルギー代謝と生成",
                         content:
-                            "ミトコンドリア内でエネルギー（ATP）を作るために必要な酵素やプロテインを作り出す遺伝子。 \n 関連遺伝子：NDUFA1, NDUFS1, \n 　　　　　　ATP5F1A",
+                            "ミトコンドリア内でエネルギー（ATP）を作るために必要な<span class='blue'>酵素</span>やプロテインを作り出す遺伝子。 \n関連遺伝子：NDUFA1, NDUFS1,\n　　　　　　ATP5F1A",
                         contentLineHeight: 1.448333, //lineheight of text
                         posInfo: {
                             top: "0rem",
@@ -46,7 +46,7 @@ const Merit = () => {
                         wrapperWidth: "230rem",
                         heading: "クエン酸回路（TCAサイクル）",
                         content:
-                            "細胞のエネルギーを生み出すクエン酸回路に関与する遺伝子。 \n 　　　関連遺伝子：OGDH",
+                            "細胞のエネルギーを生み出すク<span class='blue'>エン酸回路</span>に関与する遺伝子。\n　　　関連遺伝子：OGDH",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             top: "0rem",
@@ -64,7 +64,7 @@ const Merit = () => {
                         wrapperWidth: "167rem",
                         heading: "脂肪酸と糖の代謝",
                         content:
-                            "脂肪や糖を分解してエネルギー \n に変えるプロセスに関わる遺伝子。 \n 関連遺伝子：PANK2, G6PD,  \n 　　　　　　ACAT1",
+                            "脂肪や糖を分解してエネルギー\nに変えるプロセスに関わる遺伝子。\n 関連遺伝子：PANK2, G6PD, \n 　　　　　　ACAT1",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             bottom: "65rem",
@@ -130,7 +130,6 @@ const Merit = () => {
             data: {
                 commonStyle:{
                     gap: "5rem",  // Here is optional instead of default value 8rem
-                    // backgroundColor: "#c8c8c8"
                 },
                 inCommonStyle:{
                     gap: "3rem",     // Here is optional instead of default value 3rem
@@ -139,56 +138,32 @@ const Merit = () => {
                 titleStyle:{
                     //  HERE  WILL  BE  NO  CHANGE
                     fontSize: "12rem", //default value is ---12rem---
-                    // lineHeight:1.444444       //default value is ---1.448333---  12/17.38
                 },
                 contentStyle:{
                     fontSize: "9rem", //default value is ---12rem---
                     lineHeight:1.444444,       //default value is ---1.448333---  12/17.38
-                    // color: "red"
                 },
                 merit: [
                     {
                         title: "認知機能の向上",
                         content:
                             "エネルギー供給が改善されることで、集中力や記憶力、思考力が向上します。",
-                        titleStyle:{
-                            // fontSize: "9rem"  //fontSize 12rem could be changed
-                        },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }    
                     },
                     {
                         title: "気分の安定",
                         content:
-                            "十分なエネルギーが供給されることで、精神的な安定が保たれ、不安やうつ症状の軽減が期待されます。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }
+                            "充分なエネルギーが供給されることで、精神的な安定が保たれ、不安やうつ症状の軽減が期待されます。",
                     },
                     {
                         title: "疲労感の軽減",
                         content:
                             "脳のエネルギーが増えることで、慢性的な疲労感やBrain Fogの症状が緩和されます。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }
                     },
                     {
                         title: "免疫力の向上",
                         content:
                             "免疫細胞へのエネルギーが供給され、免疫力が向上します。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
                             contentStyle:{
-                                // letterSpace: "-0.5rem" // here could be the minus letter spacing
                                 letterSpacing: "-0.09rem"
                             }
                     },
@@ -196,71 +171,24 @@ const Merit = () => {
                         title: "代謝機能の向上",
                         content:
                             "神経伝達物質の代謝、ホルモン代謝、解毒代謝など体のメカニズムで重要となる代謝が向上し、本来の力を発揮しやすくなります。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                            // contentStyle:{
-                            //     // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                            //     letterSpacing: "-0.09rem"
-                            // }
                     },
                 ],
                 demerit: [
                     {
                         title: "ATP不足",
                         content:
-                            "身体のすべての動きや代謝活動がATPに依存しているため、エネルギー不足は身体機能全般に悪影響を与えます。",
-                        titleStyle:{
-                            // fontSize: "9rem"  //fontSize could be changed
-                        },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }
+                            "身体のすべての動きや代謝活動がATPに依存しているため、身体機能全般に悪影響を与えます。",
                     },
                     {
                         title: "筋力低下",
                         content:
                             "筋肉のエネルギー不足により、筋力が低下し、運動耐性が減少します。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }
-                    },
-                    {
-                        title: "免疫力低下",
-                        content:
-                            "エネルギー不足により、免疫細胞の働きが低下し、感染症に対する抵抗力が弱まります。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }
                     },
                     {
                         title: "認知機能の低下",
                         content:
-                            "脳の神経細胞は、信号伝達、神経伝達物質の合成など、さまざまな活動に大量のATPを消費するため。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }
+                            "解毒プロセスは、特に肝臓で行われる重要な生理機能で、体内の有害物質を無毒化し、排出するためにエネルギーを必要とします。",
                     },
-                    {
-                        title: "解毒機能の低下",
-                        content:
-                            "解毒プロセスは、特に肝臓で行われる重要な生理機能で、体内の有害物質を無毒化し、排出するためにエネルギーを必要とされる。",
-                        // titleStyle:{
-                        //     // fontSize: "9rem"  //fontSize could be changed
-                        // },
-                        //     contentStyle:{
-                        //         // letterSpace: "-0.5rem" // here could be the minus letter spacing
-                        // }
-                    }
                 ],
             },
         },

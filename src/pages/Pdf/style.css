@@ -1,7 +1,7 @@
 html {
     font-size: calc(100vw / 593);
     box-sizing: border-box;
-    font-family: "Noto Sans JP"
+    font-family: "Noto Sans JP", sans-serif;
 }
 
 .pdfwrapper {
@@ -123,4 +123,54 @@ table.geneInfo th {
 
 table.geneInfo td {
     padding: 8.4rem 0rem;
+}
+
+.blue {
+    color: #007AFF;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+span.dots {
+    position: relative;
+    height: 2rem; /* Height of the line */
+    margin-left: 20rem 0; /* Margin for spacing */
+    margin-right: 15rem 0; /* Margin for spacing */
+    overflow: hidden; /* Hide overflow */
+}
+
+span.dots::before {
+    content: '';
+    position: absolute;
+    height: 2rem; /* Height of the line */
+    width: 100%; /* Full width */
+    background: repeating-linear-gradient(
+        to right,
+        #000000,
+        #000000 2.5rem, /* Dot width */
+        transparent 5rem,
+        transparent 15rem /* Gap width */
+    );
+    margin: 20rem, 0rem
+}
+
+#file {
+    display: none;
+}
+
+.custom-file-label {
+    background-color: #00c3d0;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5rem;
+    font-size: 16rem;
+    text-align: center;
+    padding: 8rem;
+}
+
+.custom-file-label:hover {
+    background-color: #ffffff;
+    color: #00c3d0;
 }

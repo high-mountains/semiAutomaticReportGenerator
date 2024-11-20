@@ -12,10 +12,10 @@ export const fetchPdfData = createAsyncThunk(
 export const pdfDataSlice = createSlice({
   name: "articleCategory",
   initialState: {
-    clientName: "Murayama",//clientName
+    clientName: "Murayama",// clientName
     clientId: "98236",
     
-    mainColor: "#00C3D0",//mainColor (tag color) cyan
+    mainColor: "#00C3D0",// mainColor (tag color) cyan
     mainTextColor: "#484F51",//mainTextColor (text color)
     
     glutamateColor: "#ECAD14",
@@ -27,6 +27,11 @@ export const pdfDataSlice = createSlice({
 
     categoryData: [],
     geneInformationListData: {},
+    typeData: [5,5,5,5,5,5],
+
+    supplementedData: [{Lifestyle: "未定", When: "未定", Explanation: "未定", Categories: "未定"}],
+    unsupplementedData: [{Lifestyle: "未定", When: "未定", Explanation: "未定", Categories: "未定"}],
+
     // geneInformationListData: {},
     isLoading: false,
     isUpdated: true,//new article category is added or updated or deleted.
@@ -39,19 +44,42 @@ export const pdfDataSlice = createSlice({
       const category_data = payload.find(file => file.fileName === "category_data.csv");
       state.categoryData = category_data.data;
       
-      
       const geneInformationList_data = payload.find(file => file.fileName === "rsid_data.csv");
       const geneInformationListData = geneInformationList_data.data;
-
       const processedGeneInformationListData = geneInformationListData.reduce((acc, { rsid, Result }) => {
         acc[rsid] = Result;
         return acc;
       }, {});
+      state.geneInformationListData = processedGeneInformationListData;
 
-      // state.geneInformationListData = {...state.geneInformationListData, processedGeneInformationListData}
+      const type_Data = payload.find(file => file.fileName === "type_data.csv");
+      const typeDatas = type_Data.data;
+      const order = [
+        "Methylation ",
+        "Catecholamine",
+        "Detox",
+        "Mitochondria",
+        "Histamine",
+        "Catecholamine"
+      ];
+      const glutamateScore = typeDatas.find(item => item.Type === "Glutamate").Score;
+      const sortedScores = typeDatas
+        .filter(item => item.Type !== "Glutamate") // Exclude Glutamate for sorting
+        .sort((a, b) => order.indexOf(a.Type) - order.indexOf(b.Type))
+        .map(item => item.Score); // Extract scores only
+      // Add the Glutamate score to the beginning of the sorted list
+      const finalScores = [glutamateScore, ...sortedScores];
+      state.typeData = finalScores;
 
-      state.geneInformationListData = processedGeneInformationListData
-      // console.log("processedGeneInformationListData==>", processedGeneInformationListData);
+      const supplementedData = payload.find(file => file.fileName === "recommend_data.csv").data;
+      state.supplementedData = supplementedData;
+      console.log("supplemendtedData in Store====>", supplementedData);
+      
+      const unsupplementedData = payload.find(file => file.fileName === "not_recommend_data.csv").data;
+      
+      state.unsupplementedData = unsupplementedData;
+      
+      console.log("not_recommend_data in Store====>", unsupplementedData);
     }
   },
   extraReducers: {

@@ -1,15 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PageWrapper from "../../components/Pdf/PageWrapper";
 import PageHeader from "../../components/Pdf/PageHeader";
 import PageNumber from "../../components/Pdf/PageNumber";
 import Text from "../../components/Pdf/Text";
 import Table from "../../components/Pdf/Table.jsx";
+
+import pdfData from "../../utils/dummyPdf.json"
 import { useSelector } from "react-redux";
 
 const Supplement = () => {
-    const [sidbarColor, setSidebarColor] = useState(
-        useSelector((store) => store.pdfData.mainColor)
-    );
+    const [sidbarColor, setSidebarColor] = useState(pdfData.mainColor);
+    const [tableData, setTableData] = useState([]);
+    const tt = useSelector((state) => state.pdfData.supplementedData)
+    
+    useEffect(() => {
+        setTableData(tt)
+    }, [tt]);
+    
     return (
         <PageWrapper>
             <PageHeader
@@ -47,32 +54,7 @@ const Supplement = () => {
                         width: "131.25rem",
                     },
                 ]}
-                bodyData={[  //  Here, the data will be from csv file
-                    {
-                        habit: "クレイ",
-                        time: "起床時",
-                        detail: "サプリメントの説明",
-                        referCategory: "マイコトキシン",
-                    },
-                    {
-                        habit: "クレイ",
-                        time: "起床時",
-                        detail: "サプリメントの説明",
-                        referCategory: "マイコトキシン",
-                    },
-                    {
-                        habit: "クレイ",
-                        time: "起床時",
-                        detail: "サプリメントの説明",
-                        referCategory: "マイコトキシン",
-                    },
-                    {
-                        habit: "クレイ",
-                        time: "起床時",
-                        detail: "サプリメントの説明",
-                        referCategory: "マイコトキシン",
-                    },
-                ]}
+                bodyData={tableData}
             />
             <PageNumber>24</PageNumber>
         </PageWrapper>

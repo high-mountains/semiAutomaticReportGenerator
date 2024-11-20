@@ -15,32 +15,26 @@ const SupplementNot = lazy(() => import('./SupplementNot'));
 const SupplementTable = lazy(() => import('./SupplementTable'));
 const GeneInformationList = lazy(() => import('./GeneInformationList'));
 const References = lazy(() => import('./References'));
-
-import { downloadPDF } from "../../tool/jspdf";
+const Pathway = lazy(() => import('./Pathway.jsx'));
 
 const Pdf = () => {
     return (
         // <AuthLayout>
             <div className="pdfcontainer">
                 <div className="pdfwrapper" id="downloadTest">
-                    <Page1/>
+                    {/* <Page1/>
                     <Page2/>
                     <Page3/>
-                    <Page4/>
-                    <TypeByType/>
-                    <GenCategory/>
+                    <Page4/> */}
+                    {/* <TypeByType/> */}
+                    {/* <GenCategory/> */}
                     <Supplement/>
                     <SupplementNot/>
-                    <SupplementTable/>
-                    <GeneInformationList/>
-                    {/* <References/> */}
+                    {/* <SupplementTable/> */}
+                    {/* <GeneInformationList/> */}
+                    {/* <References/>
+                    <Pathway/> */}
                 </div>
-                <button
-                    className="font bg-red-600 w-[200rem] h-[60rem]"
-                    onClick={() => downloadPDF()}
-                >
-                    Download PDF
-                </button>
             </div>
             
         // </AuthLayout>
