@@ -15,6 +15,7 @@ const SupplementNot = lazy(() => import('./SupplementNot'));
 const SupplementTable = lazy(() => import('./SupplementTable'));
 const GeneInformationList = lazy(() => import('./GeneInformationList'));
 const References = lazy(() => import('./References'));
+const Pathway = lazy(() => import('./Pathway.jsx'));
 
 const Pdf = () => {
     return (
@@ -31,7 +32,8 @@ const Pdf = () => {
                     <SupplementNot/>
                     <SupplementTable/>
                     <GeneInformationList/>
-                    {/* <References/> */}
+                    <References/>
+                    <Pathway/>
                 </div>
             </div>
             

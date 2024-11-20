@@ -10,9 +10,11 @@ const Table = (props) => {
         <div className="mt-[15rem]">
             <table style={{ width: "100%", textAlign: "center", color:`${mainTextColor}`}} className="whitespace-pre-wrap">
                 <thead className="bg-[#F8F8F8] h-[39rem] leading-[1.44833] text-[12rem]">
-                    {headerData.map((item, index)=> (
-                        <th key={index} style={{ width: `${item.width}`}} className="font-normal border-[1rem]">{item.content}</th>
-                    ))}
+                    <tr>
+                        {headerData.map((item, index)=> (
+                            <th key={index} style={{ width: `${item.width}`}} className="font-normal border-[1rem]">{item.content}</th>
+                        ))}
+                    </tr>
                 </thead>
                 <tbody className="text-[14rem]">
                     {bodyData.map((item, index) => (

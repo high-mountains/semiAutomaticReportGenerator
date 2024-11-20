@@ -5,11 +5,13 @@ import PageNumber from "../../components/Pdf/PageNumber";
 import Text from "../../components/Pdf/Text";
 import Table from "../../components/Pdf/Table.jsx";
 import { useSelector } from "react-redux";
+import pdfData from "../../utils/dummyPdf.json"
 
 const Supplement = () => {
-    const [sidbarColor, setSidebarColor] = useState(
-        useSelector((store) => store.pdfData.mainColor)
-    );
+    const [sidbarColor, setSidebarColor] = useState(pdfData.mainColor);
+    // const [sidbarColor, setSidebarColor] = useState(
+    //     useSelector((store) => store.pdfData.mainColor)
+    // );
     return (
         <PageWrapper>
             <PageHeader
