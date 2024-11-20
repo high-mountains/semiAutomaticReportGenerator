@@ -22,18 +22,18 @@ const Pdf = () => {
         // <AuthLayout>
             <div className="pdfcontainer">
                 <div className="pdfwrapper" id="downloadTest">
-                    <Page1/>
+                    {/* <Page1/>
                     <Page2/>
                     <Page3/>
-                    <Page4/>
-                    <TypeByType/>
-                    <GenCategory/>
+                    <Page4/> */}
+                    {/* <TypeByType/> */}
+                    {/* <GenCategory/> */}
                     <Supplement/>
                     <SupplementNot/>
-                    <SupplementTable/>
-                    <GeneInformationList/>
-                    <References/>
-                    <Pathway/>
+                    {/* <SupplementTable/> */}
+                    {/* <GeneInformationList/> */}
+                    {/* <References/>
+                    <Pathway/> */}
                 </div>
             </div>
             
