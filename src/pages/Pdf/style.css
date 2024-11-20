@@ -155,3 +155,22 @@ span.dots::before {
     );
     margin: 20rem, 0rem
 }
+
+#file {
+    display: none;
+}
+
+.custom-file-label {
+    background-color: #00c3d0;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5rem;
+    font-size: 16rem;
+    text-align: center;
+    padding: 8rem;
+}
+
+.custom-file-label:hover {
+    background-color: #ffffff;
+    color: #00c3d0;
+}

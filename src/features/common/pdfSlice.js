@@ -29,8 +29,8 @@ export const pdfDataSlice = createSlice({
     geneInformationListData: {},
     typeData: [5,5,5,5,5,5],
 
-    supplementedData: [],
-    unsupplementedData: [],
+    supplementedData: [{Lifestyle: "未定", When: "未定", Explanation: "未定", Categories: "未定"}],
+    unsupplementedData: [{Lifestyle: "未定", When: "未定", Explanation: "未定", Categories: "未定"}],
 
     // geneInformationListData: {},
     isLoading: false,
