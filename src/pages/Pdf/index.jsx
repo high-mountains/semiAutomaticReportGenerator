@@ -7,6 +7,7 @@ const Page3 = lazy(() => import('./Page3'))
 const Page4 = lazy(() => import('./Page4'))
 
 import TypeByType from './TypeByType';
+import ParentComponent from "./ParentComponent.jsx";
 
 import AuthLayout from "../../layout/AuthLayout";
 const GenCategory = lazy(() => import('./GenCategory'));
@@ -19,25 +20,26 @@ const Pathway = lazy(() => import('./Pathway.jsx'));
 
 const Pdf = () => {
     return (
-        // <AuthLayout>
-            <div className="pdfcontainer">
+        <AuthLayout>
+            <div className="pdfcontainer my-[25rem]">
                 <div className="pdfwrapper" id="downloadTest">
-                    {/* <Page1/>
+                    
+                    <Page1/>
                     <Page2/>
                     <Page3/>
-                    <Page4/> */}
-                    {/* <TypeByType/> */}
-                    {/* <GenCategory/> */}
+                    <Page4/>
+                    <TypeByType/>
+                    <GenCategory/>
                     <Supplement/>
                     <SupplementNot/>
-                    {/* <SupplementTable/> */}
-                    {/* <GeneInformationList/> */}
-                    {/* <References/>
-                    <Pathway/> */}
+                    <SupplementTable/>
+                    <GeneInformationList/>
+                    <References/>
+                    <Pathway/>
                 </div>
             </div>
             
-        // </AuthLayout>
+        </AuthLayout>
     )
   }
 
