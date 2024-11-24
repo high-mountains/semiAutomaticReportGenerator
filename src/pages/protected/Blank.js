@@ -1,15 +1,8 @@
-import { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
 
 import DocumentIcon  from '@heroicons/react/24/solid/DocumentIcon'
 
 function InternalPage(){
 
-    const dispatch = useDispatch()
-
-    useEffect(() => {
-      }, [])
-      
     return(
         <div className="hero h-4/5 bg-base-200">
             <div className="hero-content text-accent text-center">

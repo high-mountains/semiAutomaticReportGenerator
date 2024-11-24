@@ -9,7 +9,7 @@ function Page3() {
         clientName: pdfData.clientName,
         clientId: pdfData.clientId,
         mainColor: pdfData.mainColor,
-        mainTextColor: pdfData.mainTextColor,
+        mainTextColor: pdfData.mainTextColor
     };
 
     const [data, setData] = useState(initialData);
@@ -21,25 +21,22 @@ function Page3() {
                 clientName: pdfData.clientName,
                 clientId: pdfData.clientId,
                 mainColor: pdfData.mainColor,
-                mainTextColor: pdfData.mainTextColor,
+                mainTextColor: pdfData.mainTextColor
             };
         });
         return () => {
-            // optional cleanup code (only if needed)
         };
     }, [pdfData]);
 
     return (
         <>
-            <div
-                className={`page font border-[1rem] border-[rgba(0,0,0,0.1)] rounded-[2rem] relative printUnit`}
-            >
+            <div className={`page font border-[1rem] border-[rgba(0,0,0,0.1)] rounded-[2rem] relative printUnit`}>
                 <div>
                     <div
                         style={{
                             marginTop: "30rem",
                             marginRight: "30rem",
-                            marginLeft: "30rem",
+                            marginLeft: "30rem"
                         }}
                     >
                         <Text
@@ -54,7 +51,7 @@ function Page3() {
                             className={"font-bold"}
                             style={{
                                 lineHeight: 1.25,
-                                marginBottom: "20rem",
+                                marginBottom: "20rem"
                             }}
                         />
                         <Text
@@ -71,7 +68,7 @@ function Page3() {
                                     gap: "30rem",
                                     backgroundColor: "#F8F8F8",
                                     paddingTop: "11.5rem",
-                                    paddingBottom: "11.5rem",
+                                    paddingBottom: "11.5rem"
                                 }}
                                 className={"whitespace-pre-wrap"}
                             >
@@ -82,7 +79,7 @@ function Page3() {
                                     className={"whitespace-pre-wrap font-bold"}
                                     fontSize={20}
                                     style={{
-                                        lineHeight: 1.448,
+                                        lineHeight: 1.448
                                     }}
                                 />
                                 <Text
@@ -92,7 +89,7 @@ function Page3() {
                                     className={"whitespace-pre-wrap font-bold"}
                                     fontSize={20}
                                     style={{
-                                        lineHeight: 1.448,
+                                        lineHeight: 1.448
                                     }}
                                 />
                             </div>
@@ -112,8 +109,7 @@ function Page3() {
                             paddingTop: "15rem",
                             paddingLeft: "35rem",
                             paddingRight: "35rem",
-                            paddingBottom: "39.75rem",
-                            marginBottom: "",
+                            paddingBottom: "39.75rem"
                         }}
                     >
                         <Text
@@ -126,7 +122,7 @@ function Page3() {
                             style={{
                                 height: "180rem",
                                 gap: "41rem",
-                                backgroundColor: "#FFF",
+                                backgroundColor: "#FFF"
                             }}
                         >
                             <Text
@@ -138,13 +134,13 @@ function Page3() {
                                 className={"whitespace-pre-wrap font-normal"}
                                 style={{
                                     width: "308rem",
-                                    height: "159rem",
+                                    height: "159rem"
                                 }}
                             />
                             <div
                                 style={{
                                     width: "150rem",
-                                    height: "175rem",
+                                    height: "175rem"
                                 }}
                             >
                                 <img

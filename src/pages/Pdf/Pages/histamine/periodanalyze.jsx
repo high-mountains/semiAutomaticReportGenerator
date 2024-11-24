@@ -22,7 +22,7 @@ const Periodanalyze = (props) => {
             fourthSenctences: "ホルモンバランスの変化がヒスタミン代謝に影響し、アレルギーや消化器症状が変動しやすくなります。女性は<span class='blue'>エストロゲン</span>低下で<span class='bold'>ホットフラッシュ</span>や<span class='bold'>不眠</span>が増え、男性も<span class='bold'>睡眠障害</span>や<span class='bold'>胃腸の問題</span>が起こりやすくなります。この時期はストレス管理に加え、アレルギーや消化器のケアが重要です。また、環境や音に敏感になり、化学物質に過敏反応することもあります。ルールへのこだわりが強く、日常生活での配慮が求められる場合もあります。"}},
         {Component: Improvement, 
         data: {
-            wrapperWidth: "525rem", //default is          535
+            wrapperWidth: "525rem", // 
             mainColor: mainColor,
             description: "ヒスタミンタイプのおすすめ生活改善", 
             qualities1:[

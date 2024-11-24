@@ -35,8 +35,8 @@ const Periodanalyze = (props) => {
         {
             Component: Improvement,
             data: {
-                wrapperWidth: "525rem", //default is 525
-                mainColor: mainColor, //no
+                wrapperWidth: "525rem",
+                mainColor: mainColor,
                 description: "デトックスタイプのおすすめ生活改善",
                 gap: 10,
                 qualities1: [
@@ -81,24 +81,24 @@ const Periodanalyze = (props) => {
                     },
                     { content: "充分な睡眠時間を確保する。" },
                 ],
-                oneColumnStatus: false, //Because there are 2 cols
-                inContainerGap: 15, //default is      10    in the case of two cols
-                eachUlWidth: 255, //default is     250
+                oneColumnStatus: false,
+                inContainerGap: 15,
+                eachUlWidth: 255,
 
                 ulStyle1: {
                     display: "flex",
                     flexDirection: "column",
-                    gap: "5rem", //default is ⚠In this case flex     0rem   so it's not defined in there
-                    lineHeight: 1.083, //default is  ----1.42857---- 20/14
-                    fontSize: "12rem", //default is      14rem
+                    gap: "5rem", // 
+                    lineHeight: 1.083,
+                    fontSize: "12rem",
                     whiteSpace: "pre-wrap",
                 },
                 ulStyle2: {
                     display: "flex",
                     flexDirection: "column",
-                    gap: "5rem", //default is ⚠In this case flex     0rem   so it's not defined in there
-                    lineHeight: 1.083, //default is  ----1.42857---- 20/14
-                    fontSize: "12rem", //default is      14rem
+                    gap: "5rem", // 
+                    lineHeight: 1.083,
+                    fontSize: "12rem",
                     whiteSpace: "pre-wrap",
                 },
             },

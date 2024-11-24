@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, current } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchPdfData = createAsyncThunk(
@@ -9,6 +9,26 @@ export const fetchPdfData = createAsyncThunk(
   }
 );
 
+export const setPdfFlag = createAsyncThunk(
+  "/pdfData/setPdfFlag",
+  async (payload) => {
+    return payload;
+  }
+);
+
+export const setCurrentRunningPage = createAsyncThunk(
+  "/pdfData/setCurrentRunningPage",
+  async (payload) => {
+    return payload;
+  }
+);
+export const setTotalPage = createAsyncThunk(
+  "/pdfData/setTotalPage",
+  async (payload) => {
+    return payload;
+  }
+);
+
 export const pdfDataSlice = createSlice({
   name: "articleCategory",
   initialState: {
@@ -16,7 +36,7 @@ export const pdfDataSlice = createSlice({
     clientId: "98236",
     
     mainColor: "#00C3D0",// mainColor (tag color) cyan
-    mainTextColor: "#484F51",//mainTextColor (text color)
+    mainTextColor: "#484F51",// mainTextColor (text color)
     
     glutamateColor: "#ECAD14",
     catecholamineColor: "#F89550",
@@ -32,10 +52,14 @@ export const pdfDataSlice = createSlice({
     supplementedData: [{Lifestyle: "未定", When: "未定", Explanation: "未定", Categories: "未定"}],
     unsupplementedData: [{Lifestyle: "未定", When: "未定", Explanation: "未定", Categories: "未定"}],
 
-    // geneInformationListData: {},
+    geneData: [],
+
     isLoading: false,
     isUpdated: true,//new article category is added or updated or deleted.
     error: null,
+    pdfFlag: false,
+    totalPage: 0,
+    currentRunningPage: 10,
   },
   reducers: {
     loadArticleSuccessCategory: (state, { payload }) => {},
@@ -67,56 +91,49 @@ export const pdfDataSlice = createSlice({
         .filter(item => item.Type !== "Glutamate") // Exclude Glutamate for sorting
         .sort((a, b) => order.indexOf(a.Type) - order.indexOf(b.Type))
         .map(item => item.Score); // Extract scores only
-      // Add the Glutamate score to the beginning of the sorted list
       const finalScores = [glutamateScore, ...sortedScores];
       state.typeData = finalScores;
 
       const supplementedData = payload.find(file => file.fileName === "recommend_data.csv").data;
       state.supplementedData = supplementedData;
-      console.log("supplemendtedData in Store====>", supplementedData);
       
       const unsupplementedData = payload.find(file => file.fileName === "not_recommend_data.csv").data;
       
       state.unsupplementedData = unsupplementedData;
-      
-      console.log("not_recommend_data in Store====>", unsupplementedData);
+
+      const geneData = payload.find(file => file.fileName === "gene_data.csv").data;
+      // console.log("geneData in store==>", geneData);
+      state.geneData = geneData;
     }
   },
+
   extraReducers: {
-    // [fetchPdfData.pending]: (state) => {
-    //   state.isLoading = true;
-    // },
-    // [fetchPdfData.fulfilled]: (state, { payload }) => {
-    //     payload?.data?.length?
-    //     state.clientName = payload.data.clientName: state.clientName = "clientName undefined yet"
+    [setPdfFlag.pending]: (state, {payload}) => {
+      // state.isLoading = true;
+      state.pdfFlag = payload;
+    },
+    [setPdfFlag.fulfilled]: (state, { payload }) => {
+      state.pdfFlag = payload;
+    },
+    
+    [setPdfFlag.rejected]: (state, { payload }) => {
+      state.pdfFlag = payload;
+    },
 
-    //     payload?.data?.length?
-    //     state.clientId = payload.data.clientId: state.clientId = "clientId undefined yet"
-
-    //     payload?.data?.length?
-    //     state.mainColor = payload.data.mainColor: state.mainColor = "mainColor undefined yet"
-
-    //     payload?.data?.length?
-    //     state.mainColor = payload.data.mainColor: state.mainColor = "mainColor undefined yet"
-            
+    [setCurrentRunningPage.pending]: (state, {payload}) => {
+      // state.currentRunningPage = payload;
+    },
+    [setCurrentRunningPage.fulfilled]: (state, {payload}) => {
+      state.currentRunningPage = payload;
+    },
+    // [setCurrentRunningPage.rejected]: (state, {payload}) => {
+    //   state.currentRunningPage = payload;
     // },
-    // [fetchPdfData.rejected]: (state) => {
-    //   state.isLoading = false;
-    // },
-
-    // [addFirstCategory.pending]: (state) => {
-    //   state.isLoading = true;
-    // },
-    // [addFirstCategory.fulfilled]: (state, {payload}) => {
-    //   state.isLoading = false;
-    //   state.articleCategories = [makeTree(payload?.data, [payload?.data])];
-    //   state.unGroupedCategories = [makeTree(payload?.unGr, [payload?.unGr])];
-    //   state.isUpdated = false;
-    // },
-    // [addFirstCategory.rejected]: (state, {payload}) => {
-    //   state.isLoading = false;
-    //   state.error = payload;
-    // }
+    
+    [setTotalPage.fulfilled]: (state, {payload}) => {
+      state.totalPage = payload;
+    }
+    
   },
 });
 

@@ -20,29 +20,24 @@ const Merit = () => {
                 width: "527",
                 height: "322",
                 imageURL: "bg/abilityDetox.svg",
-                contentFontSize: "10rem", //The contentSize is same among a page so have to be global
-                commonStyle: {},
+                contentFontSize: "10rem",  
                 descriptions: [
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
-                        wrapperWidth: "269rem", //rem unit
+                         
+                        wrapperWidth: "269rem",  
                         heading: "<span class='blue'>細胞質</span>の解毒",
                         content:
                             "体内の酸化ストレス管理において中心的な役割を果たし、細胞や組織の健康維持に不可欠です。\n関連遺伝子：SOD1",
-                        contentLineHeight: 1.448333, //lineheight of text
+                        contentLineHeight: 1.448333,  
                         posInfo: {
                             top: "0rem",
                             left: "0rem",
                             width: "269rem",
                         },
-                        //React DOM Styling of Wrapper paragraph of 2 sentences
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
-                        fontSize: 10, // fontsize of text content(description, not header)
+                        fontSize: 10, 
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
+                         
                         wrapperWidth: "230rem",
                         heading: "肺の解毒",
                         content:
@@ -53,14 +48,9 @@ const Merit = () => {
                             right: "0rem",
                             width: "230rem",
                         },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
                         fontSize: 10
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "169rem",
                         heading: "肝臓の解毒",
                         content:
@@ -71,15 +61,10 @@ const Merit = () => {
                             right: "0rem",
                             width: "169rem",
                         },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
                         fontSize: 10,
                         contentClassName: "tracking-tightest"
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "240rem",
                         heading: "腎臓の解毒",
                         content: `血液をろ過して尿を生成し、毒素や老廃物を体外に排出します。水溶性の物質を効果的に除去する能力が高いです。\n関連遺伝子: GPX3,  NOX4`,
@@ -89,15 +74,10 @@ const Merit = () => {
                             right: "0rem",
                             width: "240rem",
                         },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
                         fontSize: 10,
                         contentClassName: "tracking-tightest"
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "240rem",
                         heading: "腸の解毒",
                         content: `食物から吸収される有害物質を排出する役割があります。また、腸内細菌も毒素の代謝に寄与します。\n関連遺伝子: GPX2, NOX1`,
@@ -107,15 +87,10 @@ const Merit = () => {
                             left: "0rem",
                             width: "240rem",
                         },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
                         fontSize: 10,
                         contentClassName: "tracking-tightest"
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "173rem",
                         heading: "ミトコンドリアの解毒",
                         content: `エネルギー代謝が活発な組織で酸化ストレスを防ぎます。\n関連遺伝子：SOD2`,
@@ -125,10 +100,6 @@ const Merit = () => {
                             left: "0rem",
                             width: "173rem",
                         },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
                         fontSize: 10,
                         contentClassName: "tracking-tightest"
                     },
@@ -141,7 +112,6 @@ const Merit = () => {
                 maincolor: maincolor,
                 content1:
                     "解毒力が高いことによるメリットと解毒力を低いことによるデメリット",
-                // content2: "ヒスタミンが脳で増えすぎることによるデメリット",
             },
         },
         {
@@ -151,10 +121,10 @@ const Merit = () => {
                     gap: "5rem",
                 },
                 inCommonStyle: {
-                    gap: "2rem", // Here is optional instead of default value 3rem
+                    gap: "2rem", 
                 },
                 contentStyle: {
-                    fontSize: "10rem", //default value is ---12rem---
+                    fontSize: "10rem", 
                     lineHeight: 1.444444,
                 },
 
@@ -163,9 +133,6 @@ const Merit = () => {
                         title: "炎症の軽減",
                         content:
                             "毒素の排泄が促進されることで、脳内の炎症が軽減され、認知機能の低下や精神的な不調を予防することができます。",
-                        contentStyle: {
-                            // letterSpacing: "-0.09rem",
-                        }
                     },
                     {
                         title: "認知症のリスク低減",

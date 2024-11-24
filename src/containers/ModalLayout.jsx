@@ -6,16 +6,12 @@ import ConfirmationModalBody from '../features/common/components/ConfirmationMod
 
 
 function ModalLayout() {
-
-
   const { isOpen, bodyType, size, extraObject, title } = useSelector(state => state.modal)
   const dispatch = useDispatch()
 
   const close = (e) => {
     dispatch(closeModal(e))
   }
-
-
 
   return (
     <>

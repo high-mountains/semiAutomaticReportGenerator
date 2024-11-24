@@ -21,29 +21,22 @@ const Merit = () => {
                 width: "525",
                 height: "300",
                 imageURL: "bg/abilityGlutamate.svg",
-                contentFontSize: "12rem", //The contentSize is same among a page so have to be global
-                commonStyle: {},
+                contentFontSize: "12rem",  
                 descriptions: [
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
-                        wrapperWidth: "240rem", //rem unit
+                        wrapperWidth: "240rem",  
                         heading: "GABA（γ-アミノ酪酸）代謝",
                         content:
                             "グルタミン酸を<span class='blue'>GABA</span>に変換し、<span class='blue'>神経伝達</span>の抑制を介して脳の興奮状態を調整します。 \n関連遺伝子：GAD1, GABRA1,  \nGABRA2, GABRG2, ALDH5A1",
-                        contentLineHeight: 1.448333, //lineheight of text
+                        contentLineHeight: 1.448333,  
                         posInfo: {
                             top: "11rem",
                             left: "0rem",
-                            width: "240rem",
+                            width: "240rem"
                         },
-                        //React DOM Styling of Wrapper paragraph of 2 sentences
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
-                        fontSize: 12, // fontsize of text content(description, not header)
+                        fontSize: 12,  
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "240rem",
                         heading: "グルタミン酸の代謝",
                         content:
@@ -54,14 +47,10 @@ const Merit = () => {
                             left: "0rem",
                             width: "240rem",
                         },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
                         etcClassName: "",
                         fontSize: 12,
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "240rem",
                         heading: "グルタミン酸の代謝調節",
                         content:
@@ -70,17 +59,12 @@ const Merit = () => {
                         posInfo: {
                             top: "11rem",
                             right: "0rem",
-                            width: "240rem",
+                            width: "240rem"
                         },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
                         fontSize: 12,
                         contentClassName: "tracking-tightest"
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "240rem",
                         heading: "                    ホモシステイン代謝",
                         content: `                        <span class='blue'>ホモシステイン</span>を他の物質に変換 \n                   し、体内の<span class='blue'>硫黄含有アミノ酸</span>のバラ  \n    ンスや<span class='blue'>メチレーションプロセス</span>をサポートします。\n 関連遺伝子：CBS, CTH`,
@@ -88,12 +72,8 @@ const Merit = () => {
                         posInfo: {
                             bottom: "19rem",
                             right: "0rem",
-                            width: "240rem",
+                            width: "240rem"
                         },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
                         fontSize: 12,
                         contentClassName: "tracking-tightest"
                     },

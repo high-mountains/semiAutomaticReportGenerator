@@ -17,7 +17,7 @@ function Layout() {
   const location = useLocation()
   useEffect(() => {
     if(location.pathname === '/'){
-      navigate('/dashboard');
+      navigate('/login');
       return;
     }
     emitPageUrl(location.pathname)

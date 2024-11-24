@@ -38,10 +38,10 @@ const Periodanalyze = (props) => {
         {
             Component: Improvement,
             data: {
-                wrapperWidth: "525rem", //default is          535
+                wrapperWidth: "525rem", // 
                 mainColor: mainColor,
                 description: "グルタメートタイプのおすすめ生活改善",
-                gap: 10, //10  only a value     10 (only)  gap between the descriptiona and cols
+                gap: 10, // 
                 qualities1: [
                     {
                         content:
@@ -103,13 +103,13 @@ const Periodanalyze = (props) => {
                 //     }
                 // ],
                 oneColumnStatus: true,
-                inContainerGap: 15, //default is      10    in the case of two cols
-                eachUlWidth: 255, //default is      250     in the case of two cols
+                inContainerGap: 15,       
+                eachUlWidth: 255,        
 
                 ulStyle1: {
                     // display: "flex",
                     // flexDirection: "column",
-                    gap: "6rem", //default is ⚠In this case flex     0rem   so it's not defined in there
+                    gap: "6rem", // 
                     lineHeight: 1.44833, //default is  ----1.42857---- 20/14
                     fontSize: "12rem", //default is      14rem
                     // letterSpacing: "3rem", //default is      no     so it's not defined in there
