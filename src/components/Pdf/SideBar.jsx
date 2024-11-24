@@ -1,9 +1,9 @@
-import React from "react"
+import React from "react";
 import Text from "./Text";
-const SideBar = (props) =>{
-    return(
-        <>
-        <div className="pdfSideBar">
+
+const SideBar = (props) => {
+    return (
+        <div style={{ width: "5rem", height: "30rem" }}>
             <div className="sideBar"></div>
             <Text
                 bgColor={props.bgColor}
@@ -14,9 +14,7 @@ const SideBar = (props) =>{
                 style={props.style}
             />
         </div>
-            
-        </>
-    )
-}    
+    );
+};
 
 export default SideBar;

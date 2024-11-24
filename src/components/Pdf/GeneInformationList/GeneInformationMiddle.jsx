@@ -3,38 +3,25 @@ import { useSelector } from "react-redux";
 
 const GeneInformationMiddle = (props) => {
     const { datas, geneName, level, description } = props;
-
-    // Initial state setup for the data object
     const initialData = datas.reduce((acc, key) => ({ ...acc, [key]: "" }), {});
     const [data, setData] = useState(initialData);
-
     const flag = useSelector((state) => state.pdfData.geneInformationListData);
-
-    // Fetch data from Redux store dynamically
-    // const tempData = useSelector((state) => {
-    //     const geneInformation = {};
-    //     datas.forEach((key) => {
-    //         geneInformation[key] = state.pdfData.geneInformationListData[key] || ""; // Default to empty string if not found
-    //     });
-    //     return geneInformation;
-    // },  [datas, flag]);
-
+    
     const tempData = useMemo(() => {
         const geneInformation = {};
         datas.forEach((key) => {
-          geneInformation[key] = flag[key] || ""; // Default to empty string if not found
+          geneInformation[key] = flag[key] || "";
         });
         return geneInformation;
       }, [datas, flag]);
 
     useEffect(() => {
-        // Update state whenever tempData changes
         setData(tempData);
-    }, [flag]); // Dependency on the flag to trigger updates when the Redux store changes
+    }, [flag]);
 
     return (
-        <div className="font text-[#484F51] mb-[10rem]">
-            <table className="geneInfo text-[12rem] w-[535rem] mb-[10rem]">
+        <div className="" style={{ fontSize: '16px', marginBottom: '10rem', color: '#484F51',}}>
+            <table className="geneInfo" style={{ marginBottom: '10rem' , fontSize: '12rem', width: '535rem'}}>
                 <thead>
                     <tr>
                         <th>遺伝子</th>
@@ -48,7 +35,7 @@ const GeneInformationMiddle = (props) => {
                         <td>
                             {datas.map((item, index) => (
                                 <p key={index}>
-                                    {item} &nbsp; &nbsp; {data[item] || "Not defined"} {/* Safely access data */}
+                                    {item} &nbsp; &nbsp; {data[item] || "未定"}
                                 </p>
                             ))}
                         </td>
@@ -56,8 +43,7 @@ const GeneInformationMiddle = (props) => {
                     </tr>
                 </tbody>
             </table>
-
-            <p className="w-[525rem] h-[70rem] text-[10rem] leading-[1.448] whitespace-pre-line">{description}</p>
+            <p style={{width: '525rem', height: '70rem', fontSize: '10rem', lineHeight: 1.448, whiteSpace: 'pre-line'}}>{description}</p>
         </div>
     );
 };

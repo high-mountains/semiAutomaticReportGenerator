@@ -5,17 +5,26 @@ const PageNumber = (props) => {
     const [bottom, setBottom] = useState(15);
 
     useEffect(() => {
-        setBottom(props.bottom)
-    }, [])
+        setBottom(props.bottom);
+    }, []);
     return (
-        <div className="bg-[#F8F8F8]">
-            <p className="absolute bottom-0 left-2/4 translate-x-[-50%] text-[9rem] leading-[1.4477]"
+        <div style={{ backgroundColor: "#F8F8F8" }}>
+            <p
                 style={{
+                    position: "absolute",
+                    bottom: 0,
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    fontSize: "9rem",
+                    lineHeight: "1.4477",
                     marginBottom: `${bottom}rem`,
-                    color: `${pdfJson.mainTextColor}` 
-            }}>{props.children}</p>
+                    color: `${pdfJson.mainTextColor}`,
+                }}
+            >
+                {props.children}
+            </p>
         </div>
-    )
-}
+    );
+};
 
 export default PageNumber;

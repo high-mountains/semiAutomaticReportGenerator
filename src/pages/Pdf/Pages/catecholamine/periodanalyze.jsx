@@ -23,34 +23,34 @@ const Periodanalyze = (props) => {
             {
                 Component: Improvement,
                 data: {
-                    wrapperWidth: "525rem", //default is          535
+                    wrapperWidth: "525rem",
                     mainColor: mainColor,
                     description: "カテコラミンタイプのおすすめ生活改善",
-                    gap: 10, //10  only a value     10 (only)  gap between the descriptiona and cols
+                    gap: 10, 
                     qualities1: [
                         
                         {
                             content:
-                                "カフェインや糖分の多い食品、加工食品はカテコラミンレベルを上昇させる可能性があるため \n     控える。",
+                                "カフェインや糖分の多い食品、加工食品はカテコラミンレベルを上昇させる可能性があるため \n     控える。"
                         },
                         {
                             content:
-                                "飲酒すると顔が赤くなったり頭痛や吐き気を感じやすい場合は、カテコラミンの代謝が阻害さ \n     れ、カテコラミンの過剰状態が生じているため、飲酒量や頻度に調節する。",
+                                "飲酒すると顔が赤くなったり頭痛や吐き気を感じやすい場合は、カテコラミンの代謝が阻害さ \n     れ、カテコラミンの過剰状態が生じているため、飲酒量や頻度に調節する。"
                         },
                         {
                             content:
-                                "<span class='blue'>腸内フローラ</span>の影響を受けやすいため、便秘にならないように注意する。",
+                                "<span class='blue'>腸内フローラ</span>の影響を受けやすいため、便秘にならないように注意する。"
                         },
                         {
                             content:
-                                "オメガ-3脂肪酸（魚類、亜麻仁油、チアシードなど）を含む食品を摂取し、脳の健康をサポー \n    トする。",
+                                "オメガ-3脂肪酸（魚類、亜麻仁油、チアシードなど）を含む食品を摂取し、脳の健康をサポー \n    トする。"
                         },
                         {
-                            content: "抗酸化物質（果物や野菜）を多く摂取し、体内の<span class='blue'>酸化ストレス</span>を軽減する。",
+                            content: "抗酸化物質（果物や野菜）を多く摂取し、体内の<span class='blue'>酸化ストレス</span>を軽減する。"
                         },
                         {
                             content:
-                                "瞑想、深呼吸、ヨガなどのリラクゼーション法を取り入れ、ストレスを軽減する。",
+                                "瞑想、深呼吸、ヨガなどのリラクゼーション法を取り入れ、ストレスを軽減する。"
                         },
                         {
                             content:
@@ -62,9 +62,9 @@ const Periodanalyze = (props) => {
                     ulStyle1: {
                         display: "flex",
                         flexDirection: "column",
-                        gap: "5rem", //default is      0rem   so it's not defined in there
-                        lineHeight: 1.333, //default is  ----1.42857---- 20/14
-                        fontSize: "12rem", //default is      14rem
+                        gap: "5rem",  
+                        lineHeight: 1.333,
+                        fontSize: "12rem"
                     },
                 },
             },
@@ -74,11 +74,9 @@ const Periodanalyze = (props) => {
     ])
     
     return(<>
-        
         <PageWrapper>
             <EnhancedPeriodanalyze/>
         </PageWrapper>
-
     </>)
 }
 

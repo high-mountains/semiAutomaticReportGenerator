@@ -71,22 +71,22 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-pic flex items-center">
-      <div className="card mx-auto w-full max-w-5xl  shadow-xl">
+    <div className="min-h-screen bg-pic flex items-center font">
+      <div className="card mx-auto w-full max-w-[1024rem]  shadow-xl">
         <div className="grid  md:grid-cols-2 grid-cols-1 opacity-80 bg-base-100 rounded-xl">
-          <div className="">
+          <div className="font">
             <LandingIntro />
           </div>
-          <div className="py-24 px-10">
-            <h2 className="text-3xl font-semibold mb-2 text-center">Login</h2>
+          <div className="py-[96rem] px-[40rem]">
+            <h2 className="text-[30rem] font-semibold mb-[8rem]} text-center">Login</h2>
             <form onSubmit={(e) => submitForm(e)}>
-              <div className="mb-4">
+              <div className="mb-[12rem]">
                 <InputText
                   autoFocus={true}
                   type="emailId"
                   defaultValue={loginObj.userId}
                   updateType="userId"
-                  containerStyle="mt-4"
+                  containerStyle="mt-[12rem]"
                   labelTitle="User Id"
                   updateFormValue={updateFormValue}
                 />
@@ -95,7 +95,7 @@ function Login() {
                   defaultValue={loginObj.password}
                   type="password"
                   updateType="password"
-                  containerStyle="mt-4"
+                  containerStyle="mt-[12rem]"
                   labelTitle="Password"
                   updateFormValue={updateFormValue}
                 />
@@ -103,23 +103,23 @@ function Login() {
 
               <div className="text-right">
                 <Link replace to="/forgot-password">
-                  <span className="text-sm  inline-block  hover:text-[#00C3D0] underline hover:cursor-pointer transition duration-200">
+                  <span className="text-[14rem]  inline-block  hover:text-[#00C3D0] underline hover:cursor-pointer transition duration-200">
                     Forgot Password?
                   </span>
                 </Link>
               </div>
 
-              <ErrorText styleClass="mt-8">{errorMessage}</ErrorText>
+              <ErrorText styleClass="mt-[32rem]">{errorMessage}</ErrorText>
               <button
                 type="submit"
                 className={
-                  "btn mt-2 w-full btn-primary bg-[#00C3D0] border-[#00C3D0]"
+                  "btn mt-[8rem] w-full btn-primary bg-[#00C3D0] border-[#00C3D0] h-[44rem] text-[20rem] rounded-[4rem]"
                 }
               >
                 Login
               </button>
 
-              <div className="text-center  mt-4">
+              <div className="text-center  mt-[16rem]">
                 Are you new here?{" "}
                 <Link to="/register" replace>
                   <span className="  inline-block  hover:text-[#00C3D0] underline hover:cursor-pointer transition duration-200">

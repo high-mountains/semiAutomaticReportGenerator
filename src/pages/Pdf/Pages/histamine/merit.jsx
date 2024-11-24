@@ -20,28 +20,24 @@ const Merit = () => {
                 width: "540.91",
                 height: "345",
                 imageURL: "bg/abilityHistamine.svg",
-                contentFontSize: "12rem", //The contentSize is same among a page so have to be global
+                contentFontSize: "12rem",  
                 descriptions: [
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
-                        wrapperWidth: "177rem", //rem unit
+                         
+                        wrapperWidth: "177rem",  
                         heading: "ヒスタミンの合成",
                         content:
                             "アミノ酸であるヒスチジンをヒスタミンに変換することでヒスタミンを合成する。 \n 　　　関連遺伝子：HDC",
-                        contentLineHeight: 1.448333, //lineheight of text
+                        contentLineHeight: 1.448333,  
                         posInfo: {
                             top: "13.4rem",
                             left: "76rem",
                             width: "177rem",
                         },
-                        //React DOM Styling of Wrapper paragraph of 2 sentences
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
-                        fontSize: 12, // fontsize of text content(description, not header)
+                        fontSize: 12
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
+                         
                         wrapperWidth: "160.79rem",
                         heading: "抗炎症作用",
                         content:
@@ -50,16 +46,14 @@ const Merit = () => {
                         posInfo: {
                             top: "11rem",
                             right: "106.12rem",
-                            width: "160.79rem",
+                            width: "160.79rem"
                        },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
+                         
+                         
                         fontSize: 12,
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
+                         
                         wrapperWidth: "177rem",
                         heading: "ヒスタミンの代謝・分解",
                         content:
@@ -68,17 +62,13 @@ const Merit = () => {
                         posInfo: {
                             top: "133rem",
                             right: "0rem",
-                            width: "177rem",
+                            width: "177rem"
                         },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
                         fontSize: 12,
                         contentClassName: "tracking-tightest"
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
+                         
                         wrapperWidth: "304.54rem",
                         heading: "グルテン過敏症/乳糖不耐性/電磁波感受性",
                         content: `グルテンや乳製品に対して過敏性や不耐症をおこす。 \n 関連遺伝子：HLA-DQ2.2,  HLA-DQ2.5 , HLA-DQ8,  \n 　　　　　　MCM6, CACNA1C`,
@@ -86,17 +76,12 @@ const Merit = () => {
                         posInfo: {
                             bottom: "1rem",
                             right: "87.46rem",
-                            width: "304.54rem",
+                            width: "304.54rem"
                         },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
                         fontSize: 12,
                         contentClassName: "tracking-tightest"
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "181.54rem",
                         heading: "ヒスタミンの作用を \n 仲介する受容体関連",
                         content: `特定の受容体に結合することで、 \n アレルギー反応などさまざまな \n 生理的反応を引き起こす。 \n 関連遺伝子：HRH1, HRH2, \n 　　　　　　HRH3, HRH4`,
@@ -104,12 +89,8 @@ const Merit = () => {
                         posInfo: {
                             bottom: "75rem",
                             left: "0rem",
-                            width: "181.54rem",
+                            width: "181.54rem"
                         },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
                         fontSize: 12,
                         contentClassName: "tracking-tightest"
                     }
@@ -121,7 +102,7 @@ const Merit = () => {
             data: {
                 maincolor: maincolor,
                 content1: "ヒスタミンが脳で高いことによるメリットと",
-                content2: "ヒスタミンが脳で増えすぎることによるデメリット",
+                content2: "ヒスタミンが脳で増えすぎることによるデメリット"
             },
         },
         {
@@ -131,13 +112,13 @@ const Merit = () => {
                     {
                         title: "覚醒と注意力の向上",
                         content:
-                            "ヒスタミンは覚醒状態を維持し、注意力や集中力を高めます。",
+                            "ヒスタミンは覚醒状態を維持し、注意力や集中力を高めます。"
                     },
                     {
                         title: "記憶と学習のサポート",
                         content:
-                            "ヒスタミンは脳のシナプス可塑性に影響を与え、記憶の形成と学習能力を支援します。",
-                    },
+                            "ヒスタミンは脳のシナプス可塑性に影響を与え、記憶の形成と学習能力を支援します。"
+                    }
                 ],
                 demerit: [
                     {
@@ -152,7 +133,7 @@ const Merit = () => {
                     {
                         title: "アレルギー反応の悪化",
                         content:
-                            "ヒスタミンが多すぎると、アレルギー反応が過剰に起こり、慢性的な鼻炎、皮膚炎、喘息などの症状が悪化します。",
+                            "ヒスタミンが多すぎると、アレルギー反応が過剰に起こり、慢性的な鼻炎、皮膚炎、喘息などの症状が悪化します。"
                     },
                     {
                         title: "消化器症状の悪化",
@@ -162,7 +143,7 @@ const Merit = () => {
                             contentStyle: {
                                 letterSpacing: "-0.6rem"
                             }
-                        },
+                        }
                 ],
             },
         },

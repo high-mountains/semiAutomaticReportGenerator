@@ -18,6 +18,4 @@ export const sidebarSlice = createSlice({
 
 export const { toggleOpen, toggleSet } = sidebarSlice.actions;
 
-
-
 export default sidebarSlice.reducer;

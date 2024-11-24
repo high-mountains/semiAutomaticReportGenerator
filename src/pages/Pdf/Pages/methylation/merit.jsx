@@ -20,29 +20,24 @@ const Merit = () => {
                 width: "525",
                 height: "269",
                 imageURL: "bg/abilityMethylation.svg",
-                contentFontSize: "10rem", //The contentSize is same among a page so have to be global
-                commonStyle: {},
+                contentFontSize: "10rem",  
                 descriptions: [
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
-                        wrapperWidth: "240rem", //rem unit
+                         
+                        wrapperWidth: "240rem",  
                         heading: "メチレーションサイクル",
                         content:
                             "メチレーションサイクルの中で、ホモシステインからメチオニンというアミノ酸を\n作り出すのを助ける遺伝子です。\n関連遺伝子：MTHFR, MTRR, MTR, \n 　　　　　　DHFR, SHMT1",
-                        contentLineHeight: 1.448333, //lineheight of text
+                        contentLineHeight: 1.448333,  
                         posInfo: {
                             top: "0rem",
                             left: "0rem",
                             width: "240rem",
                         },
-                        //React DOM Styling of Wrapper paragraph of 2 sentences
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
-                        fontSize: 12, // fontsize of text content(description, not header)
+                           fontSize: 12,  
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
+                         
                         wrapperWidth: "240rem",
                         heading: "ホモシステイン代謝",
                         content:
@@ -53,7 +48,7 @@ const Merit = () => {
                             right: "0rem",
                             width: "240rem",
                         },
-                        //React DOM Styling
+                         
                         etcStyle: {
                             // tracking
                         },
@@ -63,7 +58,7 @@ const Merit = () => {
                         contentClassName: "tracking-tightest leading-[1.4483]"
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
+                         
                         wrapperWidth: "242rem",
                         heading: "　　　　硫黄アミノ酸代謝",
                         content:
@@ -74,7 +69,7 @@ const Merit = () => {
                             right: "0rem",
                             width: "240rem",
                         },
-                        //React DOM Styling
+                         
                         etcStyle: {},
                         //tailwind
                         etcClassName: "flex flex-col gap-[3rem]",
@@ -82,7 +77,7 @@ const Merit = () => {
                         contentClassName: "tracking-[-0.5rem] leading-[1.4483]"
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
+                         
                         wrapperWidth: "240rem",
                         heading: "葉酸の取り込み・代謝",
                         content: `葉酸というビタミンを細胞に取り込ん\nで利用するのを助ける遺伝子です。\n関連遺伝子：FOLR1, FOLR2, SLC19A1`,
@@ -92,7 +87,7 @@ const Merit = () => {
                             left: "0rem",
                             width: "240rem",
                         },
-                        //React DOM Styling
+                         
                         etcStyle: {},
                         //tailwind
                         etcClassName: "flex flex-col gap-[3rem]",

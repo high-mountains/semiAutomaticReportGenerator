@@ -5,7 +5,7 @@ import PageNumber from "../../components/Pdf/PageNumber.jsx";
 import Text from "../../components/Pdf/Text.jsx";
 import Table from "../../components/Pdf/Table.jsx";
 
-import pdfData from "../../utils/dummyPdf.json"
+import pdfData from "../../utils/dummyPdf.json";
 import { useSelector } from "react-redux";
 
 const SupplementNot = () => {
@@ -14,7 +14,6 @@ const SupplementNot = () => {
     const tt = useSelector((state) => state.pdfData.unsupplementedData)
     
     useEffect(() => {
-        console.log("tableData in frontend===>", tt);
         setTableData(tt)
     }, [tt]);
 
@@ -24,11 +23,11 @@ const SupplementNot = () => {
                 subtitle={"Supplement"}
                 mainTitle={"おすすめしないサプリメントや生活習慣"}
                 subTitleStyle={{
-                    marginBottom:"5rem"
+                    marginBottom: "5rem"
                 }}
-                mainTitleStyle={{
-                    fontSize:"28rem",
-                    letterSpacing:"-1.4rem"
+                mainTitleStyle= {{
+                    fontSize: "28rem",
+                    letterSpacing: "-1.4rem"
                 }}
             />
             <Text

@@ -10,6 +10,7 @@ const AdminUsers = lazy(() => import('../pages/Admin/Users'))
 
 const PDF = lazy(() => import("../pages/Pdf"))
 const Profile = lazy(() => import("../pages/Setting/Profile"));
+const Test = lazy(() => import("../pages/Test"))
 
 const routes = [
   {
@@ -17,6 +18,12 @@ const routes = [
     path: "/pdf", // the url
     // role: ['admin', 'guest'],
     component: PDF, // view rendered
+  },
+  {
+    title: "Test",
+    path: "/test", // the url
+    // role: ['admin', 'guest'],
+    component: Test, // view rendered
   },
   
   {

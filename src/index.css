@@ -129,7 +129,7 @@ button,
 }
 
 .serviceManage {
-  background-image: url("../public/BG3.png");
+  background-image: url("../public/bg/Background_Gradients.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;

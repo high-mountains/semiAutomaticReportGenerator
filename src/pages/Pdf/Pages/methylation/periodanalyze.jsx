@@ -35,7 +35,7 @@ const Periodanalyze = (props) => {
         {
             Component: Improvement,
             data: {
-                wrapperWidth: "525rem", //default is          535
+                wrapperWidth: "525rem", // 
                 mainColor: mainColor,
                 description: "メチレーションタイプのおすすめ生活改善",
                 qualities1: [

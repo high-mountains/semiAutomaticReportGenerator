@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Text from "../../Text"
 
 const Explanation = (props) => {
-    const [gap, setGap] = useState(10);
-    
     return (
-        <div className='flex flex-col my-[30rem] gap-[10rem]'>
+        <div style={{ display: 'flex', flexDirection: 'column', marginTop: '30rem', marginBottom: '30rem', gap: '10rem' }
+    }>
             <Text
                 sidebar={1}
                 sidebarColor={props.sidebarColor}
@@ -14,7 +13,8 @@ const Explanation = (props) => {
             <Text
                 textContent={props.answer}
                 fontSize={14}
-                className={`font-normal whitespace-pre-wrap w-[535rem] ${props.className}`}
+                className={`${props.className}`}
+                style={{ fontWeight: 'normal', whiteSpace: 'pre-wrap', width: '535rem' }}
             />
         </div>
     );

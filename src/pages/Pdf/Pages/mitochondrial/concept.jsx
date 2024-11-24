@@ -9,9 +9,7 @@ import { useState } from "react";
 import withPeriodanalyze from "../../../../components/Pdf/HOC/withperiodanalyze";
 
 const Concept = () => {
-
     const  [maincolor, setMaincolor] = useState(useSelector(state => state.pdfData.mitochodrialColor));
-    
     const EnhacedConcept = withPeriodanalyze([
         {Component: PageHeader,
             data:{
@@ -39,29 +37,17 @@ const Concept = () => {
                     {
                         content:
                             "朝起きるのがつらかったり、体が重\n     く感じる",
-                        liStyle: {
-                            //liStyle is Option
-                        },
                     },
                     {
                         content:
                             "夕方になるといつも眠くなる",
-                        liStyle: {
-                            //liStyle is Option
-                        },
                     },
                     {
                         content:
                             "積極的に運動をしない",
-                        liStyle: {
-                            //liStyle is Option
-                        },
                     },
                     {
                         content: "頭がぼんやりしてしまう",
-                        liStyle: {
-                            //liStyle is Option
-                        },
                     },
                 ],                    
                 qualities2: [
@@ -69,34 +55,21 @@ const Concept = () => {
                     {
                         content:
                             "体重のコントロールがしづらい",
-                        liStyle: {
-                            //liStyle is Option
-                        },
                     },
                     {
                         content:
                             "過食気味になりやすい",
-                        liStyle: {
-                            //liStyle is Option
-                        },
                     },
                     {
                         content:
                             "風邪を引きやすい",
-                        liStyle: {
-                            //liStyle is Option
-                        },
                     },
                     {
                         content:
                             "ロングスリーパー",
-                        liStyle: {
-                            //liStyle is Option
-                        },
                     },
                 ], 
                 sidebarColor: maincolor,
-                // className: "leading-[1.4478]"
             }
         },
         {Component: PageNumber,

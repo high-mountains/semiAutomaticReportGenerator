@@ -21,29 +21,22 @@ const Merit = () => {
                 width: "525",
                 height: "300",
                 imageURL: "bg/abilityCatecholamine.svg",
-                contentFontSize: "12rem", //The contentSize is same among a page so have to be global
-                commonStyle: {},
+                contentFontSize: "12rem", 
                 descriptions: [
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
-                        wrapperWidth: "240rem", //rem unit
+                        wrapperWidth: "240rem", 
                         heading: "カテコラミンの分解・代謝",
                         content:
                             "体が過剰なストレスや興奮状態から平常に戻るために、カテコラミンを分解・代謝\nする重要なプロセスです。\n関連遺伝子：COMT, MAOA, MAOB, \nALDH2, SULT1A3, DBH, SLC6A2",
-                        contentLineHeight: 1.448333, //lineheight of text
+                        contentLineHeight: 1.448333, 
                         posInfo: {
                             top: "11rem",
                             left: "0rem",
-                            width: "240rem",
+                            width: "240rem"
                         },
-                        //React DOM Styling of Wrapper paragraph of 2 sentences
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
-                        fontSize: 12, // fontsize of text content(description, not header)
+                        fontSize: 12, 
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "240rem",
                         heading: "カテコラミン受容体",
                         content:
@@ -52,16 +45,11 @@ const Merit = () => {
                         posInfo: {
                             top: "11rem",
                             right: "0rem",
-                            width: "240rem",
+                            width: "240rem"
                         },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
-                        fontSize: 12,
+                        fontSize: 12
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "240rem",
                         heading: "　　　　一酸化窒素 (NO) 合成",
                         content:
@@ -70,17 +58,12 @@ const Merit = () => {
                         posInfo: {
                             bottom: "53rem",
                             right: "0rem",
-                            width: "240rem",
+                            width: "240rem"
                         },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
                         fontSize: 12,
                         contentClassName: "tracking-tightest"
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "240rem",
                         heading: "カテコラミンの合成",
                         content: `アミノ酸から作られ、脳や副腎で\n生成されます。\n関連遺伝子：TH, GCH1, DHFR`,
@@ -88,12 +71,8 @@ const Merit = () => {
                         posInfo: {
                             bottom: "51rem",
                             left: "0rem",
-                            width: "240rem",
+                            width: "240rem"
                         },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
                         fontSize: 12,
                         contentClassName: "tracking-tightest"
                     },
@@ -115,34 +94,34 @@ const Merit = () => {
                     {
                         title: "集中力の向上",
                         content:
-                            "カテコラミンは注意力と集中力を高め、認知機能を向上させます。",
+                            "カテコラミンは注意力と集中力を高め、認知機能を向上させます。"
                     },
                     {
                         title: "瞬発力の向上",
                         content:
-                            "カテコラミンはストレス状況下での迅速な反応や瞬発力を高め、緊急時の対応能力を向上させます。",
+                            "カテコラミンはストレス状況下での迅速な反応や瞬発力を高め、緊急時の対応能力を向上させます。"
                     },
                     {
                         title: "モチベーションの向上",
                         content:
-                            "ドーパミンは目標達成への意欲を高め、行動を促進します。",
+                            "ドーパミンは目標達成への意欲を高め、行動を促進します。"
                     },
                 ],
                 demerit: [
                     {
                         title: "情緒の不安定",
                         content:
-                            "ノルアドレナリンとアドレナリンが高すぎると、イライラや攻撃的な行動（「キレる」状態）を引き起こすことがあります。",
+                            "ノルアドレナリンとアドレナリンが高すぎると、イライラや攻撃的な行動（「キレる」状態）を引き起こすことがあります。"
                     },
                     {
                         title: "不安やストレスの増加",
                         content:
-                            "高いカテコラミンレベルは慢性的な不安やストレスを引き起こし、心身の健康に悪影響を与えることがあります。",
+                            "高いカテコラミンレベルは慢性的な不安やストレスを引き起こし、心身の健康に悪影響を与えることがあります。"
                     },
                     {
                         title: "睡眠障害",
                         content:
-                            "過剰なカテコラミンは覚醒状態を維持しすぎ、睡眠の質を低下させることがあります。",
+                            "過剰なカテコラミンは覚醒状態を維持しすぎ、睡眠の質を低下させることがあります。"
                     },
                 ],
             },

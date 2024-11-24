@@ -22,7 +22,7 @@ const Periodanalyze = (props) => {
             fourthSenctences: "更年期に入るとホルモンバランスの変化でエネルギーや代謝が低下し、<span class='bold'>骨密度</span>や<span class='bold'>筋力の減少</span>、<span class='bold'>体重増加</span>が気になりやすくなります。ミトコンドリア機能の低下で認知や運動能力が低下し、感染症にかかりやすく外出を億劫に感じることも増えます。また、脱毛や爪の脆さ、筋肉痛、足のつりなどの身体的変化が現れることもあります。"}},
         {Component: Improvement, 
         data: {
-            wrapperWidth: "535rem", //default is          535
+            wrapperWidth: "535rem", 
             mainColor: mainColor,
             description: "ミトコンドリアタイプのおすすめ生活改善", 
             qualities1:[
@@ -50,16 +50,12 @@ const Periodanalyze = (props) => {
             ],
             oneColumnStatus: true,
             liStyle: {lineHeight: 1.25, fontSize:"12rem"},
-            // ulStyle: "flex flex-col gap-[8rem] text-[10rem] tracking-tightest"
             ulStyle1: {
                 display: "flex",
                 flexDirection: "column",
-                gap: "4rem", //default is ⚠In this case flex     0rem   so it's not defined in there
-                // lineHeight: 1.25, //default is  ----1.42857---- 20/14
-                fontSize: "12rem", //default is      14rem
-                // letterSpacing: "-0.48rem", //default is      no     so it's not defined in there
+                gap: "4rem",
+                fontSize: "12rem", 
                 whiteSpace: "pre-wrap"
-                // marginTop: "20rem"  //default is 10rem
             },
         }},
         {Component: PageNumber, 

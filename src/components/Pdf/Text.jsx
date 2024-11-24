@@ -24,29 +24,29 @@ const Text = (props) => {
             className: props.className,
             sidebarColor: props.sidebarColor,
             sidebarHeight: props.sidebarHeight,
-            style: props.style || {}, // Default to an empty object if props.style is not provided
-            containerStyle: props.containerStyle,
+            style: props.style || {},
+            containerStyle: props.containerStyle
         });
-    }, [props]); // Listen for changes in the props object
+    }, [props]);
 
     const { textContent, textColor, bgColor, fontSize, className, sidebarColor, sidebarHeight, style, containerStyle } = styleProps;
 
     return (
         <>
-            {/* Using inline styles for colors */}
-
             {props.sidebar ? props.sidebar && 
                 <>
-                    <div className="flex flex-row items-center" style={{...containerStyle}}>
+                    <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', ...containerStyle}}>
                         <span style={{backgroundColor: `${sidebarColor || "#00C3D0"}`, paddingLeft:"5rem", paddingTop:`${sidebarHeight || "30rem"}`, marginRight:"8rem"}}/>
                         <p
                             style={{
                                 backgroundColor: bgColor ? `${bgColor}` : undefined,
                                 color: `${textColor || pdfData.mainTextColor}`,
                                 fontSize: fontSize ? `${fontSize}rem` : "16rem",
-                                ...style, // Spread the incoming style prop
+                                fontWeight: 'bold',
+                                whiteSpace: 'pre-line',
+                                ...style
                             }}
-                            className={`font font-bold whitespace-pre-line ${styleProps.className}`}
+                            className={`font ${styleProps.className}`}
                         >
                             {textContent}
                         </p>
@@ -56,15 +56,14 @@ const Text = (props) => {
                             backgroundColor: bgColor ? `${bgColor}` : undefined,
                             color: `${textColor || pdfData.mainTextColor}`,
                             fontSize: fontSize ? `${fontSize}rem` : "16rem",
-                            ...style, // Spread the incoming style prop
+                            ...style
                         }}
                         className={`font ${styleProps.className}`}
                         dangerouslySetInnerHTML={{ __html: textContent }}
                         >
                         </p>
             }
-
-            {props.children && <div className={`font ${className}`}>{props.children}</div>}
+            {props.children && <div className={`${className}`} style={{fontSize: '16px'}}>{props.children}</div>}
         </>
     );
 };

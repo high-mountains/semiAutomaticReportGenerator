@@ -144,7 +144,7 @@ const GenCategory = () => {
                     "今回のSNPs検査によると、赤く囲われたカテゴリーに関連する遺伝子について、変異のある可能性があります。 \n遺伝子の変異自体は、誰にでも存在しますが、その内容は人によって様々です。自分の遺伝子・特性にあった健康管理を目指しましょう。"
                 }
                 fontSize={12}
-                className={"whitespace-pre-wrap"}
+                className={"whitespace-pre-wrap my-[18rem]"}
             />
         <div className="w-[525rem] whitespace-pre-wrap">
             <CategoryRow bgColor="#FFFDF1" data={glutamateData} />

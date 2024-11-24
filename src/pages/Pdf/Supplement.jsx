@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import PageWrapper from "../../components/Pdf/PageWrapper";
 import PageHeader from "../../components/Pdf/PageHeader";
 import PageNumber from "../../components/Pdf/PageNumber";
@@ -11,14 +11,11 @@ import { useSelector } from "react-redux";
 const Supplement = () => {
     const [sidbarColor, setSidebarColor] = useState(pdfData.mainColor);
     const [tableData, setTableData] = useState([]);
-    const supplementedData = useSelector((state) => state.pdfData.supplementedData);
-
-    const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-    const elementRef = useRef(null);
+    const tt = useSelector((state) => state.pdfData.supplementedData)
     
     useEffect(() => {
-        setTableData(supplementedData)
-    }, [supplementedData]);
+        setTableData(tt)
+    }, [tt]);
     
     return (
         <PageWrapper>
@@ -58,7 +55,6 @@ const Supplement = () => {
                     },
                 ]}
                 bodyData={tableData}
-                ref={elementRef}
             />
             <PageNumber>24</PageNumber>
         </PageWrapper>

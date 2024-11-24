@@ -343,7 +343,7 @@ function Page2() {
                         />
                         <span className="dots"></span>
                         <Text
-                            textContent={"P00"}
+                            textContent={"P150"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -353,9 +353,6 @@ function Page2() {
                         />
                     </div>
                 </div>
-                
-
-{/* あなたの遺伝子タイプ */}
             </div>
         </>
     )

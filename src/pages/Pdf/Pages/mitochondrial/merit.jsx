@@ -20,29 +20,22 @@ const Merit = () => {
                 width: "525",
                 height: "305",
                 imageURL: "bg/abilityMitochondrial.svg",
-                contentFontSize: "12rem", //The contentSize is same among a page so have to be global
-                commonStyle: {},
+                contentFontSize: "12rem",
                 descriptions: [
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
-                        wrapperWidth: "229rem", //rem unit
+                        wrapperWidth: "229rem",
                         heading: "エネルギー代謝と生成",
                         content:
                             "ミトコンドリア内でエネルギー（ATP）を作るために必要な<span class='blue'>酵素</span>やプロテインを作り出す遺伝子。 \n関連遺伝子：NDUFA1, NDUFS1,\n　　　　　　ATP5F1A",
-                        contentLineHeight: 1.448333, //lineheight of text
+                        contentLineHeight: 1.448333,  
                         posInfo: {
                             top: "0rem",
                             left: "0rem",
-                            width: "229rem",
+                            width: "229rem"
                         },
-                        //React DOM Styling of Wrapper paragraph of 2 sentences
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
-                        fontSize: 12, // fontsize of text content(description, not header)
+                        fontSize: 12
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "230rem",
                         heading: "クエン酸回路（TCAサイクル）",
                         content:
@@ -53,14 +46,9 @@ const Merit = () => {
                             right: "13rem",
                             width: "230rem",
                        },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
                         fontSize: 12,
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "167rem",
                         heading: "脂肪酸と糖の代謝",
                         content:
@@ -71,15 +59,10 @@ const Merit = () => {
                             right: "0rem",
                             width: "167rem",
                         },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
                         fontSize: 12,
                         contentClassName: "tracking-tightest"
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "398rem",
                         heading: "酸化的リン酸化と電子伝達系",
                         content: `酸素を使ってエネルギーを生成する過程（電子伝達系）に関わる遺伝子。 \n 関連遺伝子：COX4I2, CYC1, SDHB`,
@@ -89,15 +72,10 @@ const Merit = () => {
                             right: "0rem",
                             width: "398rem",
                         },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
                         fontSize: 12,
                         contentClassName: "tracking-tightest"
                     },
                     {
-                        // the width and fontSize of MainHeader is fixed, so ti will be described in that component
                         wrapperWidth: "170rem",
                         heading: "コエンザイムQの合成",
                         content: `ミトコンドリアでのエネルギー生成を助けるコエンザイムQ（ユビキノン）を作る遺伝子。 \n 関連遺伝子：COQ2, COQ7 `,
@@ -107,10 +85,6 @@ const Merit = () => {
                             left: "0rem",
                             width: "170rem",
                         },
-                        //React DOM Styling
-                        etcStyle: {},
-                        //tailwind
-                        etcClassName: "",
                         fontSize: 12,
                         contentClassName: "tracking-tightest"
                     }
@@ -129,19 +103,18 @@ const Merit = () => {
             Component: MeritDemerit,
             data: {
                 commonStyle:{
-                    gap: "5rem",  // Here is optional instead of default value 8rem
+                    gap: "5rem",
                 },
                 inCommonStyle:{
-                    gap: "3rem",     // Here is optional instead of default value 3rem
+                    gap: "3rem",
                     fontSize: 1.4477
                 },
                 titleStyle:{
-                    //  HERE  WILL  BE  NO  CHANGE
-                    fontSize: "12rem", //default value is ---12rem---
+                    fontSize: "12rem",
                 },
                 contentStyle:{
-                    fontSize: "9rem", //default value is ---12rem---
-                    lineHeight:1.444444,       //default value is ---1.448333---  12/17.38
+                    fontSize: "9rem",
+                    lineHeight:1.444444,
                 },
                 merit: [
                     {
