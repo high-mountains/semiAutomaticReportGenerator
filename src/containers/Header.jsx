@@ -200,31 +200,29 @@ function Header() {
         });
 
       notification['success']({
-        message: 'Success',
+        message: '成功',
         description:
-          'Upload is completed',
+          'アップロード完了',
           key: new Date().getTime(), // Use a unique key each time
       });
 
       setTimeout(() => {notification['success']({
-        message: 'Sucess',
+        message: '成功',
         description:
-          'Data is overwrited successfully',
+          'データの上書きに成功',
           key: new Date().getTime(), // Use a unique key each time
       });}, 500)
   }
 
   const handleDownloadPdf = async () => {
     await dispatch(setPdfFlag(true))
-    console.log("IN handleDownloadPdf===>");
     await downloadPDF();
-    console.log("OUT handleDownloadPdf===>");
     await dispatch(setPdfFlag(false));
     
     notification['success']({
-      message: 'Success',
+      message: '成功',
       description:
-        'Download is completed',
+        'ダウンロード完了',
         key: new Date().getTime(), // Use a unique key each time
     });
   
@@ -249,7 +247,7 @@ function Header() {
                 className="font bg-[#00C3D0] text-[#fff] hover:bg-[#b4eeef] hover:text-[#00C3D0] w-[200rem] h-[25rem] text-[16rem]"
             />
             {/* <label htmlFor="file" className="custom-file-label ">CSVデータアップロード</label> */}
-            <label htmlFor="file" className="custom-file-label ">Import CSV File</label>
+            <label htmlFor="file" className="custom-file-label ">CSVファイルのインポート</label>
         </div>
 
         <div className="mr-[10rem]">
@@ -257,7 +255,7 @@ function Header() {
               className="font bg-[#00C3D0] text-[#fff] hover:bg-[#b4eeef] hover:text-[#00C3D0] rounded-[5rem] flex flex-row items-center justify-center p-[8rem]"
               onClick={() => handleDownloadPdf()}
           >
-              <ArrowDownTrayIcon className={"fill-current w-[28rem] h-[25rem]"}/><p className="ml-[3rem] text-[14rem]">PDF Download</p>
+              <ArrowDownTrayIcon className={"fill-current w-[28rem] h-[25rem]"}/><p className="ml-[3rem] text-[14rem]">PDFダウンロード</p>
           </button>
         </div>
 
