@@ -3,7 +3,7 @@ import { themeChange } from "theme-change";
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { notification } from 'antd';
-import jsPDF from "jspdf";
+import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
 
 import Bars3Icon from "@heroicons/react/24/outline/Bars3Icon";
@@ -79,8 +79,8 @@ function Header() {
         const element = batch[i];
 
         try {
-          const canvas = await html2canvas(element, { scale: 1.5 });
-          const imgData = canvas.toDataURL("image/jpeg", 0.8); // Use JPEG for compression
+          const canvas = await html2canvas(element, { scale: 2 });
+          const imgData = canvas.toDataURL("image/jpeg"); // Use JPEG for compression
 
           const imgWidth = canvas.width;
           const imgHeight = canvas.height;
@@ -129,32 +129,68 @@ function Header() {
 
     // Reset current page after processing
     setCurrentPage(0);
-
-  //   setTimeout(async () => {
-  //     let elems = document.querySelectorAll<HTMLElement>(".printUnit")
-  //     const doc = new jsPDF({
-  //       orientation: "p",
-  //       format: "a4",
-  //     })
-  //     for (let i = 0; i < elems.length; i++) {
-  //       console.log("OUT export PDF");
-  //         const elem = elems[i]
-  //         if ($(elem).find("canvas").length == 0) continue
-  //         console.log("IN export PDF", i);
-          
-  //         const canvas = await html2canvas(elem, { scale: 2 })
-  //         const dataURI = canvas.toDataURL("image/png")
-  //         doc.setPage(+i + 1)
-  //         if (canvas.height / doc.internal.pageSize.height > canvas.width / doc.internal.pageSize.width) {
-  //             doc.addImage(dataURI, "JPEG", (doc.internal.pageSize.width - canvas.width / (canvas.height / doc.internal.pageSize.height)) / 2, 10, 0, doc.internal.pageSize.height - 20)
-  //         } else {
-  //             doc.addImage(dataURI, "JPEG", 10, (doc.internal.pageSize.height - canvas.height / (canvas.width / doc.internal.pageSize.width)) / 2, doc.internal.pageSize.width - 20, 0)
-  //         }
-  //         if (+i < elems.length - 1) doc.addPage()
-  //     }
-  //     doc.save(title + ".pdf")
-  // }, 1500)
   };
+
+  // ============================================
+// const downloadPDF = async (title = "") => {
+//     const elements = document.querySelectorAll(".printUnit");
+//     const pdf = new jsPDF({
+//         orientation: "l", // Use landscape as default
+//         unit: "px",
+//         format: "a4"
+//     });
+
+//     const batchSize = 5; // Process elements in smaller batches for stability
+
+//     for (let i = 0; i < elements.length; i += batchSize) {
+//         const batch = Array.from(elements).slice(i, i + batchSize);
+
+//         for (let j = 0; j < batch.length; j++) {
+//             const element = batch[j];
+//             if (!element.querySelector("canvas")) continue;
+
+//             try {
+//                 const canvas = await html2canvas(element, { scale: 2 });
+//                 const imgData = canvas.toDataURL("image/png");
+
+//                 const imgWidth = canvas.width;
+//                 const imgHeight = canvas.height;
+
+//                 const pdfPageWidth = pdf.internal.pageSize.getWidth();
+//                 const pdfPageHeight = pdf.internal.pageSize.getHeight();
+
+//                 const widthRatio = pdfPageWidth / imgWidth;
+//                 const heightRatio = pdfPageHeight / imgHeight;
+
+//                 const scaleFactor = Math.min(widthRatio, heightRatio);
+//                 const scaledWidth = imgWidth * scaleFactor;
+//                 const scaledHeight = imgHeight * scaleFactor;
+
+//                 const xOffset = (pdfPageWidth - scaledWidth) / 2;
+//                 const yOffset = (pdfPageHeight - scaledHeight) / 2;
+
+//                 pdf.setPage(i + j + 1); // Ensure proper page numbering
+//                 pdf.addImage(imgData, "PNG", xOffset, yOffset, scaledWidth, scaledHeight);
+
+//                 if (j < batch.length - 1 || i + j < elements.length - 1) {
+//                     pdf.addPage();
+//                 }
+//             } catch (error) {
+//                 console.error(`Error processing element at index ${i + j}:`, error);
+//             }
+//         }
+
+//         // Adding a delay to prevent browser freezing
+//         await new Promise(resolve => setTimeout(resolve, 100));
+//     }
+
+//     pdf.save(`${title}.pdf`);
+// };
+ 
+
+  // ====================================
+
+
 
   // function logoutUser() {
   //   window.socket && window.socket.disconnect();

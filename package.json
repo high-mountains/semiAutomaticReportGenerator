@@ -37,6 +37,7 @@
     "antd-table-saveas-excel": "^2.2.1",
     "apexcharts": "^3.44.2",
     "axios": "^1.6.2",
+    "caniuse-lite": "^1.0.30001684",
     "capitalize-the-first-letter": "^1.0.8",
     "chart.js": "^4.0.1",
     "chartjs-plugin-zoom": "^2.0.1",
