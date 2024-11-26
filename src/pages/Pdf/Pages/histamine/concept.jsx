@@ -12,6 +12,14 @@ const Concept = () => {
 
     const  [maincolor, setMaincolor] = useState(useSelector(state => state.pdfData.histamineColor));
     
+    const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
+    const [renderedPdfFlag, setRenderedPdfFlag] = useState(pdfFlag);
+
+    useEffect(() => {
+        setRenderedPdfFlag(pdfFlag);
+        console.log("pdfFlag===>", pdfFlag);
+    }, [pdfFlag]);
+
     const EnhacedConcept = withPeriodanalyze([
         {Component: PageHeader,
             data:{
@@ -39,54 +47,67 @@ const Concept = () => {
                 qualities1: [
                     
                     {
-                        content:
-                            "細かく正確性の求められるタスクに\n     向いている"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>細かく正確性の求められるタスクに\n向いている</p>`
+                        // content:
+                        //     "細かく正確性の求められるタスクに\n     向いている"
                     },
                     {
-                        content:
-                            "ルーティンワークが得意"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>ルーティンワークが得意</p>`
+                        // content:
+                        //     "ルーティンワークが得意"
                     },
                     {
-                        content:
-                            "部屋が綺麗"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>部屋が綺麗</p>`
+                        // content:
+                        //     "部屋が綺麗"
                     },
                     {
-                        content:
-                            "集中力や記憶力が高い"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>集中力や記憶力が高い</p>`
+                        // content:
+                        //     "集中力や記憶力が高い"
                     },
                     {
-                        content: "何事にも慎重なタイプ"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>何事にも慎重なタイプ</p>`
+                        // content: 
+                        //     "何事にも慎重なタイプ"
                     },
                     {
-                        content:
-                            "士業に向いている"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>士業に向いている</p>`
+                        // content:
+                        //     "士業に向いている"
                     },
                 ],
                 qualities2: [
                     
                     {
-                        content:
-                            "肌荒れやアレルギーに悩む"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>肌荒れやアレルギーに悩む</p>`
+                        // content:
+                        //     "肌荒れやアレルギーに悩む"
                     },
                     {
-                        content:
-                            "頭痛がしやすい"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>頭痛がしやすい</p>`
+                        // content:
+                        //     "頭痛がしやすい"
                     },
                     {
-                        content:
-                            "騒がしい場所が苦手"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>騒がしい場所が苦手</p>`
+                        // content:
+                        //     "騒がしい場所が苦手"
                     },
                     {
-                        content:
-                            "胃腸が痛くなりやすい"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>胃腸が痛くなりやすい</p>`
+                        // content:
+                        //     "胃腸が痛くなりやすい"
                     },
                     {
-                        content:
-                            "偏食になりやすい"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>偏食になりやすい</p>`
+                        // content:
+                        //     "偏食になりやすい"
                     },
                     {
-                        content:
-                            "不安や感覚過敏に悩む"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>不安や感覚過敏に悩む</p>`
+                        // content:
+                        //     "不安や感覚過敏に悩む"
                     },
                 ], 
                 sidebarColor: maincolor

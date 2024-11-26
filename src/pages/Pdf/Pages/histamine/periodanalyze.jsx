@@ -4,11 +4,20 @@ import PageHeader from "../../../../components/Pdf/PageHeader";
 import Fourperiod from "../../../../components/Pdf/PagesComponents/PeriodAnalyze/Fourperiod";
 import Improvement from "../../../../components/Pdf/PagesComponents/PeriodAnalyze/Improvement";
 import withPeriodanalyze from "../../../../components/Pdf/HOC/withperiodanalyze";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 const Periodanalyze = (props) => {
     const [mainColor, setMainColor] = useState(useSelector((state) => state.pdfData.histamineColor))
+        
+    const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
+    const [renderedPdfFlag, setRenderedPdfFlag] = useState(pdfFlag);
+
+    useEffect(() => {
+        setRenderedPdfFlag(pdfFlag);
+        console.log("pdfFlag===>", pdfFlag);
+    }, [pdfFlag]);
+
     const EnhancedPeriodanalyze = withPeriodanalyze([
         {Component: PageHeader, 
         data: {
@@ -27,25 +36,32 @@ const Periodanalyze = (props) => {
             description: "ヒスタミンタイプのおすすめ生活改善", 
             qualities1:[
                 {
-                    content:"ヒスタミンを多く含む食品（熟成チーズ、加工肉、発酵食品、アルコール、特定の魚類など）\n      を控える。",
+                    content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>ヒスタミンを多く含む食品（熟成チーズ、加工肉、発酵食品、アルコール、特定の魚類など\nを控える。</p>`
+                    // content:"ヒスタミンを多く含む食品（熟成チーズ、加工肉、発酵食品、アルコール、特定の魚類など）\n      を控える。",
                 },
                 {
-                    content: "なるべく飲酒を控える"
+                    content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>なるべく飲酒を控える</p>`
+                    // content: "なるべく飲酒を控える"
                 },
                 {
-                    content: "新鮮な食材や、保存料や添加物が少ない食品、抗ヒスタミン作用を持つ食品（だいこん、ター\n      メリック、ニンジンなど）を積極的に摂取する。"
+                    content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>新鮮な食材や、保存料や添加物が少ない食品、抗ヒスタミン作用を持つ食品（だいこん、ター\nメリック、ニンジンなど）を積極的に摂取する。</p>`
+                    // content: "新鮮な食材や、保存料や添加物が少ない食品、抗ヒスタミン作用を持つ食品（だいこん、ター\n      メリック、ニンジンなど）を積極的に摂取する。"
                 },
                 {
-                    content: "グルテンフリー、<span class='blue'>カゼインフリー</span>を心掛け、腸内フローラを整える。"
+                    content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>グルテンフリー、<span class='blue'>カゼインフリー</span>を心掛け、腸内フローラを整える。</p>`
+                    // content: "グルテンフリー、<span class='blue'>カゼインフリー</span>を心掛け、腸内フローラを整える。"
                 },
                 {
-                    content: "こまめな清掃や空気清浄機の使用により、環境中のアレルゲンを減らしてアレルギー反応を抑\n      える。"
+                    content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>こまめな清掃や空気清浄機の使用により、環境中のアレルゲンを減らしてアレルギー反応を抑\nえる。</p>`
+                    // content: "こまめな清掃や空気清浄機の使用により、環境中のアレルゲンを減らしてアレルギー反応を抑\n      える。"
                 },
                 {
-                    content: "<span class='blue'>マイコトキシン</span>（カビ毒）の原因となるような汚染された穀類や住居、エアコンなどを避け\n      る。"
+                    content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p><span class='blue'>マイコトキシン</span>（カビ毒）の原因となるような汚染された穀類や住居、エアコンなどを避け\nる。</p>`
+                    // content: "<span class='blue'>マイコトキシン</span>（カビ毒）の原因となるような汚染された穀類や住居、エアコンなどを避け\n      る。"
                 },
                 {
-                    content: "寝室にスマートフォンなどを持ち込まない、機内モードにしておく。寝室とWifiルーターの距\n      離を取る。"
+                    content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>寝室にスマートフォンなどを持ち込まない、機内モードにしておく。寝室とWifiルーターの距\n離を取る。</p>`
+                    // content: "寝室にスマートフォンなどを持ち込まない、機内モードにしておく。寝室とWifiルーターの距\n      離を取る。"
                 },
             ],
             oneColumnStatus: true,

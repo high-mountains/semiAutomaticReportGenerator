@@ -3,8 +3,10 @@ import { themeChange } from "theme-change";
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { notification } from 'antd';
-import jsPDF from "jspdf";
+import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
+// import PDFDocument from 'pdfkit';
+// import blobStream from 'blob-stream';
 
 import Bars3Icon from "@heroicons/react/24/outline/Bars3Icon";
 import MoonIcon from "@heroicons/react/24/outline/MoonIcon";
@@ -41,12 +43,6 @@ function Header() {
     dispatch(setCurrentRunningPage(currentPage));
   }, [totalElements, currentPage])
   
-  // useEffect(() => {
-  //   if (user) {
-  //     setAvatar(user.avatar)
-  //   }
-  // }, [user]);
-  
   useEffect(() => {
     themeChange(false);
     // if (currentTheme === null) {
@@ -63,24 +59,26 @@ function Header() {
   }, []);
 
   const downloadPDF = async (title = "") => {
-    const elements = document.querySelectorAll(".printUnit");
+    let elements = document.querySelectorAll(".printUnit");
+    // console.log("elements.length===>", elements.length);
 
     // Set total elements count
     setTotalElements(elements.length);
-
+    
     const pdf = new jsPDF({
       orientation: "p",
       unit: "px",
       format: "a4"
     });
-
+    
     const processBatch = async (batch) => {
+
       for (let i = 0; i < batch.length; i++) {
         const element = batch[i];
-
         try {
-          const canvas = await html2canvas(element, { scale: 1.5 });
-          const imgData = canvas.toDataURL("image/jpeg", 0.8); // Use JPEG for compression
+
+          const canvas = await html2canvas(element, { scale: 4 });
+          const imgData = canvas.toDataURL("image/jpeg"); // Use JPEG for compression
 
           const imgWidth = canvas.width;
           const imgHeight = canvas.height;
@@ -98,7 +96,7 @@ function Header() {
           const xOffset = (pdfPageWidth - scaledWidth) / 2;
           const yOffset = (pdfPageHeight - scaledHeight) / 2;
 
-          pdf.addImage(imgData, "JPEG", xOffset, yOffset, scaledWidth, scaledHeight);
+          pdf.addImage(imgData, "PNG", xOffset, yOffset, scaledWidth, scaledHeight);
 
           if (i < batch.length - 1 || batch.index !== elements.length - 1) {
             pdf.addPage();
@@ -109,19 +107,20 @@ function Header() {
       }
     };
 
-    const batchSize = 8; // Set a smaller batch size for better stability
+    const batchSize = 4; // Set a smaller batch size for better stability
 
     for (let i = 0; i < elements.length; i += batchSize) {
+      
       const batch = Array.from(elements).slice(i, i + batchSize);
-
+      
       // Update current page number
       setCurrentPage(i + 1);
-
+      
       await processBatch(batch);
 
       // Optional: Adding a short delay to avoid freezing the browser
       await new Promise((resolve) => setTimeout(resolve, 100));
-      console.log(`Processed batch ${i / batchSize + 1}`);
+      // console.log(`Processed batch ${i / batchSize + 1}`);
     }
 
     // Save the PDF
@@ -129,41 +128,7 @@ function Header() {
 
     // Reset current page after processing
     setCurrentPage(0);
-
-  //   setTimeout(async () => {
-  //     let elems = document.querySelectorAll<HTMLElement>(".printUnit")
-  //     const doc = new jsPDF({
-  //       orientation: "p",
-  //       format: "a4",
-  //     })
-  //     for (let i = 0; i < elems.length; i++) {
-  //       console.log("OUT export PDF");
-  //         const elem = elems[i]
-  //         if ($(elem).find("canvas").length == 0) continue
-  //         console.log("IN export PDF", i);
-          
-  //         const canvas = await html2canvas(elem, { scale: 2 })
-  //         const dataURI = canvas.toDataURL("image/png")
-  //         doc.setPage(+i + 1)
-  //         if (canvas.height / doc.internal.pageSize.height > canvas.width / doc.internal.pageSize.width) {
-  //             doc.addImage(dataURI, "JPEG", (doc.internal.pageSize.width - canvas.width / (canvas.height / doc.internal.pageSize.height)) / 2, 10, 0, doc.internal.pageSize.height - 20)
-  //         } else {
-  //             doc.addImage(dataURI, "JPEG", 10, (doc.internal.pageSize.height - canvas.height / (canvas.width / doc.internal.pageSize.width)) / 2, doc.internal.pageSize.width - 20, 0)
-  //         }
-  //         if (+i < elems.length - 1) doc.addPage()
-  //     }
-  //     doc.save(title + ".pdf")
-  // }, 1500)
   };
-
-  // function logoutUser() {
-  //   window.socket && window.socket.disconnect();
-  //   dispatch(logOut());
-  //   navigate("/login");
-  // }
-  // const onDropDownBtnClick = () => {
-  //   setShowDropdown(!showDropdown)
-  // }
 
   const handleFolderUpload = (event) => {
     const files = Array.from(event.target.files);
@@ -200,31 +165,31 @@ function Header() {
         });
 
       notification['success']({
-        message: 'Success',
+        message: '成功',
         description:
-          'Upload is completed',
+          'アップロード完了',
           key: new Date().getTime(), // Use a unique key each time
       });
 
       setTimeout(() => {notification['success']({
-        message: 'Sucess',
+        message: '成功',
         description:
-          'Data is overwrited successfully',
+          'データの上書きに成功',
           key: new Date().getTime(), // Use a unique key each time
       });}, 500)
   }
 
   const handleDownloadPdf = async () => {
-    await dispatch(setPdfFlag(true))
-    console.log("IN handleDownloadPdf===>");
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+    await dispatch(setPdfFlag(true));
+    await delay(300);
     await downloadPDF();
-    console.log("OUT handleDownloadPdf===>");
     await dispatch(setPdfFlag(false));
     
     notification['success']({
-      message: 'Success',
+      message: '成功',
       description:
-        'Download is completed',
+        'ダウンロード完了',
         key: new Date().getTime(), // Use a unique key each time
     });
   
@@ -233,11 +198,6 @@ function Header() {
   return (
     <>
       <div className="z-10 flex justify-between shadow-md navbar bg-base-100 py-[4rem]">
-        {/* Menu toogle for mobile view or small screen */}
-        {/* <ForReportNum>
-        
-        </ForReportNum> */}
-        
         <div className="ml-[10rem]" >
           <input
                 type="file"
@@ -249,7 +209,7 @@ function Header() {
                 className="font bg-[#00C3D0] text-[#fff] hover:bg-[#b4eeef] hover:text-[#00C3D0] w-[200rem] h-[25rem] text-[16rem]"
             />
             {/* <label htmlFor="file" className="custom-file-label ">CSVデータアップロード</label> */}
-            <label htmlFor="file" className="custom-file-label ">Import CSV File</label>
+            <label htmlFor="file" className="custom-file-label ">CSVファイルのインポート</label>
         </div>
 
         <div className="mr-[10rem]">

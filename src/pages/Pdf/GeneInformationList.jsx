@@ -4,7 +4,7 @@ import React from 'react';
 const GeneInformationList = () => {
     // Create an array of component numbers
     // const geneComponents = Array.from({ length: 117 }, (_, i) => i + 1).filter(num => num !== 34 && num !== 35); // Exclude Gene34 and Gene35 if needed
-    const geneComponents = Array.from({ length: 17 }, (_, i) => i + 1).filter(num => num !== 34 && num !== 35); // Exclude Gene34 and Gene35 if needed
+    const geneComponents = Array.from({ length: 117 }, (_, i) => i + 1).filter(num => num !== 34 && num !== 35); // Exclude Gene34 and Gene35 if needed
 
     return (
         <>

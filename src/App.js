@@ -12,16 +12,17 @@ import {
 } from "react-router-dom";
 import { themeChange } from "theme-change";
 import checkAuth from "./app/auth";
-import initializeApp from "./app/init";
+// import initializeApp from "./app/init";
 // for socket
 // Importing pages
 const Layout = lazy(() => import("./containers/Layout"));
 const Login = lazy(() => import("./pages/Login"));
 const ForgotPassword = lazy(() => import("./pages/ForgotPassword"));
 const Register = lazy(() => import("./pages/Register"));
+const Test = lazy(() => import("./pages/Test.jsx"))
 
 // Initializing different libraries
-initializeApp();
+// initializeApp();
 
 // Check for login and initialize axios
 checkAuth();
@@ -72,6 +73,7 @@ function App() {
 
           {/* Place new routes over this */}
           <Route path="/*" element={<Layout />} />
+          <Route path="test" element={<Test />} />
 
           {/* <Route
             path="/*"

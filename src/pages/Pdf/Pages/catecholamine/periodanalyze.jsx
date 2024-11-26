@@ -4,11 +4,20 @@ import PageHeader from "../../../../components/Pdf/PageHeader";
 import Fourperiod from "../../../../components/Pdf/PagesComponents/PeriodAnalyze/Fourperiod";
 import Improvement from "../../../../components/Pdf/PagesComponents/PeriodAnalyze/Improvement";
 import withPeriodanalyze from "../../../../components/Pdf/HOC/withperiodanalyze";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 const Periodanalyze = (props) => {
     const [mainColor, setMainColor] = useState(useSelector((state) => state.pdfData.catecholamineColor))
+        
+    const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
+    const [renderedPdfFlag, setRenderedPdfFlag] = useState(pdfFlag);
+
+    useEffect(() => {
+        setRenderedPdfFlag(pdfFlag);
+        console.log("pdfFlag===>", pdfFlag);
+    }, [pdfFlag]);
+
     const EnhancedPeriodanalyze = withPeriodanalyze([
         {Component: PageHeader, 
         data: {
@@ -30,31 +39,39 @@ const Periodanalyze = (props) => {
                     qualities1: [
                         
                         {
-                            content:
-                                "カフェインや糖分の多い食品、加工食品はカテコラミンレベルを上昇させる可能性があるため \n     控える。"
+                            content:`<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>カフェインや糖分の多い食品、加工食品はカテコラミンレベルを上昇させる可能性があるため\n控える。</p>`
+                            // content:
+                            //     "カフェインや糖分の多い食品、加工食品はカテコラミンレベルを上昇させる可能性があるため \n     控える。"
                         },
                         {
-                            content:
-                                "飲酒すると顔が赤くなったり頭痛や吐き気を感じやすい場合は、カテコラミンの代謝が阻害さ \n     れ、カテコラミンの過剰状態が生じているため、飲酒量や頻度に調節する。"
+                            content:`<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>飲酒すると顔が赤くなったり頭痛や吐き気を感じやすい場合は、カテコラミンの代謝が阻害さ\nれ、カテコラミンの過剰状態が生じているため、飲酒量や頻度に調節する。</p>`
+                            // content:
+                            //     "飲酒すると顔が赤くなったり頭痛や吐き気を感じやすい場合は、カテコラミンの代謝が阻害さ \n     れ、カテコラミンの過剰状態が生じているため、飲酒量や頻度に調節する。"
                         },
                         {
-                            content:
-                                "<span class='blue'>腸内フローラ</span>の影響を受けやすいため、便秘にならないように注意する。"
+                            content:`<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p><span class='blue'>腸内フローラ</span>の影響を受けやすいため、便秘にならないように注意する。</p>`
+                            // content:
+                            //     "<span class='blue'>腸内フローラ</span>の影響を受けやすいため、便秘にならないように注意する。"
                         },
                         {
-                            content:
-                                "オメガ-3脂肪酸（魚類、亜麻仁油、チアシードなど）を含む食品を摂取し、脳の健康をサポー \n    トする。"
+                            content:`<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>オメガ-3脂肪酸（魚類、亜麻仁油、チアシードなど）を含む食品を摂取し、脳の健康をサポー\nトする。</p>`
+                            // content:
+                            //     "オメガ-3脂肪酸（魚類、亜麻仁油、チアシードなど）を含む食品を摂取し、脳の健康をサポー \n    トする。"
                         },
                         {
-                            content: "抗酸化物質（果物や野菜）を多く摂取し、体内の<span class='blue'>酸化ストレス</span>を軽減する。"
+                            content:`<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>抗酸化物質（果物や野菜）を多く摂取し、体内の<span class='blue'>酸化ストレス</span>を軽減する。</p>`
+                            // content: 
+                            // "抗酸化物質（果物や野菜）を多く摂取し、体内の<span class='blue'>酸化ストレス</span>を軽減する。"
                         },
                         {
-                            content:
-                                "瞑想、深呼吸、ヨガなどのリラクゼーション法を取り入れ、ストレスを軽減する。"
+                            content:`<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>瞑想、深呼吸、ヨガなどのリラクゼーション法を取り入れ、ストレスを軽減する。</p>`
+                            // content:
+                            //     "瞑想、深呼吸、ヨガなどのリラクゼーション法を取り入れ、ストレスを軽減する。"
                         },
                         {
-                            content:
-                                "充分な休息とリラックス時間を確保して、衝動性や怒りのマネージメント方法を学ぶ。",
+                            content:`<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>充分な休息とリラックス時間を確保して、衝動性や怒りのマネージメント方法を学ぶ。</p>`
+                            // content:
+                            //     "充分な休息とリラックス時間を確保して、衝動性や怒りのマネージメント方法を学ぶ。",
                         }
                     ],
                     

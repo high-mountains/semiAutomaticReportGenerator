@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+
 import pdfData from "../../utils/dummyPdf.json";
 import "./sidebarStyle.css";
 
@@ -31,12 +33,18 @@ const Text = (props) => {
 
     const { textContent, textColor, bgColor, fontSize, className, sidebarColor, sidebarHeight, style, containerStyle } = styleProps;
 
+    const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
+    const [renderedPdfFlag, setRenderedPdfFlag] = useState(pdfFlag);
+
+    useEffect(() => {
+        setRenderedPdfFlag(pdfFlag);
+    }, [pdfFlag]);
     return (
         <>
             {props.sidebar ? props.sidebar && 
                 <>
-                    <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', ...containerStyle}}>
-                        <span style={{backgroundColor: `${sidebarColor || "#00C3D0"}`, paddingLeft:"5rem", paddingTop:`${sidebarHeight || "30rem"}`, marginRight:"8rem"}}/>
+                    <div style={{display: 'flex', flexDirection: 'row', alignItems: 'start', ...containerStyle}}>
+                        <span style={{backgroundColor: `${sidebarColor || "#00C3D0"}`, paddingLeft:"5rem", paddingTop:`${sidebarHeight || "30rem"}`, marginRight:"8rem"}}></span>
                         <p
                             style={{
                                 backgroundColor: bgColor ? `${bgColor}` : undefined,
@@ -44,6 +52,7 @@ const Text = (props) => {
                                 fontSize: fontSize ? `${fontSize}rem` : "16rem",
                                 fontWeight: 'bold',
                                 whiteSpace: 'pre-line',
+                                marginTop: `${ renderedPdfFlag ? '-4' : '3.415' }rem`,  //here is for jspdf module
                                 ...style
                             }}
                             className={`font ${styleProps.className}`}

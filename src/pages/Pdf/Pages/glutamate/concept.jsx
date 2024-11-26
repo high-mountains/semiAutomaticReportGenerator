@@ -5,13 +5,21 @@ import Outline from "../../../../components/Pdf/PagesComponents/Concept/Outline"
 import Explanation from "../../../../components/Pdf/PagesComponents/Concept/Explanation";
 import Quality from "../../../../components/Pdf/PagesComponents/Concept/Quality";
 import { useSelector } from "react-redux";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import withPeriodanalyze from "../../../../components/Pdf/HOC/withperiodanalyze";
 
 const Concept = () => {
     const [maincolor, setMaincolor] = useState(
         useSelector((state) => state.pdfData.glutamateColor)
     );
+
+    const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
+    const [renderedPdfFlag, setRenderedPdfFlag] = useState(pdfFlag);
+
+    useEffect(() => {
+        setRenderedPdfFlag(pdfFlag);
+        console.log("pdfFlag===>", pdfFlag);
+    }, [pdfFlag]);
 
     const EnhacedConcept = withPeriodanalyze([
         {
@@ -42,31 +50,35 @@ const Concept = () => {
         {
             Component: Quality,
             data: {
+                wrapperWidth: "535rem",
                 sidebarColor: maincolor,
                 description:
                     "カテコラミンタイプの特性には、以下のような可能性があります。",
                 qualities1: [
                     {
-                        content: "瞬発力があり決断が早い",
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>学習欲や知識欲が強い</p>`
                     },
                     {
-                        content: "行動力がある",
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>興味のあることに没頭する</p>`
                     },
                     {
-                        content: "目標を立てることが好き",
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>記憶力が良い</p>`
                     },
                     {
-                        content: "リーダー気質",
-                    },
-                    {
-                        content: "集中力が高い",
-                    },
-                    {
-                        content:
-                            "依存症になりやすい（ショッピン \n     グ、ゲーム、ギャンブルなど）",
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>頭の回転が早い天才タイプ</p>`
                     }
                 ],
-                oneColumn: true
+                qualities2: [
+                    {
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>リラックスしづらい</p>`
+                    },
+                    {
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>不眠になりやすい</p>`
+                    },
+                    {
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>周囲の雰囲気を気にしない</p>`
+                    }
+                ],
             },
         },
         {

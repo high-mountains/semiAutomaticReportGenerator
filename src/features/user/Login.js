@@ -78,7 +78,7 @@ function Login() {
             <LandingIntro />
           </div>
           <div className="py-[96rem] px-[40rem]">
-            <h2 className="text-[30rem] font-semibold mb-[8rem]} text-center">Login</h2>
+            <h2 className="text-[30rem] font-semibold mb-[8rem]} text-center">ログイン</h2>
             <form onSubmit={(e) => submitForm(e)}>
               <div className="mb-[12rem]">
                 <InputText
@@ -87,7 +87,7 @@ function Login() {
                   defaultValue={loginObj.userId}
                   updateType="userId"
                   containerStyle="mt-[12rem]"
-                  labelTitle="User Id"
+                  labelTitle="ユーザーID"
                   updateFormValue={updateFormValue}
                 />
 
@@ -96,18 +96,18 @@ function Login() {
                   type="password"
                   updateType="password"
                   containerStyle="mt-[12rem]"
-                  labelTitle="Password"
+                  labelTitle="パスワード"
                   updateFormValue={updateFormValue}
                 />
               </div>
 
-              <div className="text-right">
+              {/* <div className="text-right">
                 <Link replace to="/forgot-password">
                   <span className="text-[14rem]  inline-block  hover:text-[#00C3D0] underline hover:cursor-pointer transition duration-200">
-                    Forgot Password?
+                  パスワードをお忘れですか？
                   </span>
                 </Link>
-              </div>
+              </div> */}
 
               <ErrorText styleClass="mt-[32rem]">{errorMessage}</ErrorText>
               <button
@@ -116,17 +116,17 @@ function Login() {
                   "btn mt-[8rem] w-full btn-primary bg-[#00C3D0] border-[#00C3D0] h-[44rem] text-[20rem] rounded-[4rem]"
                 }
               >
-                Login
+                ログイン
               </button>
 
-              <div className="text-center  mt-[16rem]">
+              {/* <div className="text-center  mt-[16rem]">
                 Are you new here?{" "}
                 <Link to="/register" replace>
                   <span className="  inline-block  hover:text-[#00C3D0] underline hover:cursor-pointer transition duration-200">
                     Register
                   </span>
                 </Link>
-              </div>
+              </div> */}
             </form>
           </div>
         </div>

@@ -1,5 +1,5 @@
 html {
-    font-size: calc(100vw / 593);
+    /* font-size: calc(100vw / 593); */
     box-sizing: border-box;
     font-family: "Noto Sans JP", sans-serif;
 }
@@ -21,10 +21,15 @@ html {
       width: 100vw;
     }
 
-    .page {
+    /* .page {
         width: 595rem;
         height: 847rem;
         border-radius: 2rem;
+    } */
+    .page {
+        width: 595px;
+        height: 847px;
+        border-radius: 2px;
     }
 
     .font {
@@ -40,7 +45,8 @@ html {
     .page {
         font-size: 16rem;
         width: 100vw;
-        height: 847rem;
+        /* height: 847rem; */
+        aspect-ratio: 595/847;
         border: 1px rgba(0, 0, 0, 0.1);
     }
 }

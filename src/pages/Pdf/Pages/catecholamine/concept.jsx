@@ -4,7 +4,7 @@ import PageHeader from "../../../../components/Pdf/PageHeader";
 import Outline from "../../../../components/Pdf/PagesComponents/Concept/Outline";
 import Explanation from "../../../../components/Pdf/PagesComponents/Concept/Explanation";
 import Quality from "../../../../components/Pdf/PagesComponents/Concept/Quality";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import withPeriodanalyze from "../../../../components/Pdf/HOC/withperiodanalyze";
 
@@ -12,6 +12,14 @@ const Concept = () => {
     const [maincolor, setMaincolor] = useState(
         useSelector((state) => state.pdfData.catecholamineColor)
     );
+
+    const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
+    const [renderedPdfFlag, setRenderedPdfFlag] = useState(pdfFlag);
+
+    useEffect(() => {
+        setRenderedPdfFlag(pdfFlag);
+        console.log("pdfFlag===>", pdfFlag);
+    }, [pdfFlag]);
 
     const EnhacedConcept = withPeriodanalyze([
         {
@@ -48,34 +56,43 @@ const Concept = () => {
                     "カテコラミンタイプの特性には、以下のような可能性があります。",
                 qualities1: [
                     {
-                        content: "集中力が高い"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>集中力が高い</p>`
+                        // content: "集中力が高い"
                     },
                     {
-                        content: "行動力がある"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>行動力がある</p>`
+                        // content: "行動力がある"
                     },
                     {
-                        content: "瞬発力があり決断が早い"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>瞬発力があり決断が早い</p>`
+                        // content: "瞬発力があり決断が早い"
                     },
                     {
-                        content: "目標を立てることが好き"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>目標を立てることが好き</p>`
+                        // content: "目標を立てることが好き"
                     },
                     {
-                        content: "リーダー気質"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>リーダー気質</p>`
+                        // content: "リーダー気質"
                     },
                 ],
                 qualities2: [
                     {
-                        content: "イライラしやすい"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>イライラしやすい</p>`
+                        // content: "イライラしやすい"
                     },
                     {
-                        content: "気分の浮き沈みが激しい"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>気分の浮き沈みが激しい</p>`
+                        // content: "気分の浮き沈みが激しい"
                     },
                     {
-                        content: "不眠になりやすい"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>不眠になりやすい</p>`
+                        // content: "不眠になりやすい"
                     },
                     {
-                        content:
-                            "依存症になりやすい（ショッピン\n     グ、ゲーム、ギャンブルなど）"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>依存症になりやすい（ショッピン\nグ、ゲーム、ギャンブルなど）</p>`
+                        // content:
+                            // "依存症になりやすい（ショッピン\n     グ、ゲーム、ギャンブルなど）"
                     },
                 ],
             },

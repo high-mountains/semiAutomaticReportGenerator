@@ -4,20 +4,29 @@ import PageHeader from "../../../../components/Pdf/PageHeader";
 import Fourperiod from "../../../../components/Pdf/PagesComponents/PeriodAnalyze/Fourperiod";
 import Improvement from "../../../../components/Pdf/PagesComponents/PeriodAnalyze/Improvement";
 import withPeriodanalyze from "../../../../components/Pdf/HOC/withperiodanalyze";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 const Periodanalyze = (props) => {
     const [mainColor, setMainColor] = useState(
         useSelector((state) => state.pdfData.methylationColor)
     );
+    
+    const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
+    const [renderedPdfFlag, setRenderedPdfFlag] = useState(pdfFlag);
+
+    useEffect(() => {
+        setRenderedPdfFlag(pdfFlag);
+        console.log("pdfFlag===>", pdfFlag);
+    }, [pdfFlag]);
+
     const EnhancedPeriodanalyze = withPeriodanalyze([
         {
             Component: PageHeader,
             data: {
                 subtitle: "Methylation Type",
-                mainTitle: "メチレーションタイプ",
-            },
+                mainTitle: "メチレーションタイプ"
+            }
         },
         {
             Component: Fourperiod,
@@ -30,7 +39,7 @@ const Periodanalyze = (props) => {
                     "大人になると、自身の感受性や独自性を深く理解し、受け入れる力が増します。職場や家庭でのストレスがメンタルに影響を与えるため、<span class='bold'>ストレス管理</span>が重要になりますが、経験を活かして自己表現や創造的活動で力を発揮することも多くなる時期です。",
                 fourthSenctences:
                     "更年期以降、ホルモンバランスの変化で感受性が一層鋭くなり、感情の波が激しくなる一方、人生経験から深い洞察力も備わる時期です。しかし、メチレーション不足があると、<span class='blue'>セロトニン</span>やドーパミンの代謝に影響し、<span class='bold'>うつ症状</span>や<span class='bold'>不安</span>、<span class='bold'>認知症のリスク</span>が増します。また、神経細胞の保護や修復が不充分になり、神経変性疾患のリスクが高まる可能性があり、<span class='blue'>DNA修復機能</span>の低下で<span class='bold'>がんのリスク</span>も増すことがあります。",
-            },
+            }
         },
         {
             Component: Improvement,
@@ -40,60 +49,50 @@ const Periodanalyze = (props) => {
                 description: "メチレーションタイプのおすすめ生活改善",
                 qualities1: [
                     {
-                        content:
-                            "葉酸、ビタミンB6、ビタミンB12、メチオニンなど、メチレーションに必要な栄養素を含む\n     食品（緑黄色野菜、豆類、卵、肉類、魚など）を積極的に摂取する。",
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>葉酸、ビタミンB6、ビタミンB12、メチオニンなど、メチレーションに必要な栄養素を含む\n食品（緑黄色野菜、豆類、卵、肉類、魚など）を積極的に摂取する。</p>`
                     },
                     {
-                        content:
-                            "コリンを多く含む食品（卵、大豆製品、鶏肉、ブロッコリーなど）を積極的に摂取する。",
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>コリンを多く含む食品（卵、大豆製品、鶏肉、ブロッコリーなど）を積極的に摂取する。</p>`
                     },
                     {
-                        content:
-                            "ベタインを多く含む食品（ビーツ、ホウレンソウ、ほたてなど）を積極的に摂取する。",
+                        content:`<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>ベタインを多く含む食品（ビーツ、ホウレンソウ、ほたてなど）を積極的に摂取する。</p>`
                     },
                     {
-                        content:
-                            "グルタチオンやメチオニン、SAMeなどのメチレーションサポートサプリメントを検討する。",
+                        content:`<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>グルタチオンやメチオニン、SAMeなどのメチレーションサポートサプリメントを検討する。</p>`
                     },
                     {
-                        content:
-                            "加工食品や添加物の摂取を控え、新鮮な食材を選ぶ。",
+                        content:`<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>加工食品や添加物の摂取を控え、新鮮な食材を選ぶ。</p>`
                     },
                     {
-                        content:
-                            "セロトニンを増やすために、同じリズムの繰り返し運動や、ウォーキングなどを積極的に取り\n     入れる。",
+                        content:`<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>セロトニンを増やすために、同じリズムの繰り返し運動や、ウォーキングなどを積極的に取り\n入れる。</p>`
                     },
                     {
-                        content:
-                            "ドーパミンを増やすために、フェニルアラニンを含む食品（肉類、魚、大豆製品、卵など）や\n     チロシンを含む食品（肉、魚、大豆製品、ナッツ類）を積極的に摂取する。",
+                        content:`<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>ドーパミンを増やすために、フェニルアラニンを含む食品（肉類、魚、大豆製品、卵など）や\nチロシンを含む食品（肉、魚、大豆製品、ナッツ類）を積極的に摂取する。</p>`
                     },
                 ],
-
                 oneColumnStatus: true,
                 ulStyle1: {
                     display: "flex",
                     flexDirection: "column",
-                    gap: "4rem",
+                    gap: "6rem",
                     lineHeight: 1.25,
                     fontSize: "12rem",
-                    whiteSpace: "pre-wrap",
-                },
-            },
+                    whiteSpace: "pre-wrap"
+                }
+            }
         },
         {
             Component: PageNumber,
             data: {
-                children: "21",
-            },
-        },
+                children: "21"
+            }
+        }
     ]);
 
     return (
-        <>
             <PageWrapper>
                 <EnhancedPeriodanalyze />
             </PageWrapper>
-        </>
     );
 };
 

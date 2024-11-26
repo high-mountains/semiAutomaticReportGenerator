@@ -10,7 +10,8 @@ const Quality = (props) => {
                 sidebarColor={props.sidebarColor}
                 textContent={props.description}
             />
-            <div className='flex flex-row justify-center gap-[10rem]'>
+            <div className='flex flex-row justify-center gap-[10rem]' style={{marginTop: '-5rem'}}>
+            {/* <div className='flex flex-row justify-between'> */}
                 <QualitySection
                     qualityArray={props.qualities1}
                     oneColumn={props.oneColumn}

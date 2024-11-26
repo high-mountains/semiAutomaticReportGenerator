@@ -4,13 +4,21 @@ import PageHeader from "../../../../components/Pdf/PageHeader";
 import Fourperiod from "../../../../components/Pdf/PagesComponents/PeriodAnalyze/Fourperiod";
 import Improvement from "../../../../components/Pdf/PagesComponents/PeriodAnalyze/Improvement";
 import withPeriodanalyze from "../../../../components/Pdf/HOC/withperiodanalyze";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 const Periodanalyze = (props) => {
     const [mainColor, setMainColor] = useState(
         useSelector((state) => state.pdfData.glutamateColor)
     );
+
+    const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
+    const [renderedPdfFlag, setRenderedPdfFlag] = useState(pdfFlag);
+
+    useEffect(() => {
+        setRenderedPdfFlag(pdfFlag);
+        console.log("pdfFlag===>", pdfFlag);
+    }, [pdfFlag]);
 
     const EnhancedPeriodanalyze = withPeriodanalyze([
         {
@@ -44,27 +52,22 @@ const Periodanalyze = (props) => {
                 gap: 10, 
                 qualities1: [
                     {
-                        content:
-                            "食品添加物としてグルタミン酸を多く含む食品、ジャンクフードなどの摂取を控える。",
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>食品添加物としてグルタミン酸を多く含む食品、ジャンクフードなどの摂取を控える。</p>`
                     },
                     {
-                        content:
-                            "<span class='blue'>グルテンフリー</span>を心掛け、野菜や果物などを多く摂る。",
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p><span class='blue'>グルテンフリー</span>を心掛け、野菜や果物などを多く摂る。</p>`
                     },
                     {
-                        content:
-                            "オメガ-3脂肪酸（魚類、亜麻仁油、チアシードなど）を含む食品を摂取し、脳の健康をサポー \n    トする。",
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>オメガ-3脂肪酸（魚類、亜麻仁油、チアシードなど）を含む食品を摂取し、脳の健康をサポー\nトする。</p>`
                     },
                     {
-                        content:
-                            "神経毒性を緩和させるためにデトックス生活を心掛ける。薬味などの食材を取り入れる。",
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>神経毒性を緩和させるためにデトックス生活を心掛ける。薬味などの食材を取り入れる。</p>`
                     },
                     {
-                        content: "規則正しい睡眠習慣を持ち、睡眠を確保する。",
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>規則正しい睡眠習慣を持ち、睡眠を確保する。</p>`
                     },
                     {
-                        content:
-                            "寝る前のリラクゼーションルーティンを設け、睡眠の質を向上させる。",
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>寝る前のリラクゼーションルーティンを設け、睡眠の質を向上させる。</p>`
                     },
                 ],
                 oneColumnStatus: true,
@@ -90,11 +93,9 @@ const Periodanalyze = (props) => {
     ]);
 
     return (
-        <>
             <PageWrapper>
                 <EnhancedPeriodanalyze />
             </PageWrapper>
-        </>
     );
 };
 
