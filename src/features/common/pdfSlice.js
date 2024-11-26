@@ -32,7 +32,7 @@ export const setTotalPage = createAsyncThunk(
 export const pdfDataSlice = createSlice({
   name: "articleCategory",
   initialState: {
-    clientName: "Murayama",// clientName
+    clientName: "XX XX",// clientName
     clientId: "98236",
     
     mainColor: "#00C3D0",// mainColor (tag color) cyan
