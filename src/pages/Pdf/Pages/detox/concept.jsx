@@ -5,13 +5,21 @@ import Outline from "../../../../components/Pdf/PagesComponents/Concept/Outline"
 import Explanation from "../../../../components/Pdf/PagesComponents/Concept/Explanation";
 import Quality from "../../../../components/Pdf/PagesComponents/Concept/Quality";
 import { useSelector } from "react-redux";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import withPeriodanalyze from "../../../../components/Pdf/HOC/withperiodanalyze";
 
 const Concept = () => {
 
     const  [maincolor, setMaincolor] = useState(useSelector(state => state.pdfData.detoxColor));
     
+    const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
+    const [renderedPdfFlag, setRenderedPdfFlag] = useState(pdfFlag);
+
+    useEffect(() => {
+        setRenderedPdfFlag(pdfFlag);
+        console.log("pdfFlag===>", pdfFlag);
+    }, [pdfFlag]);
+
     const EnhacedConcept = withPeriodanalyze([
         {Component: PageHeader,
             data:{
@@ -36,54 +44,43 @@ const Concept = () => {
                 description: "デトックスタイプの特性には、以下のような可能性があります。",
                 qualities1: [
                     {
-                        content:
-                            "なにもしていないのに疲れている\n     ことがある"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>なにもしていないのに疲れている</p>`
                     },
                     {
-                        content:
-                            "肌の調子が崩れやすい"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>肌の調子が崩れやすい</p>`
                     },
                     {
-                        content:
-                            "アレルギー症状がある"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>アレルギー症状がある</p>`
                     },
                     {
-                        content:
-                            "気分が落ち込みやすい"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>気分が落ち込みやすい</p>`
                     },
                     {
-                        content: "食後にお腹が重く感じる"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>食後にお腹が重く感じる</p>`
                     },
                     {
-                        content:
-                            "入浴やサウナが好き"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>入浴やサウナが好き</p>`
                     },
                     {
-                        content:
-                            "オーガニック健康食品をよく買う"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>オーガニック健康食品をよく買う</p>`
                     }
                 ],
                 qualities2: [
                     {
-                        content:
-                            "飛行機や新幹線などにのると疲れが \n     でる"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>飛行機や新幹線などにのると疲れが\nでる</p>`
                     },
                     {
-                        content:
-                            "ホテルなどに宿泊すると体調を崩し \n     やすい"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>ホテルなどに宿泊すると体調を崩し\nやすい</p>`
                     },
                     {
-                        content:
-                            "外食すると体調を壊しやすい"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>外食すると体調を壊しやすい</p>`
                     },
                     {
-                        content:
-                            "夜間に目が覚める、トイレに行く"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>夜間に目が覚める、トイレに行く</p>`
                     },
                     {
-                        content:
-                            "薬味がおおい食事を好む"
-                    },
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>薬味がおおい食事を好む</p>`
+                    }
                 ],
                 sidebarColor: maincolor
             }

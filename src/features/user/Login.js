@@ -87,7 +87,7 @@ function Login() {
                   defaultValue={loginObj.userId}
                   updateType="userId"
                   containerStyle="mt-[12rem]"
-                  labelTitle="User Id"
+                  labelTitle="ユーザーID"
                   updateFormValue={updateFormValue}
                 />
 
@@ -96,7 +96,7 @@ function Login() {
                   type="password"
                   updateType="password"
                   containerStyle="mt-[12rem]"
-                  labelTitle="Password"
+                  labelTitle="パスワード"
                   updateFormValue={updateFormValue}
                 />
               </div>

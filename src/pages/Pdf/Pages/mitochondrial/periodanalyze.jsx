@@ -4,11 +4,18 @@ import PageHeader from "../../../../components/Pdf/PageHeader";
 import Fourperiod from "../../../../components/Pdf/PagesComponents/PeriodAnalyze/Fourperiod";
 import Improvement from "../../../../components/Pdf/PagesComponents/PeriodAnalyze/Improvement";
 import withPeriodanalyze from "../../../../components/Pdf/HOC/withperiodanalyze";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 const Periodanalyze = (props) => {
     const [mainColor, setMainColor] = useState(useSelector((state) => state.pdfData.mitochodrialColor))
+    const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
+    const [renderedPdfFlag, setRenderedPdfFlag] = useState(pdfFlag);
+
+    useEffect(() => {
+        setRenderedPdfFlag(pdfFlag);
+        console.log("pdfFlag===>", pdfFlag);
+    }, [pdfFlag]);
     const EnhancedPeriodanalyze = withPeriodanalyze([
         {Component: PageHeader, 
         data: {
@@ -27,25 +34,32 @@ const Periodanalyze = (props) => {
             description: "ミトコンドリアタイプのおすすめ生活改善", 
             qualities1:[
                 {
-                    content:"抗酸化物質を豊富に含む食品（ベリー類、緑黄色野菜類、緑茶など）を積極的に摂取する。",
+                    content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '6' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>抗酸化物質を豊富に含む食品（ベリー類、緑黄色野菜類、緑茶など）を積極的に摂取する。</p>`
+                    // content:"抗酸化物質を豊富に含む食品（ベリー類、緑黄色野菜類、緑茶など）を積極的に摂取する。",
                 },
                 {
-                    content:"オメガ-3脂肪酸（魚類、亜麻仁油、チアシードなど）を含む食品を摂取し、炎症を軽減する。",
+                    content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '6' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>オメガ-3脂肪酸（魚類、亜麻仁油、チアシードなど）を含む食品を摂取し、炎症を軽減する。</p>`
+                    // content:"オメガ-3脂肪酸（魚類、亜麻仁油、チアシードなど）を含む食品を摂取し、炎症を軽減する。",
                 },
                 {
-                    content:"コエンザイムQ10、カルニチン、ビタミンB群など、ミトコンドリア機能をサポートする栄養\n      素を積極的に摂取する。",
+                    content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '6' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>コエンザイムQ10、カルニチン、ビタミンB群など、ミトコンドリア機能をサポートする栄養\n素を積極的に摂取する。</p>`
+                    // content:"コエンザイムQ10、カルニチン、ビタミンB群など、ミトコンドリア機能をサポートする栄養\n      素を積極的に摂取する。",
                 },
                 {
-                    content:"L-カルニチンを含む食品（赤身の肉、牛肉、ラム肉など）を積極的に摂取する。",
+                    content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '6' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>L-カルニチンを含む食品（赤身の肉、牛肉、ラム肉など）を積極的に摂取する。</p>`
+                    // content:"L-カルニチンを含む食品（赤身の肉、牛肉、ラム肉など）を積極的に摂取する。",
                 },
                 {
-                    content:"ポリフェノールを豊富に含む食品（ダークチョコレート、リンゴ、トマト、タマネギ、シナモ\n      ン、オレガノなど）を積極的に摂取する。",
+                    content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '6' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>ポリフェノールを豊富に含む食品（ダークチョコレート、リンゴ、トマト、タマネギ、シナモ\nン、オレガノなど）を積極的に摂取する。</p>`
+                    // content:"ポリフェノールを豊富に含む食品（ダークチョコレート、リンゴ、トマト、タマネギ、シナモ\n      ン、オレガノなど）を積極的に摂取する。",
                 },
                 {
-                    content:"元気になり「運動したい！」と思ってから、有酸素運動や筋力トレーニングに取り組む。更にエ\n     ネルギーを感じるようになりますが、過度な運動には注意してください。",
+                    content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '6' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>元気になり「運動したい！」と思ってから、有酸素運動や筋力トレーニングに取り組む。更にエ\nネルギーを感じるようになりますが、過度な運動には注意してください。</p>`
+                    // content:"元気になり「運動したい！」と思ってから、有酸素運動や筋力トレーニングに取り組む。更にエ\n     ネルギーを感じるようになりますが、過度な運動には注意してください。",
                 },
                 {
-                    content:"睡眠不足は、ミトコンドリアの機能低下を招くため、充分な睡眠時間を確保する。",
+                    content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '6' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>睡眠不足は、ミトコンドリアの機能低下を招くため、充分な睡眠時間を確保する。</p>`
+                    // content:"睡眠不足は、ミトコンドリアの機能低下を招くため、充分な睡眠時間を確保する。",
                 },
             ],
             oneColumnStatus: true,

@@ -12,7 +12,7 @@ const TypeByType = () => {
         <>
             <Glutamate/>
             <Catecholamine/>
-            <Histamine/>
+            <Histamine/> 
             <Mitochondrial/>
             <Detox/>
             <Methylation/>

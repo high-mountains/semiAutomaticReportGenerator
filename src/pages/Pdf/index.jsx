@@ -62,7 +62,7 @@ const Pdf = () => {
                     position: "absolute",
 
                 }}>
-                    <p className="font text-[#FFFFFF] text-[64rem]">DNA PDF Generating{showCurrentPage}/{showTotalPage}</p>
+                    <p className="font text-[#FFFFFF] text-[64rem]">遺伝子検査報告書作成中{showCurrentPage}/{showTotalPage}</p>
                     <div className="loader">
                         <div className="dot dot1"><i></i></div>
                         <div className="dot dot2"><i></i></div>
@@ -83,7 +83,6 @@ const Pdf = () => {
 
             <div className="pdfcontainer my-[20rem]">
                 <div className="pdfwrapper" id="downloadTest">
-                    
                     <Page1/>
                     <Page2/>
                     <Page3/>

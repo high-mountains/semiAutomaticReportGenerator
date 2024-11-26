@@ -2,9 +2,6 @@ import React, { useEffect } from 'react';
 import Text from '../../Text'
 
 const MeritIntro = (props) => {
-    // useEffect(() => {
-    //     console.log("props.data==>", props);
-    // }, []);
 
     return (
         <>
@@ -14,7 +11,7 @@ const MeritIntro = (props) => {
                 sidebarColor= {props.maincolor}
                 className={"font-bold leading-[1.448125]"}
                 fontSize={16}
-                sidebarHeight={"23rem"}
+                sidebarHeight={"30rem"}
             />
             {props.content2 && <Text
                 sidebar= {1}
@@ -22,7 +19,7 @@ const MeritIntro = (props) => {
                 sidebarColor= {props.maincolor}
                 className={`font-bold leading-[1.448125]`}
                 fontSize={16}
-                sidebarHeight={"23rem"}
+                sidebarHeight={"30rem"}
             />}
         </>
     );

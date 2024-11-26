@@ -2,9 +2,6 @@ import React from "react";
 import Rit from "./MeritComponent";
 
 const MeritDemerit = (props) => {
-    // if(props.contentStyle) {
-    //     console.log("props.contentStyle====>", props.contentStyle)
-    // };
 
     return (
         <div className="flex flex-row items-start gap-[30rem] justify-center">

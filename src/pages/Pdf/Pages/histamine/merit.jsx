@@ -60,7 +60,7 @@ const Merit = () => {
                             "ヒスタミンを無効化し、排出することで、体内のヒスタミンレベルが適切に調整する。 \n 関連遺伝子：HNMT, NAT2, \n 　　　　　　ALDH2, UGT1A4",
                         contentLineHeight: 1.448333,
                         posInfo: {
-                            top: "133rem",
+                            bottom: "126rem",
                             right: "0rem",
                             width: "177rem"
                         },
