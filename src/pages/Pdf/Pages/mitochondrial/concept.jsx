@@ -15,7 +15,6 @@ const Concept = () => {
 
     useEffect(() => {
         setRenderedPdfFlag(pdfFlag);
-        console.log("pdfFlag===>", pdfFlag);
     }, [pdfFlag]);
     const EnhacedConcept = withPeriodanalyze([
         {Component: PageHeader,
