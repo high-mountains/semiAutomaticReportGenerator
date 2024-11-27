@@ -19,27 +19,44 @@ const GeneInformationMiddle = (props) => {
         setData(tempData);
     }, [flag]);
 
+    const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
+    const [renderedPdfFlag, setRenderedPdfFlag] = useState({marginTop: '0rem'});
+    const [secondRenderedPdfFlag, setSecondRenderedPdfFlag] = useState({marginTop: '0rem'});
+    const [thirdRenderedPdfFlag, setThirdRenderedPdfFlag] = useState({paddingTop: '8.4rem'});
+
+    useEffect(() => {
+        if(pdfFlag) {
+            setRenderedPdfFlag({marginTop: '-9rem'});
+            setSecondRenderedPdfFlag({marginTop: '-6rem'});
+            setThirdRenderedPdfFlag({paddingTop: '0rem', paddingBottom:'16.8rem'});
+        } else if(!pdfFlag) {
+            setRenderedPdfFlag({marginTop: '0rem'});
+            setSecondRenderedPdfFlag({marginTop: '0rem'});
+            setThirdRenderedPdfFlag({paddingTop: '8.4rem', paddingBottom:'8.4rem'});
+        }
+    }, [pdfFlag]);
+
     return (
         <div className="" style={{ fontSize: '16px', marginBottom: '10rem', color: '#484F51',}}>
-            <table className="geneInfo" style={{ marginBottom: '10rem' , fontSize: '12rem', width: '535rem'}}>
+            <table className="geneInfo" style={{ marginBottom: '10rem', fontSize: '12rem', width: '535rem'}}>
                 <thead>
                     <tr>
-                        <th>遺伝子</th>
-                        <th>rsID / Gene Type</th>
-                        <th>変異の大きさ</th>
+                        <th><p style={renderedPdfFlag}>遺伝子</p></th>
+                        <th><p style={renderedPdfFlag}>rsID / Gene Type</p></th>
+                        <th><p style={renderedPdfFlag}>変異の大きさ</p></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{geneName}</td>
-                        <td>
+                        <td><p style={secondRenderedPdfFlag}>{geneName}</p></td>
+                        <td style={thirdRenderedPdfFlag}>
                             {datas.map((item, index) => (
                                 <p key={index}>
                                     {item} &nbsp; &nbsp; {data[item] || "未定"}
                                 </p>
                             ))}
                         </td>
-                        <td>{level}</td>
+                        <td><p style={secondRenderedPdfFlag}>{level}</p></td>
                     </tr>
                 </tbody>
             </table>

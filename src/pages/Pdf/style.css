@@ -21,11 +21,6 @@ html {
       width: 100vw;
     }
 
-    /* .page {
-        width: 595rem;
-        height: 847rem;
-        border-radius: 2rem;
-    } */
     .page {
         width: 595px;
         height: 847px;
@@ -55,20 +50,29 @@ table.supplement {
     color: #34495E;
     line-height: 1.4477;
 }
-table.supplement thead tr {
-    border-top: #C5C5C5 1rem solid;
+
+table.supplement thead {
     border-left: #C5C5C5 1rem solid;
-    border-bottom: #C5C5C5 1rem solid;
+}
+
+table.supplement thead tr {
+    border-left: #C5C5C5 1rem solid;
 }
 table.supplement thead tr th {
+    border-top: #C5C5C5 1rem solid;
     border-right: #C5C5C5 1rem solid;
+    border-bottom: #C5C5C5 1rem solid;
+}
+table.supplement thead tr th:nth-child(1) {
+    border-left: #C5C5C5 1rem solid;
 }
 table.supplement tbody tr {
     border-left: #C5C5C5 1rem solid;
-    border-bottom: #C5C5C5 1rem solid;
+    /* border-bottom: #C5C5C5 1rem solid; */
 }
 table.supplement tbody tr td {
     border-right: #C5C5C5 1rem solid;
+    border-bottom: #C5C5C5 1rem solid;
 }
 
 table.supplement th:nth-child(1) {
@@ -108,8 +112,10 @@ table.supplement td {
 }
 
 table.supplement td:nth-last-child(5) {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 table.supplement td:nth-last-child(4) {
     padding-left: 0rem;
@@ -123,19 +129,30 @@ table tr {
 table.geneInfo {
     text-align: center;
     line-height: 1.4483;
+    /* border-top: 1rem solid #C5C5C5; */
 }
 
-table.geneInfo thead tr {
-    border-top: 1rem solid #C5C5C5;
+table.geneInfo thead {
+    /* border-top: 1rem solid #C5C5C5; */
+    border-left: 1rem solid #C5C5C5;
     border-bottom: 1rem solid #C5C5C5;
+}
+table.geneInfo thead tr {
+    /* border-left: 1rem solid #C5C5C5; */
+}
+
+table.geneInfo thead tr th:nth-child(1) {
     border-left: 1rem solid #C5C5C5;
 }
 
 table.geneInfo thead tr th {
     border-right: 1rem solid #C5C5C5;
+    border-top: 1rem solid #C5C5C5;
+    /* border-left: 1rem solid #C5C5C5; */
 }
 
 table.geneInfo tbody tr {
+    border-top: 1rem solid #C5C5C5;
     border-bottom: 1rem solid #C5C5C5;
     border-left: 1rem solid #C5C5C5;
 }
@@ -155,7 +172,8 @@ table.geneInfo th {
 }
 
 table.geneInfo td {
-    padding: 8.4rem 0rem;
+    /* padding: 8.4rem 0rem; */
+    padding-bottom: 8.4rem;
 }
 
 .blue {
@@ -330,3 +348,9 @@ span.dots::before {
 .bgRed {
     background-color: red;
 }
+
+/* textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+} */

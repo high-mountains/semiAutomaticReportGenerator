@@ -10,7 +10,6 @@ const Gene61 = () => {
             <GeneInformationMiddle
                 geneName={"BCHE"}
                 datas={[
-                    "rs2668207",
                     "rs1803274",
                     "rs1799807",
                     "rs28933389",

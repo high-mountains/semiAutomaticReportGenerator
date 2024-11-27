@@ -7,26 +7,11 @@ import {updateDangerValues} from "./updateDangerValues.js";
 
 const initialData = [
     {
-        rowSpan: 11,
+        rowSpan: 8,
         thContent: {
             main: "酸化/抗酸化",
             sub: "細胞が損傷を受けるプロセス/酸化ストレスを抑えて細胞を保護する働き",
         },
-        tdContent: {
-            gen: "GCLC",
-            danger: 0,
-            description: "ATP（補因子）, NAC, グルタチオン, αリポ酸, セレン",
-            etc: "BPA, フリーラジカル"
-        }
-    },
-    {
-        tdContent: {
-            gen: "CALM",
-            danger: 0,
-            description: "ATP（補因子）, NAC, グルタチオン, αリポ酸",
-        }
-    },
-    {
         tdContent: {
             gen: "HFE",
             danger: 0,
@@ -38,49 +23,42 @@ const initialData = [
         tdContent: {
             gen: "KEAP1",
             danger: 0,
-            description: "NAC, スルフォラファン, レスベラトロール, ビタミンC, ビタミンE",
-        }
-    },
-    {
-        tdContent: {
-            gen: "NOX1",
-            danger: 0,
-            description: "NADPH（補因子）, FAD（補因子）, ヘム（補因子）, NAC, レスベラトロール, αリポ酸, ビタミンE, クルクミン",
+            description: "NAC, スルフォラファン, ビタミンC, ビタミンE, レスベラトロール",
         }
     },
     {
         tdContent: {
             gen: "NOX4",
             danger: 0,
-            description: "NADPH（補因子）, FAD（補因子）, ヘム（補因子）, NAC, ビタミンE, ビタミンC, CoQ10",
+            description: "FAD（補因子）, NADPH（補因子）, ヘム（補因子）, CoQ10, NAC, ビタミンC, ビタミンE",
         }
     },
     {
         tdContent: {
             gen: "SHMT1",
             danger: 0,
-            description: "ビタミンB6（補因子）, 5MTHF, メチルビタミンB12, ベタイン, NAC",
+            description: "ビタミンB6（補因子）, 5MTHF, NAC, ベタイン, メチルビタミンB12",
         }
     },
     {
         tdContent: {
             gen: "SHMT2",
             danger: 0,
-            description: "ビタミンB6（補因子）, 5MTHF, メチルビタミンB12, ベタイン, NAC",
+            description: "ビタミンB6（補因子）, 5MTHF, NAC, ベタイン, メチルビタミンB12",
         }
     },
     {
         tdContent: {
             gen: "SLC40A1",
             danger: 0,
-            description: "銅, ビタミンC, ポリフェノール",
+            description: "ビタミンC, ポリフェノール, 銅",
         }
     },
     {
         tdContent: {
             gen: "SOD2",
             danger: 0,
-            description: "マンガン（補因子）, グルタチオン, NAC, ビタミンC, ビタミンE",
+            description: "マンガン（補因子）, NAC, グルタチオン, ビタミンC, ビタミンE",
             etc:"BPA, フリーラジカル"
         }
     },
@@ -88,7 +66,7 @@ const initialData = [
         tdContent: {
             gen: "SOD3",
             danger: 0,
-            description: "銅（補因子）, 亜鉛（補因子）, NAC, αリポ酸, グルタチオン, セレン, ビタミンE, ビタミンC",
+            description: "亜鉛（補因子）, 銅（補因子）, NAC, αリポ酸, グルタチオン, セレン, ビタミンC, ビタミンE",
         }
     },
     {
@@ -107,21 +85,21 @@ const initialData = [
         tdContent: {
             gen: "FOLR1",
             danger: 0,
-            description: "5MTHF, メチルビタミンB12, ビタミンB6, NAC",
+            description: "5MTHF, NAC, ビタミンB6, メチルビタミンB12",
         }
     },
     {
         tdContent: {
             gen: "FOLR2",
             danger: 0,
-            description: "5MTHF, メチルビタミンB12, ビタミンB6, NAC",
+            description: "5MTHF, NAC, ビタミンB6, メチルビタミンB12",
         }
     },
     {
         tdContent: {
             gen: "SLC19A1",
             danger: 0,
-            description: "オメガ3, L-カルニチン, CoQ10, ビタミンB群",
+            description: "CoQ10, L-カルニチン, オメガ3, ビタミンB群",
         }
     },
     {
@@ -133,7 +111,7 @@ const initialData = [
         tdContent: {
             gen: "AMTRAK",
             danger: 0,
-            description: "リボフラビン（補因子）, ビタミンB12, メチルフォレート, ビタミンB6, SAMe, ベタイン",
+            description: "リボフラビン（補因子）, SAMe, ビタミンB6, ビタミンB12, ベタイン, メチルフォレート",
         }
     },
     {
@@ -162,19 +140,19 @@ const initialData = [
         tdContent: {
             gen: "APOE",
             danger: 0,
-            description: "オメガ3, DHA, フォスファチジルコリン, フォレート, ビタミンB12, クルクミン, レスベラトロール",
+            description: "DHA, オメガ3, クルクミン, ビタミンB12, フォスファチジルコリン, フォレート, レスベラトロール",
         }
     },
     
     {
         thContent: {
             main: "BDNF",
-            sub: "タンパク質の合成に影響する遺伝子で、神経細胞の成長や維持に関わる/酸化ストレスを抑えて細胞を保護する働き",
+            sub: "タンパク質の合成に影響する遺伝子で、神経細胞の成長や維持に関わる",
         },
         tdContent: {
             gen: "BDNF",
             danger: 0,
-            description: "オメガ3, DHA, ビタミンD, EGCG, マグネシウムスレオネート",
+            description: "DHA, EGCG, オメガ3, ビタミンD, マグネシウムスレオネート",
         }
     }
     

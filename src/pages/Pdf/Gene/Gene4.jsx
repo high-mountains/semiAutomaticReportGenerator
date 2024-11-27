@@ -8,7 +8,7 @@ import Text from "../../../components/Pdf/Text";
 const Gene4 = () => {
     return (
         <PageWrapper>
-            <Text sidebar={1} textContent={"グルタミン酸輸送体"} />
+            <Text sidebar={1} textContent={"グルタミン酸輸送体"} containerStyle={{marginBottom: '10rem'}} />
             <GeneInformationMiddle
                 geneName={"SLC1A1"}
                 datas={["rs2228622", "rs301430"]}

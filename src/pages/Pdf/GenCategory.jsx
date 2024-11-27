@@ -51,7 +51,7 @@ const GenCategory = () => {
 
     const initialDetoxData2 = [
         { borderstatus: 0, subContent1: "デトックス", subContent2: "タイプ"},
-        { text: "フェーズII", subContent1: "グルタチオン", subContent2: "ペルオキシダーゼ", subContent2Class:{letterSpacing:'-0.3rem'}, tag: "フェーズII グルタチオンペルオキシダーゼ"},
+        { text: "フェーズII", subContent1: "グルタチオン", subContent2: "ペルオキシダーゼ", tag: "フェーズII グルタチオンペルオキシダーゼ"},
         { text: "フェーズII", subContent1: "N-アセチルトラ", subContent2: "ンスフェラーゼ", tag: "フェーズII N-アセチルトランスフェラーゼ"},
         { text: "フェーズII", subContent1: "N-アセチルトラ", subContent2: "ンスフェラーゼ", tag: "フェーズII N-アセチルトランスフェラーゼ"},
         { text: "フェーズII", subContent1: "スルフトランス", subContent2: "フェラーゼ", tag: "フェーズII スルフトランスフェラーゼ"},

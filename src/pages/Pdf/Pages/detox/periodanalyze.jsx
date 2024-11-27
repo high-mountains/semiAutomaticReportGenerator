@@ -16,7 +16,6 @@ const Periodanalyze = (props) => {
 
     useEffect(() => {
         setRenderedPdfFlag(pdfFlag);
-        console.log("pdfFlag===>", pdfFlag);
     }, [pdfFlag]);
     
     const EnhancedPeriodanalyze = withPeriodanalyze([

@@ -16,7 +16,7 @@ const Gene3 = () => {
             />
             <GeneInformationMiddle
                 geneName={"GAD1"}
-                datas={["rs2391191", "rs1978340", "rs3791878", "rs769390", "rs2241165"]}
+                datas={["rs769390", "rs2241165"]}
                 level={-1}
                 description={"この遺伝子に変異がある場合、グルタミン酸からGABAへの変換が阻害される可能性があります。GAD1（Glutamate Decarboxylase 1）は、グルタミン酸脱炭酸酵素（GAD67）をコードしています。この酵素は、グルタミン酸を脱炭酸してGABA（γ-アミノ酪酸）を生成する役割を担います。"}
             />

@@ -10,10 +10,6 @@ const Gene62 = () => {
             <GeneInformationMiddle
                 geneName={"PON1"}
                 datas={[
-                    "rs854569",
-                    "rs854566",
-                    "rs854570",
-                    "rs854572",
                     "rs854560",
                     "rs854571",
                     "rs662",

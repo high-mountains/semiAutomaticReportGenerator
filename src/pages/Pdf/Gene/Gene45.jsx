@@ -8,11 +8,11 @@ import Text from "../../../components/Pdf/Text.jsx";
 const Gene45 = () => {
     return (
         <PageWrapper>
-            <Text sidebar={1} textContent={"フェーズII グルタチオンペルオキシダーゼ"} />
+            <Text sidebar={1} textContent={"フェーズII グルタチオンペルオキシダーゼ"} containerStyle={{marginBottom: '10rem'}} />
 
             <GeneInformationMiddle
                 geneName={"GPX1"}
-                datas={["rs3448", "rs1050450"]}
+                datas={["rs1050450"]}
                 level={-1}
                 description={
                     "この遺伝子に変異がある場合、細胞内の過酸化物の除去能力が弱まる可能性があります。\nGPX1（Glutathione Peroxidase 1）は、抗酸化酵素であるグルタチオンペルオキシダーゼ1をコードしており、細胞内の過酸化水素や有機過酸化物をグルタチオンを用いて水やアルコールに還元する役割を果たします。"
@@ -21,7 +21,6 @@ const Gene45 = () => {
             <GeneInformationMiddle
                 geneName={"GPX2"}
                 datas={[
-                    "rs2071566",
                     "rs4902346",
                 ]}
                 level={-1}
@@ -39,7 +38,7 @@ const Gene45 = () => {
             />
             <GeneInformationMiddle
                 geneName={"GPX4"}
-                datas={["rs713041", "rs8177412"]}
+                datas={["rs713041"]}
                 level={-1}
                 description={
                     "この遺伝子に変異がある場合、細胞膜の脂質過酸化への抑制機能が低下する可能性があります。\nGPX4（Glutathione Peroxidase 4）は、細胞膜での脂質過酸化物を還元する特殊な抗酸化酵素をコードしています。この酵素は、脂質過酸化の制御において重要であり、細胞膜の構造と機能の維持に寄与します。"

@@ -8,18 +8,6 @@ import {updateDangerValues} from "./updateDangerValues.js";
 
 const initialData = [
     {
-        thContent: {
-            main: "炎症OFF",
-            sub: "炎症性疾患や回復プロセスに影響し、炎症反応の抑制・終了に関わる",
-        },
-        tdContent: {
-            gen: "TNF",
-            danger: 0,
-            description:
-                "ビタミンD, オメガ3, NAC, クルクミン, レスベラトロール",
-        },
-    },
-    {
         rowSpan: 2,
         thContent: {
             main: "筋肉/筋肉痛",
@@ -29,7 +17,7 @@ const initialData = [
             gen: "ACTN3",
             danger: 0,
             description:
-            "ATP（補因子）, カルシウム（補因子）, クレアチン, βアラニン, BCAA, L-シトルリン",
+            "ATP（補因子）, カルシウム（補因子）, BCAA, L-シトルリン, βアラニン, クレアチン",
         },
     },
     {
@@ -37,7 +25,7 @@ const initialData = [
             gen: "AMPD1",
             danger: 0,
             description:
-            "ATP, マグネシウム（補因子）, クレアチン, βアラニン, CoQ10, L-カルニチン, BCAA",
+            "マグネシウム（補因子）, ATP, BCAA, CoQ10, L-カルニチン, βアラニン, クレアチン",
         },
     },
     {
@@ -49,7 +37,7 @@ const initialData = [
             gen: "PPARδ",
             danger: 0,
             description:
-                "オメガ3, L-カルニチン, ビタミンD, クルクミン, レスベラトロール",
+                "L-カルニチン, オメガ3, クルクミン, ビタミンD, レスベラトロール",
         },
     },
     {
@@ -61,7 +49,7 @@ const initialData = [
             gen: "BCHE",
             danger: 0,
             description:
-                "ホスファチジルコリン, NAC, ビタミンE, ミルクシスル, ビタミンB群",
+                "NAC, ビタミンB群, ビタミンE, ホスファチジルコリン, ミルクシスル",
         },
     },
     {
@@ -74,7 +62,7 @@ const initialData = [
             gen: "COMT",
             danger: 0,
             description:
-                "マグネシウム, ビタミンB6, ビタミンB12, メチルフォレート, SAMe（補因子）, NAC",
+                "SAMe（補因子）, NAC, ビタミンB6, ビタミンB12, マグネシウム, メチルフォレート",
         },
     },
     {
@@ -82,7 +70,7 @@ const initialData = [
             gen: "DAO",
             danger: 0,
             description:
-                "リボフラビン（補因子）, NAC, セレン, オメガ3, ビタミンB6",
+                "リボフラビン（補因子）, NAC, オメガ3, セレン, ビタミンB6",
         },
     },
     {
@@ -90,7 +78,7 @@ const initialData = [
             gen: "DAOA",
             danger: 0,
             description:
-                "リボフラビン（補因子）, NAC, セレン, オメガ3, ビタミンB6",
+                "リボフラビン（補因子）, NAC, オメガ3, セレン, ビタミンB6",
         },
     },
     {
@@ -105,7 +93,7 @@ const initialData = [
             gen: "DRD1",
             danger: 0,
             description:
-                "L-チロシン, ビタミンB6, オメガ3, フォスファチジルコリン, ビタミンD, マグネシウム",
+                "L-チロシン, オメガ3, ビタミンB6, ビタミンD, フォスファチジルコリン, マグネシウム",
         },
     },
     {
@@ -113,7 +101,7 @@ const initialData = [
             gen: "DRD2",
             danger: 0,
             description:
-                "L-チロシン, ビタミンB6, オメガ3, フォスファチジルコリン, ビタミンD, マグネシウム",
+                "L-チロシン, オメガ3, ビタミンB6, ビタミンD, フォスファチジルコリン, マグネシウム",
         },
     },
     {
@@ -121,7 +109,7 @@ const initialData = [
             gen: "DRD4",
             danger: 0,
             description:
-                "L-チロシン, ビタミンB6, オメガ3, フォスファチジルコリン, ビタミンD, マグネシウム",
+                "L-チロシン, オメガ3, ビタミンB6, ビタミンD, フォスファチジルコリン, マグネシウム",
         },
     },
     {
@@ -129,14 +117,14 @@ const initialData = [
             gen: "GAD1",
             danger: 0,
             description:
-                "P5P（補因子）, L-グルタミン, GABA, L-テアニン, マグネシウム",
+                "P5P（補因子）, GABA, L-グルタミン, L-テアニン, マグネシウム",
         },
     },
     {
         tdContent: {
             gen: "GCH1",
             danger: 0,
-            description: "L-フェニルアラニン, L-チロシン, 5-HTP, ビタミンB群, NAC",
+            description: "5-HTP, L-チロシン, L-フェニルアラニン, NAC, ビタミンB群",
         },
     },
     {
@@ -144,14 +132,14 @@ const initialData = [
             gen: "HTR2",
             danger: 0,
             description:
-                "5-HTP, オメガ3, マグネシウム, ビタミンB6, L-テアニン, サフラン抽出物",
+                "5-HTP, L-テアニン, オメガ3, サフラン抽出物, ビタミンB6, マグネシウム",
         },
     },
     {
         tdContent: {
             gen: "MAOA",
             danger: 0,
-            description: "リボフラビン（補因子）, マグネシウム, ビタミンB2, ビタミンB6, ビタミンB12, フォレート",
+            description: "リボフラビン（補因子）, ビタミンB2, ビタミンB6, ビタミンB12, フォレート, マグネシウム",
         },
     },
     {
@@ -159,21 +147,21 @@ const initialData = [
             gen: "MAOB",
             danger: 0,
             description:
-                "マグネシウム, ビタミンB2, ビタミンB6, ビタミンB12, フォレート",
+                "ビタミンB2, ビタミンB6, ビタミンB12, フォレート, マグネシウム",
         },
     },
     {
         tdContent: {
             gen: "SLC6A4",
             danger: 0,
-            description: "ナトリウム, ビタミンB6, マグネシウム, 5-HTP, L-テアニン, オメガ3",
+            description: "5-HTP, L-テアニン, オメガ3, ナトリウム, ビタミンB6, マグネシウム",
         },
     },
     {
         tdContent: {
             gen: "SPR",
             danger: 0,
-            description: "NADPH（補因子）, BH4, ビタミンB6, NAC, フォレート, マグネシウム",
+            description: "NADPH（補因子）, BH4, NAC, ビタミンB6, フォレート, マグネシウム",
         },
     },
     {
@@ -187,14 +175,14 @@ const initialData = [
         tdContent: {
             gen: "TPH",
             danger: 0,
-            description: "BH4（補因子）, 鉄（補因子）, 5-HTP, フォレート, ビタミンB6, マグネシウム, オメガ3",
+            description: "BH4（補因子）, 鉄（補因子）, 5-HTP, オメガ3, ビタミンB6, フォレート, マグネシウム",
         },
     },
     {
         tdContent: {
             gen: "TPH2",
             danger: 0,
-            description: "BH4（補因子）, 鉄（補因子）, 5-HTP, フォレート, ビタミンB6, マグネシウム, オメガ3",
+            description: "BH4（補因子）, 鉄（補因子）, 5-HTP, オメガ3, ビタミンB6, フォレート, マグネシウム",
         },
     },
 ]

@@ -3,7 +3,7 @@ import PageWrapper from "../../../components/Pdf/PageWrapper";
 import PageNumber from "../../../components/Pdf/PageNumber";
 import TableNew from "../../../components/Pdf/Supplements/TableNew";
 import { useSelector } from "react-redux";
-import {updateDangerValues} from "./updateDangerValues.js";
+import { updateDangerValues } from "./updateDangerValues.js";
 
 const initialData = [
     {
@@ -16,80 +16,57 @@ const initialData = [
             gen: "IL10",
             danger: 0,
             description: "オメガ3, ビタミンD, プロバイオティクス, 亜鉛",
-            etc: "グルテン, カゼイン"
-        }
+            etc: "グルテン, カゼイン",
+        },
     },
     {
         // trHeight: 27,
         tdContent: {
             gen: "ZO-2(TJP2)",
             danger: 0,
-            description: "ビタミンD, オメガ3, L-グルタミン, プロバイオティクス, 亜鉛",
-            etc: "グルテン, カゼイン"
-        }
+            description:
+                "ビタミンD, オメガ3, L-グルタミン, プロバイオティクス, 亜鉛",
+            etc: "グルテン, カゼイン",
+        },
     },
     {
-        rowSpan: 8,
+        rowSpan: 4,
         thContent: {
             main: "Longevity Genes",
             sub: "長寿に影響する遺伝子群で、老化の遅延や疾病予防に関わる",
         },
         tdContent: {
-            gen: "CETP",
-            danger: 0,
-            description: "EPA, ビタミンB3",
-        }
-    },
-    {
-        tdContent: {
             gen: "COMT",
             danger: 0,
-            description: "マグネシウム, ビタミンB6, ビタミンB12, メチルフォレート, SAMe（補因子）, NAC",
-            etc: "便秘, ピル"
-        }
+            description:
+                "SAMe（補因子）, NAC, ビタミンB6, ビタミンB12, マグネシウム, メチルフォレート",
+            etc: "便秘, ピル",
+        },
     },
     {
         tdContent: {
             gen: "CYP2B6",
             danger: 0,
-            description: "グルタチオン, NAC, NADPH（補因子）, スルフォラファン, EGCG, ヘム（補因子）",
-            etc: "喫煙"
-        }
-    },
-    {
-        tdContent: {
-            gen: "FOXO3A",
-            danger: 0,
-            description: "グルタチオン, NAC, ビタミンC, メラトニン, NAD+",
-        }
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
+            etc: "喫煙",
+        },
     },
     {
         tdContent: {
             gen: "IGF1R",
             danger: 0,
-            description: "亜鉛, ビタミンD, L-アルギニン, ビタミンD, ゴロストラム（初乳）",
-        }
-    },
-    {
-        tdContent: {
-            gen: "IL-6",
-            danger: 0,
-            description: "ビタミンD, 亜鉛, EPA, クルクミン, レスベラトロール, EGCG",
-        }
+            description:
+                "L-アルギニン, ゴロストラム（初乳）, ビタミンD, ビタミンD, 亜鉛",
+        },
     },
     {
         tdContent: {
             gen: "IMPK",
             danger: 0,
-            description: "マグネシウム, ビタミンB6, ビタミンB12, Dリボース, CoQ10, ATP",
-        }
-    },
-    {
-        tdContent: {
-            gen: "TP53",
-            danger: 0,
-            description: "グルタチオン, NAC, ビタミンC, メラトニン, NAD+, セレン",
-        }
+            description:
+                "ATP, CoQ10, Dリボース, ビタミンB6, ビタミンB12, マグネシウム",
+        },
     },
     {
         thContent: {
@@ -99,8 +76,8 @@ const initialData = [
         tdContent: {
             gen: "TREM2",
             danger: 0,
-            description: "オメガ3, NAC, ビタミンD, クルクミン",
-        }
+            description: "NAC, オメガ3, クルクミン, ビタミンD",
+        },
     },
     {
         rowSpan: 3,
@@ -112,24 +89,26 @@ const initialData = [
             gen: "ADH1B",
             danger: 0,
             description: "NAC, ビタミンB群, ビタミンC, クルクミン",
-            etc: "アルコール"
-        }
+            etc: "アルコール",
+        },
     },
     {
         tdContent: {
             gen: "ADH1C",
             danger: 0,
-            description: "NAD+（補因子）, NAC, ビタミンB群, ビタミンC, クルクミン",
-            etc : "アルコール"
-        }
+            description:
+                "NAD+（補因子）, NAC, ビタミンB群, ビタミンC, クルクミン",
+            etc: "アルコール",
+        },
     },
     {
         tdContent: {
             gen: "ALDH2",
             danger: 0,
-            description: "NAC, ビタミンB群, ビタミンC, クルクミン, レスベラトロール",
-            etc : "アルコール"
-        }
+            description:
+                "NAC, ビタミンB群, ビタミンC, クルクミン, レスベラトロール",
+            etc: "アルコール",
+        },
     },
     {
         rowSpan: 2,
@@ -140,16 +119,16 @@ const initialData = [
         tdContent: {
             gen: "ATG16L1",
             danger: 0,
-            description: "プロバイオティクス, EGCG, オメガ3",
-            etc: "断食"
-        }
+            description: "EGCG, オメガ3, プロバイオティクス",
+            etc: "断食",
+        },
     },
-    {   
+    {
         tdContent: {
             gen: "ATG5",
             danger: 0,
-            description: "オメガ3, EGCG, レスベラトロール, クルクミン, NAC",
-        }
+            description: "EGCG, NAC, オメガ3, クルクミン, レスベラトロール",
+        },
     },
     {
         rowSpan: 2,
@@ -160,17 +139,18 @@ const initialData = [
         tdContent: {
             gen: "ADORA2A",
             danger: 0,
-            description: "L-テアニン, マグネシウム, ビタミンB群, メラトニン",
-        }
+            description: "L-テアニン, ビタミンB群, マグネシウム, メラトニン",
+        },
     },
-    {   
+    {
         tdContent: {
             gen: "CYP1A2",
             danger: 0,
-            description: "グルタチオン, NAC, NADPH（補因子）, スルフォラファン, EGCG, ヘム（補因子）",
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
             etc: "過剰なカフェイン, 喫煙, 焦げた肉",
-            etcClassName: "tracking-[-0.5rem]"
-        }
+            etcClassName: "tracking-[-0.5rem]",
+        },
     },
     {
         trHeight: 40,
@@ -181,9 +161,10 @@ const initialData = [
         tdContent: {
             gen: "CYP1A1",
             danger: 0,
-            description: "グルタチオン, NAC, NADPH（補因子）, スルフォラファン, EGCG, ヘム（補因子）",
-            etc: "グルテン, カゼイン, 環境毒"
-        }
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
+            etc: "グルテン, カゼイン, 環境毒",
+        },
     },
     {
         thContent: {
@@ -193,8 +174,9 @@ const initialData = [
         tdContent: {
             gen: "GLRX",
             danger: 0,
-            description: "グルタチオン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE, セレン",
-        }
+            description:
+                "グルタチオン（補因子）, NAC, αリポ酸, セレン, ビタミンC, ビタミンE",
+        },
     },
     {
         thContent: {
@@ -205,29 +187,9 @@ const initialData = [
             gen: "TMPRSS6",
             danger: 0,
             description: "銅（補因子）, ビタミンB群, NAC",
-        }
-    },
-    {
-        rowSpan: 2,
-        thContent: {
-            main: "メラトニン",
-            sub: "睡眠と覚醒リズムを調整する",
         },
-        tdContent: {
-            gen: "MTNR1A",
-            danger: 0,
-            description: "メラトニン, 5-HTP, ビタミンB6, L-トリプトファン, バレリアンルート",
-            etc: "過剰なカフェイン, 喫煙, 焦げた肉",
-            etcClassName: "tracking-[-0.5rem]"
-        }
     },
-    {tdContent: {
-        gen: "HLA-DQA1",
-        danger: 0,
-        description: "オメガ3, プロバイオティクス, DAO酵素, ビタミンD, 亜鉛, L-グルタミン",
-    }
-}
-]
+];
 const Supplement12 = (props) => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
@@ -238,13 +200,9 @@ const Supplement12 = (props) => {
 
     return (
         <PageWrapper>
-            <TableNew
-                tBody={updatedTableData}
-            />
+            <TableNew tBody={updatedTableData} />
             {/* Old Table code can be safely removed if no longer needed */}
-            <PageNumber>
-                37
-            </PageNumber>
+            <PageNumber>37</PageNumber>
         </PageWrapper>
     );
 };

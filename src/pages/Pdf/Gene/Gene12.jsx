@@ -8,7 +8,7 @@ import Text from "../../../components/Pdf/Text.jsx";
 const Gene12 = () => {
     return (
         <PageWrapper>
-            <Text sidebar={1} textContent={"ヒスタミン代謝"} />
+            <Text sidebar={1} textContent={"ヒスタミン代謝"} containerStyle={{marginBottom: '10rem'}} />
 
             <GeneInformationMiddle
                 geneName={"ALDH2"}
@@ -32,7 +32,7 @@ const Gene12 = () => {
             
             <GeneInformationMiddle
                 geneName={"ABP1"}
-                datas={["rs2052129", "rs1049793", "rs1049742", "rs10156191"]}
+                datas={["rs1049793", "rs1049742", "rs10156191"]}
                 level={-1}
                 description={"この遺伝子に変異がある場合、ヒスタミンを代謝するプロセスが阻害される可能性があります。MAOA（Monoamine Oxidase A）は、モノアミンオキシダーゼAという酵素をコードしています。この酵素は、セロトニン、ノルアドレナリン、ドーパミンなどのモノアミン神経伝達物質の分解に関与し、これらの伝達物質を酸化的に脱アミノ化して不活性化します。"}
             />

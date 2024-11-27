@@ -9,7 +9,7 @@ const Gene1 = () => {
     return (
         <PageWrapper>
 
-            <Text sidebar={1} textContent={"グルタミン酸代謝"} />
+            <Text sidebar={1} textContent={"グルタミン酸代謝"} containerStyle={{marginBottom: '10rem'}} />
             
             <GeneInformationMiddle
                 datas={["rs121964962", "rs121964963", "rs121964965", "rs121964967","rs121964972", "rs375846341","rs398123151"]}

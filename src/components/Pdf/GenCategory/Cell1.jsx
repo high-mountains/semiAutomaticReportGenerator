@@ -3,10 +3,16 @@ import { useSelector } from 'react-redux';
 import pdfData from "../../../utils/dummyPdf.json"
 
 const Cell = (props) => {
-    // const [color, setColor] = useState(useSelector((store) => store.pdfData.mainTextColor))
     const color = pdfData.mainTextColor;
     const [borderColor, setBorderColor] = useState("border-[#C5C5C5]");
     
+    const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
+    const [renderedPdfFlag, setRenderedPdfFlag] = useState(pdfFlag);
+
+    useEffect(() => {
+        setRenderedPdfFlag(pdfFlag);
+    }, [pdfFlag]);
+
     useEffect(() => {
         if (props.borderStatus === 0) {
             setBorderColor("")
@@ -19,12 +25,21 @@ const Cell = (props) => {
     
     return (
         <div className={`w-[82.5rem] h-[50rem] flex items-center justify-center ${borderColor} text-[${color}]`}>
-            <p className={`text-[${color}] text-[12rem] text-center leading-[1.44833] inline-grid`}>
+            <p
+            style={{
+                color: "#484F51",
+                fontSize: "12rem",
+                textAlign: "center",
+                lineHeight: "1.44833",
+                display: "inline-grid",
+                marginTop: `${renderedPdfFlag ? "-13" : "0"}rem`,
+            }}
+            >
                 {props.content && props.content}
                 <span className='text-[10rem] leading-[1.448] inline-block my-[-1rem]'>
                     {props.subContent1 && props.subContent1}
                 </span>
-                <span className='text-[10rem] leading-[1.448] inline-block'>
+                <span className='text-[10rem] leading-[1.448] inline-block tracking-[-0.3rem]'>
                     {props.subContent2 && props.subContent2}
                 </span>
             </p>

@@ -1,7 +1,5 @@
 import TemplatePointers from "./components/TemplatePointers"
 
-
-
 function LandingIntro() {
 
   return (
@@ -17,9 +15,7 @@ function LandingIntro() {
 
           {/* Importing pointers component */}
           <TemplatePointers />
-
         </div>
-
       </div>
     </div>
   )

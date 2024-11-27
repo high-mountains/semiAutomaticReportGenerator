@@ -14,7 +14,7 @@ const Gene2 = () => {
                 mainTitle={"あなたの遺伝子情報一覧"}
             />
 
-            <Text sidebar={1} textContent={"グルタミン酸合成"} />
+            <Text sidebar={1} textContent={"グルタミン酸合成"} containerStyle={{marginBottom: '10rem'}}/>
             
             <GeneInformationMiddle
                 datas={["rs2657879", "rs2638315"]}

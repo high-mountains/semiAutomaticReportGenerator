@@ -8,26 +8,8 @@ import Text from "../../../components/Pdf/Text.jsx";
 const Gene46 = () => {
     return (
         <PageWrapper>
-            <Text sidebar={1} textContent={"フェーズII グルタチオントランスフェラーゼ"} />
+            <Text sidebar={1} textContent={"フェーズII グルタチオントランスフェラーゼ"} containerStyle={{marginBottom: '10rem'}} />
 
-            <GeneInformationMiddle
-                geneName={"GSTA1"}
-                datas={["rs3957356", "rs3957357"]}
-                level={-1}
-                description={
-                    "この遺伝子に変異がある場合、体内の有害物質や酸化ストレスによる有害化合物の解毒能力が減少する可能性があります。GSTA1（Glutathione S-Transferase Alpha 1）は、グルタチオンS-トランスフェラーゼ（GST）ファミリーの一種で、肝臓で高く発現し、解毒反応に関与しています。この酵素は、グルタチオンを用いて化合物を無毒化し、水溶性を高めて排出を促進する役割を果たします。"
-                }
-            />
-            <GeneInformationMiddle
-                geneName={"GSTM1"}
-                datas={[
-                    "rs366631",
-                ]}
-                level={-1}
-                description={
-                    "この遺伝子に変異がある場合、特定の環境毒素や薬物の解毒が不十分となる可能性があります。\nGSTM1（Glutathione S-Transferase Mu 1）は、グルタチオンS-トランスフェラーゼ（GST）ファミリーに属し、グルタチオンを用いて有害物質や環境毒素を無毒化する酵素です。GSTM1は、肝臓をはじめとする解毒に重要な組織で発現し、特に発がん性物質や毒素の解毒に特化しています。"
-                }
-            />
             <GeneInformationMiddle
                 geneName={"GSTP1"}
                 datas={["rs1695"]}
