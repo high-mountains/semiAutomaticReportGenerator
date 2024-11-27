@@ -20,6 +20,7 @@ const Merit = () => {
                 width: "527",
                 height: "322",
                 imageURL: "bg/abilityDetox.svg",
+                detoxStatus: true,
                 contentFontSize: "10rem",  
                 descriptions: [
                     {
