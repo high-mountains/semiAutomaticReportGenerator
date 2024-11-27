@@ -117,18 +117,18 @@ const Pdf = () => {
 
             <div className="pdfcontainer my-[20rem]">
                 <div className="pdfwrapper" id="downloadTest">
-                    <Page1 />
+                    {/* <Page1 />
                     <Page2 />
                     <Page3 />
-                    <Page4 />
+                    <Page4 /> */}
                     <TypeByType />
-                    <GenCategory />
+                    {/* <GenCategory />
                     <Supplement />
                     <SupplementNot />
                     <SupplementTable />
                     <GeneInformationList />
                     <References />
-                    <Pathway />
+                    <Pathway /> */}
                 </div>
             </div>
         </>

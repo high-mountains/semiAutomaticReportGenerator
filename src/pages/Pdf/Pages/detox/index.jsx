@@ -5,8 +5,8 @@ import Periodanalyze from "./periodanalyze";
 const Detox = () => {
     return (
         <>
-            <Concept />
-            <Periodanalyze />
+            {/* <Concept />
+            <Periodanalyze /> */}
             <Merit />
         </>
     );

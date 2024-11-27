@@ -11,7 +11,9 @@ const Ability = (props) => {
                 position: 'relative'
             }}
         >
-            <img src={props.imageURL} style={{width: '100%', height: '100%', position: 'absolute', top: 0}}/>
+            {
+                props.detoxStatus ? <img src={props.imageURL} style={{width: '258rem', height: '315rem', position: 'absolute', top: 0, left: '125rem'}}/> : <img src={props.imageURL} style={{width: '100%', height: '100%', position: 'absolute', top: 0}}/>
+            }
             {props.descriptions && props.descriptions.map((data, index) => (
                 <AbilityComponent key={index} data={data} />
             ))}
