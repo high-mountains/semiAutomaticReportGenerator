@@ -17,7 +17,6 @@ const Periodanalyze = (props) => {
 
     useEffect(() => {
         setRenderedPdfFlag(pdfFlag);
-        console.log("pdfFlag===>", pdfFlag);
     }, [pdfFlag]);
 
     const EnhancedPeriodanalyze = withPeriodanalyze([
@@ -46,40 +45,52 @@ const Periodanalyze = (props) => {
         {
             Component: Improvement,
             data: {
-                wrapperWidth: "525rem", 
+                wrapperWidth: "525rem",
                 mainColor: mainColor,
                 description: "グルタメートタイプのおすすめ生活改善",
-                gap: 10, 
+                gap: 10,
                 qualities1: [
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>食品添加物としてグルタミン酸を多く含む食品、ジャンクフードなどの摂取を控える。</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
+                            renderedPdfFlag ? "12" : "4"
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>食品添加物としてグルタミン酸を多く含む食品、ジャンクフードなどの摂取を控える。</p>`,
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p><span class='blue'>グルテンフリー</span>を心掛け、野菜や果物などを多く摂る。</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
+                            renderedPdfFlag ? "12" : "4"
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p><span class='blue'>グルテンフリー</span>を心掛け、野菜や果物などを多く摂る。</p>`,
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>オメガ-3脂肪酸（魚類、亜麻仁油、チアシードなど）を含む食品を摂取し、脳の健康をサポー\nトする。</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
+                            renderedPdfFlag ? "12" : "4"
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>オメガ-3脂肪酸（魚類、亜麻仁油、チアシードなど）を含む食品を摂取し、脳の健康をサポー\nトする。</p>`,
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>神経毒性を緩和させるためにデトックス生活を心掛ける。薬味などの食材を取り入れる。</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
+                            renderedPdfFlag ? "12" : "4"
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>神経毒性を緩和させるためにデトックス生活を心掛ける。薬味などの食材を取り入れる。</p>`,
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>規則正しい睡眠習慣を持ち、睡眠を確保する。</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
+                            renderedPdfFlag ? "12" : "4"
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>規則正しい睡眠習慣を持ち、睡眠を確保する。</p>`,
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${ renderedPdfFlag ? '12' : '4' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>寝る前のリラクゼーションルーティンを設け、睡眠の質を向上させる。</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
+                            renderedPdfFlag ? "12" : "4"
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>寝る前のリラクゼーションルーティンを設け、睡眠の質を向上させる。</p>`,
                     },
                 ],
                 oneColumnStatus: true,
-                inContainerGap: 15,  
-                eachUlWidth: 255,  
+                inContainerGap: 15,
+                eachUlWidth: 255,
 
                 ulStyle1: {
                     display: "flex",
                     flexDirection: "column",
-                    gap: "6rem",  
+                    gap: "6rem",
                     lineHeight: 1.448333,
-                    fontSize: "12rem"
+                    fontSize: "12rem",
                 },
             },
         },
@@ -87,15 +98,15 @@ const Periodanalyze = (props) => {
         {
             Component: PageNumber,
             data: {
-                children: "06"
+                children: "06",
             },
         },
     ]);
 
     return (
-            <PageWrapper>
-                <EnhancedPeriodanalyze />
-            </PageWrapper>
+        <PageWrapper>
+            <EnhancedPeriodanalyze />
+        </PageWrapper>
     );
 };
 
