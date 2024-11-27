@@ -7,29 +7,22 @@ import {updateDangerValues} from "./updateDangerValues.js";
 
 const initialData =[
     {
-        rowSpan: 4,
+        rowSpan: 3,
         thContent: {
             main: "活性酸素",
             sub: "細胞に損傷を与える不安定な酸素分子で、老化や病気の原因に関わる",
         },
         tdContent: {
-            gen: "NOX1",
-            danger: 0,
-            description: "NADPH（補因子）, FAD（補因子）, ヘム（補因子）, NAC, レスベラトロール, αリポ酸, ビタミンE, クルクミン",
-        }
-    },
-    {
-        tdContent: {
             gen: "SOD1",
             danger: 0,
-            description: "銅（補因子）, 亜鉛（補因子）, NAC, αリポ酸, グルタチオン, セレン, ビタミンE, ビタミンC",
+            description: "亜鉛（補因子）, 銅（補因子）, NAC, αリポ酸, グルタチオン, セレン, ビタミンC, ビタミンE",
         }
     },
     {
         tdContent: {
             gen: "SOD2",
             danger: 0,
-            description: "マンガン（補因子）, グルタチオン, NAC, ビタミンC, ビタミンE",
+            description: "マンガン（補因子）, NAC, グルタチオン, ビタミンC, ビタミンE",
             etc: "BPA, フリーラジカル"
         }
     },
@@ -37,11 +30,11 @@ const initialData =[
         tdContent: {
             gen: "SOD3",
             danger: 0,
-            description: "銅（補因子）, 亜鉛（補因子）, NAC, αリポ酸, グルタチオン, セレン, ビタミンE, ビタミンC",
+            description: "亜鉛（補因子）, 銅（補因子）, NAC, αリポ酸, グルタチオン, セレン, ビタミンC, ビタミンE",
         }
     },
     {
-        rowSpan: 4,
+        rowSpan: 2,
         thContent: {
             main: "水銀",
             sub: "体内に蓄積された有害な重金属の排出に関わる",
@@ -49,14 +42,14 @@ const initialData =[
         tdContent: {
             gen: "CPOX4",
             danger: 0,
-            description: "鉄, ビタミンB6, メチルビタミンB12, メチルフォレート, 銅, ビタミンC",
+            description: "ビタミンB6, ビタミンC, メチルビタミンB12, メチルフォレート, 鉄, 銅",
         }
     },
     {   
         tdContent: {
-            gen: "GCLM",
+            gen: "GSTP1",
             danger: 0,
-            description: "ATP（補因子）, NAC, グルタチオン, αリポ酸",
+            description: "NAC, クレイ, クロレラ, グルタチオン",
         }
     },
     {
@@ -64,13 +57,6 @@ const initialData =[
             gen: "GSTM1",
             danger: 0,
             description: "グルタチオン（基質）, NAC, スルフォラファン, αリポ酸, クミン",
-        }
-    },
-    {
-        tdContent: {
-            gen: "GSTP1",
-            danger: 0,
-            description: "グルタチオン, NAC, クレイ, クロレラ",
         }
     },
     {
@@ -82,7 +68,7 @@ const initialData =[
         tdContent: {
             gen: "BCHE",
             danger: 0,
-            description: "ホスファチジルコリン, NAC, ビタミンE, ミルクシスル, ビタミンB群",
+            description: "NAC, ビタミンB群, ビタミンE, ホスファチジルコリン, ミルクシスル",
         }
     },
     {
@@ -90,7 +76,7 @@ const initialData =[
         tdContent: {
             gen: "CYP2B6",
             danger: 0,
-            description: "グルタチオン, NAC, NADPH（補因子）, スルフォラファン, EGCG, ヘム（補因子）",
+            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン）",
             etc: "喫煙"
         }
     },
@@ -98,8 +84,8 @@ const initialData =[
         tdContent: {
             gen: "PON1",
             danger: 0,
-            description: "カルシウム, ビタミンD, オメガ3, ビタミンC, ビタミンE, NAD+",
-            etc: "有機リン系農薬"   //fdsdfsdf
+            description: "NAD+, オメガ3, カルシウム, ビタミンC, ビタミンD, ビタミンE",
+            etc: "有機リン系農薬"
         }
     },
     {
@@ -111,56 +97,56 @@ const initialData =[
         tdContent: {
             gen: "ACHY",
             danger: 0,
-            description: "NAD+（補因子）, ビタミンB12, ビタミンB6, メチルフォレート, ベタイン",
+            description: "NAD+（補因子）, ビタミンB6, ビタミンB12, ベタイン, メチルフォレート",
         }
     },
     {
         tdContent: {
             gen: "BHMT",
             danger: 0,
-            description: "ベタイン（補因子）, メチルビタミンB12, ビタミンB6, メチルフォレート",
+            description: "ベタイン（補因子）, ビタミンB6, メチルビタミンB12, メチルフォレート",
         }
     },
     {
         tdContent: {
             gen: "CTH",
             danger: 0,
-            description: "ビタミンB6（補因子）, NAC, メチルフォレート, メチルビタミンB12",
+            description: "ビタミンB6（補因子）, NAC, メチルビタミンB12, メチルフォレート",
         }
     },
     {
         tdContent: {
             gen: "MTHFD1",
             danger: 0,
-            description: "NADPH（補因子）, NAD+（補因子）, 5MTHF, メチルビタミンB12, ビタミンB6",
+            description: "NAD+（補因子）, NADPH（補因子）, 5MTHF, ビタミンB6, メチルビタミンB12",
         }
     },
     {
         tdContent: {
             gen: "MTHFR\nA1298C",
             danger: 0,
-            description: "NADPH（補因子）, NAD+（補因子）, 5MTHF, メチルビタミンB12, ビタミンB6",
+            description: "NAD+（補因子）, NADPH（補因子）, 5MTHF, ビタミンB6, メチルビタミンB12",
         }
     },
     {
         tdContent: {
             gen: "MTHFR\nC677T",
             danger: 0,
-            description: "NADPH（補因子）, NAD+（補因子）, 5MTHF, メチルビタミンB12, ビタミンB6",
+            description: "NAD+（補因子）, NADPH（補因子）, 5MTHF, ビタミンB6, メチルビタミンB12",
         }
     },
     {
         tdContent: {
             gen: "MTR",
             danger: 0,
-            description: "メチルビタミンB12（補因子）, SAMe, 5MTHF, ビタミンB6",
+            description: "メチルビタミンB12（補因子）, 5MTHF, SAMe, ビタミンB6",
         }
     },
     {
         tdContent: {
             gen: "MTRR",
             danger: 0,
-            description: "リボフラビン（補因子）, ビタミンB12, メチルフォレート, ビタミンB6, SAMe, ベタイン",
+            description: "リボフラビン（補因子）, SAMe, ビタミンB6, ビタミンB12, ベタイン, メチルフォレート",
         }
     },
     {
@@ -172,7 +158,7 @@ const initialData =[
         tdContent: {
             gen: "CAT",
             danger: 0,
-            description: "グルタチオン, NAC, SOD, セレン, レスベラトロール, ビタミンC, ビタミンE",
+            description: "NAC, SOD, グルタチオン, セレン, ビタミンC, ビタミンE, レスベラトロール",
             etc: "BPA, フリーラジカル"
         }
     },
@@ -180,21 +166,21 @@ const initialData =[
         tdContent: {
             gen: "CBS",
             danger: 0,
-            description: "ビタミンB6（補因子）, ヘム（補因子）, メチルビタミンB12, 5MTHF, NAC, ベタイン",
+            description: "ビタミンB6（補因子）, ヘム（補因子）, 5MTHF, NAC, ベタイン, メチルビタミンB12",
         }
     },
     {
         tdContent: {
             gen: "CTH",
             danger: 0,
-            description: "ビタミンB6（補因子）, NAC, メチルフォレート, メチルビタミンB12",
+            description: "ビタミンB6（補因子）, NAC, メチルビタミンB12, メチルフォレート",
         }
     },
     {
         tdContent: {
             gen: "DUOX1",
             danger: 0,
-            description: "NADPH（補因子）, NAC, ビタミンE, ビタミンC, セレン",
+            description: "NADPH（補因子）, NAC, セレン, ビタミンC, ビタミンE",
         }
     },
 ];

@@ -11,11 +11,12 @@ const Gene50 = () => {
             <Text
                 sidebar={1}
                 textContent={"フェーズII UDP-グルクロン酸転移酵素"}
+                containerStyle={{ marginBottom: "10rem" }}
             />
 
             <GeneInformationMiddle
                 geneName={"UGT1A1"}
-                datas={["rs887829", "rs34983651", "rs6742078", "rs34946978"]}
+                datas={["rs34983651", "rs6742078", "rs34946978"]}
                 level={-1}
                 description={
                     "この遺伝子に変異がある場合、ビリルビンや特定の薬物のグルクロン酸抱合が不十分となる可能性があります。UGT1A1（UDP Glucuronosyltransferase Family 1 Member A1）は、グルクロン酸転移酵素をコードしています。この酵素は、ビリルビンやホルモン、特定の薬物などにグルクロン酸を結合させ、水溶性を高めて排泄しやすくする役割を持っています。"

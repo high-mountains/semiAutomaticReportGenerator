@@ -8,7 +8,7 @@ import Text from "../../../components/Pdf/Text.jsx";
 const Gene9 = () => {
     return (
         <PageWrapper>
-            <Text sidebar={1} textContent={"ドーパミン受容体"} />
+            <Text sidebar={1} textContent={"ドーパミン受容体"} containerStyle={{marginBottom: '10rem'}} />
 
             <GeneInformationMiddle
                 geneName={"DRD1"}
@@ -25,7 +25,7 @@ const Gene9 = () => {
             
             <GeneInformationMiddle
                 geneName={"DRD4"}
-                datas={["rs11246226", "rs916455", "rs4331145", "rs180095"]}
+                datas={["rs4331145", "rs180095"]}
                 level={-1}
                 description={"この遺伝子に変異がある場合、注意力や行動の抑制に影響を与える可能性があります。DRD4（Dopamine Receptor D4）は、ドーパミンD4受容体をコードしており、DRD2と同様にアデニル酸シクラーゼを抑制するGタンパク質共役型受容体です。DRD4は、特に前頭前皮質に高発現しており、認知機能や感情の調節、注意の制御に関連しています。"}
             />

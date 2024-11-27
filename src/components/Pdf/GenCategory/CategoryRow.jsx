@@ -11,8 +11,17 @@ const CategoryRow = ({bgColor, data}) => {
     
     return (
         <div
-            className={`w-full py-[5rem] flex flex-wrap items-center justify-start gap-[5rem]`}
-            style={{ backgroundColor: `${bgColor}` }}
+            style={{
+                width: "100%", // Equivalent to w-full
+                paddingTop: "2.5rem", // Equivalent to py-[5rem]
+                paddingBottom: "2.5rem", // Equivalent to py-[5rem]
+                display: "flex", // Equivalent to flex
+                flexWrap: "wrap", // Equivalent to flex-wrap
+                alignItems: "center", // Equivalent to items-center
+                justifyContent: "flex-start", // Equivalent to justify-start
+                gap: "5rem", // Equivalent to gap-[5rem]
+                backgroundColor: `${bgColor}`
+            }}
         >
             {categoryData.map(
                 ({ borderstatus, text, subContent1, subContent2 }, index) => (

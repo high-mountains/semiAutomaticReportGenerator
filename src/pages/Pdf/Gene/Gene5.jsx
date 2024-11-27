@@ -8,7 +8,7 @@ import Text from "../../../components/Pdf/Text.jsx";
 const Gene5 = () => {
     return (
         <PageWrapper>
-            <Text sidebar={1} textContent={"GABA代謝"} />
+            <Text sidebar={1} textContent={"GABA代謝"} containerStyle={{marginBottom: '10rem'}} />
             <GeneInformationMiddle
                 geneName={"ALDH5A1"}
                 datas={["rs3765310", "rs2760118", "rs62621664"]}

@@ -15,7 +15,7 @@ const initialData = [
         tdContent: {
             gen: "UGT1A1",
             danger: 0,
-            description: "ビタミンD, グルタチオン, NAC, 胆汁サプリメント, カルシウムDグルカル酸",
+            description: "NAC, カルシウムDグルカル酸, グルタチオン, ビタミンD, 胆汁サプリメント",
             etc: "BPA, 環境毒"
         }
     },
@@ -23,100 +23,79 @@ const initialData = [
         tdContent: {
             gen: "UGT1A3",
             danger: 0,
-            description: "カルシウムDグルカル酸, タンポポ茶, ミルクシスル, NAC, スルフォラファン, オメガ3",
+            description: "NAC, オメガ3, カルシウムDグルカル酸, スルフォラファン, タンポポ茶, ミルクシスル",
         }
     },
     {
         tdContent: {
             gen: "UGT1A4",
             danger: 0,
-            description: "カルシウムDグルカル酸, タンポポ茶, ミルクシスル, NAC, スルフォラファン, オメガ3",
+            description: "NAC, オメガ3, カルシウムDグルカル酸, スルフォラファン, タンポポ茶, ミルクシスル",
         }
     },
     {
         tdContent: {
             gen: "UGT1A6",
             danger: 0,
-            description: "NAC, ミルクシスル, ビタミンC",
+            description: "NAC, ビタミンC, ミルクシスル",
         }
     },
     {
         tdContent: {
             gen: "UGT1A7",
             danger: 0,
-            description: "NAC, ミルクシスル, ビタミンC",
+            description: "NAC, ビタミンC, ミルクシスル",
         }
     },
     {
-        rowSpan: 9,
+        rowSpan: 6,
         thContent: {
             main: "炎症/抗炎症",
             sub: "組織の損傷や感染に対する体の防御反応/体の炎症を抑えて健康を維持する",
         },
         tdContent: {
-            gen: "BDKRB2",
-            danger: 0,
-            description: "オメガ3, アルギニン, ビタミンD, レスベラトロール, マグネシウム",
-        }
-    },
-    {   
-        tdContent: {
             gen: "GPX1",
             danger: 0,
-            description: "セレン（補因子）, グルタチオン（基質）, NAC, αリポ酸, ビタミンE, ビタミンC",
+            description: "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
         }
     },
     {
         tdContent: {
             gen: "GPX2",
             danger: 0,
-            description: "セレン（補因子）, グルタチオン（基質）, NAC, αリポ酸, ビタミンE, ビタミンC",
+            description: "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
         }
     },
     {
         tdContent: {
             gen: "GPX3",
             danger: 0,
-            description: "セレン（補因子）, グルタチオン（基質）, NAC, αリポ酸, ビタミンE, ビタミンC",
+            description: "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
         }
     },
     {
         tdContent: {
             gen: "GPX4",
             danger: 0,
-            description: "セレン（補因子）, グルタチオン（基質）, NAC, αリポ酸, ビタミンE, ビタミンC",
-        }
-    },
-    {
-        tdContent: {
-            gen: "GSTA1",
-            danger: 0,
-            description: "グルタチオン（基質）, NAC, スルフォラファン, αリポ酸, クミン",
-        }
-    },
-    {
-        tdContent: {
-            gen: "GSTM1",
-            danger: 0,
-            description: "グルタチオン（基質）, NAC, スルフォラファン, αリポ酸, クミン",
+            description: "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
         }
     },
     {
         tdContent: {
             gen: "GSTM3",
             danger: 0,
-            description: "グルタチオン（基質）, NAC, セレン, クルクミン, ミルクシスル",
+            description: "グルタチオン（基質）, NAC, クルクミン, セレン, ミルクシスル",
         }
     },
     {
         tdContent: {
             gen: "GSTP1",
             danger: 0,
-            description: "グルタチオン, NAC, クレイ, クロレラ",
+            description: "NAC, クレイ, クロレラ, グルタチオン",
         }
     },
     {
-        rowSpan: 6,
+        rowSpan: 5,
         thContent: {
             main: "化学物質過敏",
             sub: "化学物質に対して異常に強い反応を示す",
@@ -124,7 +103,7 @@ const initialData = [
         tdContent: {
             gen: "CAT",
             danger: 0,
-            description: "グルタチオン, NAC, SOD, セレン, レスベラトロール, ビタミンC, ビタミンE",
+            description: "NAC, SOD, グルタチオン, セレン, ビタミンC, ビタミンE, レスベラトロール",
             etc: "BPA, フリーラジカル"
         }
     },
@@ -133,41 +112,34 @@ const initialData = [
         tdContent: {
             gen: "CYP2C9",
             danger: 0,
-            description: "グルタチオン, NAC, NADPH（補因子）, レスベラトロール, EGCG, ヘム（補因子）",
+            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, レスベラトロール",
             etc: "環境毒, 発がん物質"
-        }
-    },
-    {
-        tdContent: {
-            gen: "GSTM1",
-            danger: 0,
-            description: "グルタチオン（基質）, NAC, スルフォラファン, αリポ酸, クミン",
         }
     },
     {
         tdContent: {
             gen: "GSTP1",
             danger: 0,
-            description: "グルタチオン, NAC, クレイ, クロレラ",
+            description: "NAC, クレイ, クロレラ, グルタチオン",
         }
     },
     {
         tdContent: {
             gen: "NOS3",
             danger: 0,
-            description: "BH4（補因子）, NADPH（補因子）, FAD（補因子）, L-アルギニン, NAC",
+            description: "BH4（補因子）, FAD（補因子）, NADPH（補因子）, L-アルギニン, NAC",
         }
     },
     {
         tdContent: {
             gen: "SOD2",
             danger: 0,
-            description: "マンガン（補因子）, グルタチオン, NAC, ビタミンC, ビタミンE",
+            description: "マンガン（補因子）, NAC, グルタチオン, ビタミンC, ビタミンE",
             etc: "BPA, フリーラジカル"
         }
     },
     {
-        rowSpan: 4,
+        rowSpan: 2,
         thContent: {
             main: "活性酸素",
             sub: "細胞に損傷を与える不安定な酸素分子で、老化や病気の原因に関わる",
@@ -179,25 +151,11 @@ const initialData = [
         }
     },{
         tdContent: {
-            gen: "GCLC",
-            danger: 0,
-            description: "ATP（補因子）, NAC, グルタチオン, αリポ酸, セレン",
-        }
-    },
-    {
-        tdContent: {
-            gen: "GCLM",
-            danger: 0,
-            description: "ATP（補因子）, NAC, グルタチオン, αリポ酸",
-        }
-    },
-    {
-        tdContent: {
             gen: "GSR",
             danger: 0,
-            description: "NADPH（補因子）, NAC, αリポ酸, セレン, グルタチオン, ビタミンE, ビタミンC",
+            description: "NADPH（補因子）, NAC, αリポ酸, グルタチオン, セレン, ビタミンC, ビタミンE",
         }
-    }
+    },
 ];
 
 const Supplement8 = () => {

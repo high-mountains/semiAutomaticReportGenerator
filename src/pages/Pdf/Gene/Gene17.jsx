@@ -8,11 +8,11 @@ import Text from "../../../components/Pdf/Text.jsx";
 const Gene17 = () => {
     return (
         <PageWrapper>
-            <Text sidebar={1} textContent={"ミトコンドリア"} />
+            <Text sidebar={1} textContent={"ミトコンドリア"} containerStyle={{marginBottom: '10rem'}} />
 
             <GeneInformationMiddle
                 geneName={"ACAT2"}
-                datas={["rs71565752", "rs41258114", "rs9347340", "rs3798211", "rs75757546", "rs3465", "rs25683", "rs146437481", "rs202015012", "rs192445956"]}
+                datas={["rs41258114", "rs3465", "rs25683", "rs146437481", "rs202015012", "rs192445956"]}
                 level={-1}
                 description={"この遺伝子に変異がある場合、脂肪酸やコレステロールの代謝が阻害される可能性があります。ACAT2（Acetyl-CoA Acetyltransferase 2）は、アセチル-CoAアセチルトランスフェラーゼ2をコードしており、主に肝臓でコレステロールエステルの合成に関与しています。この酵素は、アセチル-CoAと脂肪酸を基質にしてコレステロールエステルを生成し、コレステロールの輸送や貯蔵において重要な役割を果たします。"}
             />

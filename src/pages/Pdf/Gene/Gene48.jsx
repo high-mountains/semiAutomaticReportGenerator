@@ -11,12 +11,12 @@ const Gene48 = () => {
             <Text
                 sidebar={1}
                 textContent={"フェーズII スルフトランスフェラーゼ"}
+                containerStyle={{marginBottom: '10rem'}}
             />
 
             <GeneInformationMiddle
                 geneName={"SULT1A1"}
                 datas={[
-                    "i6018900",
                     "rs9282861",
                     "rs1968752",
                     "rs1042028",

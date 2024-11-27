@@ -26,8 +26,6 @@ const Gene73 = () => {
             <GeneInformationMiddle
                 geneName={"CYP1A2"}
                 datas={[
-                    "rs762551",
-                    "rs12720461",
                     "rs72547517",
                     "rs72547515"
                 ]}

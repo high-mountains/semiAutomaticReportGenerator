@@ -8,7 +8,6 @@ const Gene80 = () => {
     return (
         <PageWrapper>
             
-
             <GeneInformationMiddle
                 geneName={"ZO-2(TJP2)"}
                 datas={["rs121918299", "rs587777521", "rs746830415"]}

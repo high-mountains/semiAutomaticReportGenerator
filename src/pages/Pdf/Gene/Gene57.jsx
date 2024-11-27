@@ -8,12 +8,11 @@ import Text from "../../../components/Pdf/Text.jsx";
 const Gene57 = () => {
     return (
         <PageWrapper>
-            <Text sidebar={1} textContent={"活性酸素"} />
+            <Text sidebar={1} textContent={"活性酸素"} containerStyle={{marginBottom: '10rem'}}/>
 
             <GeneInformationMiddle
                 geneName={"G6PD"}
                 datas={[
-                    "rs762516",
                     "rs1050828",
                     "rs1050829",
                     "rs137852327",

@@ -11,13 +11,12 @@ const Gene47 = () => {
             <Text
                 sidebar={1}
                 textContent={"フェーズII N-アセチルトランスフェラーゼ"}
+                containerStyle={{marginBottom: '10rem'}}
             />
 
             <GeneInformationMiddle
                 geneName={"NAT1"}
                 datas={[
-                    "rs15561",
-                    "rs6586714",
                     "rs1474593589",
                     "rs1275254501",
                     "rs775745792",
@@ -33,7 +32,6 @@ const Gene47 = () => {
             <GeneInformationMiddle
                 geneName={"NAT2"}
                 datas={[
-                    "rs1495741",
                     "rs1208",
                     "rs1799930",
                     "rs1801280",

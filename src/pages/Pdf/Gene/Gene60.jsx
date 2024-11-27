@@ -18,22 +18,7 @@ const Gene60 = () => {
                 level={-1}
                 description={"この遺伝子に変異がある場合、水銀への感受性が高まり、体内での毒性が増加する可能性があります。\nCPOX4（Coproporphyrinogen Oxidase）は、ヘム合成経路において、コプロポルフィリノーゲンをプロトポルフィリンノーゲンに変換する反応を触媒する酵素です。CPOX4は、ミトコンドリアで活性を持ち、最終的なヘムの生成に重要な役割を果たしています。"}
             />
-            <GeneInformationMiddle
-                geneName={"GCLM"}
-                datas={[
-                    "rs41303970"
-                ]}
-                level={-1}
-                description={"この遺伝子に変異がある場合、体内のグルタチオンレベルが低下し水銀の解毒が不十分となる可能性があります。GCLM（Glutamate-Cysteine Ligase Modifier Subunit）は、グルタミン酸システインリガーゼの修飾サブユニットをコードしており、GCLCとともにグルタチオン合成を促進します。GCLMは、GCLCの触媒活性を調節し、グルタチオンの生成を効率的に行うために必要です。"}
-            />
-            <GeneInformationMiddle
-                geneName={"GSTM1"}
-                datas={[
-                    "rs366631"
-                ]}
-                level={-1}
-                description={"この遺伝子に変異がある場合、抗酸化・解毒機能が低下し、体内の酸化ストレスが増加する可能性があります。GSTM1（Glutathione S-Transferase Mu 1）は、グルタチオンS-トランスフェラーゼ（GST）ファミリーに属し、グルタチオンを用いて有害物質や環境毒素を無毒化する酵素です。GSTM1は、肝臓をはじめとする解毒に重要な組織で発現し、特に発がん性物質や毒素の解毒に特化しています。"}
-            />
+            
             <GeneInformationMiddle
                 geneName={"GSTP1"}
                 datas={[

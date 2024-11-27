@@ -7,7 +7,7 @@ import {updateDangerValues} from "./updateDangerValues.js";
 
 const initialData = [
     {
-        rowSpan: 7,
+        rowSpan: 5,
         thContent: {
             main: "マイコトキシン",
             sub: "カビが産生する有害物質で、食品汚染や毒性物質の解毒や代謝に関わる",
@@ -48,20 +48,20 @@ const initialData = [
             description: "グルタチオン, NAC, クレイ, クロレラ",
         }
     },
-    {
-        tdContent: {
-            gen: "SLCO1B1",
-            danger: 0,
-            description: "NAC, ミルクシスル, タウリン, αリポ酸, CoQ10, ビタミンB群",
-        }
-    },
-    {   
-        tdContent: {
-            gen: "XPC",
-            danger: 0,
-            description: "NAC, メチルフォレート, メチルビタミンB12, オメガ3, レスベラトロール, ビタミンE",
-        }
-    },
+    // {
+    //     tdContent: {
+    //         gen: "SLCO1B1",
+    //         danger: 0,
+    //         description: "NAC, ミルクシスル, タウリン, αリポ酸, CoQ10, ビタミンB群",
+    //     }
+    // },
+    // {   
+    //     tdContent: {
+    //         gen: "XPC",
+    //         danger: 0,
+    //         description: "NAC, メチルフォレート, メチルビタミンB12, オメガ3, レスベラトロール, ビタミンE",
+    //     }
+    // },
     {
         rowSpan: 4,
         thContent: {

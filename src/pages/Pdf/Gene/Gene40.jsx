@@ -8,15 +8,11 @@ import Text from "../../../components/Pdf/Text.jsx";
 const Gene40 = () => {
     return (
         <PageWrapper>
-            <Text sidebar={1} textContent={"PON1"} />
+            <Text sidebar={1} textContent={"PON1"} containerStyle={{marginBottom: '10rem'}} />
 
             <GeneInformationMiddle
                 geneName={"PON1"}
                 datas={[
-                    "rs854569",
-                    "rs854566",
-                    "rs854570",
-                    "rs854572",
                     "rs854560",
                     "rs854571",
                     "rs662",

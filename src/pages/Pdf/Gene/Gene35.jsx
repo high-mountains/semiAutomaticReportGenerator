@@ -10,11 +10,7 @@ const Gene35 = () => {
             <GeneInformationMiddle
                 geneName={"ACAT2"}
                 datas={[
-                    "rs71565752",
                     "rs41258114",
-                    "rs9347340",
-                    "rs3798211",
-                    "rs75757546",
                     "rs3465",
                     "rs25683",
                     "rs146437481",
@@ -27,14 +23,6 @@ const Gene35 = () => {
                 }
             />
             <GeneInformationMiddle
-                geneName={"ADRA2A"}
-                datas={["rs553668"]}
-                level={-1}
-                description={
-                    "この遺伝子に変異がある場合、食欲やエネルギー代謝の制御に影響を与える可能性があります。ADRA2A（Adrenoceptor Alpha 2A）は、アドレナリンα2A受容体をコードしています。この受容体は、ノルアドレナリンとアドレナリンの結合によって活性化され、中枢神経系や交感神経系で神経伝達の調節に重要な役割を果たします。"
-                }
-            />
-            <GeneInformationMiddle
                 geneName={"BCMO1"}
                 datas={["rs7501331", "rs12934922", "rs11645428"]}
                 level={-1}
@@ -43,6 +31,22 @@ const Gene35 = () => {
                 }
             />
 
+            <GeneInformationMiddle
+                geneName={"ELOVL2"}
+                datas={["rs953413"]}
+                level={-1}
+                description={
+                    "この遺伝子に変異がある場合、長鎖不飽和脂肪酸の合成が阻害される可能性があります。ELOVL2（Elongation of Very Long Chain Fatty Acids Protein 2）は、非常に長鎖の脂肪酸を延長する酵素をコードしています。この酵素は、脂肪酸合成経路において、特に長鎖ポリ不飽和脂肪酸（PUFA）の生成に関与し、細胞膜の構造や機能、シグナル伝達に重要です。"
+                }
+            />
+            <GeneInformationMiddle
+                geneName={"SELENOS"}
+                datas={["rs28665122", "rs28665122"]}
+                level={-1}
+                description={
+                    "この遺伝子に変異がある場合、抗酸化作用を持つセレンタンパク質の機能が低下する可能性があります。SELENOS（Selenoprotein S）は、セレノプロテインSをコードしており、細胞内の小胞体に存在して、タンパク質の品質管理とストレス応答に関与します。SELENOSは、異常なタンパク質の分解をサポートし、炎症反応の調節にも寄与しています。"
+                }
+            />
             <GenePageNumber>76</GenePageNumber>
         </PageWrapper>
     );

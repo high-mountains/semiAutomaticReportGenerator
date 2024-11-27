@@ -38,7 +38,6 @@ export const AuthProvider = ({ children }) => {
     const login = async (credientail, handleSuccess, handleError) => {
         try {
             const res = await signInWithEmailAndPassword(auth, credientail.email, credientail.password)
-            
             handleSuccess()
             toast.success('ログインしました。')
         } catch (error) {

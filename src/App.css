@@ -65,11 +65,11 @@
   background-color: #808080!important;
 }
 .table {
-  margin: auto;
+  /* margin: auto; */
 }
 .table table,
 .table td {
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
 }
 .ckEditor {
   flex-direction: column;
