@@ -16,7 +16,6 @@ function Page1() {
     const [deliveryFlag, setDeliveryFlag] = useState('');
 
     useEffect(() => {
-        console.log("renderFlag(Common)====>", renderFlag);
         setDeliveryFlag(renderFlag);
     }, [renderFlag])
 

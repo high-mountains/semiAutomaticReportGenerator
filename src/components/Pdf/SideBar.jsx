@@ -1,30 +1,25 @@
-import { useSelector } from "react-redux";
-import React, { useEffect } from "react";
+import React from "react";
 import Text from "./Text";
 
-const SideBar = (props) => {
-    const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
-    const [renderedPdfFlag, setRenderedPdfFlag] = useState(pdfFlag);
+const SideBar = ({ bgColor, textColor, fontSize, textContent, className, style }) => {
 
-    useEffect(() => {
-        setRenderedPdfFlag(pdfFlag);
-        console.log("pdfFlag===>", pdfFlag);
-    }, [pdfFlag]);
-
-    useEffect(() => {
-        console.log("sidebar");
-    },[])
+    const styles = {
+        container: {
+            width: "5rem",
+            height: "30rem",
+        },
+    };
 
     return (
-        <div style={{ width: "5rem", height: "30rem" }}>
+        <div style={styles.container}>
             <div className="sideBar"></div>
             <Text
-                bgColor={props.bgColor}
-                textColor={props.textColor}
-                fontSize={props.fontSize}
-                textContent={props.textContent}
-                className={props.className}
-                style={props.style}
+                bgColor={bgColor}
+                textColor={textColor}
+                fontSize={fontSize}
+                textContent={textContent}
+                className={className}
+                style={style}
             />
         </div>
     );
