@@ -108,7 +108,7 @@ function Header() {
       }
     };
 
-    const batchSize = 4; // Set a smaller batch size for better stability
+    const batchSize = 8; // Set a smaller batch size for better stability
 
     for (let i = 0; i < elements.length; i += batchSize) {
       
