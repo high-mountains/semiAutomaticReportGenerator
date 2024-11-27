@@ -14,7 +14,7 @@ const Eachperiod = (props) => {
     return (
         <div className='flex flex-row items-start gap-[10rem] py-[10rem] px-[4.5rem]'
             style={props.style && props.style}>
-            <div className={`w-[60rem] h-[70rem] ${renderedPdfFlag ? "mt-[7rem]" : ' '}mt-[7rem]`}>
+            <div className={`w-[60rem] h-[70rem] ${renderedPdfFlag ? "mt-[7rem]" : ' '}`}>
                 <img src={props.imgURL} alt=""  className="w-full h-full"/>
             </div>
                 <Text
