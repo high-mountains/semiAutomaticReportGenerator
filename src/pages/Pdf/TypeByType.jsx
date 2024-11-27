@@ -10,12 +10,12 @@ const Methylation = lazy(() => import('./Pages/methylation'));
 const TypeByType = () => {
     return(
         <>
-            {/* <Glutamate/>
+            <Glutamate/>
             <Catecholamine/>
             <Histamine/> 
-            <Mitochondrial/> */}
+            <Mitochondrial/>
             <Detox/>
-            {/* <Methylation/> */}
+            <Methylation/>
         </>
     )
 }
