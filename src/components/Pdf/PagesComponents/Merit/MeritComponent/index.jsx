@@ -22,7 +22,6 @@ const MeritComponent = (props) => {
 
     useEffect(() => {
         setRenderedPdfFlag(pdfFlag);
-        console.log("pdfFlag===>", pdfFlag);
     }, [pdfFlag]);
 
     return (
@@ -43,12 +42,12 @@ const MeritComponent = (props) => {
             {/* The commonStyle is for control the gap instead of defaul value 8rem as in 5rem */}
             {/* <div className='w-full flex flex-col gap-[8rem]' style={commonStyle || {}}>   */}
             <div
-                style={{ 
-                    width: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '8rem',
-                    ...commonStyle 
+                style={{
+                    width: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8rem",
+                    ...commonStyle,
                 }}
                 // className="w-full flex flex-col gap-[8rem]"
             >

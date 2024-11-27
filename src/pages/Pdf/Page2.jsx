@@ -283,7 +283,7 @@ function Page2() {
                         />
                         <span className="dots"></span>
                         <Text
-                            textContent={"P00"}
+                            textContent={"P24"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -308,7 +308,7 @@ function Page2() {
                         />
                         <span className="dots"></span>
                         <Text
-                            textContent={"P20"}
+                            textContent={"P25"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -335,7 +335,7 @@ function Page2() {
                         />
                         <span className="dots"></span>
                         <Text
-                            textContent={"P20"}
+                            textContent={"P26"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -361,7 +361,7 @@ function Page2() {
                         />
                         <span className="dots"></span>
                         <Text
-                            textContent={"P00"}
+                            textContent={"P41"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -386,7 +386,7 @@ function Page2() {
                         />
                         <span className="dots"></span>
                         <Text
-                            textContent={"P20"}
+                            textContent={"P41"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -411,7 +411,7 @@ function Page2() {
                         />
                         <span className="dots"></span>
                         <Text
-                            textContent={"P150"}
+                            textContent={"P160"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -421,7 +421,6 @@ function Page2() {
                         />
                     </div>
                 </div>
-                {/* </div> */}
                 </div>
                 
             </div>

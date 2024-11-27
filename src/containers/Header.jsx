@@ -77,7 +77,7 @@ function Header() {
         const element = batch[i];
         try {
 
-          const canvas = await html2canvas(element, { scale: 4 });
+          const canvas = await html2canvas(element, { scale: 10 });
           const imgData = canvas.toDataURL("image/jpeg"); // Use JPEG for compression
 
           const imgWidth = canvas.width;
@@ -190,7 +190,7 @@ function Header() {
     notification['success']({
       message: '成功',
       description:
-        'ダウンロード完了',
+        '検査報告書作成完了',
         key: new Date().getTime(), // Use a unique key each time
     });
   
