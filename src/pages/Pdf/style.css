@@ -1,5 +1,4 @@
 html {
-    /* font-size: calc(100vw / 593); */
     box-sizing: border-box;
     font-family: "Noto Sans JP", sans-serif;
 }
@@ -40,7 +39,6 @@ html {
     .page {
         font-size: 16rem;
         width: 100vw;
-        /* height: 847rem; */
         aspect-ratio: 595/847;
         border: 1px rgba(0, 0, 0, 0.1);
     }
@@ -68,7 +66,6 @@ table.supplement thead tr th:nth-child(1) {
 }
 table.supplement tbody tr {
     border-left: #C5C5C5 1rem solid;
-    /* border-bottom: #C5C5C5 1rem solid; */
 }
 table.supplement tbody tr td {
     border-right: #C5C5C5 1rem solid;
@@ -129,16 +126,11 @@ table tr {
 table.geneInfo {
     text-align: center;
     line-height: 1.4483;
-    /* border-top: 1rem solid #C5C5C5; */
 }
 
 table.geneInfo thead {
-    /* border-top: 1rem solid #C5C5C5; */
     border-left: 1rem solid #C5C5C5;
     border-bottom: 1rem solid #C5C5C5;
-}
-table.geneInfo thead tr {
-    /* border-left: 1rem solid #C5C5C5; */
 }
 
 table.geneInfo thead tr th:nth-child(1) {
@@ -148,7 +140,6 @@ table.geneInfo thead tr th:nth-child(1) {
 table.geneInfo thead tr th {
     border-right: 1rem solid #C5C5C5;
     border-top: 1rem solid #C5C5C5;
-    /* border-left: 1rem solid #C5C5C5; */
 }
 
 table.geneInfo tbody tr {
@@ -170,10 +161,6 @@ table.geneInfo th {
     font-weight: 400;
     padding: 5.9rem 10rem;
 }
-
-/* table.geneInfo td {
-    padding-bottom: 8.4rem;
-} */
 
 table.geneInfo td:nth-child(1) {
    padding-bottom: 0rem;
@@ -355,9 +342,3 @@ span.dots::before {
 .bgRed {
     background-color: red;
 }
-
-/* textarea {
-    border: none;
-    outline: none;
-    width: 100%;
-} */

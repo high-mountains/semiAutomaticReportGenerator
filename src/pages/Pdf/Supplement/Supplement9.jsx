@@ -176,7 +176,7 @@ const Supplement9 = (props) => {
         <PageWrapper>
             <TableNew tBody={updatedTableData} />
             {/* Old Table code can be safely removed if no longer needed */}
-            <PageNumber>35</PageNumber>
+            <PageNumber>34</PageNumber>
         </PageWrapper>
     );
 };

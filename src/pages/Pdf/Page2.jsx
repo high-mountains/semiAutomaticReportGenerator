@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import Text from "../../components/Pdf/Text";
 import pdfData from "../../utils/dummyPdf.json";
 
@@ -28,27 +27,27 @@ function Page2() {
     }, [pdfData]);
 
     return (
+        <div
+            style={{
+                borderWidth: "1rem",
+                borderColor: "rgba(0,0,0,0.1)",
+                borderRadius: "2rem",
+                color: "#484F51",
+            }}
+            className="font"
+        >
             <div
                 style={{
-                    borderWidth: "1rem",
-                    borderColor: "rgba(0,0,0,0.1)",
-                    borderRadius: "2rem",
-                    color: "#484F51",
+                    position: "relative",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    paddingLeft: "-2rem",
+                    paddingRight: "-2rem",
                 }}
-                className="font"
+                className={"printUnit page font"}
             >
-                <div
-                    style={{
-                        position: "relative",
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        paddingLeft: "-2rem",
-                        paddingRight: "-2rem",
-                    }}
-                    className={"printUnit page font"}
-                >
                 <div
                     className="flex flex-col items-center"
                     style={{ marginTop: "175.5rem", marginBottom: "175.5rem" }}
@@ -61,8 +60,7 @@ function Page2() {
                         style={{
                             lineHeight: 1.25,
                             width: "505rem",
-                            marginBottom: "15rem"
-
+                            marginBottom: "15rem",
                         }}
                     />
                     <div
@@ -421,9 +419,8 @@ function Page2() {
                         />
                     </div>
                 </div>
-                </div>
-                
             </div>
+        </div>
     );
 }
 
