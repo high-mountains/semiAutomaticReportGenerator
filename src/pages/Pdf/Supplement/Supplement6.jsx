@@ -29,7 +29,7 @@ const initialData = [
     },
     {
         tdContent: {
-            gen: "GSTA1",
+            gen: "GSTP1",
             danger: 0,
             description: "NAC, クレイ, クロレラ, グルタチオン",
         }
@@ -158,7 +158,6 @@ const initialData = [
 const Supplement6 = () => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
-    // Memoized updated data
     const updatedTableData = useMemo(() => {
         return updateDangerValues(initialData, geneData || []);
     }, [geneData]);
@@ -168,7 +167,6 @@ const Supplement6 = () => {
             <TableNew
                 tBody={updatedTableData}
             />
-            {/* Old Table code can be safely removed if no longer needed */}
             <PageNumber>
                 31
             </PageNumber>

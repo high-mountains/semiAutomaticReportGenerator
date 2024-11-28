@@ -13,9 +13,9 @@ const initialData = [
         },
         tdContent: {
             gen: "DRD4",
-            danger: 0, // Dynamically updated based on state
+            danger: 0,
             description:
-                "L-チロシン, ビタミンB6, オメガ3, フォスファチジルコリン, ビタミンD, マグネシウム",
+                "L-チロシン, オメガ3, ビタミンB6, ビタミンD, フォスファチジルコリン, マグネシウム",
         },
     },
     {
@@ -35,7 +35,7 @@ const initialData = [
             gen: "MAOA",
             danger: 0,
             description:
-                "リボフラビン（補因子）, マグネシウム, ビタミンB2, ビタミンB6, ビタミンB12, フォレート",
+                "リボフラビン（補因子）, ビタミンB2, ビタミンB6, ビタミンB12, フォレート, マグネシウム",
         },
     },
     {
@@ -46,7 +46,7 @@ const initialData = [
         tdContent: {
             gen: "HDC",
             danger: 0,
-            description: "P5P（補因子）, ケルセチン, NAC",
+            description: "P5P（補因子）, NAC, ケルセチン",
         },
     },
     {
@@ -59,7 +59,7 @@ const initialData = [
             gen: "ALDH2",
             danger: 0,
             description:
-                "NAC, ビタミンB群, ビタミンC, クルクミン, レスベラトロール",
+                "NAC, クルクミン, ビタミンB群, ビタミンC, レスベラトロール",
             etc: "アルコール",
         },
     },
@@ -68,7 +68,7 @@ const initialData = [
             gen: "MAOA",
             danger: 0,
             description:
-                "リボフラビン（補因子）, マグネシウム, ビタミンB2, ビタミンB6, ビタミンB12, フォレート",
+                "リボフラビン（補因子）, ビタミンB2, ビタミンB6, ビタミンB12, フォレート, マグネシウム",
         },
     },
     {
@@ -76,7 +76,7 @@ const initialData = [
             gen: "MAOB",
             danger: 0,
             description:
-                "マグネシウム, ビタミンB2, ビタミンB6, ビタミンB12, フォレート",
+                "ビタミンB2, ビタミンB6, ビタミンB12, フォレート, マグネシウム",
         },
     },
     {
@@ -84,7 +84,7 @@ const initialData = [
             gen: "ABP1",
             danger: 0,
             description:
-                "銅（補因子）, ビタミンB6（補因子）, ケルセチン, DAO酵素, ビタミンD",
+                "ビタミンB6（補因子）, 銅（補因子）, DAO酵素, ケルセチン, ビタミンD",
             etc: "ヒスタミン",
         },
     },
@@ -93,7 +93,7 @@ const initialData = [
             gen: "HNMT",
             danger: 0,
             description:
-                "SAMe（補因子）, マグネシウム, メチルビタミンB12, メチルフォレート, ビタミンB6, ケルセチン",
+                "SAMe（補因子）, ケルセチン, ビタミンB6, マグネシウム, メチルビタミンB12, メチルフォレート",
             etc: "ヒスタミン",
         },
     },
@@ -110,7 +110,7 @@ const initialData = [
         tdContent: {
             gen: "ADH1B",
             danger: 0,
-            description: "NAC, ビタミンB群, ビタミンC, クルクミン",
+            description: "NAC, クルクミン, ビタミンB群, ビタミンC",
             etc: "アルコール",
         },
     },
@@ -119,11 +119,11 @@ const initialData = [
             gen: "CYP21A2",
             danger: 0,
             description:
-                "NAD+（補因子）, ヘム（補因子）, ビタミンB群, αリポ酸, マグネシウム（補因子）, 亜鉛, アシュワガンダ",
+                "NAD+（補因子）, ヘム（補因子）, マグネシウム（補因子）, αリポ酸, アシュワガンダ, ビタミンB群, 亜鉛",
         },
     },
     {
-        rowSpan: 4,
+        rowSpan: 3,
         thContent: {
             main: "ヒスタミン受容体",
             sub: "アレルギー反応や覚醒に影響する物質の感度に関わる",
@@ -131,16 +131,7 @@ const initialData = [
         tdContent: {
             gen: "HRH1",
             danger: 0,
-            description: "ケルセチン, NAC, マグネシウム, オメガ3",
-            etc: "ヒスタミン",
-        },
-    },
-    {
-        tdContent: {
-            gen: "HRH2",
-            danger: 0,
-            description:
-                "甘草, プロバイオティクス, 亜鉛, マグネシウム, オメガ3",
+            description: "NAC, オメガ3, ケルセチン, マグネシウム",
             etc: "ヒスタミン",
         },
     },
@@ -149,7 +140,7 @@ const initialData = [
             gen: "HRH3",
             danger: 0,
             description:
-                "ロディオラ, フォスファチジルセリン, オメガ3, ビタミンB群, L-テアニン",
+                "L-テアニン, オメガ3, ビタミンB群, フォスファチジルセリン, ロディオラ",
             etc: "ヒスタミン",
         },
     },
@@ -158,7 +149,7 @@ const initialData = [
             gen: "HRH4",
             danger: 0,
             description:
-                "ケルセチン, ビタミンD, クルクミン, マグネシウム, オメガ3",
+                "オメガ3, クルクミン, ケルセチン, ビタミンD, マグネシウム",
             etc: "ヒスタミン",
         },
     },
@@ -172,28 +163,28 @@ const initialData = [
             gen: "ACAT1",
             danger: 0,
             description:
-                "コエンザイムA（補因子）, MCTオイル, L-カルニチン, オメガ3, αリポ酸",
+                "コエンザイムA（補因子）, L-カルニチン, MCTオイル, αリポ酸, オメガ3",
         },
     },
     {
         tdContent: {
             gen: "ACAT2",
             danger: 0,
-            description: "オメガ3, ビタミンE, レスベラトロール, αリポ酸",
+            description: "αリポ酸, オメガ3, ビタミンE, レスベラトロール",
         },
     },
     {
         tdContent: {
             gen: "ATP5F1A",
             danger: 0,
-            description: "CoQ10, L-カルニチン, NAD+, ビタミンB群, αリポ酸",
+            description: "CoQ10, L-カルニチン, NAD+, αリポ酸, ビタミンB群",
         },
     },
     {
         tdContent: {
             gen: "ATP5F1E",
             danger: 0,
-            description: "CoQ10, NAD+, リボフラビン, ビタミンB群",
+            description: "CoQ10, NAD+, ビタミンB群, リボフラビン",
         },
     },
     {
@@ -201,7 +192,7 @@ const initialData = [
             gen: "COQ2",
             danger: 0,
             description:
-                "CoQ10, リボフラビン, L-カルニチン, ビタミンB6, αリポ酸, NAD+",
+                "CoQ10, L-カルニチン, NAD+, αリポ酸, ビタミンB6, リボフラビン",
         },
     },
     {
@@ -209,7 +200,7 @@ const initialData = [
             gen: "COQ3",
             danger: 0,
             description:
-                "CoQ10, リボフラビン, L-カルニチン, ビタミンB6, αリポ酸, NAD+",
+                "CoQ10, L-カルニチン, NAD+, αリポ酸, ビタミンB6, リボフラビン",
         },
     },
 ];

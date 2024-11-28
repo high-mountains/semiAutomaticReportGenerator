@@ -5,7 +5,7 @@ import Supplement3 from './Supplement/Supplement3.jsx';
 import Supplement4 from './Supplement/Supplement4.jsx';
 import Supplement5 from './Supplement/Supplement5.jsx';
 import Supplement6 from './Supplement/Supplement6.jsx';
-// import Supplement7 from './Supplement/Supplement7.jsx';
+import Supplement7 from './Supplement/Supplement7.jsx';
 import Supplement8 from './Supplement/Supplement8.jsx';
 import Supplement9 from './Supplement/Supplement9.jsx';
 import Supplement10 from './Supplement/Supplement10.jsx';
@@ -25,7 +25,7 @@ const SupplementTable = () => {
                 <Supplement4/>
                 <Supplement5/>
                 <Supplement6/>
-                {/* <Supplement7/> */}
+                <Supplement7/>
                 <Supplement8/>
                 <Supplement9/>
                 <Supplement10/>

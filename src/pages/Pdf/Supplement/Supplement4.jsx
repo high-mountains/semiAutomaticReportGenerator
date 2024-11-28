@@ -134,7 +134,7 @@ const initialData = [
         tdContent: {
             gen: "UQCRQ",
             danger: 0,
-            description: "ヘム（補因子）, ユビキノール（補因子）, CoQ10, ビタミンB群, L-カルニチン, αリポ酸, ビタミンC",
+            description: "ヘム（補因子）, ユビキノール（補因子）, CoQ10, L-カルニチン, αリポ酸, ビタミンB群, ビタミンC",
         }
     }
 ];
@@ -142,7 +142,6 @@ const initialData = [
 const Supplement4 = () => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
-    // Memoized updated data
     const updatedTableData = useMemo(() => {
         return updateDangerValues(initialData, geneData || []);
     }, [geneData]);
@@ -152,7 +151,6 @@ const Supplement4 = () => {
             <TableNew
                 tBody={updatedTableData}
             />
-            {/* Old Table code can be safely removed if no longer needed */}
             <PageNumber>
                 29
             </PageNumber>
