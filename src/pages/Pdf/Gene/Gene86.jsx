@@ -31,7 +31,7 @@ const Gene86 = () => {
                 }
             />
 
-            <GenePageNumber>127</GenePageNumber>
+            <GenePageNumber>119</GenePageNumber>
         </PageWrapper>
     );
 };

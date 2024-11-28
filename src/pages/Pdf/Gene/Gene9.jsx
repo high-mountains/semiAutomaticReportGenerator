@@ -30,7 +30,7 @@ const Gene9 = () => {
                 description={"この遺伝子に変異がある場合、注意力や行動の抑制に影響を与える可能性があります。DRD4（Dopamine Receptor D4）は、ドーパミンD4受容体をコードしており、DRD2と同様にアデニル酸シクラーゼを抑制するGタンパク質共役型受容体です。DRD4は、特に前頭前皮質に高発現しており、認知機能や感情の調節、注意の制御に関連しています。"}
             />
             
-            <GenePageNumber>50</GenePageNumber>
+            <GenePageNumber>48</GenePageNumber>
         </PageWrapper>
     );
 };

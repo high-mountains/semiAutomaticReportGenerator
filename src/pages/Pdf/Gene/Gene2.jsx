@@ -18,7 +18,7 @@ const Gene1 = () => {
                 description={"この遺伝子に変異がある場合、体の中でグルタミン酸の代謝が低下する可能性があります。CBS（Cystathionine Beta-Synthase）は、シスタチオニンβ-シンターゼという酵素をコードしています。この酵素は、メチオニン代謝経路において重要な役割を果たし、ホモシステインをシスタチオニンに変換する反応を触媒します。"}
             />
 
-            <GenePageNumber>43</GenePageNumber>
+            <GenePageNumber>41</GenePageNumber>
         </PageWrapper>
     );
 };

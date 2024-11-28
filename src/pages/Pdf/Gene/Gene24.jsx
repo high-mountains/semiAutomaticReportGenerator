@@ -35,7 +35,7 @@ const Gene24 = () => {
                 description={"この遺伝子に変異がある場合、ATP合成効率が低下し、細胞のエネルギー供給が不足する可能性があります。NDUFA10（NADH Oxidoreductase Subunit A10）は、複合体Iの一部として電子伝達とプロトン移動に関与し、ATP合成に必要なプロトン勾配を形成する役割を果たします。NDUFA10は、複合体Iの構造を安定させ、エネルギー生成の効率を高めています。"}
             />
 
-            <GenePageNumber>65</GenePageNumber>
+            <GenePageNumber>63</GenePageNumber>
         </PageWrapper>
     );
 };

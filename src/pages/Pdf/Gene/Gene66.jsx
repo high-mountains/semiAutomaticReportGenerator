@@ -46,7 +46,7 @@ const Gene66 = () => {
                     "この遺伝子に変異がある場合、抗酸化・解毒機能が低下し、体内の酸化ストレスが増加する可能性があります。NOX4（NADPH Oxidase 4）は、NOXファミリーの一員であり、活性酸素種の一種である過酸化水素（H₂O₂）を生成します。NOX4は、腎臓、血管、心臓など多くの組織で発現しており、細胞の酸化還元バランスの維持、線維化反応、細胞の分化・増殖に重要です。"
                 }
             />
-            <GenePageNumber>107</GenePageNumber>
+            <GenePageNumber>102</GenePageNumber>
         </PageWrapper>
     );
 };

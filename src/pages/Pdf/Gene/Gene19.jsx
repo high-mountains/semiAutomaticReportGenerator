@@ -28,7 +28,7 @@ const Gene19 = () => {
                 description={"この遺伝子に変異がある場合、CoQ10の生合成が阻害され、エネルギー産生が低下する可能性があります。COQ8A（Coenzyme Q8A, ATPase）およびCOQ8B（Coenzyme Q8B, ATPase）は、ATPase活性を持ち、コエンザイムQの生合成複合体の安定性や活性調整に関わるタンパク質をコードしています。これらのタンパク質は、コエンザイムQの生合成経路を支援する役割を果たします。"}
             />
             
-            <GenePageNumber>60</GenePageNumber>
+            <GenePageNumber>58</GenePageNumber>
         </PageWrapper>
     );
 };

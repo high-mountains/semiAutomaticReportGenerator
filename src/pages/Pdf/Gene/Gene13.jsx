@@ -28,7 +28,7 @@ const Gene13 = () => {
                 description={"この遺伝子に変異がある場合、アルコール代謝酵素の働きが低下する可能性があります。\n ADH1B（Alcohol Dehydrogenase 1B）は、アルコールデヒドロゲナーゼ1Bという酵素をコードしています。この酵素は、エタノールをアセトアルデヒドに酸化する反応を触媒し、アルコール代謝の初期段階で活性を持ちます。"}
             />
             
-            <GenePageNumber>54</GenePageNumber>
+            <GenePageNumber>52</GenePageNumber>
         </PageWrapper>
     );
 };

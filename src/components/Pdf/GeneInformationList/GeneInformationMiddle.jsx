@@ -21,17 +21,14 @@ const GeneInformationMiddle = (props) => {
 
     const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
     const [renderedPdfFlag, setRenderedPdfFlag] = useState({marginTop: '0rem'});
-    const [secondRenderedPdfFlag, setSecondRenderedPdfFlag] = useState({marginTop: '0rem'});
     const [thirdRenderedPdfFlag, setThirdRenderedPdfFlag] = useState({paddingTop: '8.4rem'});
 
     useEffect(() => {
         if(pdfFlag) {
             setRenderedPdfFlag({marginTop: '-9rem'});
-            setSecondRenderedPdfFlag({marginTop: '-6rem'});
             setThirdRenderedPdfFlag({paddingTop: '0rem', paddingBottom:'16.8rem'});
         } else if(!pdfFlag) {
             setRenderedPdfFlag({marginTop: '0rem'});
-            setSecondRenderedPdfFlag({marginTop: '0rem'});
             setThirdRenderedPdfFlag({paddingTop: '8.4rem', paddingBottom:'8.4rem'});
         }
     }, [pdfFlag]);
@@ -48,7 +45,6 @@ const GeneInformationMiddle = (props) => {
                 </thead>
                 <tbody>
                     <tr>
-                        {/* <td><p style={thirdRenderedPdfFlag}>{geneName}</p></td> */}
                         <td><p>{geneName}</p></td>
                         <td style={thirdRenderedPdfFlag}>
                             {datas.map((item, index) => (
@@ -57,7 +53,6 @@ const GeneInformationMiddle = (props) => {
                                 </p>
                             ))}
                         </td>
-                        {/* <td><p style={thirdRenderedPdfFlag}>{level}</p></td> */}
                         <td><p>{level}</p></td>
                     </tr>
                 </tbody>

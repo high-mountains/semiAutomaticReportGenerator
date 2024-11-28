@@ -47,7 +47,7 @@ const Gene35 = () => {
                     "この遺伝子に変異がある場合、抗酸化作用を持つセレンタンパク質の機能が低下する可能性があります。SELENOS（Selenoprotein S）は、セレノプロテインSをコードしており、細胞内の小胞体に存在して、タンパク質の品質管理とストレス応答に関与します。SELENOSは、異常なタンパク質の分解をサポートし、炎症反応の調節にも寄与しています。"
                 }
             />
-            <GenePageNumber>76</GenePageNumber>
+            <GenePageNumber>74</GenePageNumber>
         </PageWrapper>
     );
 };

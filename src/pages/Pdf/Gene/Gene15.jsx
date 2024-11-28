@@ -29,7 +29,7 @@ const Gene14 = () => {
                 description={"この遺伝子に変異がある場合、アレルギー反応や炎症反応の調整に影響を与える可能性があります。HRH4（Histamine Receptor H4）は、ヒスタミンH4受容体をコードしています。この受容体は、主に免疫細胞で発現しており、好酸球やマスト細胞などでのヒスタミンの応答に関与します。"}
             />
             
-            <GenePageNumber>56</GenePageNumber>
+            <GenePageNumber>54</GenePageNumber>
         </PageWrapper>
     );
 };

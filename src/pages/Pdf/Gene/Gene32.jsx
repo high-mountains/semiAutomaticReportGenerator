@@ -53,12 +53,9 @@ const Gene32 = () => {
                     "rs587782904",
                 ]}
                 level={-1}
-                description={
-                    ""
-                }
             />
 
-            <GenePageNumber>73</GenePageNumber>
+            <GenePageNumber>71</GenePageNumber>
         </PageWrapper>
     );
 };

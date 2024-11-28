@@ -17,7 +17,7 @@ const Gene16 = () => {
                 description={"この遺伝子に変異がある場合、ミトコンドリア内でのアセトアセチルCoAの生成が阻害される可能性があります。ACAT1（Acetyl-CoA Acetyltransferase 1）は、アセチル-CoAアセチルトランスフェラーゼ1をコードしています。この酵素は、細胞内でアセチル-CoA分子を結合し、ケトン体合成やコレステロール代謝に関与します。"}
             />
 
-            <GenePageNumber>57</GenePageNumber>
+            <GenePageNumber>55</GenePageNumber>
         </PageWrapper>
     );
 };

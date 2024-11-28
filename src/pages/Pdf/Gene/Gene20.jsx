@@ -28,7 +28,7 @@ const Gene20 = () => {
                 description={"この遺伝子に変異がある場合、CoQ10の生合成が阻害され、エネルギー産生が低下する可能性があります。COQ10AおよびCOQ10B（Coenzyme Q10 Homolog A/B）は、コエンザイムQのホモログとして働くタンパク質をコードしています。これらは、コエンザイムQの生合成や安定性をサポートする役割を果たし、特にミトコンドリアの電子伝達系におけるユビキノンの供給に重要です。COQ10AとCOQ10Bの機能は類似しており、コエンザイムQの適切な濃度を維持することで細胞のエネルギー産生を助けています。"}
             />
 
-            <GenePageNumber>61</GenePageNumber>
+            <GenePageNumber>59</GenePageNumber>
         </PageWrapper>
     );
 };

@@ -120,7 +120,7 @@ const Supplement14 = () => {
                 tBody={updatedTableData}
             />
             {/* Old Table code can be safely removed if no longer needed */}
-            <PageNumber>40</PageNumber>
+            <PageNumber>39</PageNumber>
         </PageWrapper>
     );
 };

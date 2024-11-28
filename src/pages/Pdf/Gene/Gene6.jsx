@@ -30,7 +30,7 @@ const Gene6 = () => {
                 description={"この遺伝子に変異がある場合、GABA受容体の機能が低下し、興奮と抑制のバランスが崩れる可能性があります。GABRG2（Gamma-Aminobutyric Acid Type A Receptor Subunit Gamma2）は、GABRG2受容体のγ2サブユニットをコードしています。γ2サブユニットは、GABA A受容体の構成要素で、特にベンゾジアゼピンの結合部位を形成しています。このサブユニットは、ベンゾジアゼピン系薬物がGABAの作用を強化する役割を担っており、神経伝達の抑制効果を増強します。"}
             />
             
-            <GenePageNumber>47</GenePageNumber>
+            <GenePageNumber>45</GenePageNumber>
         </PageWrapper>
     );
 };

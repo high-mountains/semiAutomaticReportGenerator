@@ -28,7 +28,7 @@ const Gene22 = () => {
                 description={"この遺伝子に変異がある場合、ミトコンドリア内でエネルギー産生が不十分になる可能性があります。\n KYNU（Kynureninase）は、キヌレニナーゼという酵素をコードしており、キヌレニン経路でキヌレニンを代謝してアントラニル酸に変換する役割を持ちます。この経路は、トリプトファン代謝における重要な経路であり、神経伝達物質や免疫応答に関わる代謝産物の生成に寄与しています。"}
             />
             
-            <GenePageNumber>63</GenePageNumber>
+            <GenePageNumber>61</GenePageNumber>
         </PageWrapper>
     );
 };

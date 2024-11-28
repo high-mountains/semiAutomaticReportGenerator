@@ -35,7 +35,7 @@ const Gene26 = () => {
                 description={"この遺伝子に変異がある場合、ATP合成効率が低下し、細胞のエネルギー供給が不足する可能性があります。NDUFS6（NADH Oxidoreductase Subunit S6）は、ミトコンドリア電子伝達系の複合体Iの補助サブユニットで、電子伝達とプロトン移動の機能をサポートしています。NDUFS6は、複合体Iの構造を安定させ、ATP合成のためのプロトン勾配形成に寄与しています。"}
             />
 
-            <GenePageNumber>67</GenePageNumber>
+            <GenePageNumber>65</GenePageNumber>
         </PageWrapper>
     );
 };
