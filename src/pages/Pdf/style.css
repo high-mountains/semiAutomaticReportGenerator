@@ -171,9 +171,16 @@ table.geneInfo th {
     padding: 5.9rem 10rem;
 }
 
-table.geneInfo td {
-    /* padding: 8.4rem 0rem; */
+/* table.geneInfo td {
     padding-bottom: 8.4rem;
+} */
+
+table.geneInfo td:nth-child(1) {
+   padding-bottom: 0rem;
+}
+
+table.geneInfo td:nth-child(3) {
+   padding-bottom: 0rem;
 }
 
 .blue {

@@ -48,7 +48,8 @@ const GeneInformationMiddle = (props) => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td><p style={secondRenderedPdfFlag}>{geneName}</p></td>
+                        {/* <td><p style={thirdRenderedPdfFlag}>{geneName}</p></td> */}
+                        <td><p>{geneName}</p></td>
                         <td style={thirdRenderedPdfFlag}>
                             {datas.map((item, index) => (
                                 <p key={index}>
@@ -56,7 +57,8 @@ const GeneInformationMiddle = (props) => {
                                 </p>
                             ))}
                         </td>
-                        <td><p style={secondRenderedPdfFlag}>{level}</p></td>
+                        {/* <td><p style={thirdRenderedPdfFlag}>{level}</p></td> */}
+                        <td><p>{level}</p></td>
                     </tr>
                 </tbody>
             </table>

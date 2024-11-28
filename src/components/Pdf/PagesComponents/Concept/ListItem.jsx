@@ -6,7 +6,7 @@ const ListItem = (props) => {
     return (
         <li
             className="whitespace-pre-wrap flex flex-row items-start"
-            style={props.data.liStyle || {}}
+            style={{ color: "#484F51", ...props.data.liStyle }}
             dangerouslySetInnerHTML={{ __html: textContent }}
         >
         </li>

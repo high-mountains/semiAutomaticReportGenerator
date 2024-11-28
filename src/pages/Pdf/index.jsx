@@ -54,7 +54,7 @@ const Pdf = () => {
                 <div
                     style={{
                         width: "100vw",
-                        height: "calc(100vh - 40rem)",
+                        height: "calc(100vh - 49rem)",
                         display: "flex",
                         flexDirection: "column",
                         gap: "20rem",
@@ -65,8 +65,8 @@ const Pdf = () => {
                         position: "absolute",
                     }}
                 >
-                    <p className="font text-[#FFFFFF] text-[64rem]">
-                        遺伝子検査報告書作成中{showCurrentPage}/{showTotalPage}
+                    <p className="font text-[#FFFFFF]" style={{fontSize: "28rem"}}>
+                        遺伝子検査報告書作成中 {showCurrentPage}/{showTotalPage}
                     </p>
                     <div className="loader">
                         <div className="dot dot1">
@@ -115,7 +115,7 @@ const Pdf = () => {
                 </div>
             )}
 
-            <div className="pdfcontainer my-[20rem]">
+            <div className="pdfcontainer py-[20rem]">
                 <div className="pdfwrapper" id="downloadTest">
                     <Page1 />
                     <Page2 />
