@@ -22,7 +22,7 @@ const MethylationPathway = () => {
             <div className='w-[535rem] h-[314rem]'>
                 <img src="bg/methylationPathway.png" alt="" className="w-full h-full" />
             </div>
-            <PageNumber>161</PageNumber>
+            <PageNumber>154</PageNumber>
         </PageWrapper>
     );
 };
