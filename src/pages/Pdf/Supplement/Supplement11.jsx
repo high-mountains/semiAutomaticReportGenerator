@@ -20,12 +20,11 @@ const initialData = [
         },
     },
     {
-        // trHeight: 27,
         tdContent: {
             gen: "ZO-2(TJP2)",
             danger: 0,
             description:
-                "ビタミンD, オメガ3, L-グルタミン, プロバイオティクス, 亜鉛",
+                "L-グルタミン, オメガ3, ビタミンD, プロバイオティクス, 亜鉛",
             etc: "グルテン, カゼイン",
         },
     },
@@ -88,7 +87,7 @@ const initialData = [
         tdContent: {
             gen: "ADH1B",
             danger: 0,
-            description: "NAC, ビタミンB群, ビタミンC, クルクミン",
+            description: "NAC, クルクミン, ビタミンB群, ビタミンC",
             etc: "アルコール",
         },
     },
@@ -97,7 +96,7 @@ const initialData = [
             gen: "ADH1C",
             danger: 0,
             description:
-                "NAD+（補因子）, NAC, ビタミンB群, ビタミンC, クルクミン",
+                "NAD+（補因子）, NAC, クルクミン, ビタミンB群, ビタミンC",
             etc: "アルコール",
         },
     },
@@ -106,7 +105,7 @@ const initialData = [
             gen: "ALDH2",
             danger: 0,
             description:
-                "NAC, ビタミンB群, ビタミンC, クルクミン, レスベラトロール",
+                "NAC, クルクミン, ビタミンB群, ビタミンC, レスベラトロール",
             etc: "アルコール",
         },
     },
@@ -186,14 +185,13 @@ const initialData = [
         tdContent: {
             gen: "TMPRSS6",
             danger: 0,
-            description: "銅（補因子）, ビタミンB群, NAC",
+            description: "銅（補因子）, NAC, ビタミンB群",
         },
     },
 ];
-const Supplement12 = (props) => {
+const Supplement11 = (props) => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
-    // Memoized updated data
     const updatedTableData = useMemo(() => {
         return updateDangerValues(initialData, geneData || []);
     }, [geneData]);
@@ -207,4 +205,4 @@ const Supplement12 = (props) => {
     );
 };
 
-export default Supplement12;
+export default Supplement11;

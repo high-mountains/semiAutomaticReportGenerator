@@ -14,10 +14,9 @@ const initialData = [
         },
         tdContent: {
             gen: "CYP1A1",
-            danger: 0, // Dynamically updated based on state
-            description:
-                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
-                etc: 'グルテン, カゼイン, 環境毒'
+            danger: 0,
+            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
+            etc: "グルテン, カゼイン, 環境毒"
         },
     },
     {
@@ -25,15 +24,14 @@ const initialData = [
             gen: "CYP1A2",
             danger: 0,
             description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
-            etc:"過剰なカフェイン, 喫煙, 焦げた肉"
+            etc: "過剰なカフェイン, 喫煙, 焦げた肉"
         },
     },
     {
         tdContent: {
             gen: "CYP1B1",
             danger: 0,
-            description:
-                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン, ビタミンC",
+            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン, ビタミンC",
                 etc: '乳製品, ピル, 焦げた肉'
         },
     },
@@ -136,7 +134,7 @@ const initialData = [
         tdContent: {
             gen: "FN1",
             danger: 0,
-            description: "細胞接着や組織の構造維持に影響するタンパク質で、傷の治癒に関わる"
+            description: "アルギニン, ビタミンC, 亜鉛"
         },
     },
 ];
@@ -144,7 +142,6 @@ const initialData = [
 const Supplement10 = (props) => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
-    // Memoized updated data
     const updatedTableData = useMemo(() => {
         return updateDangerValues(initialData, geneData || []);
     }, [geneData]);
