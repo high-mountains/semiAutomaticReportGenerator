@@ -13,7 +13,7 @@ const initialData = [
             sub: "カビが産生する有害物質で、食品汚染や毒性物質の解毒や代謝に関わる",
         },
         tdContent: {
-            gen: "777777777CYP1A2",
+            gen: "CYP1A2",
             danger: 0,
             description: "グルタチオン, NAC, NADPH（補因子）, スルフォラファン, EGCG, ヘム（補因子）",
             etc: "過剰なカフェイン, 喫煙, 焦げた肉"
