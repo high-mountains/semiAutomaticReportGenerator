@@ -75,6 +75,7 @@ function Header() {
 
       for (let i = 0; i < batch.length; i++) {
         const element = batch[i];
+        // setCurrentPage(bundleOrder + i);
         try {
 
           const canvas = await html2canvas(element, { scale: 10 });
@@ -107,7 +108,7 @@ function Header() {
       }
     };
 
-    const batchSize = 8; // Set a smaller batch size for better stability
+    const batchSize = 6; // Set a smaller batch size for better stability
 
     for (let i = 0; i < elements.length; i += batchSize) {
       
@@ -208,7 +209,6 @@ function Header() {
                 onChange={handleFolderUpload}
                 className="font bg-[#00C3D0] text-[#fff] hover:bg-[#b4eeef] hover:text-[#00C3D0] w-[200rem] h-[25rem] text-[16rem]"
             />
-            {/* <label htmlFor="file" className="custom-file-label ">CSVデータアップロード</label> */}
             <label htmlFor="file" className="custom-file-label ">CSVファイルのインポート</label>
         </div>
 
