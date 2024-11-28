@@ -13,7 +13,7 @@ const initialData = [
             sub: "カビが産生する有害物質で、食品汚染や毒性物質の解毒や代謝に関わる",
         },
         tdContent: {
-            gen: "CYP1A2",
+            gen: "777777777CYP1A2",
             danger: 0,
             description: "グルタチオン, NAC, NADPH（補因子）, スルフォラファン, EGCG, ヘム（補因子）",
             etc: "過剰なカフェイン, 喫煙, 焦げた肉"
@@ -48,20 +48,6 @@ const initialData = [
             description: "グルタチオン, NAC, クレイ, クロレラ",
         }
     },
-    // {
-    //     tdContent: {
-    //         gen: "SLCO1B1",
-    //         danger: 0,
-    //         description: "NAC, ミルクシスル, タウリン, αリポ酸, CoQ10, ビタミンB群",
-    //     }
-    // },
-    // {   
-    //     tdContent: {
-    //         gen: "XPC",
-    //         danger: 0,
-    //         description: "NAC, メチルフォレート, メチルビタミンB12, オメガ3, レスベラトロール, ビタミンE",
-    //     }
-    // },
     {
         rowSpan: 4,
         thContent: {
@@ -102,7 +88,7 @@ const initialData = [
             sub: "肝臓に存在し、有害物質の排出を促進する酵素で、解毒に関わる",
         },
         tdContent: {
-            gen: "GSTA1",
+            gen: "222GSTA1",
             danger: 0,
             description: "グルタチオン（基質）, NAC, スルフォラファン, αリポ酸, クミン",
         }

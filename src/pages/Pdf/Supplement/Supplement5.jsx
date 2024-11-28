@@ -191,7 +191,6 @@ const initialData = [
 const Supplement5 = () => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
-    // Memoized updated data
     const updatedTableData = useMemo(() => {
         return updateDangerValues(initialData, geneData || []);
     }, [geneData]);
@@ -201,7 +200,6 @@ const Supplement5 = () => {
             <TableNew
                 tBody={updatedTableData}
             />
-            {/* Old Table code can be safely removed if no longer needed */}
             <PageNumber>
                 30
             </PageNumber>
