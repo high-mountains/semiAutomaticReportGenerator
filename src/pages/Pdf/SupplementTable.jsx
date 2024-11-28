@@ -13,7 +13,6 @@ import Supplement11 from './Supplement/Supplement10.jsx';
 import Supplement12 from './Supplement/Supplement11.jsx';
 import Supplement13 from './Supplement/Supplement12.jsx';
 import Supplement14 from './Supplement/Supplement13.jsx';
-// import Supplement16 from './Supplement/Supplement16.jsx';
 
 const SupplementTable = () => {
     return (
@@ -32,7 +31,6 @@ const SupplementTable = () => {
                 <Supplement12/>
                 <Supplement13/>
                 <Supplement14/>
-                {/* <Supplement16/> */}
             </>
     );
 };

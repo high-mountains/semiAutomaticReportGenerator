@@ -121,7 +121,6 @@ const initialData = [
                 "NAC, オメガ3, ビタミンD, プロバイオティクス",
         },
     },
-    
     {
         tdContent: {
             gen: "TNF",
@@ -135,7 +134,6 @@ const initialData = [
 const Supplement12 = () => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
-    // Memoized updated data
     const updatedTableData = useMemo(() => {
         return updateDangerValues(initialData, geneData || []);
     }, [geneData]);

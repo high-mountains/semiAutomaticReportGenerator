@@ -63,6 +63,7 @@ const initialData = [
             danger: 0,
             description:
                 "SAMe（補因子）, NAC, ビタミンB6, ビタミンB12, マグネシウム, メチルフォレート",
+                etc: "便秘, ピル"
         },
     },
     {
@@ -190,7 +191,6 @@ const initialData = [
 const Supplement13 = () => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
-    // Memoized updated data
     const updatedTableData = useMemo(() => {
         return updateDangerValues(initialData, geneData || []);
     }, [geneData]);
