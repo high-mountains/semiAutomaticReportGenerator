@@ -1,162 +1,146 @@
 import React, { useMemo } from "react";
-import PageWrapper from "../../../components/Pdf/PageWrapper";
-import PageNumber from "../../../components/Pdf/PageNumber";
-import TableNew from "../../../components/Pdf/Supplements/TableNew";
+import PageWrapper from "../../../components/Pdf/PageWrapper.jsx";
+import PageNumber from "../../../components/Pdf/PageNumber.jsx";
+import TableNew from "../../../components/Pdf/Supplements/TableNew.jsx";
 import { useSelector } from "react-redux";
 import {updateDangerValues} from "./updateDangerValues.js";
 
 const initialData = [
     {
-        rowSpan: 8,
+        rowSpan: 12,
         thContent: {
-            main: "酸化/抗酸化",
-            sub: "細胞が損傷を受けるプロセス/酸化ストレスを抑えて細胞を保護する働き",
+            main: "CYP450",
+            sub: "肝臓に存在する酵素群で、薬物や毒素の代謝に関わる",
         },
         tdContent: {
-            gen: "HFE",
-            danger: 0,
-            description: "フェチン酸, ポリフェノール",
-            etc: "鉄"
-        }
+            gen: "CYP1A1",
+            danger: 0, // Dynamically updated based on state
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
+                etc: 'グルテン, カゼイン, 環境毒'
+        },
     },
     {
         tdContent: {
-            gen: "KEAP1",
+            gen: "CYP1A2",
             danger: 0,
-            description: "NAC, スルフォラファン, ビタミンC, ビタミンE, レスベラトロール",
-        }
+            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
+            etc:"過剰なカフェイン, 喫煙, 焦げた肉"
+        },
     },
     {
         tdContent: {
-            gen: "NOX4",
+            gen: "CYP1B1",
             danger: 0,
-            description: "FAD（補因子）, NADPH（補因子）, ヘム（補因子）, CoQ10, NAC, ビタミンC, ビタミンE",
-        }
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン, ビタミンC",
+                etc: '乳製品, ピル, 焦げた肉'
+        },
     },
     {
         tdContent: {
-            gen: "SHMT1",
+            gen: "CYP2A6",
             danger: 0,
-            description: "ビタミンB6（補因子）, 5MTHF, NAC, ベタイン, メチルビタミンB12",
-        }
+            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン, ビタミンC",
+            etc:"喫煙"
+        },
     },
     {
         tdContent: {
-            gen: "SHMT2",
+            gen: "CYP2B6",
             danger: 0,
-            description: "ビタミンB6（補因子）, 5MTHF, NAC, ベタイン, メチルビタミンB12",
-        }
+            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
+            etc:"喫煙"
+        },
     },
     {
         tdContent: {
-            gen: "SLC40A1",
+            gen: "CYP2C9",
             danger: 0,
-            description: "ビタミンC, ポリフェノール, 銅",
-        }
+            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, レスベラトロール",
+            etc:"環境毒, 発がん物質"
+        },
     },
     {
         tdContent: {
-            gen: "SOD2",
+            gen: "CYP2C19",
             danger: 0,
-            description: "マンガン（補因子）, NAC, グルタチオン, ビタミンC, ビタミンE",
-            etc:"BPA, フリーラジカル"
-        }
+            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, レスベラトロール",
+            etc:"環境毒, 発がん物質"
+        },
     },
     {
         tdContent: {
-            gen: "SOD3",
+            gen: "CYP2D6",
             danger: 0,
-            description: "亜鉛（補因子）, 銅（補因子）, NAC, αリポ酸, グルタチオン, セレン, ビタミンC, ビタミンE",
-        }
+            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, ビタミンB6, ビタミンB12, レスベラトロール",
+        },
     },
     {
-        rowSpan: 4,
+        tdContent: {
+            gen: "CYP2E1",
+            danger: 0,
+            description: "NAC, クルクミン, グルタチオン, ビタミンE, ミルクシスル, レスベラトロール",
+            etc:"アルコール, 塩化ビニル, ベンゼン"
+        },
+    },
+    {
+        tdContent: {
+            gen: "CYP2R1",
+            danger: 0,
+            description: "ビタミンD3, ビタミンK2, マグネシウム",
+        },
+    },
+    {
+        tdContent: {
+            gen: "CYP3A4",
+            danger: 0,
+            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, クルクミン, グルタチオン, ビタミンC, レスベラトロール",
+            etc: "グレープフルーツ"
+        },
+    },
+    {
+        tdContent: {
+            gen: "CYP3A5",
+            danger: 0,
+            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, クルクミン, グルタチオン, ビタミンC, レスベラトロール",
+        },
+    },
+    {
+        rowSpan: 2,
         thContent: {
-            main: "葉酸",
-            sub: "ビタミンB群のひとつで、DNA合成や赤血球の生成に関わる",
+            main: "Dyslexia",
+            sub: "文字の読み書きに困難を伴う学習障害に関わる",
         },
         tdContent: {
-            gen: "DHFR",
+            gen: "DCDC2",
             danger: 0,
-            description: "NAD+（補因子）, ビタミンB12, メチルフォレート",
-        }
-    },
-    {
-        tdContent: {
-            gen: "FOLR1",
-            danger: 0,
-            description: "5MTHF, NAC, ビタミンB6, メチルビタミンB12",
-        }
-    },
-    {
-        tdContent: {
-            gen: "FOLR2",
-            danger: 0,
-            description: "5MTHF, NAC, ビタミンB6, メチルビタミンB12",
-        }
-    },
-    {
-        tdContent: {
-            gen: "SLC19A1",
-            danger: 0,
-            description: "CoQ10, L-カルニチン, オメガ3, ビタミンB群",
-        }
-    },
-    {
-        rowSpan: 3,
-        thContent: {
-            main: "ビタミンB12",
-            sub: "ビタミンB群のひとつで、神経系の健康と赤血球生成に関わる",
+            description:
+                "DHA, ビタミンB6, ビタミンB12, フォスファチジルコリン, フォスファチジルセリン, マグネシウム, 葉酸",
         },
-        tdContent: {
-            gen: "AMTRAK",
-            danger: 0,
-            description: "リボフラビン（補因子）, SAMe, ビタミンB6, ビタミンB12, ベタイン, メチルフォレート",
-        }
     },
     {
-        
         tdContent: {
-            gen: "TCN1",
+            gen: "KIAA0319",
             danger: 0,
-            description: "ビタミンB12, フォレート, 亜鉛",
-            etc: "ビタミンB12"
-        }
-    },
-    {
-        
-        tdContent: {
-            gen: "TCN2",
-            danger: 0,
-            description: "ビタミンB12, フォレート, 亜鉛",
-            etc: "ビタミンB12"
-        }
-    },
-    {
-        thContent: {
-            main: "APOE",
-            sub: "脂質代謝に影響する遺伝子で、アルツハイマー病や心血管疾患のリスクに関わる",
-        },
-        tdContent: {
-            gen: "APOE",
-            danger: 0,
-            description: "DHA, オメガ3, クルクミン, ビタミンB12, フォスファチジルコリン, フォレート, レスベラトロール",
+            description:
+                "DHA, ビタミンB6, ビタミンB12, フォスファチジルコリン, フォスファチジルセリン, マグネシウム, 葉酸"
         }
     },
     
     {
         thContent: {
-            main: "BDNF",
-            sub: "タンパク質の合成に影響する遺伝子で、神経細胞の成長や維持に関わる",
+            main: "FN1",
+            sub: "細胞接着や組織の構造維持に影響するタンパク質で、傷の治癒に関わる"
         },
         tdContent: {
-            gen: "BDNF",
+            gen: "FN1",
             danger: 0,
-            description: "DHA, EGCG, オメガ3, ビタミンD, マグネシウムスレオネート",
-        }
-    }
-    
-]
+            description: "細胞接着や組織の構造維持に影響するタンパク質で、傷の治癒に関わる"
+        },
+    },
+];
+
 const Supplement10 = (props) => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
@@ -164,6 +148,7 @@ const Supplement10 = (props) => {
     const updatedTableData = useMemo(() => {
         return updateDangerValues(initialData, geneData || []);
     }, [geneData]);
+
     return (
         <PageWrapper>
             <TableNew
@@ -171,7 +156,7 @@ const Supplement10 = (props) => {
             />
             {/* Old Table code can be safely removed if no longer needed */}
             <PageNumber>
-                35
+                36
             </PageNumber>
         </PageWrapper>
     );

@@ -22,7 +22,11 @@ const TableNew = (props) => {
 
     return (
         <div className="mt-[10rem] w-[535rem] font">
-            <table className="w-full font supplement pt-[10rem]">
+            <table className="supplement" style={{
+                width: "100%",
+                color: "#34495E",
+                paddingTop: "10rem"
+            }}>
                 <thead>
                     <TableHeader/>
                 </thead>

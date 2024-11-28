@@ -1,21 +1,57 @@
 import React, { useMemo } from "react";
-import PageWrapper from "../../../components/Pdf/PageWrapper";
-import PageNumber from "../../../components/Pdf/PageNumber";
-import TableNew from "../../../components/Pdf/Supplements/TableNew";
+import PageWrapper from "../../../components/Pdf/PageWrapper.jsx";
+import PageNumber from "../../../components/Pdf/PageNumber.jsx";
+import TableNew from "../../../components/Pdf/Supplements/TableNew.jsx";
 import { useSelector } from "react-redux";
 import {updateDangerValues} from "./updateDangerValues.js";
 
-const initialData =[
+const initialData = [
     {
-        rowSpan: 3,
+        rowSpan: 8,
         thContent: {
-            main: "活性酸素",
-            sub: "細胞に損傷を与える不安定な酸素分子で、老化や病気の原因に関わる",
+            main: "酸化/抗酸化",
+            sub: "細胞が損傷を受けるプロセス/酸化ストレスを抑えて細胞を保護する働き",
         },
         tdContent: {
-            gen: "SOD1",
+            gen: "HFE",
             danger: 0,
-            description: "亜鉛（補因子）, 銅（補因子）, NAC, αリポ酸, グルタチオン, セレン, ビタミンC, ビタミンE",
+            description: "フェチン酸, ポリフェノール",
+            etc: "鉄"
+        }
+    },
+    {
+        tdContent: {
+            gen: "KEAP1",
+            danger: 0,
+            description: "NAC, スルフォラファン, ビタミンC, ビタミンE, レスベラトロール",
+        }
+    },
+    {
+        tdContent: {
+            gen: "NOX4",
+            danger: 0,
+            description: "FAD（補因子）, NADPH（補因子）, ヘム（補因子）, CoQ10, NAC, ビタミンC, ビタミンE",
+        }
+    },
+    {
+        tdContent: {
+            gen: "SHMT1",
+            danger: 0,
+            description: "ビタミンB6（補因子）, 5MTHF, NAC, ベタイン, メチルビタミンB12",
+        }
+    },
+    {
+        tdContent: {
+            gen: "SHMT2",
+            danger: 0,
+            description: "ビタミンB6（補因子）, 5MTHF, NAC, ベタイン, メチルビタミンB12",
+        }
+    },
+    {
+        tdContent: {
+            gen: "SLC40A1",
+            danger: 0,
+            description: "ビタミンC, ポリフェノール, 銅",
         }
     },
     {
@@ -23,7 +59,7 @@ const initialData =[
             gen: "SOD2",
             danger: 0,
             description: "マンガン（補因子）, NAC, グルタチオン, ビタミンC, ビタミンE",
-            etc: "BPA, フリーラジカル"
+            etc:"BPA, フリーラジカル"
         }
     },
     {
@@ -34,164 +70,100 @@ const initialData =[
         }
     },
     {
-        rowSpan: 2,
+        rowSpan: 4,
         thContent: {
-            main: "水銀",
-            sub: "体内に蓄積された有害な重金属の排出に関わる",
+            main: "葉酸",
+            sub: "ビタミンB群のひとつで、DNA合成や赤血球の生成に関わる",
         },
         tdContent: {
-            gen: "CPOX4",
+            gen: "DHFR",
             danger: 0,
-            description: "ビタミンB6, ビタミンC, メチルビタミンB12, メチルフォレート, 鉄, 銅",
-        }
-    },
-    {   
-        tdContent: {
-            gen: "GSTP1",
-            danger: 0,
-            description: "NAC, クレイ, クロレラ, グルタチオン",
+            description: "NAD+（補因子）, ビタミンB12, メチルフォレート",
         }
     },
     {
         tdContent: {
-            gen: "GSTM1",
+            gen: "FOLR1",
             danger: 0,
-            description: "グルタチオン（基質）, NAC, スルフォラファン, αリポ酸, クミン",
+            description: "5MTHF, NAC, ビタミンB6, メチルビタミンB12",
+        }
+    },
+    {
+        tdContent: {
+            gen: "FOLR2",
+            danger: 0,
+            description: "5MTHF, NAC, ビタミンB6, メチルビタミンB12",
+        }
+    },
+    {
+        tdContent: {
+            gen: "SLC19A1",
+            danger: 0,
+            description: "CoQ10, L-カルニチン, オメガ3, ビタミンB群",
         }
     },
     {
         rowSpan: 3,
         thContent: {
-            main: "有機リン系",
-            sub: "農薬や殺虫剤に含まれる神経毒性を持つ化学物質で、解毒に関わる",
+            main: "ビタミンB12",
+            sub: "ビタミンB群のひとつで、神経系の健康と赤血球生成に関わる",
         },
         tdContent: {
-            gen: "BCHE",
-            danger: 0,
-            description: "NAC, ビタミンB群, ビタミンE, ホスファチジルコリン, ミルクシスル",
-        }
-    },
-    {
-        
-        tdContent: {
-            gen: "CYP2B6",
-            danger: 0,
-            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン）",
-            etc: "喫煙"
-        }
-    },
-    {
-        tdContent: {
-            gen: "PON1",
-            danger: 0,
-            description: "NAD+, オメガ3, カルシウム, ビタミンC, ビタミンD, ビタミンE",
-            etc: "有機リン系農薬"
-        }
-    },
-    {
-        rowSpan: 8,
-        thContent: {
-            main: "メチオニンサイクル",
-            sub: "肝臓で働くアミノ酸代謝経路で、細胞の代謝と解毒に関わる",
-        },
-        tdContent: {
-            gen: "ACHY",
-            danger: 0,
-            description: "NAD+（補因子）, ビタミンB6, ビタミンB12, ベタイン, メチルフォレート",
-        }
-    },
-    {
-        tdContent: {
-            gen: "BHMT",
-            danger: 0,
-            description: "ベタイン（補因子）, ビタミンB6, メチルビタミンB12, メチルフォレート",
-        }
-    },
-    {
-        tdContent: {
-            gen: "CTH",
-            danger: 0,
-            description: "ビタミンB6（補因子）, NAC, メチルビタミンB12, メチルフォレート",
-        }
-    },
-    {
-        tdContent: {
-            gen: "MTHFD1",
-            danger: 0,
-            description: "NAD+（補因子）, NADPH（補因子）, 5MTHF, ビタミンB6, メチルビタミンB12",
-        }
-    },
-    {
-        tdContent: {
-            gen: "MTHFR\nA1298C",
-            danger: 0,
-            description: "NAD+（補因子）, NADPH（補因子）, 5MTHF, ビタミンB6, メチルビタミンB12",
-        }
-    },
-    {
-        tdContent: {
-            gen: "MTHFR\nC677T",
-            danger: 0,
-            description: "NAD+（補因子）, NADPH（補因子）, 5MTHF, ビタミンB6, メチルビタミンB12",
-        }
-    },
-    {
-        tdContent: {
-            gen: "MTR",
-            danger: 0,
-            description: "メチルビタミンB12（補因子）, 5MTHF, SAMe, ビタミンB6",
-        }
-    },
-    {
-        tdContent: {
-            gen: "MTRR",
+            gen: "AMTRAK",
             danger: 0,
             description: "リボフラビン（補因子）, SAMe, ビタミンB6, ビタミンB12, ベタイン, メチルフォレート",
         }
     },
     {
-        rowSpan: 4,
+        
+        tdContent: {
+            gen: "TCN1",
+            danger: 0,
+            description: "ビタミンB12, フォレート, 亜鉛",
+            etc: "ビタミンB12"
+        }
+    },
+    {
+        
+        tdContent: {
+            gen: "TCN2",
+            danger: 0,
+            description: "ビタミンB12, フォレート, 亜鉛",
+            etc: "ビタミンB12"
+        }
+    },
+    {
         thContent: {
-            main: "酸化/抗酸化",
-            sub: "細胞が損傷を受けるプロセス/酸化ストレスを抑えて細胞を保護する働き",
+            main: "APOE",
+            sub: "脂質代謝に影響する遺伝子で、アルツハイマー病や心血管疾患のリスクに関わる",
         },
         tdContent: {
-            gen: "CAT",
+            gen: "APOE",
             danger: 0,
-            description: "NAC, SOD, グルタチオン, セレン, ビタミンC, ビタミンE, レスベラトロール",
-            etc: "BPA, フリーラジカル"
+            description: "DHA, オメガ3, クルクミン, ビタミンB12, フォスファチジルコリン, フォレート, レスベラトロール",
         }
     },
-    {
-        tdContent: {
-            gen: "CBS",
-            danger: 0,
-            description: "ビタミンB6（補因子）, ヘム（補因子）, 5MTHF, NAC, ベタイン, メチルビタミンB12",
-        }
-    },
-    {
-        tdContent: {
-            gen: "CTH",
-            danger: 0,
-            description: "ビタミンB6（補因子）, NAC, メチルビタミンB12, メチルフォレート",
-        }
-    },
-    {
-        tdContent: {
-            gen: "DUOX1",
-            danger: 0,
-            description: "NADPH（補因子）, NAC, セレン, ビタミンC, ビタミンE",
-        }
-    },
-];
-
-const Supplement9 = () => {
-        const geneData = useSelector((state) => state.pdfData.geneData);
     
-        // Memoized updated data
-        const updatedTableData = useMemo(() => {
-            return updateDangerValues(initialData, geneData || []);
-        }, [geneData]);
+    {
+        thContent: {
+            main: "BDNF",
+            sub: "タンパク質の合成に影響する遺伝子で、神経細胞の成長や維持に関わる",
+        },
+        tdContent: {
+            gen: "BDNF",
+            danger: 0,
+            description: "DHA, EGCG, オメガ3, ビタミンD, マグネシウムスレオネート",
+        }
+    }
+    
+]
+const Supplement9 = (props) => {
+    const geneData = useSelector((state) => state.pdfData.geneData);
+
+    // Memoized updated data
+    const updatedTableData = useMemo(() => {
+        return updateDangerValues(initialData, geneData || []);
+    }, [geneData]);
     return (
         <PageWrapper>
             <TableNew
@@ -199,7 +171,7 @@ const Supplement9 = () => {
             />
             {/* Old Table code can be safely removed if no longer needed */}
             <PageNumber>
-                34
+                35
             </PageNumber>
         </PageWrapper>
     );
