@@ -22,7 +22,7 @@ const DetoxPathway = () => {
             <div className='w-[535rem] h-[565rem]'>
                 <img src="bg/detoxPathway.png" alt="" className="w-full h-full" />
             </div>
-            <PageNumber>160</PageNumber>
+            <PageNumber>153</PageNumber>
         </PageWrapper>
     );
 };

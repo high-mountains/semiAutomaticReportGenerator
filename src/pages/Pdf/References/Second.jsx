@@ -28,7 +28,7 @@ const Second = () => {
                 fontSize={12}
             />
             <PageNumber>
-                160
+                152
             </PageNumber>
         </PageWrapper>
     );
