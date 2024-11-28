@@ -44,7 +44,7 @@ const Gene33 = () => {
                 description={"この遺伝子に変異がある場合、ATP合成効率が低下し、細胞のエネルギー供給が不足する可能性があります。UQCRQ（Ubiquinol-Cytochrome c Reductase Complex III Subunit VIII）は、複合体IIIの小サブユニットの一つで、ユビキノールからシトクロムcへの電子移動の効率化を補助しています。"}
             />
 
-            <GenePageNumber>74</GenePageNumber>
+            <GenePageNumber>72</GenePageNumber>
         </PageWrapper>
     );
 };

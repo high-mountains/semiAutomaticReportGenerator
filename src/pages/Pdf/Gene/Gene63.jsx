@@ -43,7 +43,7 @@ const Gene63 = () => {
                 description={"この遺伝子に変異がある場合、細胞のメチル化反応が影響を受ける可能性があります。MTHFD1（Methylenetetrahydrofolate Dehydrogenase 1）は、メチレンテトラヒドロ葉酸デヒドロゲナーゼという酵素をコードしており、テトラヒドロ葉酸を利用してさまざまな一炭素化合物（フォレート）を合成する役割を果たします。この酵素は、DNA合成や修復、メチル化反応に必要なメチル基の供給をサポートし、細胞の成長や遺伝情報の安定性維持に重要です。"}
             />
 
-            <GenePageNumber>104</GenePageNumber>
+            <GenePageNumber>99</GenePageNumber>
         </PageWrapper>
     );
 };

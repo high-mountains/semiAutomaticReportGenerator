@@ -39,7 +39,7 @@ const Gene20 = () => {
                 description={"この遺伝子に変異がある場合、ATP合成効率が低下し、細胞のエネルギー供給が不足する可能性があります。NDUFV2（NADH Oxidoreductase Core Subunit V2）は、ミトコンドリア電子伝達系の複合体Iに属するコアサブユニットで、NADHからユビキノンへの電子伝達に関わります。NDUFV2は、プロトン勾配の形成を助けてATP合成を支援し、エネルギー生成の効率化に貢献しています。"}
             />
 
-            <GenePageNumber>68</GenePageNumber>
+            <GenePageNumber>66</GenePageNumber>
         </PageWrapper>
     );
 };

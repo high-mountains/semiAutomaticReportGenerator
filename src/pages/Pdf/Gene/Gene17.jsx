@@ -31,7 +31,7 @@ const Gene17 = () => {
                 description={"この遺伝子に変異がある場合、ATP合成効率が低下し、細胞のエネルギー供給が不足する可能性があります。ATP5F1E（ATP Synthase F1 Subunit Epsilon）は、ATP合成酵素のF1部分のεサブユニットをコードしています。このサブユニットは、ATP合成酵素の構造的安定性に寄与し、ATP生成の効率を維持するために必要です。"}
             />
 
-            <GenePageNumber>58</GenePageNumber>
+            <GenePageNumber>56</GenePageNumber>
         </PageWrapper>
     );
 };

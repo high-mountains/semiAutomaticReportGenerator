@@ -28,7 +28,7 @@ const Gene23 = () => {
                 description={"この遺伝子に変異がある場合、ATP合成効率が低下し、細胞のエネルギー供給が不足する可能性があります。NDUFA1（NADH Oxidoreductase Subunit A1）は、ミトコンドリアの電子伝達系複合体Iの一部であるタンパク質をコードしています。このサブユニットは、NADHから電子を受け取り、ユビキノンに渡す複合体Iの機能に重要です。NDUFA1は、ATP合成のためのプロトン勾配の形成をサポートし、細胞エネルギー生成を促進します。"}
             />
             
-            <GenePageNumber>64</GenePageNumber>
+            <GenePageNumber>62</GenePageNumber>
         </PageWrapper>
     );
 };

@@ -15,7 +15,7 @@ const Gene14 = () => {
                 description={"この遺伝子に変異がある場合、ステロイドホルモンの代謝に影響が生じ、ヒスタミン反応の調整が乱れる可能性があります。CYP21A2（Cytochrome P450 Family 21 Subfamily A Member 2）は、ステロイド21-水酸化酵素をコードしており、コルチゾールやアルドステロンなどのステロイドホルモンの合成に関与します。この酵素は、副腎で重要な役割を果たし、ストレス応答や電解質バランスの維持に必要なホルモンの生合成に寄与しています。"}
             />
             
-            <GenePageNumber>55</GenePageNumber>
+            <GenePageNumber>53</GenePageNumber>
         </PageWrapper>
     );
 };

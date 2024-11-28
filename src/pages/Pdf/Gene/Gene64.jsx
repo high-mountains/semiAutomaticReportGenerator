@@ -41,7 +41,7 @@ const Gene64 = () => {
                 description={"この遺伝子に変異がある場合、細胞のメチル化反応が影響を受ける可能性があります。MTRR（Methionine Synthase Reductase）は、メチオニンシンターゼの活性を維持するための補助酵素で、MTRが反応を繰り返し行えるように再活性化する役割を持っています。MTRRは、ビタミンB12を必要とする反応を介してMTRの活性状態を維持し、ホモシステインの再メチル化とメチル供給において重要です。"}
             />
 
-            <GenePageNumber>105</GenePageNumber>
+            <GenePageNumber>100</GenePageNumber>
         </PageWrapper>
     );
 };

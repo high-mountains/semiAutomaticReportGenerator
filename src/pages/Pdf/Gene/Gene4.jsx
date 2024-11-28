@@ -16,7 +16,7 @@ const Gene4 = () => {
                 description={"この遺伝子に変異がある場合、体内のグルタミン酸輸送が正常に行われず、神経細胞の機能に影響を与える可能性があります。SLC1A1（Solute Carrier Family 1 Member 1）は、グルタミン酸トランスポーターをコードしています。このトランスポーターは、主に中枢神経系で、シナプス間隙からグルタミン酸を取り込む役割を果たします。"}
             />
 
-            <GenePageNumber>45</GenePageNumber>
+            <GenePageNumber>43</GenePageNumber>
         </PageWrapper>
     );
 };

@@ -33,7 +33,7 @@ const Gene75 = () => {
                 description={"この遺伝子に変異がある場合、ビタミンDの活性化が不十分となる可能性があります。CYP2R1（Cytochrome P450 Family 2 Subfamily R Member 1）は、ビタミンD3を25-ヒドロキシビタミンD3に変換する酵素をコードしています。この変換は、ビタミンDが活性型に変換され、カルシウム代謝や骨の健康維持に利用されるために重要なステップです。"}
             />
 
-            <GenePageNumber>116</GenePageNumber>
+            <GenePageNumber>111</GenePageNumber>
         </PageWrapper>
     );
 };

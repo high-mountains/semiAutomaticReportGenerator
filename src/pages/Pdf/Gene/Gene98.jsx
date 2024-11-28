@@ -53,7 +53,7 @@ const Gene98 = () => {
                 }
             />
 
-            <GenePageNumber>139</GenePageNumber>
+            <GenePageNumber>131</GenePageNumber>
         </PageWrapper>
     );
 };

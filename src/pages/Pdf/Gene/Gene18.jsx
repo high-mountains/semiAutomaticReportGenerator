@@ -28,7 +28,7 @@ const Gene18 = () => {
                 description={"この遺伝子に変異がある場合、CoQ10の生合成が阻害され、エネルギー産生が低下する可能性があります。COQ4（Coenzyme Q4, Structural Component）は、コエンザイムQ合成複合体の構造的安定に関与するタンパク質をコードしています。COQ4は、コエンザイムQの生合成酵素複合体を組み立てる際に重要で、生合成の効率を高めています。"}
             />
             
-            <GenePageNumber>53</GenePageNumber>
+            <GenePageNumber>57</GenePageNumber>
         </PageWrapper>
     );
 };

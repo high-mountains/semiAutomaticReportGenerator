@@ -35,7 +35,7 @@ const Gene3 = () => {
                 description={"この遺伝子に変異がある場合、グルタミン酸からグルタミンへの合成が阻害される可能性があります。GLUL（Glutamine Synthetase）は、グルタミン合成酵素をコードしています。この酵素は、グルタミン酸とアンモニアを基質としてグルタミンを合成します。"}
             />
 
-            <GenePageNumber>44</GenePageNumber>
+            <GenePageNumber>42</GenePageNumber>
         </PageWrapper>
     );
 };

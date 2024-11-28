@@ -21,7 +21,7 @@ const Gene25= () => {
                 description={"この遺伝子に変異がある場合、ATP合成効率が低下し、細胞のエネルギー供給が不足する可能性があります。NDUFS1（NADH Oxidoreductase Core Subunit S1）は、ミトコンドリア電子伝達系複合体Iのコアサブユニットの一つであり、NADHからユビキノンへの電子伝達に重要な役割を果たします。NDUFS1は、複合体I内での電子移動とプロトンポンプ機能を支え、ATP合成に必要なプロトン勾配の維持に貢献します。"}
             />
             
-            <GenePageNumber>66</GenePageNumber>
+            <GenePageNumber>64</GenePageNumber>
         </PageWrapper>
     );
 };

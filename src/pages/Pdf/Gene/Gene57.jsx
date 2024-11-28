@@ -52,10 +52,9 @@ const Gene57 = () => {
                     "rs587776730",
                 ]}
                 level={-1}
-                description={""}
             />
 
-            <GenePageNumber>98</GenePageNumber>
+            <GenePageNumber>93</GenePageNumber>
         </PageWrapper>
     );
 };

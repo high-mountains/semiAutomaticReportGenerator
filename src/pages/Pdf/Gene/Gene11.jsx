@@ -17,7 +17,7 @@ const Gene11 = () => {
                 description={"この遺伝子に変異がある場合、体内のヒスタミン生成が阻害される可能性があります。HDC（Histidine Decarboxylase）は、ヒスチジン脱炭酸酵素をコードしています。この酵素は、ヒスチジンからヒスタミンを生成する反応を触媒します。"}
             />
            
-            <GenePageNumber>52</GenePageNumber>
+            <GenePageNumber>50</GenePageNumber>
         </PageWrapper>
     );
 };

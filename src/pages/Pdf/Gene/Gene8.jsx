@@ -30,7 +30,7 @@ const Gene8 = () => {
                 description={"この遺伝子に変異がある場合、グルタミン酸の代謝や体のエネルギー産生に問題が生じる可能性があります。GLUD1（Glutamate Dehydrogenase 1）は、グルタミン酸デヒドロゲナーゼ1という酵素をコードしています。この酵素は、グルタミン酸を酸化的に脱アミノ化し、α-ケトグルタル酸とアンモニアを生成します。"}
             />
 
-            <GenePageNumber>49</GenePageNumber>
+            <GenePageNumber>47</GenePageNumber>
         </PageWrapper>
     );
 };

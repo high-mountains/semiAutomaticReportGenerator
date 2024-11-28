@@ -30,7 +30,7 @@ const Gene7 = () => {
                 description={"この遺伝子に変異がある場合、ドーパミンをはじめとするカテコラミンの合成が低下する可能性があります。TH（Tyrosine Hydroxylase）は、チロシン水酸化酵素をコードしており、チロシンからドーパを生成する反応を触媒します。"}
             />
             
-            <GenePageNumber>48</GenePageNumber>
+            <GenePageNumber>46</GenePageNumber>
         </PageWrapper>
     );
 };

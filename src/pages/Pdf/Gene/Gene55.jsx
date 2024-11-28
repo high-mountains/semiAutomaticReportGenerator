@@ -51,7 +51,7 @@ const Gene55 = () => {
                     "この遺伝子に変異がある場合、抗酸化・解毒機能が低下し、体内の酸化ストレスが増加する可能性があります。SOD2（Superoxide Dismutase 2）は、スーパーオキシドジスムターゼ2をコードしており、ミトコンドリア内で活性酸素種の一つであるスーパーオキシドラジカルを過酸化水素に変換する役割を持っています。"
                 }
             />
-            <GenePageNumber>96</GenePageNumber>
+            <GenePageNumber>92</GenePageNumber>
         </PageWrapper>
     );
 };

@@ -23,7 +23,7 @@ const Gene10 = () => {
                 description={"この遺伝子に変異がある場合、ドーパミンやセロトニン、ノルアドレナリンの代謝が阻害される可能性があります。MAOA（Monoamine Oxidase A）は、モノアミンオキシダーゼAという酵素をコードしています。この酵素は、セロトニン、ノルアドレナリン、ドーパミンなどのモノアミン神経伝達物質の分解に関与し、これらの伝達物質を酸化的に脱アミノ化して不活性化します。"}
             />
 
-            <GenePageNumber>51</GenePageNumber>
+            <GenePageNumber>49</GenePageNumber>
         </PageWrapper>
     );
 };
