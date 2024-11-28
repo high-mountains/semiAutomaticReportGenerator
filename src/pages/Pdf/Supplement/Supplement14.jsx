@@ -1,191 +1,112 @@
 import React, { useMemo } from "react";
-import PageWrapper from "../../../components/Pdf/PageWrapper";
-import PageNumber from "../../../components/Pdf/PageNumber";
-import TableNew from "../../../components/Pdf/Supplements/TableNew";
+import PageWrapper from "../../../components/Pdf/PageWrapper.jsx";
+import PageNumber from "../../../components/Pdf/PageNumber.jsx";
+import TableNew from "../../../components/Pdf/Supplements/TableNew.jsx";
 import { useSelector } from "react-redux";
 import {updateDangerValues} from "./updateDangerValues.js";
 
-
 const initialData = [
     {
-        rowSpan: 2,
         thContent: {
-            main: "筋肉/筋肉痛",
-            sub: "運動や負荷により損傷した筋繊維の修復に関わる",
-        },
-        tdContent: {
-            gen: "ACTN3",
-            danger: 0,
-            description:
-            "ATP（補因子）, カルシウム（補因子）, BCAA, L-シトルリン, βアラニン, クレアチン",
-        },
-    },
-    {
-        tdContent: {
-            gen: "AMPD1",
-            danger: 0,
-            description:
-            "マグネシウム（補因子）, ATP, BCAA, CoQ10, L-カルニチン, βアラニン, クレアチン",
-        },
-    },
-    {
-        thContent: {
-            main: "細胞代謝",
-            sub: "細胞のエネルギーの生成や利用、栄養素の代謝に関わる",
-        },
-        tdContent: {
-            gen: "PPARδ",
-            danger: 0,
-            description:
-                "L-カルニチン, オメガ3, クルクミン, ビタミンD, レスベラトロール",
-        },
-    },
-    {
-        thContent: {
-            main: "殺虫剤&農薬",
-            sub: "神経性毒を持つ殺虫剤や農薬の代謝や解毒に関わる",
-        },
-        tdContent: {
-            gen: "BCHE",
-            danger: 0,
-            description:
-                "NAC, ビタミンB群, ビタミンE, ホスファチジルコリン, ミルクシスル",
-        },
-    },
-    {
-        rowSpan: 17,
-        thContent: {
-            main: "神経伝達物質",
-            sub: "神経細胞間で情報を伝達する化学物質の生成・分解・再取り込み・感受性に関わる",
+            main: "女性ホルモン",
+            sub: "女性の生殖機能やホルモン調節に関わる",
         },
         tdContent: {
             gen: "COMT",
             danger: 0,
             description:
                 "SAMe（補因子）, NAC, ビタミンB6, ビタミンB12, マグネシウム, メチルフォレート",
+                etc: "便秘, ピル"
         },
     },
     {
+        rowSpan: 4,
+        thContent: {
+            main: "腸内フローラ",
+            sub: "腸内の微生物環境や免疫応答、栄養素の代謝（消化）に関わる",
+        },
         tdContent: {
-            gen: "DAO",
+            gen: "FLG",
             danger: 0,
             description:
-                "リボフラビン（補因子）, NAC, オメガ3, セレン, ビタミンB6",
+            "NAC, オメガ3, ビタミンD, プロバイオティクス",
         },
     },
     {
         tdContent: {
-            gen: "DAOA",
+            gen: "FUT2",
             danger: 0,
             description:
-                "リボフラビン（補因子）, NAC, オメガ3, セレン, ビタミンB6",
+            "ビタミンD, プレバイオティクス, プロバイオティクス, 亜鉛",
         },
     },
     {
         tdContent: {
-            gen: "DHFR",
-            danger: 0,
-            description: "NAD+（補因子）, ビタミンB12, メチルフォレート",
-        },
-    },
-    {
-        tdContent: {
-            gen: "DRD1",
+            gen: "HLA-DRA",
             danger: 0,
             description:
-                "L-チロシン, オメガ3, ビタミンB6, ビタミンD, フォスファチジルコリン, マグネシウム",
+            "DAO酵素, L-グルタミン, オメガ3, ビタミンD, プロバイオティクス, 亜鉛",
+            etc: "グルテン, カゼイン"
         },
     },
     {
         tdContent: {
-            gen: "DRD2",
+            gen: "MCM6",
             danger: 0,
             description:
-                "L-チロシン, オメガ3, ビタミンB6, ビタミンD, フォスファチジルコリン, マグネシウム",
+            "ATP（補因子）, カルシウム, ビタミンD, プロバイオティクス, ラクターゼ酵素",
+            etc: "乳製品"
         },
     },
     {
+        rowSpan: 5,
+        thContent: {
+            main: "鉛",
+            sub: "体内に蓄積された有害な鉛の解毒に関わる",
+        },
         tdContent: {
-            gen: "DRD4",
+            gen: "ALAD",
             danger: 0,
             description:
-                "L-チロシン, オメガ3, ビタミンB6, ビタミンD, フォスファチジルコリン, マグネシウム",
+            "亜鉛（補因子）, グルタチオン, ビタミンB6, ビタミンC",
+            etc: "鉛"
         },
     },
     {
         tdContent: {
-            gen: "GAD1",
+            gen: "GPX1",
             danger: 0,
             description:
-                "P5P（補因子）, GABA, L-グルタミン, L-テアニン, マグネシウム",
+            "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE"
         },
     },
     {
         tdContent: {
-            gen: "GCH1",
-            danger: 0,
-            description: "5-HTP, L-チロシン, L-フェニルアラニン, NAC, ビタミンB群",
-        },
-    },
-    {
-        tdContent: {
-            gen: "HTR2",
+            gen: "HFE",
             danger: 0,
             description:
-                "5-HTP, L-テアニン, オメガ3, サフラン抽出物, ビタミンB6, マグネシウム",
+            "フェチン酸, ポリフェノール",
+            etc: "鉄"
         },
     },
     {
         tdContent: {
-            gen: "MAOA",
-            danger: 0,
-            description: "リボフラビン（補因子）, ビタミンB2, ビタミンB6, ビタミンB12, フォレート, マグネシウム",
-        },
-    },
-    {
-        tdContent: {
-            gen: "MAOB",
+            gen: "SLC11A2",
             danger: 0,
             description:
-                "ビタミンB2, ビタミンB6, ビタミンB12, フォレート, マグネシウム",
+                "ビタミンB12, プロバイオティクス, 亜鉛, 鉄, 銅",
+                etc: "鉛"
         },
     },
     {
         tdContent: {
-            gen: "SLC6A4",
+            gen: "TNF",
             danger: 0,
-            description: "5-HTP, L-テアニン, オメガ3, ナトリウム, ビタミンB6, マグネシウム",
+            description:
+                "NAC, オメガ3, クルクミン, ビタミンD, レスベラトロール",
         },
     },
-    {
-        tdContent: {
-            gen: "SPR",
-            danger: 0,
-            description: "NADPH（補因子）, BH4, NAC, ビタミンB6, フォレート, マグネシウム",
-        },
-    },
-    {
-        tdContent: {
-            gen: "TH",
-            danger: 0,
-            description: "BH4（補因子）, L-チロシン, ビタミンB群, メチルフォレート",
-        },
-    },
-    {
-        tdContent: {
-            gen: "TPH",
-            danger: 0,
-            description: "BH4（補因子）, 鉄（補因子）, 5-HTP, オメガ3, ビタミンB6, フォレート, マグネシウム",
-        },
-    },
-    {
-        tdContent: {
-            gen: "TPH2",
-            danger: 0,
-            description: "BH4（補因子）, 鉄（補因子）, 5-HTP, オメガ3, ビタミンB6, フォレート, マグネシウム",
-        },
-    },
-]
+];
 
 const Supplement14 = () => {
     const geneData = useSelector((state) => state.pdfData.geneData);
@@ -194,14 +115,13 @@ const Supplement14 = () => {
     const updatedTableData = useMemo(() => {
         return updateDangerValues(initialData, geneData || []);
     }, [geneData]);
-
     return (
         <PageWrapper>
             <TableNew
                 tBody={updatedTableData}
             />
             {/* Old Table code can be safely removed if no longer needed */}
-            <PageNumber>39</PageNumber>
+            <PageNumber>40</PageNumber>
         </PageWrapper>
     );
 };

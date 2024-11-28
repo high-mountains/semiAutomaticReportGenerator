@@ -60,7 +60,6 @@ const initialData = [
             description: "CoQ10, L-カルニチン, NAD+, αリポ酸, ビタミンB6, リボフラビン",
         }
     },
-    
     {
         tdContent: {
             gen: "COX4I2",
