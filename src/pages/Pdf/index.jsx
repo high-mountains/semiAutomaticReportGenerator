@@ -124,7 +124,7 @@ const Pdf = () => {
                     <TypeByType />
                     <GenCategory />
                     <Supplement />
-                    <SupplementNot />
+                    <SupplementNot /> 
                     <SupplementTable />
                     <GeneInformationList />
                     <References />

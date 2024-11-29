@@ -11,8 +11,17 @@ const CategoryRow = ({bgColor, data}) => {
     
     return (
         <div
-            className={`w-full py-[5rem] flex flex-wrap items-center justify-start gap-[5rem]`}
-            style={{ backgroundColor: `${bgColor}` }}
+            style={{
+                width: "100%",
+                paddingTop: "5rem",
+                paddingBottom: "5rem",
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: "flex-start",
+                gap: "5rem",
+                backgroundColor: `${bgColor}` 
+            }}
         >
             {categoryData.map(
                 ({ borderstatus, text, subContent1, subContent2 }, index) => (

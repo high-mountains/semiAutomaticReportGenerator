@@ -12,14 +12,14 @@ const CategoryRow = ({bgColor, data}) => {
     return (
         <div
             style={{
-                width: "100%", // Equivalent to w-full
-                paddingTop: "2.5rem", // Equivalent to py-[5rem]
-                paddingBottom: "2.5rem", // Equivalent to py-[5rem]
-                display: "flex", // Equivalent to flex
-                flexWrap: "wrap", // Equivalent to flex-wrap
-                alignItems: "center", // Equivalent to items-center
-                justifyContent: "flex-start", // Equivalent to justify-start
-                gap: "5rem", // Equivalent to gap-[5rem]
+                width: "100%",
+                paddingTop: "2.5rem",
+                paddingBottom: "2.5rem",
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: "flex-start",
+                gap: "5rem",
                 backgroundColor: `${bgColor}`
             }}
         >
