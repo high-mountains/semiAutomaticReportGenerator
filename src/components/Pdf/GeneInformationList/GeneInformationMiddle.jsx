@@ -25,8 +25,8 @@ const GeneInformationMiddle = (props) => {
 
     useEffect(() => {
         if(pdfFlag) {
-            setRenderedPdfFlag({marginTop: '-9rem'});
-            setThirdRenderedPdfFlag({paddingTop: '0rem', paddingBottom:'16.8rem'});
+            setRenderedPdfFlag({marginTop: '-12rem'});
+            setThirdRenderedPdfFlag({paddingTop: '0rem', paddingBottom:'13.8rem'});
         } else if(!pdfFlag) {
             setRenderedPdfFlag({marginTop: '0rem'});
             setThirdRenderedPdfFlag({paddingTop: '8.4rem', paddingBottom:'8.4rem'});
@@ -45,7 +45,7 @@ const GeneInformationMiddle = (props) => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td><p>{geneName}</p></td>
+                        <td style={thirdRenderedPdfFlag}><p>{geneName}</p></td>
                         <td style={thirdRenderedPdfFlag}>
                             {datas.map((item, index) => (
                                 <p key={index}>
@@ -53,7 +53,7 @@ const GeneInformationMiddle = (props) => {
                                 </p>
                             ))}
                         </td>
-                        <td><p>{level}</p></td>
+                        <td style={thirdRenderedPdfFlag}><p>{level}</p></td>
                     </tr>
                 </tbody>
             </table>
