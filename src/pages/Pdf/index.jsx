@@ -48,7 +48,7 @@ const Pdf = () => {
     }, [receivedtotalPage]);
 
     return (
-        // <AuthLayout>
+        <AuthLayout>
         <>
             {renderedPdfFlag && (
                 <div
@@ -132,7 +132,7 @@ const Pdf = () => {
                 </div>
             </div>
         </>
-        {/* </AuthLayout> */}
+        </AuthLayout>
     );
 };
 
