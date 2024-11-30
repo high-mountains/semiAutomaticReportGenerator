@@ -1,25 +1,68 @@
-import TemplatePointers from "./components/TemplatePointers"
+// import TemplatePointers from "./components/TemplatePointers"
 
 function LandingIntro() {
+    return (
+        <div
+            className="hero"
+            style={{
+                minHeight: "100%", // Equivalent to min-h-full
+                borderTopLeftRadius: "12rem", // Equivalent to rounded-l-[12rem]
+                borderBottomLeftRadius: "12rem", // Equivalent to rounded-l-[12rem]
+                backgroundColor: "#f5f5f5", // Replace with the actual bg-base-100 color
+            }}
+        >
+            <div
+                style={{
+                    zIndex: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    maxWidth: "80%",
+                    gap: "1rem",
+                    padding: "1rem",
+                    paddingTop: "48rem",
+                    paddingBottom: "48rem",
+                }}
+            >
+                <div
+                    style={{
+                        maxWidth: "448rem", // Equivalent to max-w-[448rem]
+                    }}
+                >
+                    <h1
+                        style={{
+                            fontSize: "30rem", // Equivalent to text-[30rem]
+                            textAlign: "center", // Equivalent to text-center
+                            fontWeight: "bold", // Equivalent to font-bold
+                        }}
+                    >
+                        DNA報告書
+                        <br />
+                        半自動生成システム{" "}
+                    </h1>
 
-  return (
-    <div className="hero min-h-full rounded-l-[12rem] bg-base-100">
-      <div className="z-0 flex items-center justify-center max-w-[80%] gap-[1rem] p-[1rem] py-[48rem]">
-        <div className="max-w-[448rem]">
+                    <div
+                        style={{
+                            textAlign: "center", // Equivalent to text-center
+                            marginTop: "48rem", // Equivalent to mt-[48rem]
+                        }}
+                    >
+                        <img
+                            src="./bg/SocialNoFriends.png"
+                            alt="Dashwind Admin Template"
+                            style={{
+                                width: "192rem", // Equivalent to w-[192rem]
+                                display: "inline-block", // Equivalent to inline-block
+                            }}
+                        ></img>
+                    </div>
 
-          <h1 className='text-[30rem] text-center font-bold '>
-            {/* <img src="/bg/SocialNoFriends.png" className="w-12 inline-block mr-2" alt="dashwind-logo" /> */}
-            DNA報告書<br/>半自動生成システム </h1>
-
-          <div className="text-center mt-[48rem]"><img src="./bg/SocialNoFriends.png" alt="Dashwind Admin Template" className="w-[192rem] inline-block"></img></div>
-
-          {/* Importing pointers component */}
-          <TemplatePointers />
+                    {/* Importing pointers component */}
+                    {/* <TemplatePointers /> */}
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  )
-
+    );
 }
 
-export default LandingIntro
+export default LandingIntro;

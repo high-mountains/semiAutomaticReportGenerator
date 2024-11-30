@@ -14,8 +14,8 @@ const TypeByType = () => {
             <Catecholamine/>
             <Histamine/> 
             <Mitochondrial/>
-            <Detox/>
-            <Methylation/>
+            {/* <Detox/>
+            <Methylation/> */}
         </>
     )
 }

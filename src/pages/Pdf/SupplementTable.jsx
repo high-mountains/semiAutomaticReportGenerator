@@ -23,14 +23,14 @@ const SupplementTable = () => {
                 <Supplement4/>
                 <Supplement5/>
                 <Supplement6/>
-                <Supplement7/>
+                {/* <Supplement7/>
                 <Supplement8/>
                 <Supplement9/>
                 <Supplement10/>
                 <Supplement11/>
                 <Supplement12/>
                 <Supplement13/>
-                <Supplement14/>
+                <Supplement14/> */}
             </>
     );
 };
