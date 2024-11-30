@@ -60,7 +60,7 @@ const Pdf = () => {
                         gap: "20rem",
                         alignItems: "center",
                         justifyContent: "center",
-                        backgroundColor: "#000000b0",
+                        backgroundColor: "#000000dd",
                         zIndex: 99,
                         position: "absolute",
                     }}
