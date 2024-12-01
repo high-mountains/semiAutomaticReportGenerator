@@ -124,12 +124,12 @@ function Header() {
       await processBatch(batch);
 
       // Optional: Adding a short delay to avoid freezing the browser
-      await new Promise((resolve) => setTimeout(resolve, 100));
+      await new Promise((resolve) => setTimeout(resolve, 200));
       // console.log(`Processed batch ${i / batchSize + 1}`);
     }
 
     // Save the PDF
-    pdf.save("遺伝子検査報告書作.pdf");
+    pdf.save("遺伝子検査報告書.pdf");
 
     // Reset current page after processing
     setCurrentPage(0);
