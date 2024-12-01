@@ -38,16 +38,22 @@ function Page1() {
         <>
             <div
                 style={{
-                    // outline: "1rem",
+                    outlineWidth: "1rem",
                     outlineColor: "rgba(0,195,208,0.8)",
+                    outlineStyle: "solid",
                     position: "relative",
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
-                    justifyContent: "space-between",
-                    color: "#484F51"
+                    // justifyContent: "space-between",
+                    color: "#484F51",
+                    width: "595px",
+                    height: "841px",
+                    borderRadius: "2px"
+                    // backgroundColor: "red"
                 }}
-                className="page font printUnit"
+                // className="page font printUnit"
+                className="font printUnit"
             >
                 {/* Top Nav */}
                 <div
@@ -66,8 +72,8 @@ function Page1() {
                 />
 
                 <Text
-                    textContent={`${data.clientName}様 (ID:${data.clientId})\n検査結果通知日：2024年10月1日`}
-                    textColor={"00C3D0"}
+                    textContent={`${data.clientName}様   (ID:${data.clientId})\n検査結果通知日 ：2024年10月1日`}
+                    textColor={"#00C3D0"}
                     className={
                         "font-bold text-center mb-[162rem] pt-[21rem] whitespace-pre-wrap"
                     }
@@ -79,19 +85,20 @@ function Page1() {
                     }
                     fontSize={12}
                     style={{
-                        lineHeight: "1.41733",
                         width: "500rem",
-                        lineHeight: 1.25,
+                        lineHeight: 1.4483,
                         fontWeight: 400,
                         whiteSpace: "pre-wrap",
                         borderWidth: "1rem",
                         borderColor: "#00C3D0",
                         borderRadius: "12rem",
+                        // paddingTop: '19rem',
+                        // paddingBottom: "19rem",
                         paddingRight: "13rem",
                         paddingLeft: "14rem",
-                        paddingBottom: "12rem",
+                        marginBottom: "67rem",
                         color: "#484F51",
-                        ...(!deliveryFlag && { paddingTop: "12rem" }),
+                        ...(!deliveryFlag ? { paddingTop: "19rem", paddingBottom: "19rem" } : { paddingTop: "14rem", paddingBottom: "24rem" }),
                     }}
                 />
 

@@ -48,7 +48,7 @@ const Pdf = () => {
     }, [receivedtotalPage]);
 
     return (
-       // <AuthLayout>
+       <AuthLayout>
         <>
             {renderedPdfFlag && (
                 <div
@@ -119,7 +119,7 @@ const Pdf = () => {
                 <div className="pdfwrapper">
                     <Page1 />
                     <Page2 />
-                    {/* <Page3 />
+                    <Page3 />
                     <Page4 />
                     <TypeByType />
                     <GenCategory />
@@ -128,11 +128,11 @@ const Pdf = () => {
                     <SupplementTable />
                     <GeneInformationList />
                     <References />
-                    <Pathway /> */}
+                    <Pathway />
                 </div>
             </div>
         </>
-       // </AuthLayout>
+       </AuthLayout>
     );
 };
 
