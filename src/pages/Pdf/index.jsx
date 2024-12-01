@@ -127,8 +127,8 @@ const Pdf = () => {
                     <SupplementNot /> 
                     <SupplementTable />
                     <GeneInformationList />
-                    {/* <References />
-                    <Pathway /> */}
+                    <References />
+                    <Pathway />
                 </div>
             </div>
         </>
