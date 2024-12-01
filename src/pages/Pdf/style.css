@@ -40,7 +40,7 @@ html {
         font-size: 16rem;
         width: 100vw;
         aspect-ratio: 595/847;
-        border: 1px rgba(0, 0, 0, 0.1);
+        /* border: 1px rgba(0, 0, 0, 0.1); */
     }
 }
 

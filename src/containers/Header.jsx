@@ -61,6 +61,8 @@ function Header() {
 
   const downloadPDF = async (title = "") => {
     let elements = document.querySelectorAll(".printUnit");
+
+    let elementsLength = elements.length;
     // console.log("elements.length===>", elements.length);
 
     // Set total elements count
@@ -112,7 +114,7 @@ function Header() {
 
     const batchSize = 6; // Set a smaller batch size for better stability
 
-    for (let i = 0; i < elements.length; i += batchSize) {
+    for (let i = 0; i < elementsLength; i += batchSize) {
       
       const batch = Array.from(elements).slice(i, i + batchSize);
       
@@ -127,7 +129,7 @@ function Header() {
     }
 
     // Save the PDF
-    pdf.save("download.pdf");
+    pdf.save("遺伝子検査報告書作.pdf");
 
     // Reset current page after processing
     setCurrentPage(0);
@@ -195,7 +197,6 @@ function Header() {
         '検査報告書作成完了',
         key: new Date().getTime(), // Use a unique key each time
     });
-  
   }
 
   return (

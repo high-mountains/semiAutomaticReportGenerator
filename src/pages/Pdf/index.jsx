@@ -116,10 +116,10 @@ const Pdf = () => {
             )}
 
             <div className="pdfcontainer py-[20rem]">
-                <div className="pdfwrapper" id="downloadTest">
+                <div className="pdfwrapper">
                     <Page1 />
                     <Page2 />
-                    <Page3 />
+                    {/* <Page3 />
                     <Page4 />
                     <TypeByType />
                     <GenCategory />
@@ -128,7 +128,7 @@ const Pdf = () => {
                     <SupplementTable />
                     <GeneInformationList />
                     <References />
-                    <Pathway />
+                    <Pathway /> */}
                 </div>
             </div>
         </>
