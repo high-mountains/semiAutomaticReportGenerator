@@ -13,7 +13,7 @@ const Gene46 = () => {
             <GeneInformationMiddle
                 geneName={"GSTP1"}
                 datas={["rs1695"]}
-                level={-1}
+                level={0}
                 description={
                     "この遺伝子に変異がある場合、細胞内での有害物質の代謝と解毒が不十分となる可能性があります。GSTP1（Glutathione S-Transferase Pi 1）は、主に腫瘍抑制と酸化ストレス防御に関与するGSTファミリーの酵素です。この酵素は、グルタチオンと結合して有害物質を解毒し、細胞を酸化ストレスや発がん性物質から保護します。"
                 }

@@ -17,7 +17,7 @@ const Gene90 = () => {
             <GeneInformationMiddle
                 geneName={"TMPRSS6"}
                 datas={["rs855791"]}
-                level={-1}
+                level={0}
                 description={
                     "この遺伝子に変異がある場合、鉄の代謝調節に影響を与える可能性があります。TMPRSS6は、膜貫通型セリンプロテアーゼで、特にヘプシジンの調節を通じて体内の鉄代謝を制御します。このタンパク質は、肝臓でヘプシジンの発現を抑制し、鉄の吸収と利用を調整します。"
                 }

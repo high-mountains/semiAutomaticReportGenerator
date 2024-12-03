@@ -12,7 +12,7 @@ const Gene4 = () => {
             <GeneInformationMiddle
                 geneName={"SLC1A1"}
                 datas={["rs2228622", "rs301430"]}
-                level={-1}
+                level={0}
                 description={"この遺伝子に変異がある場合、体内のグルタミン酸輸送が正常に行われず、神経細胞の機能に影響を与える可能性があります。SLC1A1（Solute Carrier Family 1 Member 1）は、グルタミン酸トランスポーターをコードしています。このトランスポーターは、主に中枢神経系で、シナプス間隙からグルタミン酸を取り込む役割を果たします。"}
             />
 

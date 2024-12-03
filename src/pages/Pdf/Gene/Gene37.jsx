@@ -10,7 +10,7 @@ const Gene37 = () => {
             <GeneInformationMiddle
                 geneName={"SLC30A3"}
                 datas={["rs11126936"]}
-                level={-1}
+                level={0}
                 description={
                     "この遺伝子に変異がある場合、神経系や免疫機能に関連する亜鉛バランスが崩れる可能性があります。\n SLC30A3（Solute Carrier Family 30 Member 3）は、亜鉛輸送体の一つで、細胞内から亜鉛イオンを細胞外へ、あるいは細胞小器官内へ移動させる役割を果たします。"
                 }
@@ -26,7 +26,7 @@ const Gene37 = () => {
                     "rs121909793",
                     "rs121909790",
                 ]}
-                level={-1}
+                level={0}
                 description={
                     "この遺伝子に変異がある場合、鉄やマンガンの細胞内取り込みに問題が生じる可能性があります。\n SLC39A14（Solute Carrier Family 39 Member 14）は、亜鉛およびマンガンの輸送体をコードしており、細胞外から細胞内への金属イオンの取り込みを促進します。"
                 }
@@ -34,7 +34,7 @@ const Gene37 = () => {
             <GeneInformationMiddle
                 geneName={"VDR"}
                 datas={["rs12325817"]}
-                level={-1}
+                level={0}
                 description={
                     "この遺伝子に変異がある場合、カルシウム吸収や骨の健康、免疫調整に影響を与える可能性があります。VDR（Vitamin D Receptor）は、ビタミンD受容体をコードしています。この受容体は、ビタミンDが結合することで活性化され、カルシウムとリンの代謝を調節するための遺伝子発現を誘導します。"
                 }

@@ -17,7 +17,7 @@ const Gene85 = () => {
             <GeneInformationMiddle
                 geneName={"ADH1B"}
                 datas={["rs1229984", "rs2066702"]}
-                level={-1}
+                level={0}
                 description={
                     "この遺伝子に変異がある場合、アルコールの代謝が影響を受ける可能性があります。ADH1B（Alcohol Dehydrogenase 1B）は、アルコールデヒドロゲナーゼ1Bという酵素をコードしています。この酵素は、エタノールをアセトアルデヒドに酸化する反応を触媒し、アルコール代謝の初期段階で活性を持ちます。"
                 }
@@ -26,7 +26,7 @@ const Gene85 = () => {
             <GeneInformationMiddle
                 geneName={"ALDH2"}
                 datas={["rs671"]}
-                level={-1}
+                level={0}
                 description={
                     "この遺伝子に変異がある場合、アルコールの代謝が影響を受ける可能性があります。ALDH2（Aldehyde Dehydrogenase 2）は、アルデヒドデヒドロゲナーゼ2という酵素をコードしています。この酵素は、主に肝臓で活性を持ち、エタノール代謝においてアセトアルデヒドを酢酸に変換する役割を果たします。ALDH2は、アセトアルデヒドの解毒に重要で、これによりアルコール摂取後の身体反応に影響を与えます。"
                 }

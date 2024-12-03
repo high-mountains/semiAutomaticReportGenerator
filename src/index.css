@@ -138,7 +138,7 @@ button,
 }
 
 .bg-pic {
-  background-image: url("../public/bg/background_outrun.jpg");
+  background-image: url("../public/bg/background_outrun.webp");
   background-size: cover;
   background-position: center;
 }

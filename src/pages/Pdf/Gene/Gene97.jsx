@@ -11,7 +11,7 @@ const Gene97 = () => {
             <GeneInformationMiddle
                 geneName={"TRAF1"}
                 datas={["rs3761847"]}
-                level={-1}
+                level={0}
                 description={
                     "この遺伝子に変異がある場合、炎症シグナル伝達の調整が不十分となる可能性があります。TRAF1は、TNF受容体関連因子であり、TNFシグナル伝達の調節を行うタンパク質です。TRAF1は、主に細胞の生存や炎症反応のシグナル伝達に関わり、細胞がストレスや免疫刺激に応答する際に必要な役割を果たします。"
                 }
