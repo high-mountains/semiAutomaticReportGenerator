@@ -1,6 +1,6 @@
 import Concept from "./concept";
-import Merit from "./merit";
 import Periodanalyze from "./periodanalyze";
+import Merit from "./merit";
 
 const Catecholamine = () => {
     return (

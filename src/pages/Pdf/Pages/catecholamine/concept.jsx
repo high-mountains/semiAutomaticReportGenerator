@@ -24,24 +24,24 @@ const Concept = () => {
         {
             Component: PageHeader,
             data: {
-                subtitle: "Catecholamine Type",
-                mainTitle: "カテコラミンタイプ"
+                // subtitle: "Catecholamine Type",
+                mainTitle: "Catecholamine Type"
             },
         },
         {
             Component: Outline,
             data: {
                 imageURL: "./bg/catecholamine.png",
-                concept: "カテコラミンタイプは、",
+                concept: "Catecholamine Type is",
                 description:
-                    "脳の興奮物質である、カテコラミンの代謝やその調節がスムーズに行われにくく、脳内にカテコラミンが多くなりやすい傾向があるタイプです。"
+"This type of disorder is characterized by a tendency for the brain to accumulate too much catecholamine, a stimulant substance in the brain, as the metabolism and regulation of catecholamines is not carried out smoothly."
             },
         },
         {
             Component: Explanation,
             data: {
-                question: "カテコラミンタイプとは",
-                answer: "カテコラミンとは、<span class='blue'>アドレナリン、ノルアドレナリン、ドーパミン</span>という3つの神経伝達物質を指し、私たちが<span class='bold'>集中力</span>を高めたり、<span class='bold'>やる気</span>を出したりするときに重要な役割を果たしています。 \n しかし、カテコラミンが脳内や体内で過剰になると、<span class='bold'>イライラ</span>しやすくなったり、<span class='bold'>不安</span>感を感じたり、<span class='bold'>夜に眠れなくなること</span>があるかもしれません。そのため、カテコラミンのバランスを保つことが心と体の健康において非常に重要です。適切なレベルを維持することで、集中力やモチベーションを高めつつ、心の安定を図り、リラックスした状態で日々を過ごすことができます。心と体のバランスを意識しながら、自分の特性を理解し、カテコラミンの働きを考慮した生活を整えることが、健やかな毎日を送るための鍵となります。 将来的には、脳にかかる負荷が大きくなることで神経変性疾患のリスクが高まる可能性があるため、バランスの取れた食事や適切なストレス管理が重要です。",
+                question: "What is the catecholamine type?",
+                answer: "Catecholamines are three neurotransmitters called adrenaline, noradrenaline, and dopamine, which play an important role in increasing our concentration and motivation. However, if there is an excess of catecholamines in the brain or body, you may become easily irritated, feel anxious, or have trouble sleeping at night. Therefore, maintaining a balance of catecholamines is very important for mental and physical health. By maintaining an appropriate level, you can increase your concentration and motivation, stabilize your mind, and spend your days in a relaxed state. Being aware of the balance between your mind and body, understanding your own characteristics, and adjusting your lifestyle to take into account the function of catecholamines is the key to living a healthy life. In the future, the increased strain on the brain may increase the risk of neurodegenerative diseases, so a balanced diet and proper stress management are important.",
                 sidebarColor: maincolor
             },
         },
@@ -52,46 +52,36 @@ const Concept = () => {
                 wrapperWidth: "535rem",
                 sidebarColor: maincolor,
                 description:
-                    "カテコラミンタイプの特性には、以下のような可能性があります。",
+                    "Catecholamine-type properties may include the following:",
                 qualities1: [
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>集中力が高い</p>`
-                        // content: "集中力が高い"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>High concentration</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>行動力がある</p>`
-                        // content: "行動力がある"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Proactive</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>瞬発力があり決断が早い</p>`
-                        // content: "瞬発力があり決断が早い"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Resilient and quick to make decisions</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>目標を立てることが好き</p>`
-                        // content: "目標を立てることが好き"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>I like setting goals</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>リーダー気質</p>`
-                        // content: "リーダー気質"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Leadership</p>`
                     },
                 ],
                 qualities2: [
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>イライラしやすい</p>`
-                        // content: "イライラしやすい"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Irritability</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>気分の浮き沈みが激しい</p>`
-                        // content: "気分の浮き沈みが激しい"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Mood swings</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>不眠になりやすい</p>`
-                        // content: "不眠になりやすい"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Tend to get insomnia</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>依存症になりやすい（ショッピン\nグ、ゲーム、ギャンブルなど）</p>`
-                        // content:
-                            // "依存症になりやすい（ショッピン\n     グ、ゲーム、ギャンブルなど）"
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Prone to addiction (shopping, games, gambling, etc.)</p>`
                     },
                 ],
             },

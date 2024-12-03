@@ -25,9 +25,9 @@ const Merit = () => {
                 descriptions: [
                     {
                         wrapperWidth: "240rem", 
-                        heading: "カテコラミンの分解・代謝",
+                        heading: "Decomposition and metabolism of catecholamines",
                         content:
-                            "体が過剰なストレスや興奮状態から平常に戻るために、カテコラミンを分解・代謝\nする重要なプロセスです。\n関連遺伝子：COMT, MAOA, MAOB, \nALDH2, SULT1A3, DBH, SLC6A2",
+                            "This is an important process that breaks down and metabolizes catecholamines so that the body can return to normal from excessive stress or excitement. Related genes: COMT, MAOA, MAOB, ALDH2, SULT1A3, DBH, SLC6A2",
                         contentLineHeight: 1.448333, 
                         posInfo: {
                             top: "11rem",
@@ -40,7 +40,7 @@ const Merit = () => {
                         wrapperWidth: "240rem",
                         heading: "カテコラミン受容体",
                         content:
-                            "カテコラミンが結合して信号を細胞に伝える\n　　ことで、体内の様々な反応を引き起こし\n　　　　ます\n　　　　　　関連遺伝子：DRD1, DRD2, \n　　　　　　　　　　　　DRD4,ADRA2A",
+                            "Catecholamines bind and transmit signals to cells\n　　This triggers a variety of reactions in the body.\n　　　　　　Related genes:DRD1, DRD2, \n　　　　　　　　　　　　DRD4,ADRA2A",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             top: "11rem",
@@ -51,9 +51,9 @@ const Merit = () => {
                     },
                     {
                         wrapperWidth: "240rem",
-                        heading: "　　　　一酸化窒素 (NO) 合成",
+                        heading: "　　　　Nitric oxide (NO) synthesis",
                         content:
-                            "　　　　　血管の拡張や神経伝達を調整する\n　　　　働きを持ちます\n　　関連遺伝子：NOS2, NOS3",
+                            "　　　　　Regulating blood vessel dilation and neurotransmission. Related genes: NOS2, NOS3",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             bottom: "53rem",
@@ -65,8 +65,8 @@ const Merit = () => {
                     },
                     {
                         wrapperWidth: "240rem",
-                        heading: "カテコラミンの合成",
-                        content: `アミノ酸から作られ、脳や副腎で\n生成されます。\n関連遺伝子：TH, GCH1, DHFR`,
+                        heading: "Synthesis of catecholamines",
+                        content: `It is made from amino acids and is produced in the brain and adrenal glands. Related genes: TH, GCH1, DHFR`,
                         contentLineHeight: 1.448333,
                         posInfo: {
                             bottom: "51rem",
@@ -83,8 +83,8 @@ const Merit = () => {
             Component: MeritIntro,
             data: {
                 maincolor: maincolor,
-                content1: "ヒスタミンが脳で高いことによるメリットと",
-                content2: "ヒスタミンが脳で増えすぎることによるデメリット",
+                content1: "The benefits of having high levels of histamine in the brain",
+                content2: "Disadvantages of excess histamine in the brain",
             },
         },
         {
@@ -92,36 +92,36 @@ const Merit = () => {
             data: {
                 merit: [
                     {
-                        title: "集中力の向上",
+                        title: "Improved concentration",
                         content:
-                            "カテコラミンは注意力と集中力を高め、認知機能を向上させます。"
+                            "Catecholamines increase attention and focus, improving cognitive function."
                     },
                     {
-                        title: "瞬発力の向上",
+                        title: "Improved explosiveness",
                         content:
-                            "カテコラミンはストレス状況下での迅速な反応や瞬発力を高め、緊急時の対応能力を向上させます。"
+                            "Catecholamines enhance rapid reaction and explosiveness under stressful situations, improving the ability to respond to emergencies."
                     },
                     {
-                        title: "モチベーションの向上",
+                        title: "Increased motivation",
                         content:
-                            "ドーパミンは目標達成への意欲を高め、行動を促進します。"
+                            "Dopamine motivates us to achieve our goals and drives our actions."
                     },
                 ],
                 demerit: [
                     {
-                        title: "情緒の不安定",
+                        title: "Emotional instability",
                         content:
-                            "ノルアドレナリンとアドレナリンが高すぎると、イライラや攻撃的な行動（「キレる」状態）を引き起こすことがあります。"
+                            "Too much norepinephrine and adrenaline can lead to irritability and aggressive behavior ([losing your temper])."
                     },
                     {
-                        title: "不安やストレスの増加",
+                        title: "Increased anxiety and stress",
                         content:
-                            "高いカテコラミンレベルは慢性的な不安やストレスを引き起こし、心身の健康に悪影響を与えることがあります。"
+                            "High catecholamine levels can lead to chronic anxiety and stress, which can have a negative impact on your physical and mental health."
                     },
                     {
-                        title: "睡眠障害",
+                        title: "Sleep disorders",
                         content:
-                            "過剰なカテコラミンは覚醒状態を維持しすぎ、睡眠の質を低下させることがあります。"
+                            "Excess catecholamines can keep you awake for too long and reduce the quality of your sleep."
                     },
                 ],
             },
@@ -130,8 +130,8 @@ const Merit = () => {
     return(<>
     <PageWrapper>
         <PageHeader 
-            subtitle={"Catecholamine Type"}
-            mainTitle={"カテコラミンタイプ"}>
+            // subtitle={"Catecholamine Type"}
+            mainTitle={"Catecholamine Type"}>
         </PageHeader>
         
         <EnhancedMerit />
