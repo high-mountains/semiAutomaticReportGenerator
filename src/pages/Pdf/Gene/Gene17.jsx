@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import PageWrapper from "../../../components/Pdf/PageWrapper.jsx";
 import GenePageNumber from "../../../components/Pdf/GenePageNumber.jsx";
 import GeneInformationMiddle from "../../../components/Pdf/GeneInformationList/GeneInformationMiddle.jsx";
-import Text from "../../../components/Pdf/Text.jsx";
+// import Text from "../../../components/Pdf/Text.jsx";
 
 import { updateDangerLevel } from "../Supplement/updateDangerValues.js";
 
@@ -44,11 +44,11 @@ const Gene17 = () => {
 
   return (
     <PageWrapper>
-      <Text
+      {/*<Text
         sidebar={1}
         textContent={"ミトコンドリア"}
         containerStyle={{ marginBottom: "10rem" }}
-      />
+      />*/}
 
       {/* Render each gene information dynamically */}
       {updatedGeneData.map((item, index) => (
