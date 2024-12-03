@@ -39,7 +39,6 @@ const Gene6 = () => {
 
   // Memoize the updated gene data to avoid unnecessary recalculations
   const updatedGeneData = useMemo(() => {
-    console.log("Updating gene danger levels...");
     return updateDangerLevel(initialGeneData, geneData);
   }, [geneData]);
 
