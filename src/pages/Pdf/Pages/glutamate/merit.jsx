@@ -25,12 +25,12 @@ const Merit = () => {
                 descriptions: [
                     {
                         wrapperWidth: "240rem",  
-                        heading: "GABA（γ-アミノ酪酸）代謝",
+                        heading: "GABA (γ-aminobutyric acid) metabolism",
                         content:
-                            "グルタミン酸を<span class='blue'>GABA</span>に変換し、<span class='blue'>神経伝達</span>の抑制を介して脳の興奮状態を調整します。 \n関連遺伝子：GAD1, GABRA1,  \nGABRA2, GABRG2, ALDH5A1",
+                            "It converts glutamate into GABA, and regulates brain excitation through \ninhibition of neurotransmission. \nRelated genes: GAD1, GABRA1,\n GABRA2, GABRG2, ALDH5A1",
                         contentLineHeight: 1.448333,  
                         posInfo: {
-                            top: "11rem",
+                            top: "0rem",
                             left: "0rem",
                             width: "240rem"
                         },
@@ -38,9 +38,9 @@ const Merit = () => {
                     },
                     {
                         wrapperWidth: "240rem",
-                        heading: "グルタミン酸の代謝",
+                        heading: "Glutamate Metabolism",
                         content:
-                            "グルタミン酸をエネルギー生産や \n神経伝達に利用するために変換・再生し、\n脳機能や細胞の代謝活動を支えます。\n関連遺伝子：GLS2, GLUL, GLUD1,SLC1A1s",
+                            "It converts and regenerates\nglutamate for use in energy \nproduction and neurotransmission, supporting brain function and cellular metabolic activity. Related genes: GLS2, GLUL, GLUD1, SLC1A1s",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             bottom: "11rem",
@@ -52,12 +52,12 @@ const Merit = () => {
                     },
                     {
                         wrapperWidth: "240rem",
-                        heading: "グルタミン酸の代謝調節",
+                        heading: "Regulation of glutamate metabolism",
                         content:
-                            "グルタミン酸の濃度を調整し、過剰な神経興奮 \n       を防ぎ、脳内の化学バランスを維持し \n                 ます。\n                           関連遺伝子：DAO, DAOA",
+                            "It regulates glutamate levels, prevents\n                  excessive neuroexcitation, and\n                       maintains chemical balance in the \n                           brain. Related genes: DAO,  \n                                 DAOA",
                         contentLineHeight: 1.448333,
                         posInfo: {
-                            top: "11rem",
+                            top: "0rem",
                             right: "0rem",
                             width: "240rem"
                         },
@@ -66,11 +66,11 @@ const Merit = () => {
                     },
                     {
                         wrapperWidth: "240rem",
-                        heading: "                    ホモシステイン代謝",
-                        content: `                        <span class='blue'>ホモシステイン</span>を他の物質に変換 \n                   し、体内の<span class='blue'>硫黄含有アミノ酸</span>のバラ  \n    ンスや<span class='blue'>メチレーションプロセス</span>をサポートします。\n 関連遺伝子：CBS, CTH`,
+                        heading: "                    Homocysteine \n                    ​​metabolism",
+                        content: `                    It converts homocysteine ​​into other \n             substances and supports the balance \n    of sulfur-containing amino acids in the body and the methylation process. Related genes: CBS, CTH`,
                         contentLineHeight: 1.448333,
                         posInfo: {
-                            bottom: "19rem",
+                            bottom: "5rem",
                             right: "0rem",
                             width: "240rem"
                         },
@@ -84,8 +84,8 @@ const Merit = () => {
             Component: MeritIntro,
             data: {
                 maincolor: maincolor,
-                content1: "グルタミン酸が脳で多いことによるメリットと",
-                content2: "グルタミン酸が脳で多すぎることによるデメリット",
+                content1: "The benefits of having a lot of glutamate in the brain",
+                content2: "The downsides of having too much glutamate in the brain",
             },
         },
         {
@@ -93,36 +93,36 @@ const Merit = () => {
             data: {
                 merit: [
                     {
-                        title: "記憶力の向上",
+                        title: "Improved memory",
                         content:
-                            "グルタミン酸は<span class='blue'>シナプスの可塑性</span>を高め、短期記憶と長期記憶の両方を強化します。",
+                            "Glutamate increases <span class='blue'>synaptic plasticity</span>, strengthening both short-term and long-term memory.",
                     },
                     {
-                        title: "学習能力の向上",
+                        title: "Improve learning ability",
                         content:
-                            "学習の際に必要な神経ネットワークの形成と強化に貢献します。",
+                            "It contributes to the formation and strengthening of neural networks necessary for learning.",
                     },
                     {
-                        title: "集中力の向上",
+                        title: "Improved concentration",
                         content:
-                            "グルタミン酸は注意力を高め、情報処理速度を向上させます。",
+                            "Glutamate increases attention and improves the speed of information processing.",
                     },
                 ],
                 demerit: [
                     {
-                        title: "神経細胞の過剰刺激",
+                        title: "Overstimulation of nerve cells",
                         content:
-                            "グルタミン酸が過剰に分泌されると、神経細胞が過剰に興奮し、最終的に細胞死（興奮毒性）を引き起こすことがあります。",
+                            "Excessive secretion of glutamate can cause hyperexcitation of nerve cells and ultimately cell death (excitotoxicity).",
                     },
                     {
-                        title: "神経変性疾患のリスク",
+                        title: "Risk of neurodegenerative diseases",
                         content:
-                            "長期的に過剰なグルタミン酸は、アルツハイマー病やパーキンソン病などの神経変性疾患のリスクを高めることがあります。",
+                            "Over the long term, excess glutamate can increase the risk of neurodegenerative diseases such as Alzheimer's and Parkinson's.",
                     },
                     {
-                        title: "精神的健康の問題",
+                        title: "Mental health issues",
                         content:
-                            "不安、ストレス、うつ病などの精神的健康問題の悪化に寄与することがあります。",
+                            "It can contribute to worsening mental health problems such as anxiety, stress, and depression.",
                     },
                 ],
             },
@@ -133,8 +133,8 @@ const Merit = () => {
         <>
             <PageWrapper>
                 <PageHeader
-                    subtitle={"Glutamate Type"}
-                    mainTitle={"グルタメートタイプ"}
+                    // subtitle={"Glutamate Type"}
+                    mainTitle={"Glutamate Type"}
                 />
                 <EnhancedMerit />
                 <PageNumber>07</PageNumber>

@@ -10,11 +10,11 @@ const Page4 = () => {
             <PageWrapper>
                 <PageHeader
                     subtitle={"Our Genetic Test"}
-                    mainTitle={"私たちの遺伝子検査について"}
+                    mainTitle={"About our genetic testing"}
                 />
-                {`私たちの遺伝子検査は、750以上の<span style='color: #007AFF;'>SNP（単一ヌクレオチド多型）</span>を解析することで、あなたの体質や健康リスクをさまざまな側面から把握することができます。\n
-これらの情報を基に、個々の遺伝的特性に最適化された健康管理プランを提供し、日常生活の質を向上させるお手伝いをいたします。\n<span style=>従来の遺伝子検査の多くは、希少疾患・難病リスクが高い傾向にある・低い傾向にあることを伝えています。\nせっかく遺伝子検査をしても「では何をすれば良いのか」と次の一歩に繋がる情報はありませんでした。\n私たちの遺伝子検査は、医学論文に基づいた情報から、健康管理に役立つ情報提供を目指しております。(https://jene-inc.com/paper)\n
-検査結果は理解しやすい形で実際の生活に取り入れていただけるようサポートします。\nあなたが持つ遺伝子情報を最大限に活用し、健康で充実した人生を送るための具体的なアクションプランを提供します。\nあなたの未来をより健康で輝かしいものにするため、私たちの遺伝子検査サービスをご活用ください。`
+                {`Our genetic testing analyzes over 750 <span style='color: #007AFF;'>SNPs (single nucleotide polymorphisms)</span> to understand various aspects of your constitution and health risks.\n
+Based on this information, we will provide you with a health management plan optimized for your individual genetic characteristics and help you improve the quality of your daily life.\nMost conventional genetic tests only tell you whether you have a high or low risk of rare or intractable diseases.\nEven if you take a genetic test, you may not know what to do next and not have any information to help you take the next step.\nOur genetic tests aim to provide information based on medical papers that is useful for health management.\n
+We will support you in incorporating the test results into your daily life in an easy-to-understand format.\nWe will provide you with a concrete action plan to make the most of your genetic information and live a healthy and fulfilling life.\nPlease take advantage of our genetic testing services to make your future healthier and brighter.`
                     .split("\n")
                     .map((line, index) => (
                         <Text

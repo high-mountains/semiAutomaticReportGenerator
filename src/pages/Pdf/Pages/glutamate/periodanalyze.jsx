@@ -23,8 +23,8 @@ const Periodanalyze = (props) => {
         {
             Component: PageHeader,
             data: {
-                subtitle: "Glutamate Type",
-                mainTitle: "グルタメートタイプ",
+                // subtitle: "Glutamate Type",
+                mainTitle: "Glutamate Type",
             },
         },
 
@@ -32,13 +32,13 @@ const Periodanalyze = (props) => {
             Component: Fourperiod,
             data: {
                 firstSenctences:
-                    "グルタメートタイプの子どもは<span class='bold'>好奇心旺盛</span>で、<span class='bold'>学びたいという強い欲求</span>を持ち、<span class='bold'>知識吸収が速いこと</span>が多いです。集中力も高く、特定の遊びや学びに没頭する傾向があります。ただし、脳の発達が著しい時期に過剰なグルタミン酸は、<span class='bold'>脳の発達や行動への影響リスクがある</span>とされています。",
+                    "Children with glutamate type tend to be <span class='bold'>curious</span>, have a <span class='bold'>strong desire to learn</span>, and <span class='bold'>absorb knowledge quickly</span>. They also have high concentration and tend to become engrossed in specific play and learning. However, excessive glutamate during periods of rapid brain development is said to pose a risk of affecting brain development and behavior.",
                 secondSenctences:
-                    "思春期に入ると、知識欲がさらに高まり、<span class='bold'>自己探求</span>に強い関心を示すようになります。興味がある分野には驚異的な集中力を発揮し、没頭する一方、興味のない分野にはほとんど関心を示さない傾向があります。好きな学業では高成績を収める反面、他の教科には力を入れないこともあります。また、周囲の評価を気にせず自分の興味に邁進し、完璧を求めることもあります。この時期は<span class='bold'>感情の起伏が激しく</span>、<span class='blue'>ホルモンバランス</span>の変化や脳の再構築の影響で、過剰なグルタミン酸が<span class='bold'>情緒不安定や衝動的な行動</span>を引き起こす可能性があるため、注意が必要です。",
+"When they enter adolescence, their desire for knowledge increases and they become very interested in self-exploration. They have an incredible ability to concentrate and become absorbed in subjects that interest them, but tend to show little interest in subjects that do not interest them. They may achieve high grades in their favorite subjects, but may not put much effort into other subjects. They may also pursue their own interests without worrying about the opinions of others and strive for perfection. During this period, their emotions are intense, and due to changes in their hormone balance and brain restructuring, excess glutamate may cause emotional instability and impulsive behavior, so caution is required.",
                 thirdSenctences:
-                    "大人になると、高い集中力と知識を活かしてキャリアや家庭で成功しやすく、<span class='bold'>新しいことを学び続けよう</span>とする姿勢が強く見られます。しかし、仕事や家庭のプレッシャーから<span class='bold'>ストレス</span>が蓄積しやすくなり、それがグルタミン酸レベルに影響を与え、<span class='bold'>慢性的な不安</span>や<span class='bold'>うつ症状</span>を悪化させる可能性があるため、注意が必要です。",
+"As adults, they tend to be successful in their careers and at home thanks to their high level of concentration and knowledge, and have a strong desire to continue learning new things. However, they are more likely to accumulate stress from work and family pressures, which can affect glutamate levels and worsen chronic anxiety and depression, so caution is required.",
                 fourthSenctences:
-                    "更年期以降、ホルモンバランスの変化がグルタミン酸の代謝に影響を与え、<span class='bold'>集中力</span>や<span class='bold'>記憶力</span>が低下することがあるとされています。また、この時期は<span class='bold'>神経変性疾患</span>のリスクも徐々に高まると考えられています。グルタミン酸が過剰になると、神経毒性が生じる可能性があり、それが<span class='bold'>認知機能の低下</span>や<span class='bold'>気分の変動</span>と関連することがあるため、注意が必要です。",
+"After menopause, changes in hormone balance affect glutamate metabolism, which can lead to a decline in concentration and memory. It is also believed that the risk of neurodegenerative diseases gradually increases during this period. Excess glutamate can cause neurotoxicity, which can be associated with cognitive decline and mood swings, so caution is required.",
             },
         },
 
@@ -47,38 +47,38 @@ const Periodanalyze = (props) => {
             data: {
                 wrapperWidth: "525rem",
                 mainColor: mainColor,
-                description: "グルタメートタイプのおすすめ生活改善",
+                description: "Recommended lifestyle improvements for glutamate types",
                 gap: 10,
                 qualities1: [
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
                             renderedPdfFlag ? "12" : "4"
-                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>食品添加物としてグルタミン酸を多く含む食品、ジャンクフードなどの摂取を控える。</p>`,
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Avoid consuming junk food and foods that contain a lot of glutamic acid as a food additive.</p>`,
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
                             renderedPdfFlag ? "12" : "4"
-                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p><span class='blue'>グルテンフリー</span>を心掛け、野菜や果物などを多く摂る。</p>`,
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p><span class='blue'>Gluten Free</span>Try to eat plenty of vegetables and fruits.</p>`,
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
                             renderedPdfFlag ? "12" : "4"
-                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>オメガ-3脂肪酸（魚類、亜麻仁油、チアシードなど）を含む食品を摂取し、脳の健康をサポー\nトする。</p>`,
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Eat foods that contain omega-3 fatty acids (such as fish, flaxseed oil, and chia seeds) to support brain health.</p>`,
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
                             renderedPdfFlag ? "12" : "4"
-                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>神経毒性を緩和させるためにデトックス生活を心掛ける。薬味などの食材を取り入れる。</p>`,
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>In order to alleviate neurotoxicity, try to live a detox lifestyle and incorporate condiments and other ingredients.</p>`,
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
                             renderedPdfFlag ? "12" : "4"
-                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>規則正しい睡眠習慣を持ち、睡眠を確保する。</p>`,
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Have regular sleep habits and get enough sleep.</p>`,
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
                             renderedPdfFlag ? "12" : "4"
-                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>寝る前のリラクゼーションルーティンを設け、睡眠の質を向上させる。</p>`,
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Establish a relaxation routine before bed to improve the quality of your sleep.</p>`,
                     },
                 ],
                 oneColumnStatus: true,
@@ -88,7 +88,7 @@ const Periodanalyze = (props) => {
                 ulStyle1: {
                     display: "flex",
                     flexDirection: "column",
-                    gap: "6rem",
+                    gap: "-1rem",
                     lineHeight: 1.448333,
                     fontSize: "12rem",
                 },

@@ -24,8 +24,8 @@ const Concept = () => {
         {
             Component: PageHeader,
             data: {
-                subtitle: "Glutamate Type",
-                mainTitle: "グルタメートタイプ"
+                // subtitle: "Glutamate Type",
+                mainTitle: "Glutamate Type"
             }
         },
         {
@@ -33,16 +33,16 @@ const Concept = () => {
             data: {
                 imageURL: "./bg/Glutamate_Avatar.png",
                 concept:
-                    "<span style='color: #007AFF;'>グルタメート</span>タイプは、",
+                    "<span style='color: #007AFF;'>Glutamate</span>Type is",
                 description:
-                    "脳の興奮物質である、<span class='blue'>グルタミン酸</span>の代謝やその調節がスムーズに行われにくく、脳内にグルタミン酸が多くなりやすい傾向があるタイプです。"
+                    "This type of disorder makes it difficult for the metabolism and regulation of glutamate, a stimulant substance in the brain, to function smoothly, and tends to have an excess of glutamate in the brain."
             }
         },
         {
             Component: Explanation,
             data: {
-                question: "グルタメートタイプとは",
-                answer: "グルタミン酸は、脳の信号伝達を促進し、学習や記憶の形成に重要な役割を果たしているとされる脳内興奮性神経伝達物質のひとつです。脳の<span style='color: #007AFF;'>ニューロン</span>間のコミュニケーションに深く関与していると考えられており、頭の回転が早く、記憶力の優れた人の多くがこのグルタメートタイプに該当する可能性があります。 \n ただし、グルタミン酸が脳内で過剰に増加すると、リラックスが難しくなり、疲労感を感じやすくなったり、精神的な疾患のリスクが高まることが特徴として挙げられます。 将来的には、脳にかかる負荷が大きくなることで<span class='blue'>神経変性疾患</span>のリスクが高まる可能性があるため、バランスの取れた食事や適切なストレス管理が重要です。",
+                question: "What is Glutamate Type",
+                answer: "Glutamate is one of the excitatory neurotransmitters in the brain that is said to promote signal transmission in the brain and play an important role in learning and memory formation. It is thought to be deeply involved in communication between the brain's <span style='color: #007AFF;'>neurons</span>, and many people with quick minds and excellent memories may belong to this glutamate type. However, if glutamate increases excessively in the brain, it becomes difficult to relax, people tend to feel fatigued, and the risk of mental illness increases. In the future, the increased strain on the brain may increase the risk of neurodegenerative diseases, so a balanced diet and proper stress management are important.",
                 sidebarColor: maincolor
             }
         },
@@ -52,30 +52,30 @@ const Concept = () => {
                 wrapperWidth: "535rem",
                 sidebarColor: maincolor,
                 description:
-                    "カテコラミンタイプの特性には、以下のような可能性があります。",
+                    "Catecholamine-type properties may include the following:",
                 qualities1: [
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>学習欲や知識欲が強い</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Strong desire to learn and have knowledge</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>興味のあることに没頭する</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Immerse yourself in things that interest you</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>記憶力が良い</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Good memory</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>頭の回転が早い天才タイプ</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Quick-witted genius type</p>`
                     }
                 ],
                 qualities2: [
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>リラックスしづらい</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Difficulty relaxing</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>不眠になりやすい</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Prone to insomnia</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>周囲の雰囲気を気にしない</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Not paying attention to the surroundings</p>`
                     }
                 ],
             },
