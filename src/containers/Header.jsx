@@ -170,16 +170,16 @@ function Header() {
         });
 
       notification['success']({
-        message: '成功',
+        message: 'Success',
         description:
-          'アップロード完了',
+          'File is Downloaded',
           key: new Date().getTime(), // Use a unique key each time
       });
 
       setTimeout(() => {notification['success']({
-        message: '成功',
+        message: 'Success',
         description:
-          'データの上書きに成功',
+          'Data is overwrited',
           key: new Date().getTime(), // Use a unique key each time
       });}, 500)
   }
@@ -192,9 +192,9 @@ function Header() {
     await dispatch(setPdfFlag(false));
     
     notification['success']({
-      message: '成功',
+      message: 'Success',
       description:
-        '検査報告書作成完了',
+        'Analysis Report is created',
         key: new Date().getTime(), // Use a unique key each time
     });
   }
@@ -219,7 +219,7 @@ function Header() {
                 flexDirection: 'row',
                 alignItems: 'center'
               }}
-            ><DocumentPlusIcon className={"fill-current w-[28rem] h-[25rem]"}/><p className="ml-[3rem] text-[14rem]">CSVファイルのインポート</p></label>
+            ><DocumentPlusIcon className={"fill-current w-[28rem] h-[25rem]"}/><p className="ml-[3rem] text-[14rem]">Upload CSV File</p></label>
         </div>
 
         <div className="mr-[10rem]">
@@ -227,7 +227,7 @@ function Header() {
               className="font bg-[#00C3D0] text-[#fff] hover:bg-[#b4eeef] hover:text-[#00C3D0] rounded-[5rem] flex flex-row items-center justify-center p-[8rem]"
               onClick={() => handleDownloadPdf()}
           >
-              <ArrowDownTrayIcon className={"fill-current w-[28rem] h-[25rem]"}/><p className="ml-[3rem] text-[14rem]">PDFダウンロード</p>
+              <ArrowDownTrayIcon className={"fill-current w-[28rem] h-[25rem]"}/><p className="ml-[3rem] text-[14rem]">PDF Download</p>
           </button>
         </div>
 

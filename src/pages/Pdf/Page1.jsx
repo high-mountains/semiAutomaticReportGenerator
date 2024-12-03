@@ -30,7 +30,6 @@ function Page1() {
             };
         });
         return () => {
-            // optional cleanup code (only if needed)
         };
     }, [pdfData]);
 
@@ -45,24 +44,21 @@ function Page1() {
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
-                    // justifyContent: "space-between",
                     color: "#484F51",
                     width: "595px",
                     height: "841px",
                     borderRadius: "2px"
-                    // backgroundColor: "red"
                 }}
-                // className="page font printUnit"
                 className="font printUnit"
             >
                 {/* Top Nav */}
                 <div
-                    className="w-full h-[30rem] mb-[243rem]"
+                    className="w-full h-[30rem] mb-[203rem]"
                     style={{ backgroundColor: "#00C3D0" }}
                 ></div>
 
                 <Text
-                    textContent={"遺伝子検査レポート"}
+                    textContent={"Genetic Analysis Report"}
                     textColor={"#00C3D0"}
                     fontSize={32}
                     className={"font-bold text-center"}
@@ -72,7 +68,7 @@ function Page1() {
                 />
 
                 <Text
-                    textContent={`${data.clientName}様   (ID:${data.clientId})\n検査結果通知日 ：2024年10月1日`}
+                    textContent={`Mr/Mrs${data.clientName}   (ID:${data.clientId})\nInspection Result Notification Date ：10/01/2024`}
                     textColor={"#00C3D0"}
                     className={
                         "font-bold text-center mb-[162rem] pt-[21rem] whitespace-pre-wrap"
@@ -81,7 +77,7 @@ function Page1() {
 
                 <Text
                     textContent={
-                        "本ゲノム検査は医療行為ではありません。\nまた従って診断確定に用いることもできません。\n見つかった遺伝子変異に関連する疾患の情報は教育目的で提供するもので、特定の人物についての発症の有無や症状の進展、治療法等について医師が提供する情報に代わるものではありません。\n気になる変異が見つかった場合には、本レポートを参考に主治医、かかりつけ医などの医療機関にお持ちするなど、医療的な診断を受けることを勧めています。"
+                        "  This genomic testing is not a medical procedure.\n  Therefore, it cannot be used to confirm a diagnosis.\n  Information on diseases associated with the genetic mutations found is provided for educational purposes only, and is not intended to replace information provided by a physician on whether or not a particular person has the disease, the progression of symptoms, or treatment options.\n  Information on diseases associated with the genetic mutations found is provided for educational purposes only, and is not intended to replace information provided by a physician on whether or not a particular person has the disease, the progression of symptoms, or treatment options."
                     }
                     fontSize={12}
                     style={{
@@ -92,8 +88,6 @@ function Page1() {
                         borderWidth: "1rem",
                         borderColor: "#00C3D0",
                         borderRadius: "12rem",
-                        // paddingTop: '19rem',
-                        // paddingBottom: "19rem",
                         paddingRight: "13rem",
                         paddingLeft: "14rem",
                         marginBottom: "67rem",
@@ -103,7 +97,7 @@ function Page1() {
                 />
 
                 <div className="mb-[16rem] w-[176rem] h-[33rem]">
-                    <img src="/bg/JENE_Logo.svg" alt="JENE仮ロゴ横_0604 1" />
+                    {/* <img src="/bg/JENE_Logo.svg" alt="JENE仮ロゴ横_0604 1" /> */}
                 </div>
 
                 <div

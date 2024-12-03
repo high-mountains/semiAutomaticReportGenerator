@@ -1,11 +1,10 @@
-// import TemplatePointers from "./components/TemplatePointers"
 
 function LandingIntro() {
     return (
         <div
             className="hero"
             style={{
-                minHeight: "100%", // Equivalent to min-h-full
+                minHeight: "100%", 
                 borderTopLeftRadius: "12px", // Equivalent to rounded-l-[12px]
                 borderBottomLeftRadius: "12px", // Equivalent to rounded-l-[12px]
                 backgroundColor: "#f5f5f5", // Replace with the actual bg-base-100 color
@@ -26,39 +25,37 @@ function LandingIntro() {
             >
                 <div
                     style={{
-                        maxWidth: "448px", // Equivalent to max-w-[448px]
+                        maxWidth: "448px", 
                     }}
                 >
                     <h1
                         style={{
-                            fontSize: "30px", // Equivalent to text-[30px]
-                            textAlign: "center", // Equivalent to text-center
-                            fontWeight: "bold", // Equivalent to font-bold
+                            fontSize: "30px",
+                            textAlign: "center",
+                            fontWeight: "bold"
                         }}
                     >
-                        DNA報告書
+                        Genetic Analysis Report
                         <br />
-                        半自動生成システム{" "}
+                        semi-automatic export system{" "}
                     </h1>
 
                     <div
                         style={{
-                            textAlign: "center", // Equivalent to text-center
-                            marginTop: "48px", // Equivalent to mt-[48px]
+                            textAlign: "center",
+                            marginTop: "48px"
                         }}
                     >
                         <img
                             src="./bg/SocialNoFriends.png"
-                            alt="Dashwind Admin Template"
+                            alt="Gene DNA"
                             style={{
-                                width: "192px", // Equivalent to w-[192px]
-                                display: "inline-block", // Equivalent to inline-block
+                                width: "192px",
+                                display: "inline-block"
                             }}
                         ></img>
                     </div>
 
-                    {/* Importing pointers component */}
-                    {/* <TemplatePointers /> */}
                 </div>
             </div>
         </div>

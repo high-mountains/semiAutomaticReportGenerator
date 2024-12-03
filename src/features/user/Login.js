@@ -15,27 +15,10 @@ function Login() {
     password: "",
     userId: "",
   };
-  // const { token, isLoading, error } = useSelector((store) => store.user);
-  // const token = true
-  // const dispatch = useDispatch();
-  // const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [loginObj, setLoginObj] = useState(INITIAL_LOGIN_OBJ);
   useEffect(() => {
-    // inputRef.current.focus();
   },[])
-  // useEffect(() => {
-    // if (token) {
-    //   navigate('/dashboard', { replace: true });
-    // }
-  // }, [token]);
-  // useEffect(() => {
-  //   // console.log("errro change");
-  //  setErrorMessage(error);
-  //   setTimeout(() => {
-  //     dispatch(resetError());
-  //   }, 3000);
-  // },[error])
   const submitForm = async (e) => {
     try {
       e.preventDefault();
@@ -62,7 +45,6 @@ function Login() {
     } catch (error) {
       console.log(error);
     }
-    // navigate('/dashboard', { replace: true });
   };
 
   const updateFormValue = ({ updateType, value }) => {
@@ -78,7 +60,7 @@ function Login() {
             <LandingIntro />
           </div>
           <div className="py-[96px] px-[40px]">
-            <h2 className="text-[30px] font-semibold mb-[8px]} text-center">ログイン</h2>
+            <h2 className="text-[30px] font-semibold mb-[8px]} text-center">Login</h2>
             <form onSubmit={(e) => submitForm(e)}>
               <div className="mb-[12px]">
                 <InputText
@@ -87,7 +69,7 @@ function Login() {
                   defaultValue={loginObj.userId}
                   updateType="userId"
                   containerStyle="mt-[12px]"
-                  labelTitle="ユーザーID"
+                  labelTitle="User Email"
                   updateFormValue={updateFormValue}
                 />
 
@@ -96,18 +78,10 @@ function Login() {
                   type="password"
                   updateType="password"
                   containerStyle="mt-[12px]"
-                  labelTitle="パスワード"
+                  labelTitle="Password"
                   updateFormValue={updateFormValue}
                 />
               </div>
-
-              {/* <div className="text-right">
-                <Link replace to="/forgot-password">
-                  <span className="text-[14px]  inline-block  hover:text-[#00C3D0] underline hover:cursor-pointer transition duration-200">
-                  パスワードをお忘れですか？
-                  </span>
-                </Link>
-              </div> */}
 
               <ErrorText styleClass="mt-[32px]">{errorMessage}</ErrorText>
               <button
@@ -116,17 +90,9 @@ function Login() {
                   "btn mt-[8px] w-full btn-primary bg-[#00C3D0] border-[#00C3D0] h-[44px] text-[20px] rounded-[4px]"
                 }
               >
-                ログイン
+                Login
               </button>
 
-              {/* <div className="text-center  mt-[16px]">
-                Are you new here?{" "}
-                <Link to="/register" replace>
-                  <span className="  inline-block  hover:text-[#00C3D0] underline hover:cursor-pointer transition duration-200">
-                    Register
-                  </span>
-                </Link>
-              </div> */}
             </form>
           </div>
         </div>

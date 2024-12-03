@@ -65,7 +65,7 @@ function Page3() {
                                 }}
                             />
                             <Text
-                                textContent={"あなたの遺伝子タイプ"}
+                                textContent={"Your Genotype"}
                                 fontSize={32}
                                 className={"font-bold"}
                                 style={{
@@ -75,7 +75,7 @@ function Page3() {
                                 }}
                             />
                             <Text
-                                textContent={"あなたの遺伝子タイプは...."}
+                                textContent={"Your genotype is...."}
                                 style={{
                                     lineHeight: 1.448125,
                                     marginLeft: "35rem",
@@ -93,14 +93,12 @@ function Page3() {
                                         marginRight: "35rem",
 
                                         paddingBottom: "11.5rem",
-                                        // paddingTop: "-8rem",
-                                        // paddingTop: `${ renderedPdfFlag ? '-8' : '11.5' }rem`,
                                     }}
                                     className={"whitespace-pre-wrap"}
                                 >
                                     <Text
                                         textContent={
-                                            "グルタメートタイプ\nカテコラミンタイプ\nヒスタミンタイプ "
+                                            "Glutamate type\n-Catecholamine type\n-Histamine type"
                                         }
                                         className={
                                             "whitespace-pre-wrap font-bold"
@@ -113,7 +111,7 @@ function Page3() {
                                     />
                                     <Text
                                         textContent={
-                                            "ミトコンドリアタイプ\nデトックスタイプ\nメチレーションタイプ "
+                                            "Mitochondrial type\nDetox type\nMethylation type"
                                         }
                                         className={
                                             "whitespace-pre-wrap font-bold"
@@ -131,7 +129,7 @@ function Page3() {
                         <div className="h-[315rem] pt-[20rem] flex flex-col items-center relative">
                             <SpiderChart />
                             <p className="absolute bottom-[20rem] right-[30rem] text-[9rem] text-[#484F51]">
-                                ※点数が高いほど、タイプとしての特徴がより強い傾向にあります。
+                                ※The higher the score, the stronger the characteristics as a type tend to be.
                             </p>
                         </div>
 
@@ -150,7 +148,7 @@ function Page3() {
                             <Text
                                 sidebar={1}
                                 sidebarColor={"#00C3D0"}
-                                textContent="遺伝子とは？"
+                                textContent="What are genes?"
                                 style={{
                                     marginBottom: `${ renderedPdfFlag ? '' : '10.5' }rem`,
                                 }}
@@ -165,7 +163,7 @@ function Page3() {
                             >
                                 <Text
                                     textContent={
-                                        "身体の特徴を左右する「人体の設計図」です。遺伝子によって、人それぞれの特性が異なることが分かっています。\nたとえば、遺伝子の違いによって、ある人は食べ物の消化が得意だったり、ストレスに強かったりするかもしれません。また、遺伝子の情報を知ることで、より効果的な健康管理や病気の予防ができる可能性があります。"
+                                        "It is the “blueprint of the human body” that determines physical characteristics. It is known that each person's characteristics differ according to his or her genes.\nFor example, different genes may make one person better at digesting food or more resilient to stress."
                                     }
                                     bgColor={"FFF"}
                                     fontSize={14}
@@ -176,7 +174,7 @@ function Page3() {
                                         width: "308rem",
                                         height: "159rem",
                                         lineHeight: 1.4478,
-                                        marginTop: `${ renderedPdfFlag ? '1' : '10.5' }rem`,
+                                        marginTop: `${ renderedPdfFlag ? '1' : '15.5' }rem`,
                                     }}
                                 />
                                 <div
@@ -195,10 +193,8 @@ function Page3() {
                             <PageNumber bottom={11.75}>03</PageNumber>
                         </div>
                     </div>
-                    {/* <div className={`page font border-[1rem] border-[rgba(0,0,0,0.1)] rounded-[2rem] relative printUnit`}> */}
                 </div>
             </div>
-            {/* </div> */}
         </>
     );
 }

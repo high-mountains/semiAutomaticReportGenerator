@@ -68,7 +68,7 @@ function Page2() {
                         style={{ width: "505rem" }}
                     >
                         <Text
-                            textContent={"1.あなたの遺伝子タイプ"}
+                            textContent={"1.Your Genotype"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -92,7 +92,7 @@ function Page2() {
                         style={{ width: "505rem" }}
                     >
                         <Text
-                            textContent={"私たちの遺伝子検査について"}
+                            textContent={"About our genetic testing"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -117,7 +117,7 @@ function Page2() {
                         style={{ width: "505rem" }}
                     >
                         <Text
-                            textContent={"グルタメートタイプ"}
+                            textContent={"Glutamate type"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -142,7 +142,7 @@ function Page2() {
                         style={{ width: "505rem" }}
                     >
                         <Text
-                            textContent={"カテコラミンタイプ"}
+                            textContent={"Catecholamine type"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -167,7 +167,7 @@ function Page2() {
                         style={{ width: "505rem" }}
                     >
                         <Text
-                            textContent={"ヒスタミンタイプ"}
+                            textContent={"Histamine type"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -192,7 +192,7 @@ function Page2() {
                         style={{ width: "505rem" }}
                     >
                         <Text
-                            textContent={"ミトコンドリアタイプ"}
+                            textContent={"Mitochondrial type"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -217,7 +217,7 @@ function Page2() {
                         style={{ width: "505rem" }}
                     >
                         <Text
-                            textContent={"デトックスタイプ"}
+                            textContent={"Detox type"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -242,7 +242,7 @@ function Page2() {
                         style={{ width: "505rem" }}
                     >
                         <Text
-                            textContent={"メチレーションタイプ"}
+                            textContent={"Methylation type"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -270,7 +270,7 @@ function Page2() {
                     >
                         <Text
                             textContent={
-                                "2.あなたにおすすめのサプリメントや生活習慣"
+                                "2. Recommended supplements and lifestyle for you"
                             }
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
@@ -295,7 +295,7 @@ function Page2() {
                         style={{ width: "505rem" }}
                     >
                         <Text
-                            textContent={"サプリメント計画表"}
+                            textContent={"Supplemental Plan Chart"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -321,7 +321,7 @@ function Page2() {
                     >
                         <Text
                             textContent={
-                                "変異のある遺伝子のカテゴリーと変異度合い"
+                                "Categories of genes with mutations and the degree of mutation"
                             }
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
@@ -349,7 +349,7 @@ function Page2() {
                         style={{ width: "505rem" }}
                     >
                         <Text
-                            textContent={"3.あなたの遺伝子情報"}
+                            textContent={"3. Your genetic information"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -373,7 +373,7 @@ function Page2() {
                         style={{ width: "505rem" }}
                     >
                         <Text
-                            textContent={"遺伝子のカテゴリーと働きと変異度合い"}
+                            textContent={"Gene categories, features and mutation levels"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
@@ -399,7 +399,7 @@ function Page2() {
                         style={{ width: "505rem" }}
                     >
                         <Text
-                            textContent={"4.参考・引用論文"}
+                            textContent={"4.References"}
                             textColor={`${data.mainTextColor}`}
                             fontSize={16}
                             className={"font-bold"}
