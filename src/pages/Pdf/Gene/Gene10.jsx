@@ -18,7 +18,7 @@ const initialGeneData = [
       "この遺伝子に変異がある場合、気分や行動、認知機能に変化を引き起こす可能性があります。HTR2A（5-Hydroxytryptamine Receptor 2A）は、セロトニン2A受容体をコードしています。この受容体は、中枢神経系のGタンパク質共役型受容体で、セロトニンが結合すると、細胞内のシグナル伝達経路を活性化します。",
   },
   {
-    geneName: "GAD1",
+    geneName: "MAOA",
     datas: ["rs6323", "rs1137070", "rs72554632", "rs796065312"],
     level: 0,
     description:
