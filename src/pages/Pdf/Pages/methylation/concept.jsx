@@ -31,7 +31,7 @@ const Concept = () => {
         {
             Component: Outline,
             data: {
-                imageURL: "./bg/methylation.png",
+                imageURL: "./bg/methylation.webp",
                 concept: "メチレーションタイプは、",
                 description:
                     "体内の必須システムであるメチレーションの機能が低下し、ホルモンのバランスが安定しにくい傾向があるタイプです。"

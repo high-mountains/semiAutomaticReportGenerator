@@ -23,7 +23,7 @@ const Concept = () => {
                 mainTitle: "ミトコンドリアタイプ"}},
         {Component: Outline,
             data:{
-                imageURL: "./bg/mitochondrial.png",
+                imageURL: "./bg/mitochondrial.webp",
                 concept: "ミトコンドリアタイプは、",
                 description: "体のエネルギーを生成するミトコンドリアの機能が十分に発揮されにくく、エネルギーを作る機能が低下しやすい傾向があるタイプです。"
             }

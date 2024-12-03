@@ -31,7 +31,7 @@ const Concept = () => {
         {
             Component: Outline,
             data: {
-                imageURL: "./bg/Glutamate_Avatar.png",
+                imageURL: "./bg/Glutamate_Avatar.webp",
                 concept:
                     "<span style='color: #007AFF;'>グルタメート</span>タイプは、",
                 description:

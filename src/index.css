@@ -13,7 +13,7 @@
 
 html {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 14px;
+  /* font-size: 14px; */
   
   /* color: hsla(var(--bc)/ var(--tw-text-opacity, 1)); */
 }
@@ -138,8 +138,9 @@ button,
 }
 
 .bg-pic {
-  background-image: url("../public/bg/background_outrun.jpg");
+  background-image: url("../public/bg/background_outrun.webp");
   background-size: cover;
+  background-position: center;
 }
 
 .ant-btn-primary {

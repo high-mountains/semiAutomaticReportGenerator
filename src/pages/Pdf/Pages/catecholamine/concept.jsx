@@ -31,7 +31,7 @@ const Concept = () => {
         {
             Component: Outline,
             data: {
-                imageURL: "./bg/catecholamine.png",
+                imageURL: "./bg/catecholamine.webp",
                 concept: "カテコラミンタイプは、",
                 description:
                     "脳の興奮物質である、カテコラミンの代謝やその調節がスムーズに行われにくく、脳内にカテコラミンが多くなりやすい傾向があるタイプです。"
@@ -56,42 +56,32 @@ const Concept = () => {
                 qualities1: [
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>集中力が高い</p>`
-                        // content: "集中力が高い"
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>行動力がある</p>`
-                        // content: "行動力がある"
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>瞬発力があり決断が早い</p>`
-                        // content: "瞬発力があり決断が早い"
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>目標を立てることが好き</p>`
-                        // content: "目標を立てることが好き"
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>リーダー気質</p>`
-                        // content: "リーダー気質"
                     },
                 ],
                 qualities2: [
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>イライラしやすい</p>`
-                        // content: "イライラしやすい"
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>気分の浮き沈みが激しい</p>`
-                        // content: "気分の浮き沈みが激しい"
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>不眠になりやすい</p>`
-                        // content: "不眠になりやすい"
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>依存症になりやすい（ショッピン\nグ、ゲーム、ギャンブルなど）</p>`
-                        // content:
-                            // "依存症になりやすい（ショッピン\n     グ、ゲーム、ギャンブルなど）"
                     },
                 ],
             },

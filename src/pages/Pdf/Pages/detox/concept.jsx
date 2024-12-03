@@ -26,7 +26,7 @@ const Concept = () => {
                 mainTitle: "デトックスタイプ"}},
         {Component: Outline,
             data:{
-                imageURL: "./bg/detox.png",
+                imageURL: "./bg/detox.webp",
                 concept: "デトックスタイプは、",
                 description: "体内の毒素を排出する、解毒の機能が充分に発揮されにくく、体内に毒素が蓄積しやすい傾向があるタイプです。"
             }

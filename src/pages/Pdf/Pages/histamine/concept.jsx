@@ -26,7 +26,7 @@ const Concept = () => {
                 mainTitle: "ヒスタミンタイプ"}},
         {Component: Outline,
             data:{
-                imageURL: "./bg/histamine.png",
+                imageURL: "./bg/histamine.webp",
                 concept: "ヒスタミンタイプは、",
                 description: "アレルギー症状にも深く関わっているヒスタミンの代謝やその調節がスムーズに行われにくく、脳内にヒスタミンが多くなりやすい傾向があるタイプです。"
             }

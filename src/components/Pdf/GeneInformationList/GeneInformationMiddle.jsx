@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { useSelector } from "react-redux";
 
 const GeneInformationMiddle = (props) => {
-    const { datas, geneName, level, description } = props;
+    const { datas = [], geneName, level, description } = props;
     const initialData = datas.reduce((acc, key) => ({ ...acc, [key]: "" }), {});
     const [data, setData] = useState(initialData);
     const flag = useSelector((state) => state.pdfData.geneInformationListData);

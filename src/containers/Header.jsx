@@ -12,6 +12,7 @@ import Bars3Icon from "@heroicons/react/24/outline/Bars3Icon";
 import MoonIcon from "@heroicons/react/24/outline/MoonIcon";
 import SunIcon from "@heroicons/react/24/outline/SunIcon";
 import ArrowDownTrayIcon from "@heroicons/react/24/outline/ArrowDownTrayIcon"
+import DocumentPlusIcon from "@heroicons/react/24/outline/DocumentPlusIcon"
 import { toggleOpen } from "../features/common/sidebarSlice";
 import { Tooltip } from 'antd';
 import { logOut } from "../features/user/userSlice";
@@ -60,6 +61,8 @@ function Header() {
 
   const downloadPDF = async (title = "") => {
     let elements = document.querySelectorAll(".printUnit");
+
+    let elementsLength = elements.length;
     // console.log("elements.length===>", elements.length);
 
     // Set total elements count
@@ -110,7 +113,7 @@ function Header() {
 
     const batchSize = 6; // Set a smaller batch size for better stability
 
-    for (let i = 0; i < elements.length; i += batchSize) {
+    for (let i = 0; i < elementsLength; i += batchSize) {
       
       const batch = Array.from(elements).slice(i, i + batchSize);
       
@@ -120,12 +123,12 @@ function Header() {
       await processBatch(batch);
 
       // Optional: Adding a short delay to avoid freezing the browser
-      await new Promise((resolve) => setTimeout(resolve, 100));
+      await new Promise((resolve) => setTimeout(resolve, 200));
       // console.log(`Processed batch ${i / batchSize + 1}`);
     }
 
     // Save the PDF
-    pdf.save("download.pdf");
+    pdf.save("遺伝子検査報告書.pdf");
 
     // Reset current page after processing
     setCurrentPage(0);
@@ -193,13 +196,13 @@ function Header() {
         '検査報告書作成完了',
         key: new Date().getTime(), // Use a unique key each time
     });
-  
   }
 
   return (
     <>
       <div className="z-10 flex justify-between shadow-md navbar bg-base-100 py-[4rem]">
         <div className="ml-[10rem]" >
+          
           <input
                 type="file"
                 id="file"
@@ -209,7 +212,13 @@ function Header() {
                 onChange={handleFolderUpload}
                 className="font bg-[#00C3D0] text-[#fff] hover:bg-[#b4eeef] hover:text-[#00C3D0] w-[200rem] h-[25rem] text-[16rem]"
             />
-            <label htmlFor="file" className="custom-file-label ">CSVファイルのインポート</label>
+            <label htmlFor="file" className="custom-file-label flex"
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center'
+              }}
+            ><DocumentPlusIcon className={"fill-current w-[28rem] h-[25rem]"}/><p className="ml-[3rem] text-[14rem]">CSVファイルのインポート</p></label>
         </div>
 
         <div className="mr-[10rem]">
