@@ -13,7 +13,6 @@ const initialGeneData = [
   {
     geneName: "BCHE",
     datas: [
-      "rs2668207",
       "rs1803274",
       "rs1799807",
       "rs28933389",
@@ -54,7 +53,7 @@ const Gene102 = () => {
         />
       ))}
 
-      <GenePageNumber>135</GenePageNumber>
+      <GenePageNumber>132</GenePageNumber>
     </PageWrapper>
   );
 };

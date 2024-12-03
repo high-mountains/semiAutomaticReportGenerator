@@ -25,10 +25,17 @@ const initialGeneData = [
   },
   {
     geneName: "DRD4",
-    datas: ["rs11246226", "rs916455", "rs4331145", "rs180095"],
+    datas: ["rs4331145", "rs180095"],
     level: 0,
     description:
       "この遺伝子に変異がある場合、注意力や行動の抑制に影響を与える可能性があります。DRD4（Dopamine Receptor D4）は、ドーパミンD4受容体をコードしており、DRD2と同様にアデニル酸シクラーゼを抑制するGタンパク質共役型受容体です。DRD4は、特に前頭前皮質に高発現しており、認知機能や感情の調節、注意の制御に関連しています。",
+  },
+  {
+    geneName: "GAD1",
+    datas: ["rs769390", "rs2241165"],
+    level: 0,
+    description:
+      "この遺伝子に変異がある場合、グルタミン酸からGABAへの変換が阻害される可能性があります。GAD1（Glutamate Decarboxylase 1）は、グルタミン酸脱炭酸酵素（GAD67）をコードしています。この酵素は、グルタミン酸を脱炭酸してGABA（γ-アミノ酪酸）を生成する役割を担います。",
   },
 ];
 
@@ -54,7 +61,7 @@ const Gene104 = () => {
         />
       ))}
 
-      <GenePageNumber>137</GenePageNumber>
+      <GenePageNumber>134</GenePageNumber>
     </PageWrapper>
   );
 };

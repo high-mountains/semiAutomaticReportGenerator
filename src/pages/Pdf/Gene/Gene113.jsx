@@ -10,13 +10,6 @@ import { updateDangerLevel } from "../Supplement/updateDangerValues.js";
 // Centralized initial gene data
 const initialGeneData = [
   {
-    geneName: "SLC11A2",
-    datas: ["rs224589"],
-    level: 0,
-    description:
-      "この遺伝子に変異がある場合、体内での鉛の蓄積のリスクが高まる可能性があります。SLC11A2は、二価金属イオン輸送タンパク質DMT1（Divalent Metal Transporter 1）をコードしており、特に腸管細胞での鉄の吸収や細胞内での鉄の輸送に関与しています。この輸送タンパク質は、鉄イオンを細胞内に取り込み、体内での鉄の利用を促進します。",
-  },
-  {
     geneName: "TNF",
     datas: ["rs1800629", "rs361525", "rs1799964"],
     level: 0,
@@ -47,7 +40,7 @@ const Gene113 = () => {
         />
       ))}
 
-      <GenePageNumber>146</GenePageNumber>
+      <GenePageNumber>140</GenePageNumber>
     </PageWrapper>
   );
 };
