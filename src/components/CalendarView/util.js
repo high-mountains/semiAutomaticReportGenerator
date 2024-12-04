@@ -9,6 +9,4 @@ module.exports = Object.freeze({
         "PINK" : "bg-pink-200 dark:bg-pink-600 dark:text-pink-100",
         "MORE" : "hover:underline cursor-pointer font-medium "
     }
-
-    
 });

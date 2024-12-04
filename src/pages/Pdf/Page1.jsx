@@ -45,14 +45,11 @@ function Page1() {
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
-                    // justifyContent: "space-between",
                     color: "#484F51",
                     width: "595px",
                     height: "841px",
                     borderRadius: "2px"
-                    // backgroundColor: "red"
                 }}
-                // className="page font printUnit"
                 className="font printUnit"
             >
                 {/* Top Nav */}
@@ -92,13 +89,11 @@ function Page1() {
                         borderWidth: "1rem",
                         borderColor: "#00C3D0",
                         borderRadius: "12rem",
-                        // paddingTop: '19rem',
-                        // paddingBottom: "19rem",
                         paddingRight: "13rem",
                         paddingLeft: "14rem",
                         marginBottom: "67rem",
                         color: "#484F51",
-                        ...(!deliveryFlag ? { paddingTop: "19rem", paddingBottom: "19rem" } : { paddingTop: "14rem", paddingBottom: "24rem" }),
+                        ...(!deliveryFlag ? { paddingTop: "19rem", paddingBottom: "19rem" } : { paddingTop: "13rem", paddingBottom: "25rem" }),
                     }}
                 />
 

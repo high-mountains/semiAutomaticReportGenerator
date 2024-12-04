@@ -19,16 +19,9 @@ const AppContainer = (props) => {
         page: props.title || "unKnown",
         _id: user._id,
       });
-    // if (typeof props.sidebar === 'boolean')
     dispatch(toggleSet(props.sideBar));
   }, [props.title]);
 
-  // useEffect(() => {
-  //   console.log("sideBar:", props.sideBar);
-  // }, [props.sideBar]);
-
-  // useEffect(() => {
-  // }, [props.sidebar])
   return (
     <div className={`flex h-full w-full ${props.fullScreen ? "p-0" : "p-4"}`}>
       <props.element />

@@ -78,4 +78,4 @@ HOC(High Order Component)
 
 ## Feedback
 
-If you have any feedback, please reach out [me] highmountain430@gmail.com
+If you have any feedback, please reach out [me] 🌄highmountain430@gmail.com🌄

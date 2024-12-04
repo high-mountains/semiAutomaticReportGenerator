@@ -1,4 +1,3 @@
-import routes from "../routes/sidebar";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import SidebarSubmenu from "./SidebarSubmenu";
 import Icons from "../components/Icons";
@@ -8,14 +7,10 @@ import { useEffect, useState } from "react";
 
 function LeftSidebar() {
   const location = useLocation();
-  const unread = useSelector(store => store.unread);
-  const { user } = useSelector(state => state.user)
   const { isOpen } = useSelector((store) => store.sidebar);
   const { menu } = useSelector((store) => store.user);
   const [className, setClassName] = useState('drawer-side');
-  const close = (e) => {
-    document.getElementById("left-sidebar-drawer").click();
-  };
+  
   useEffect(() => {
     setClassName(`${isOpen === true ? "drawer-side" : "hidden"}`);
     console.log(`${isOpen === true ? "drawer-side" : "hidden"}`);

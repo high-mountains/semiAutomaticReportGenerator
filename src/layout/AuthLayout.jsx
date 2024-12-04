@@ -1,7 +1,7 @@
 'use client'
 
 import { useAuth } from '../context/AuthContext'
-import { ReactNode, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
 
 const AuthLayout = ({ children }) => {
