@@ -23,7 +23,6 @@ const SupplementTable = () => {
 
     useEffect(() => {
         setDeltaPageCount(storeDelta);
-        console.log(storeDelta);
     }, [storeDelta]);
 
     return (

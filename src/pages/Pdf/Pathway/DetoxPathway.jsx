@@ -4,7 +4,7 @@ import PageWrapper from '../../../components/Pdf/PageWrapper';
 import PageHeader from '../../../components/Pdf/PageHeader';
 import PageNumber from '../../../components/Pdf/PageNumber';
 
-const DetoxPathway = () => {
+const DetoxPathway = ({deltaPageCount}) => {
     return (
         <PageWrapper>
             <PageHeader
@@ -22,7 +22,7 @@ const DetoxPathway = () => {
             <div className='w-[535rem] h-[565rem]'>
                 <img src="bg/detoxPathway.png" alt="" className="w-full h-full" />
             </div>
-            <PageNumber>153</PageNumber>
+            <PageNumber>{153+deltaPageCount}</PageNumber>
         </PageWrapper>
     );
 };

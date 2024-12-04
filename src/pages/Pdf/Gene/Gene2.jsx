@@ -45,7 +45,7 @@ const initialGeneData = [
     },
 ];
 
-const Gene1 = () => {
+const Gene1 = ({deltaPageCount}) => {
     const geneData = useSelector((state) => state.pdfData?.geneData || []);
 
     // Memoize the updated gene data to avoid unnecessary recalculations
@@ -72,7 +72,7 @@ const Gene1 = () => {
                 />
             ))}
 
-            <GenePageNumber>41</GenePageNumber>
+            <GenePageNumber>{deltaPageCount+41}</GenePageNumber>
         </PageWrapper>
     );
 };

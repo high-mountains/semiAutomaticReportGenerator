@@ -160,7 +160,35 @@ const Pathway = lazy(() => import("./Pathway.jsx"));
 
 const Pdf = () => {
     const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
+    
+    // ========================For loading DNA Symbol==============
     const [renderedPdfFlag, setRenderedPdfFlag] = useState(pdfFlag);
+
+    useEffect(() => {
+        setRenderedPdfFlag(pdfFlag);
+    }, [pdfFlag]);
+
+    const [showTotalPage, setShowTotalPage] = useState(
+        useSelector((state) => state.pdfData.totalPage)
+    );
+    const [showCurrentPage, setShowCurrentPage] = useState(
+        useSelector((state) => state.pdfData.currentRunningPage)
+    );
+
+    const receivedShowCurrentPage = useSelector(
+        (state) => state.pdfData.currentRunningPage
+    );
+    const receivedtotalPage = useSelector((state) => state.pdfData.totalPage);
+
+    useEffect(() => {
+        setShowCurrentPage(receivedShowCurrentPage);
+    }, [receivedShowCurrentPage]);
+
+    useEffect(() => {
+        setShowTotalPage(receivedtotalPage);
+    }, [receivedtotalPage]);
+    
+    // ====================For Dynamic Page Reflection==================
     const [extraSupplements, setExtraSupplements] = useState([]);
     const [extraSupplementsForUnSupplement, setExtraSupplementsForUnSupplement] = useState([]);
     
@@ -171,7 +199,6 @@ const Pdf = () => {
 
     useEffect(() => {
         const deltaPage = extraSupplements.length + extraSupplementsForUnSupplement.length;
-        console.log("deltaPage===>", deltaPage);
         dispatch(setDeltaPage(deltaPage))
     }, [extraSupplements, extraSupplementsForUnSupplement])
     useEffect(() => {
@@ -207,21 +234,62 @@ const Pdf = () => {
                         }}
                     >
                         <p className="font text-[#FFFFFF]" style={{ fontSize: "28rem" }}>
-                            遺伝子検査報告書作成中
+                            遺伝子検査報告書作成中 {showCurrentPage}/{showTotalPage}
                         </p>
                         <div className="loader">
-                            {/* Loader dots */}
+                            <div className="dot dot1">
+                             <i></i>
+                         </div>
+                         <div className="dot dot2">
+                             <i></i>
+                         </div>
+                         <div className="dot dot3">
+                             <i></i>
+                         </div>
+                         <div className="dot dot4">
+                             <i></i>
+                         </div>
+                         <div className="dot dot5">
+                             <i></i>
+                         </div>
+                         <div className="dot dot6">
+                             <i></i>
+                         </div>
+                         <div className="dot dot7">
+                             <i></i>
+                         </div>
+                         <div className="dot dot8">
+                             <i></i>
+                         </div>
+                         <div className="dot dot9">
+                             <i></i>
+                         </div>
+                         <div className="dot dot10">
+                             <i></i>
+                         </div>
+                         <div className="dot dot11">
+                             <i></i>
+                         </div>
+                         <div className="dot dot12">
+                             <i></i>
+                         </div>
+                         <div className="dot dot13">
+                             <i></i>
+                         </div>
+                         <div className="dot dot14">
+                             <i></i>
+                         </div>
                         </div>
                     </div>
                 )}
 
                 <div className="pdfcontainer py-[20rem]">
                     <div className="pdfwrapper">
-                        {/* <Page1 />
+                        <Page1 />
                         <Page2 />
                         <Page3 />
                         <Page4 />
-                        <TypeByType /> */}
+                        <TypeByType />
                         <GenCategory />
                         {/* Pass `isFirstPage` to the first Supplement */}
                         <Supplement key={0} onExceedHeight={handleExtraPage} isFirstPage={ true } pageNum={24} />
@@ -233,8 +301,8 @@ const Pdf = () => {
                             <SupplementNot onExceedHeight={handleExtraPageForUnSupplement} key={index + 100} unsupplementalData={data} isFirstPage={false}  pageNum={26 + extraSupplements.length + index}/>
                         ))}
                         <SupplementTable />
-                        {/* <GeneInformationList />
-                        <References /> */}
+                        <GeneInformationList />
+                        <References />
                         <Pathway />
                     </div>
                 </div>

@@ -103,7 +103,7 @@ const Supplement = ({ onExceedHeight, supplementalData, isFirstPage, pageNum }) 
         }
     }, [tableData]);
 
-    const heightThreshold = isFirstPage ? 640 : 712;  // First page threshold 640px, subsequent pages 780px based on design
+    const heightThreshold = isFirstPage ? 632 : 712;  // First page threshold 640px, subsequent pages 780px based on design
     // const heightThreshold =  640;  // First page threshold 640px, subsequent pages 780px based on design
 
     // Trigger the action when height exceeds the threshold

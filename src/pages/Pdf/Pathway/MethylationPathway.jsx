@@ -4,7 +4,7 @@ import PageWrapper from '../../../components/Pdf/PageWrapper';
 import PageHeader from '../../../components/Pdf/PageHeader';
 import PageNumber from '../../../components/Pdf/PageNumber';
 
-const MethylationPathway = () => {
+const MethylationPathway = ({deltaPageCount}) => {
     return (
         <PageWrapper>
             <PageHeader
@@ -22,7 +22,7 @@ const MethylationPathway = () => {
             <div className='w-[535rem] h-[314rem]'>
                 <img src="bg/methylationPathway.png" alt="" className="w-full h-full" />
             </div>
-            <PageNumber>154</PageNumber>
+            <PageNumber>{154+deltaPageCount}</PageNumber>
         </PageWrapper>
     );
 };

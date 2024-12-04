@@ -39,7 +39,7 @@ const initialGeneData = [
   },
 ];
 
-const Gene67 = () => {
+const Gene67 = ({deltaPageCount}) => {
   // Fetch gene data from Redux store
   const geneData = useSelector((state) => state.pdfData?.geneData || []);
 
@@ -61,7 +61,7 @@ const Gene67 = () => {
         />
       ))}
 
-      <GenePageNumber>103</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+103}</GenePageNumber>
     </PageWrapper>
   );
 };

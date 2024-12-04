@@ -18,7 +18,7 @@ const initialGeneData = [
             "この遺伝子に変異がある場合、体内のグルタミン酸合成を阻害する可能性があります。GLS2 (Glutaminase 2)は、肝臓に特異的なグルタミナーゼをコードする遺伝子です。この酵素は、グルタミンをグルタミン酸とアンモニアに変換する反応を触媒し、グルタミン代謝とエネルギー代謝において重要な役割を果たします。",
     },
 ];
-const Gene2 = () => {
+const Gene2 = ({deltaPageCount}) => {
     // Fetch gene data from Redux store
     const geneData = useSelector((state) => state.pdfData?.geneData || []);
 
@@ -51,7 +51,7 @@ const Gene2 = () => {
                 />
             ))}
 
-            <GenePageNumber>40</GenePageNumber>
+            <GenePageNumber>{deltaPageCount+40}</GenePageNumber>
         </PageWrapper>
     );
 };

@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import PageWrapper from '../../../components/Pdf/PageWrapper';
 import PageHeader from '../../../components/Pdf/PageHeader';
 import PageNumber from '../../../components/Pdf/PageNumber';
 import Text from '../../../components/Pdf/Text';
 
 const Second = () => {
+    const [deltaPageCount, setDeltaPageCount] = useState(
+        useSelector((state) => state.pdfData.deltaPage)
+    );
+    const storeDelta = useSelector((state) => state.pdfData.deltaPage);
+
+    useEffect(() => {
+        setDeltaPageCount(storeDelta);
+    }, [storeDelta]);
+
     return (
         <PageWrapper>
             <PageHeader
@@ -28,7 +38,7 @@ const Second = () => {
                 fontSize={12}
             />
             <PageNumber>
-                152
+                {deltaPageCount+152}
             </PageNumber>
         </PageWrapper>
     );
