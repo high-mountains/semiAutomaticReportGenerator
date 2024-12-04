@@ -98,7 +98,6 @@ export const pdfDataSlice = createSlice({
       state.supplementedData = supplementedData;
       
       const unsupplementedData = payload.find(file => file.fileName === "not_recommend_data.csv").data;
-      
       state.unsupplementedData = unsupplementedData;
 
       const geneData = payload.find(file => file.fileName === "gene_data.csv").data;
