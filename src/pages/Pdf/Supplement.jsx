@@ -11,11 +11,11 @@ import { useSelector } from "react-redux";
 const Supplement = () => {
     const [sidbarColor, setSidebarColor] = useState(pdfData.mainColor);
     const [tableData, setTableData] = useState([]);
-    const tt = useSelector((state) => state.pdfData.supplementedData)
+    const supplementedData = useSelector((state) => state.pdfData.supplementedData)
     
     useEffect(() => {
-        setTableData(tt)
-    }, [tt]);
+        setTableData(supplementedData)
+    }, [supplementedData]);
     
     return (
         <PageWrapper>

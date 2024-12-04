@@ -68,7 +68,7 @@ const Gene112 = () => {
         />
       ))}
 
-      <GenePageNumber>139</GenePageNumber>
+      <GenePageNumber>140</GenePageNumber>
     </PageWrapper>
   );
 };
