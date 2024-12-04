@@ -10,13 +10,6 @@ import { updateDangerLevel } from "../Supplement/updateDangerValues.js";
 // Centralized initial gene data
 const initialGeneData = [
   {
-    geneName: "IL5",
-    datas: ["rs2069812"],
-    level: 0,
-    description:
-      "この遺伝子に変異がある場合、免疫細胞の炎症反応が影響を受ける可能性があります。IL5は、主にヘルパーT細胞（Th2）や好酸球によって分泌され、好酸球の成長、分化、および活性化を促進する役割を担います。IL5は、寄生虫感染やアレルギー反応において重要で、特に好酸球が関与する免疫応答の調整に寄与します。",
-  },
-  {
     geneName: "IL6",
     datas: ["rs1800795", "rs1800796", "rs1800797"],
     level: 0,
@@ -36,6 +29,13 @@ const initialGeneData = [
     level: 0,
     description:
       "この遺伝子に変異がある場合、免疫細胞の炎症反応が影響を受ける可能性があります。IL10（Interleukin 10）は、抗炎症性のサイトカインで、免疫応答の調節に重要な役割を果たします。この分子は、マクロファージやT細胞などの免疫細胞から分泌され、炎症性サイトカインの産生を抑制することで免疫系の過剰な活性化を防ぎます。",
+  },
+  {
+    geneName: "IL13",
+    datas: ["rs1800925", "rs1295686", "rs20541"],
+    level: 0,
+    description:
+      "この遺伝子に変異がある場合、免疫細胞の炎症反応が影響を受ける可能性があります。IL13は、主にヘルパーT細胞（Th2）によって分泌されるサイトカインで、B細胞の分化と抗体産生を促進します。また、IL13は、気道や消化管での粘液産生を増加させることでアレルギー反応に関与し、寄生虫感染に対する免疫応答にも寄与します。",
   },
 ];
 
@@ -61,7 +61,7 @@ const Gene95 = () => {
         />
       ))}
 
-      <GenePageNumber>128</GenePageNumber>
+      <GenePageNumber>126</GenePageNumber>
     </PageWrapper>
   );
 };
