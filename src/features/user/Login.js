@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from '../../context/AuthContext'
 import InputText from "../../components/Input/InputText";
 import ErrorText from "../../components/Typography/ErrorText";
 import LandingIntro from "./LandingIntro";
-import { signin, resetError } from "./userSlice";
 
 function Login() {
   const navigate = useNavigate();
@@ -15,27 +13,12 @@ function Login() {
     password: "",
     userId: "",
   };
-  // const { token, isLoading, error } = useSelector((store) => store.user);
-  // const token = true
-  // const dispatch = useDispatch();
-  // const [loading, setLoading] = useState(false);
+  
   const [errorMessage, setErrorMessage] = useState("");
   const [loginObj, setLoginObj] = useState(INITIAL_LOGIN_OBJ);
   useEffect(() => {
     // inputRef.current.focus();
   },[])
-  // useEffect(() => {
-    // if (token) {
-    //   navigate('/dashboard', { replace: true });
-    // }
-  // }, [token]);
-  // useEffect(() => {
-  //   // console.log("errro change");
-  //  setErrorMessage(error);
-  //   setTimeout(() => {
-  //     dispatch(resetError());
-  //   }, 3000);
-  // },[error])
   const submitForm = async (e) => {
     try {
       e.preventDefault();
@@ -62,7 +45,6 @@ function Login() {
     } catch (error) {
       console.log(error);
     }
-    // navigate('/dashboard', { replace: true });
   };
 
   const updateFormValue = ({ updateType, value }) => {

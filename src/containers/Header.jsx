@@ -5,37 +5,16 @@ import { useSelector, useDispatch } from "react-redux";
 import { notification } from 'antd';
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
-// import PDFDocument from 'pdfkit';
-// import blobStream from 'blob-stream';
 
-import Bars3Icon from "@heroicons/react/24/outline/Bars3Icon";
-import MoonIcon from "@heroicons/react/24/outline/MoonIcon";
-import SunIcon from "@heroicons/react/24/outline/SunIcon";
 import ArrowDownTrayIcon from "@heroicons/react/24/outline/ArrowDownTrayIcon"
 import DocumentPlusIcon from "@heroicons/react/24/outline/DocumentPlusIcon"
-import { toggleOpen } from "../features/common/sidebarSlice";
-import { Tooltip } from 'antd';
-import { logOut } from "../features/user/userSlice";
 import { csvDataUpload } from "../features/common/pdfSlice";
-import UserImg from "../pages/common/userImg";
-import NotifyPage from "./Notify";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Papa from "papaparse";
-import { NotificationManager } from "react-notifications";
 import { setPdfFlag, setCurrentRunningPage, setTotalPage } from "../features/common/pdfSlice";
 
-// import { downloadPDF } from "../tool/jspdf";
-
 function Header() {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
-  const socket = useSelector(state => state.socket);
-  const { user } = useSelector((state) => state.user);
-  const [avatar, setAvatar] = useState('');
-  const [showDropdown, setShowDropdown] = useState(false)
-  const [currentTheme, setCurrentTheme] = useState(
-    localStorage.getItem("theme")
-  );
   const [totalElements, setTotalElements] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -46,26 +25,13 @@ function Header() {
   
   useEffect(() => {
     themeChange(false);
-    // if (currentTheme === null) {
-    //   if (
-    //     window.matchMedia &&
-    //     window.matchMedia("(prefers-color-scheme: dark)").matches
-    //   ) {
-    //     setCurrentTheme("dark");
-    //   } else {
-    //     setCurrentTheme("light");
-    //   }
-    // }
-    // 👆 false parameter is required for react project
+    
   }, []);
 
   const downloadPDF = async (title = "") => {
     let elements = document.querySelectorAll(".printUnit");
 
     let elementsLength = elements.length;
-    // console.log("elements.length===>", elements.length);
-
-    // Set total elements count
     setTotalElements(elements.length);
     
     const pdf = new jsPDF({
@@ -125,7 +91,6 @@ function Header() {
 
       // Optional: Adding a short delay to avoid freezing the browser
       await new Promise((resolve) => setTimeout(resolve, 200));
-      // console.log(`Processed batch ${i / batchSize + 1}`);
     }
 
     // Save the PDF
@@ -230,74 +195,6 @@ function Header() {
               <ArrowDownTrayIcon className={"fill-current w-[28rem] h-[25rem]"}/><p className="ml-[3rem] text-[14rem]">PDFダウンロード</p>
           </button>
         </div>
-
-        {/* <div className="order-last"> */}
-          
-          {/* <label className="px-[10rem] swap">
-            <input type="checkbox" />
-            <SunIcon
-              data-set-theme="light"
-              data-act-class="ACTIVECLASS"
-              className={
-                "fill-current w-[28rem] h-[28rem] " +
-                (currentTheme === "dark" ? "swap-on" : "swap-off")
-              }
-            />
-            <MoonIcon
-              data-set-theme="dark"
-              data-act-class="ACTIVECLASS"
-              className={
-                "fill-current w-[28rem] h-[28rem] " +
-                (currentTheme === "light" ? "swap-on" : "swap-off")
-              }
-            />
-          </label> */}
-
-          {/* <NotifyPage /> */}
-
-          {/* <div className="dropdown dropdown-end">
-            <label
-              tabIndex={0}
-              className="pt-[0rem] btn btn-ghost btn-full avatar h-[64rem]"
-              onClick={onDropDownBtnClick}
-            >
-              <div className="w-[36rem] h-[36rem] mr-[4rem] rounded-full">
-                <UserImg src={
-                  process.env.REACT_APP_FILE_URL +
-                  "/download/" +
-                  avatar
-                } fallbackSrc='avatar.png'/>
-              </div>
-              <p className="text-[14rem]">
-                {user?.userId || "unknown"}
-              </p>
-            </label>
-            <ul
-              tabIndex={0}
-              className={showDropdown ? "menu menu-compact dropdown-content mt-[12rem] p-[8rem] shadow bg-base-100 rounded-box w-[208rem]" : 'hidden'}
-            >
-              <li className="justify-between" onClick={onDropDownBtnClick}>
-                <Link to={`/user/${user?._id}`} className="text-[16rem]">
-                  <p className="text-[14rem]">My Page</p>
-                </Link>
-                <Link to={"/settings/profile"} className="text-[16rem]">
-                  <p className="text-[14rem]">Profile Settings</p>
-                </Link>
-              </li>
-              <li className="justify-between" onClick={onDropDownBtnClick}>
-                <Link to={"/system/my-plan"} className="text-[16rem]">
-                  <p className="text-[14rem]">My Plan</p>
-                </Link>
-              </li>
-              <div className="mt-0 mb-0 divider"></div>
-              <li>
-                <a onClick={logoutUser} className="text-[16rem]">
-                  Logout
-                  </a>
-              </li>
-            </ul>
-          </div> */}
-        {/* </div> */}
       </div >
     </>
   );

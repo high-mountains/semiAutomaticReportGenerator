@@ -81,12 +81,6 @@ const routes = [
     name: "Admin Manager", // name that appear in Sidebar
     submenu: [
       
-      // {
-      //   path: "/admin/bussiness",
-      //   icon: <RectangleGroupIcon className={submenuIconClasses} />,
-      //   name: "Bussiness",
-      // },
-      
       {
         path: "/admin/users",
         icon: <UsersIcon className={submenuIconClasses} />,

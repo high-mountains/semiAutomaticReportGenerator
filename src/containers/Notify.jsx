@@ -56,8 +56,6 @@ const NotifyPage = () => {
   useEffect(() => {
     const load = async () => {
       try {
-        // const res = await axios.get(process.env.REACT_APP_SOCKET_URL + "/notifications");
-        // setNotifcations(res.data.notifications);
       } catch (err) {
 
       }
@@ -67,14 +65,6 @@ const NotifyPage = () => {
 
   return (
     <div className="dropdown dropdown-end">
-      {/* <label
-        tabIndex={0}
-        className="btn btn-ghost btn-full p-0 px-[12rem]"
-      >
-        <Badge count={totalCount}>
-          <BellIcon className="h-[24rem] w-[24rem]" />
-        </Badge>
-      </label> */}
       <ul
         tabIndex={0}
         className="menu menu-compact dropdown-content mt-[12rem] p-[8rem] shadow bg-base-100 rounded-box w-[208rem]"
