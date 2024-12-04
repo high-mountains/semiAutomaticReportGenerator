@@ -139,7 +139,8 @@
 // export default Pdf;
 
 import { lazy, useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setDeltaPage } from "../../features/common/pdfSlice.js";
 
 import "./style.css";
 
@@ -161,8 +162,18 @@ const Pdf = () => {
     const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
     const [renderedPdfFlag, setRenderedPdfFlag] = useState(pdfFlag);
     const [extraSupplements, setExtraSupplements] = useState([]);
-    const [isFirstPage, setIsFirstPage] = useState(true);  // Track the first page
+    const [extraSupplementsForUnSupplement, setExtraSupplementsForUnSupplement] = useState([]);
     
+    const [isFirstPage, setIsFirstPage] = useState(true);  // Track the first page
+    const [isFirstPageForUnSupplement, setIsFirstPageForUnSupplement] = useState(true);  // Track the first page
+    
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        const deltaPage = extraSupplements.length + extraSupplementsForUnSupplement.length;
+        console.log("deltaPage===>", deltaPage);
+        dispatch(setDeltaPage(deltaPage))
+    }, [extraSupplements, extraSupplementsForUnSupplement])
     useEffect(() => {
         setRenderedPdfFlag(pdfFlag);
     }, [pdfFlag]);
@@ -170,6 +181,11 @@ const Pdf = () => {
     const handleExtraPage = (additionalData) => {
         setExtraSupplements((prev) => [...prev, additionalData]);
         setIsFirstPage(false);  // After first page, set to false
+    };
+
+    const handleExtraPageForUnSupplement = (additionalData) => {
+        setExtraSupplementsForUnSupplement((prev) => [...prev, additionalData]);
+        setIsFirstPageForUnSupplement(false);  // After first page, set to false
     };
 
     return (
@@ -208,13 +224,16 @@ const Pdf = () => {
                         <TypeByType /> */}
                         <GenCategory />
                         {/* Pass `isFirstPage` to the first Supplement */}
-                        <Supplement key={0} onExceedHeight={handleExtraPage} isFirstPage={true} />
+                        <Supplement key={0} onExceedHeight={handleExtraPage} isFirstPage={ true } pageNum={24} />
                         {extraSupplements.map((data, index) => (
-                            <Supplement onExceedHeight={handleExtraPage} key={index + 1 } supplementalData={data} isFirstPage={false} />
+                            <Supplement onExceedHeight={handleExtraPage} key={index + 1} supplementalData={data} isFirstPage={false} pageNum={25 + index}/>
                         ))}
-                        <SupplementNot />
-                        {/* <SupplementTable />
-                        <GeneInformationList />
+                        <SupplementNot key={100} onExceedHeight={handleExtraPageForUnSupplement} isFirstPage={ true } pageNum={extraSupplements.length ? 25+extraSupplements.length : 25}/>
+                        {extraSupplementsForUnSupplement.map((data, index) => (
+                            <SupplementNot onExceedHeight={handleExtraPageForUnSupplement} key={index + 100} unsupplementalData={data} isFirstPage={false}  pageNum={26 + extraSupplements.length + index}/>
+                        ))}
+                        <SupplementTable />
+                        {/* <GeneInformationList />
                         <References /> */}
                         <Pathway />
                     </div>

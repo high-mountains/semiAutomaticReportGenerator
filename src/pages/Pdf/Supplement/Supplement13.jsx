@@ -3,8 +3,7 @@ import PageWrapper from "../../../components/Pdf/PageWrapper.jsx";
 import PageNumber from "../../../components/Pdf/PageNumber.jsx";
 import TableNew from "../../../components/Pdf/Supplements/TableNew.jsx";
 import { useSelector } from "react-redux";
-import {updateDangerValues} from "./updateDangerValues.js";
-
+import { updateDangerValues } from "./updateDangerValues.js";
 
 const initialData = [
     {
@@ -17,7 +16,7 @@ const initialData = [
             gen: "ACTN3",
             danger: 0,
             description:
-            "ATP（補因子）, カルシウム（補因子）, BCAA, L-シトルリン, βアラニン, クレアチン",
+                "ATP（補因子）, カルシウム（補因子）, BCAA, L-シトルリン, βアラニン, クレアチン",
         },
     },
     {
@@ -25,7 +24,7 @@ const initialData = [
             gen: "AMPD1",
             danger: 0,
             description:
-            "マグネシウム（補因子）, ATP, BCAA, CoQ10, L-カルニチン, βアラニン, クレアチン",
+                "マグネシウム（補因子）, ATP, BCAA, CoQ10, L-カルニチン, βアラニン, クレアチン",
         },
     },
     {
@@ -63,7 +62,7 @@ const initialData = [
             danger: 0,
             description:
                 "SAMe（補因子）, NAC, ビタミンB6, ビタミンB12, マグネシウム, メチルフォレート",
-                etc: "便秘, ピル"
+            etc: "便秘, ピル",
         },
     },
     {
@@ -125,7 +124,8 @@ const initialData = [
         tdContent: {
             gen: "GCH1",
             danger: 0,
-            description: "5-HTP, L-チロシン, L-フェニルアラニン, NAC, ビタミンB群",
+            description:
+                "5-HTP, L-チロシン, L-フェニルアラニン, NAC, ビタミンB群",
         },
     },
     {
@@ -140,7 +140,8 @@ const initialData = [
         tdContent: {
             gen: "MAOA",
             danger: 0,
-            description: "リボフラビン（補因子）, ビタミンB2, ビタミンB6, ビタミンB12, フォレート, マグネシウム",
+            description:
+                "リボフラビン（補因子）, ビタミンB2, ビタミンB6, ビタミンB12, フォレート, マグネシウム",
         },
     },
     {
@@ -155,40 +156,45 @@ const initialData = [
         tdContent: {
             gen: "SLC6A4",
             danger: 0,
-            description: "5-HTP, L-テアニン, オメガ3, ナトリウム, ビタミンB6, マグネシウム",
+            description:
+                "5-HTP, L-テアニン, オメガ3, ナトリウム, ビタミンB6, マグネシウム",
         },
     },
     {
         tdContent: {
             gen: "SPR",
             danger: 0,
-            description: "NADPH（補因子）, BH4, NAC, ビタミンB6, フォレート, マグネシウム",
+            description:
+                "NADPH（補因子）, BH4, NAC, ビタミンB6, フォレート, マグネシウム",
         },
     },
     {
         tdContent: {
             gen: "TH",
             danger: 0,
-            description: "BH4（補因子）, L-チロシン, ビタミンB群, メチルフォレート",
+            description:
+                "BH4（補因子）, L-チロシン, ビタミンB群, メチルフォレート",
         },
     },
     {
         tdContent: {
             gen: "TPH",
             danger: 0,
-            description: "BH4（補因子）, 鉄（補因子）, 5-HTP, オメガ3, ビタミンB6, フォレート, マグネシウム",
+            description:
+                "BH4（補因子）, 鉄（補因子）, 5-HTP, オメガ3, ビタミンB6, フォレート, マグネシウム",
         },
     },
     {
         tdContent: {
             gen: "TPH2",
             danger: 0,
-            description: "BH4（補因子）, 鉄（補因子）, 5-HTP, オメガ3, ビタミンB6, フォレート, マグネシウム",
+            description:
+                "BH4（補因子）, 鉄（補因子）, 5-HTP, オメガ3, ビタミンB6, フォレート, マグネシウム",
         },
     },
-]
+];
 
-const Supplement13 = () => {
+const Supplement13 = ({ deltaPageCount }) => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
     const updatedTableData = useMemo(() => {
@@ -197,11 +203,9 @@ const Supplement13 = () => {
 
     return (
         <PageWrapper>
-            <TableNew
-                tBody={updatedTableData}
-            />
+            <TableNew tBody={updatedTableData} />
             {/* Old Table code can be safely removed if no longer needed */}
-            <PageNumber>38</PageNumber>
+            <PageNumber>{deltaPageCount + 38}</PageNumber>
         </PageWrapper>
     );
 };

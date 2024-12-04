@@ -3,7 +3,7 @@ import PageWrapper from "../../../components/Pdf/PageWrapper";
 import PageNumber from "../../../components/Pdf/PageNumber";
 import TableNew from "../../../components/Pdf/Supplements/TableNew";
 import { useSelector } from "react-redux";
-import {updateDangerValues} from "./updateDangerValues.js";
+import { updateDangerValues } from "./updateDangerValues.js";
 
 const initialData = [
     {
@@ -15,38 +15,42 @@ const initialData = [
         tdContent: {
             gen: "CYP1A2",
             danger: 0,
-            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
-            etc: "過剰なカフェイン, 喫煙, 焦げた肉"
-        }
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
+            etc: "過剰なカフェイン, 喫煙, 焦げた肉",
+        },
     },
     {
         tdContent: {
             gen: "CYP3A4",
             danger: 0,
-            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, クルクミン, グルタチオン, ビタミンC, レスベラトロール",
-            etc: "グレープフルーツ"
-        }
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, クルクミン, グルタチオン, ビタミンC, レスベラトロール",
+            etc: "グレープフルーツ",
+        },
     },
     {
         tdContent: {
             gen: "GSTP1",
             danger: 0,
             description: "NAC, クレイ, クロレラ, グルタチオン",
-        }
+        },
     },
     {
         tdContent: {
             gen: "SLCO1B1",
             danger: 0,
-            description: "CoQ10, NAC, αリポ酸, タウリン, ビタミンB群, ミルクシスル",
-        }
+            description:
+                "CoQ10, NAC, αリポ酸, タウリン, ビタミンB群, ミルクシスル",
+        },
     },
     {
         tdContent: {
             gen: "XPC",
             danger: 0,
-            description: "NAC, オメガ3, ビタミンE, メチルビタミンB12, メチルフォレート, レスベラトロール",
-        }
+            description:
+                "NAC, オメガ3, ビタミンE, メチルビタミンB12, メチルフォレート, レスベラトロール",
+        },
     },
     {
         rowSpan: 4,
@@ -57,29 +61,33 @@ const initialData = [
         tdContent: {
             gen: "GPX1",
             danger: 0,
-            description: "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
-        }
+            description:
+                "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
+        },
     },
     {
         tdContent: {
             gen: "GPX2",
             danger: 0,
-            description: "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
-        }
+            description:
+                "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
+        },
     },
     {
         tdContent: {
             gen: "GPX3",
             danger: 0,
-            description: "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
-        }
+            description:
+                "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
+        },
     },
     {
         tdContent: {
             gen: "GPX4",
             danger: 0,
-            description: "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
-        }
+            description:
+                "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
+        },
     },
     {
         thContent: {
@@ -90,7 +98,7 @@ const initialData = [
             gen: "GSTA1",
             danger: 0,
             description: "NAC, クレイ, クロレラ, グルタチオン",
-        }
+        },
     },
     {
         rowSpan: 2,
@@ -101,16 +109,18 @@ const initialData = [
         tdContent: {
             gen: "NAT1",
             danger: 0,
-            description: "アセチルコエンザイムA（補因子）, NAC, クミン, スルフォラファン",
-        }
+            description:
+                "アセチルコエンザイムA（補因子）, NAC, クミン, スルフォラファン",
+        },
     },
     {
         tdContent: {
             gen: "NAT2",
             danger: 0,
-            description: "アセチルコエンザイムA（補因子）, NAC, クミン, スルフォラファン",
-            etc: "ヒスタミン"
-        }
+            description:
+                "アセチルコエンザイムA（補因子）, NAC, クミン, スルフォラファン",
+            etc: "ヒスタミン",
+        },
     },
     {
         rowSpan: 5,
@@ -121,41 +131,43 @@ const initialData = [
         tdContent: {
             gen: "SULT1A1",
             danger: 0,
-            description: "MSM, NAC, ビタミンB6, ビタミンB12, ビタミンB群, フォレート, メチルフォレート",
-            etc: "BPA, フリーラジカル"
-        }
+            description:
+                "MSM, NAC, ビタミンB6, ビタミンB12, ビタミンB群, フォレート, メチルフォレート",
+            etc: "BPA, フリーラジカル",
+        },
     },
     {
         tdContent: {
             gen: "SULT1A2",
             danger: 0,
             description: "MSM, NAC, アデノシン, クルクミン",
-        }
+        },
     },
     {
         tdContent: {
             gen: "SULT1C4",
             danger: 0,
             description: "MSM, NAC, アデノシン, クルクミン",
-        }
+        },
     },
     {
         tdContent: {
             gen: "SULT1E1",
             danger: 0,
-            description: "DIM（ブロッコリー）, MSM, NAC, クルクミン, スルフォラファン",
-        }
+            description:
+                "DIM（ブロッコリー）, MSM, NAC, クルクミン, スルフォラファン",
+        },
     },
     {
         tdContent: {
             gen: "SULT2B1",
             danger: 0,
             description: "NAC, クルクミン, スルフォラファン, ビタミンD, 亜鉛",
-        }
+        },
     },
 ];
 
-const Supplement6 = () => {
+const Supplement6 = ({ deltaPageCount }) => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
     const updatedTableData = useMemo(() => {
@@ -164,12 +176,8 @@ const Supplement6 = () => {
 
     return (
         <PageWrapper>
-            <TableNew
-                tBody={updatedTableData}
-            />
-            <PageNumber>
-                31
-            </PageNumber>
+            <TableNew tBody={updatedTableData} />
+            <PageNumber>{deltaPageCount + 31}</PageNumber>
         </PageWrapper>
     );
 };

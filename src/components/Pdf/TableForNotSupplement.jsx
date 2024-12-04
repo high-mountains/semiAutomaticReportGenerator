@@ -52,7 +52,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 
-const Table = ({ headerData, bodyData, onHeightExceed, isFirstPage }) => {
+const TableForNotSupplement = ({ headerData, bodyData, onHeightExceed, isFirstPage }) => {
     const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
     const [renderedPdfFlag, setRenderedPdfFlag] = useState({marginTop: '0rem'});
     const [secondRenderedPdfFlag, setSecondRenderedPdfFlag] = useState({marginTop: '0rem', paddingBottom: '5rem'});
@@ -131,8 +131,8 @@ const Table = ({ headerData, bodyData, onHeightExceed, isFirstPage }) => {
                     {visibleData.map((item, index) => (
                         <tr key={index} style={{borderLeftWidth: '1rem', borderLeftColor: '#C5C5C5', borderBottomWidth: '1rem', borderBottomColor: '#C5C5C5', height:'auto', fontSize:'12rem'}}>
                             <td style={{borderRightWidth: '1rem', borderRightColor:'#C5C5C5'}}><p style={secondRenderedPdfFlag}>{item.Lifestyle}</p></td>
-                            <td style={{borderRightWidth: '1rem', borderRightColor:'#C5C5C5'}}><p style={secondRenderedPdfFlag}>{item.When}</p></td>
-                            <td style={{borderRightWidth: '1rem', borderRightColor:'#C5C5C5'}}><p style={secondRenderedPdfFlag}>{item.Explanation}</p></td>
+                            {/* <td style={{borderRightWidth: '1rem', borderRightColor:'#C5C5C5'}}><p style={secondRenderedPdfFlag}>{item.When}</p></td> */}
+                            <td style={{borderRightWidth: '1rem', borderRightColor:'#C5C5C5', padding:'10rem'}}><p style={secondRenderedPdfFlag}>{item.Explanation}</p></td>
                             <td style={{borderRightWidth: '1rem', borderRightColor:'#C5C5C5'}}><p style={secondRenderedPdfFlag}>{item.Categories}</p></td>
                         </tr>
                     ))}
@@ -142,4 +142,4 @@ const Table = ({ headerData, bodyData, onHeightExceed, isFirstPage }) => {
     );
 };
 
-export default Table;
+export default TableForNotSupplement;

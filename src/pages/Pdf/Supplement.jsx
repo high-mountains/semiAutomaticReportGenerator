@@ -73,7 +73,7 @@ import Table from "../../components/Pdf/Table.jsx";
 import pdfData from "../../utils/dummyPdf.json";
 import { useSelector } from "react-redux";
 
-const Supplement = ({ onExceedHeight, supplementalData, isFirstPage }) => {
+const Supplement = ({ onExceedHeight, supplementalData, isFirstPage, pageNum }) => {
     const [sidbarColor, setSidebarColor] = useState(pdfData.mainColor);
     const supplementedData = useSelector((state) => state.pdfData.supplementedData);
     const [tableData, setTableData] = useState(supplementalData || []);
@@ -103,7 +103,7 @@ const Supplement = ({ onExceedHeight, supplementalData, isFirstPage }) => {
         }
     }, [tableData]);
 
-    const heightThreshold = isFirstPage ? 640 : 753;  // First page threshold 640px, subsequent pages 780px based on design
+    const heightThreshold = isFirstPage ? 640 : 712;  // First page threshold 640px, subsequent pages 780px based on design
     // const heightThreshold =  640;  // First page threshold 640px, subsequent pages 780px based on design
 
     // Trigger the action when height exceeds the threshold
@@ -141,7 +141,7 @@ const Supplement = ({ onExceedHeight, supplementalData, isFirstPage }) => {
                 onHeightExceed={handleTableHeightExceed}
                 isFirstPage = {isFirstPage}
             />
-            <PageNumber>24</PageNumber>
+            <PageNumber>{pageNum}</PageNumber>
         </PageWrapper>
     );
 };

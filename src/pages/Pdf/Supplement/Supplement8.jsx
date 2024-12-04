@@ -198,7 +198,7 @@ const initialData = [
     },
 ];
 
-const Supplement8 = () => {
+const Supplement8 = ({ deltaPageCount }) => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
     const updatedTableData = useMemo(() => {
@@ -208,7 +208,7 @@ const Supplement8 = () => {
         <PageWrapper>
             <TableNew tBody={updatedTableData} />
             {/* Old Table code can be safely removed if no longer needed */}
-            <PageNumber>33</PageNumber>
+            <PageNumber>{deltaPageCount + 33}</PageNumber>
         </PageWrapper>
     );
 };
