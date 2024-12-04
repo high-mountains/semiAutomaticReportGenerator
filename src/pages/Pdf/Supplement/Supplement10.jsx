@@ -3,7 +3,7 @@ import PageWrapper from "../../../components/Pdf/PageWrapper.jsx";
 import PageNumber from "../../../components/Pdf/PageNumber.jsx";
 import TableNew from "../../../components/Pdf/Supplements/TableNew.jsx";
 import { useSelector } from "react-redux";
-import {updateDangerValues} from "./updateDangerValues.js";
+import { updateDangerValues } from "./updateDangerValues.js";
 
 const initialData = [
     {
@@ -15,71 +15,80 @@ const initialData = [
         tdContent: {
             gen: "CYP1A1",
             danger: 0,
-            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
-            etc: "グルテン, カゼイン, 環境毒"
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
+            etc: "グルテン, カゼイン, 環境毒",
         },
     },
     {
         tdContent: {
             gen: "CYP1A2",
             danger: 0,
-            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
-            etc: "過剰なカフェイン, 喫煙, 焦げた肉"
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
+            etc: "過剰なカフェイン, 喫煙, 焦げた肉",
         },
     },
     {
         tdContent: {
             gen: "CYP1B1",
             danger: 0,
-            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン, ビタミンC",
-                etc: '乳製品, ピル, 焦げた肉'
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン, ビタミンC",
+            etc: "乳製品, ピル, 焦げた肉",
         },
     },
     {
         tdContent: {
             gen: "CYP2A6",
             danger: 0,
-            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン, ビタミンC",
-            etc:"喫煙"
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン, ビタミンC",
+            etc: "喫煙",
         },
     },
     {
         tdContent: {
             gen: "CYP2B6",
             danger: 0,
-            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
-            etc:"喫煙"
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
+            etc: "喫煙",
         },
     },
     {
         tdContent: {
             gen: "CYP2C9",
             danger: 0,
-            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, レスベラトロール",
-            etc:"環境毒, 発がん物質"
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, レスベラトロール",
+            etc: "環境毒, 発がん物質",
         },
     },
     {
         tdContent: {
             gen: "CYP2C19",
             danger: 0,
-            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, レスベラトロール",
-            etc:"環境毒, 発がん物質"
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, レスベラトロール",
+            etc: "環境毒, 発がん物質",
         },
     },
     {
         tdContent: {
             gen: "CYP2D6",
             danger: 0,
-            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, ビタミンB6, ビタミンB12, レスベラトロール",
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, ビタミンB6, ビタミンB12, レスベラトロール",
         },
     },
     {
         tdContent: {
             gen: "CYP2E1",
             danger: 0,
-            description: "NAC, クルクミン, グルタチオン, ビタミンE, ミルクシスル, レスベラトロール",
-            etc:"アルコール, 塩化ビニル, ベンゼン"
+            description:
+                "NAC, クルクミン, グルタチオン, ビタミンE, ミルクシスル, レスベラトロール",
+            etc: "アルコール, 塩化ビニル, ベンゼン",
         },
     },
     {
@@ -93,15 +102,17 @@ const initialData = [
         tdContent: {
             gen: "CYP3A4",
             danger: 0,
-            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, クルクミン, グルタチオン, ビタミンC, レスベラトロール",
-            etc: "グレープフルーツ"
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, クルクミン, グルタチオン, ビタミンC, レスベラトロール",
+            etc: "グレープフルーツ",
         },
     },
     {
         tdContent: {
             gen: "CYP3A5",
             danger: 0,
-            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, クルクミン, グルタチオン, ビタミンC, レスベラトロール",
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, クルクミン, グルタチオン, ビタミンC, レスベラトロール",
         },
     },
     {
@@ -122,24 +133,24 @@ const initialData = [
             gen: "KIAA0319",
             danger: 0,
             description:
-                "DHA, ビタミンB6, ビタミンB12, フォスファチジルコリン, フォスファチジルセリン, マグネシウム, 葉酸"
-        }
+                "DHA, ビタミンB6, ビタミンB12, フォスファチジルコリン, フォスファチジルセリン, マグネシウム, 葉酸",
+        },
     },
-    
+
     {
         thContent: {
             main: "FN1",
-            sub: "細胞接着や組織の構造維持に影響するタンパク質で、傷の治癒に関わる"
+            sub: "細胞接着や組織の構造維持に影響するタンパク質で、傷の治癒に関わる",
         },
         tdContent: {
             gen: "FN1",
             danger: 0,
-            description: "アルギニン, ビタミンC, 亜鉛"
+            description: "アルギニン, ビタミンC, 亜鉛",
         },
     },
 ];
 
-const Supplement10 = (props) => {
+const Supplement10 = ({deltaPageCount}) => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
     const updatedTableData = useMemo(() => {
@@ -148,13 +159,9 @@ const Supplement10 = (props) => {
 
     return (
         <PageWrapper>
-            <TableNew
-                tBody={updatedTableData}
-            />
+            <TableNew tBody={updatedTableData} />
             {/* Old Table code can be safely removed if no longer needed */}
-            <PageNumber>
-                35
-            </PageNumber>
+            <PageNumber>{deltaPageCount + 35}</PageNumber>
         </PageWrapper>
     );
 };

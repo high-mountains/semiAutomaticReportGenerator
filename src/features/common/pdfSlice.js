@@ -28,6 +28,12 @@ export const setTotalPage = createAsyncThunk(
     return payload;
   }
 );
+export const setDeltaPage = createAsyncThunk(
+  "/pdfData/setDeltaPage",
+  async (payload) => {
+    return payload;
+  }
+);
 
 export const pdfDataSlice = createSlice({
   name: "articleCategory",
@@ -51,8 +57,9 @@ export const pdfDataSlice = createSlice({
 
     supplementedData: [{Lifestyle: "未定", When: "未定", Explanation: "未定", Categories: "未定"}],
     unsupplementedData: [{Lifestyle: "未定", When: "未定", Explanation: "未定", Categories: "未定"}],
-
+    
     geneData: [],
+    deltaPage: 0,
 
     isLoading: false,
     isUpdated: true,//new article category is added or updated or deleted.
@@ -98,7 +105,6 @@ export const pdfDataSlice = createSlice({
       state.supplementedData = supplementedData;
       
       const unsupplementedData = payload.find(file => file.fileName === "not_recommend_data.csv").data;
-      
       state.unsupplementedData = unsupplementedData;
 
       const geneData = payload.find(file => file.fileName === "gene_data.csv").data;
@@ -132,6 +138,10 @@ export const pdfDataSlice = createSlice({
     
     [setTotalPage.fulfilled]: (state, {payload}) => {
       state.totalPage = payload;
+    },
+
+    [setDeltaPage.fulfilled]: (state, {payload}) => {
+      state.deltaPage = payload;
     }
     
   },

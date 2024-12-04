@@ -3,7 +3,7 @@ import PageWrapper from "../../../components/Pdf/PageWrapper.jsx";
 import PageNumber from "../../../components/Pdf/PageNumber.jsx";
 import TableNew from "../../../components/Pdf/Supplements/TableNew.jsx";
 import { useSelector } from "react-redux";
-import {updateDangerValues} from "./updateDangerValues.js";
+import { updateDangerValues } from "./updateDangerValues.js";
 
 const initialData = [
     {
@@ -16,7 +16,7 @@ const initialData = [
             danger: 0,
             description:
                 "SAMe（補因子）, NAC, ビタミンB6, ビタミンB12, マグネシウム, メチルフォレート",
-                etc: "便秘, ピル"
+            etc: "便秘, ピル",
         },
     },
     {
@@ -28,8 +28,7 @@ const initialData = [
         tdContent: {
             gen: "FLG",
             danger: 0,
-            description:
-            "NAC, オメガ3, ビタミンD, プロバイオティクス",
+            description: "NAC, オメガ3, ビタミンD, プロバイオティクス",
         },
     },
     {
@@ -37,7 +36,7 @@ const initialData = [
             gen: "FUT2",
             danger: 0,
             description:
-            "ビタミンD, プレバイオティクス, プロバイオティクス, 亜鉛",
+                "ビタミンD, プレバイオティクス, プロバイオティクス, 亜鉛",
         },
     },
     {
@@ -45,8 +44,8 @@ const initialData = [
             gen: "HLA-DRA",
             danger: 0,
             description:
-            "DAO酵素, L-グルタミン, オメガ3, ビタミンD, プロバイオティクス, 亜鉛",
-            etc: "グルテン, カゼイン"
+                "DAO酵素, L-グルタミン, オメガ3, ビタミンD, プロバイオティクス, 亜鉛",
+            etc: "グルテン, カゼイン",
         },
     },
     {
@@ -54,8 +53,8 @@ const initialData = [
             gen: "MCM6",
             danger: 0,
             description:
-            "ATP（補因子）, カルシウム, ビタミンD, プロバイオティクス, ラクターゼ酵素",
-            etc: "乳製品"
+                "ATP（補因子）, カルシウム, ビタミンD, プロバイオティクス, ラクターゼ酵素",
+            etc: "乳製品",
         },
     },
     {
@@ -67,9 +66,8 @@ const initialData = [
         tdContent: {
             gen: "ALAD",
             danger: 0,
-            description:
-            "亜鉛（補因子）, グルタチオン, ビタミンB6, ビタミンC",
-            etc: "鉛"
+            description: "亜鉛（補因子）, グルタチオン, ビタミンB6, ビタミンC",
+            etc: "鉛",
         },
     },
     {
@@ -77,25 +75,23 @@ const initialData = [
             gen: "GPX1",
             danger: 0,
             description:
-            "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE"
+                "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
         },
     },
     {
         tdContent: {
             gen: "HFE",
             danger: 0,
-            description:
-            "フェチン酸, ポリフェノール",
-            etc: "鉄"
+            description: "フェチン酸, ポリフェノール",
+            etc: "鉄",
         },
     },
     {
         tdContent: {
             gen: "SLC11A2",
             danger: 0,
-            description:
-                "ビタミンB12, プロバイオティクス, 亜鉛, 鉄, 銅",
-                etc: "鉛"
+            description: "ビタミンB12, プロバイオティクス, 亜鉛, 鉄, 銅",
+            etc: "鉛",
         },
     },
     {
@@ -108,7 +104,7 @@ const initialData = [
     },
 ];
 
-const Supplement14 = () => {
+const Supplement14 = ({ deltaPageCount }) => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
     const updatedTableData = useMemo(() => {
@@ -116,11 +112,9 @@ const Supplement14 = () => {
     }, [geneData]);
     return (
         <PageWrapper>
-            <TableNew
-                tBody={updatedTableData}
-            />
+            <TableNew tBody={updatedTableData} />
             {/* Old Table code can be safely removed if no longer needed */}
-            <PageNumber>39</PageNumber>
+            <PageNumber>{deltaPageCount + 39}</PageNumber>
         </PageWrapper>
     );
 };
