@@ -66,7 +66,7 @@ const Pdf = () => {
                     }}
                 >
                     <p className="font text-[#FFFFFF]" style={{fontSize: "28rem"}}>
-                        遺伝子検査報告書作成中 {showCurrentPage}/{showTotalPage}
+                        Genetic testing report being prepared. {showCurrentPage}/{showTotalPage} Pages
                     </p>
                     <div className="loader">
                         <div className="dot dot1">

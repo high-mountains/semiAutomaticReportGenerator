@@ -123,20 +123,6 @@ const initialData = [
             description: "CoQ10, L-Carnitine, Omega-3, Vitamin B complex",
         }
     },
-    {
-        tdContent: {
-            gen: "UQCRB",
-            danger: 0,
-            description: "Heme (Cofactor), Ubiquinol (Cofactor), CoQ10, L-Carnitine, Alpha Lipoic Acid, Vitamin B complex, Vitamin C",
-        }
-    },
-    {
-        tdContent: {
-            gen: "UQCRQ",
-            danger: 0,
-            description: "Heme (Cofactor), Ubiquinol (Cofactor), CoQ10, L-Carnitine, Alpha Lipoic Acid, Vitamin B complex, Vitamin C",
-        }
-    },
 ];
 
 const Supplement4 = () => {

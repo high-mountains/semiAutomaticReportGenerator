@@ -9,7 +9,7 @@ const First = () => {
         <PageWrapper>
             <PageHeader
                 subtitle={"Glossary"}
-                mainTitle={"用語集"}
+                mainTitle={"Glossary"}
                 subTitleStyle={{
                     marginBottom:"5rem",
                     fontSize: "14rem"
@@ -24,7 +24,7 @@ const First = () => {
                 }}
             />
             <Text
-                textContent={'ATP（アデノシン三リン酸）・・・細胞のエネルギー源となる分子で、体を動かす「燃料」にあたる。<br/><br/>COMT活性・・・COMTは体内の一部の化学物質を分解する酵素で、その働き（活性）によって気分や反応の速さに影響が出る。<br/><br/>>DNAの調節・・・必要なタイミングで特定の遺伝子が働くように調整する仕組み。体の機能が適切に働くためのスイッチの役割を持つ。<br/><br/>DNA修復機能・・・損傷したDNAを修復し、正常な状態を保つための機能。<br/><br/>GABA・・・脳の神経を落ち着かせ、リラックスさせる働きを持つ物質。<br/><br/>SNP（単一ヌクレオチド多型）・・・姿形や体質といった個人差が生じる遺伝子多型の一種。代表的なものは「太りやすいかどうか」や「アルコールに強いかどうか」など。<br/><br/>アドレナリン・・・緊張や興奮を引き起こすホルモンで、「戦うか逃げるか」の反応をサポートする。<br/><br/>エストロゲン・・・主に女性の体の発育や機能を助けるホルモン。<br/><br/>カゼインフリー・・・カゼインという乳製品のたんぱく質を含まないことを指す。<br/><br/>クエン酸回路・・・細胞の中でエネルギーを作り出すサイクルの一部。<br/><br/>グルタメート・・・脳内の神経伝達物質で、脳内で神経信号を伝える重要な役割を持つ。<br/><br/>グルテンフリー ・・・小麦などに含まれるグルテンを避けた食品や食事を指す。<br/><br/>サイトカイン・・・体の免疫システムを調整する分子で、感染や炎症への反応に関わる。<br/><br/>シナプス可塑性・・・脳の神経細胞同士のつながりが変化し、記憶や学習を助ける現象。<br/><br/>ステロイド・・・体内の炎症を抑える薬で、体のホルモンに似た働きを持つ。<br/><br/>セロトニン・・・気分や睡眠に関係する物質で、心の安定に役立つ。<br/><br/>ドーパミン・・・喜びや快感を感じるときに放出される物質で、やる気や行動に関わる。'}
+                textContent={'ATP (adenosine triphosphate) - A molecule that is the energy source for cells, and the "fuel" that moves the body. <br/><br/>COMT activity - COMT is an enzyme that breaks down some chemicals in the body, and its activity affects mood and reaction speed. <br/><br/>>DNA regulation - A mechanism that adjusts certain genes to work at the necessary timing. It acts as a switch to ensure that the body"s functions work properly. <br/><br/>DNA repair function - A function to repair damaged DNA and maintain a normal state. <br/><br/>GABA - A substance that calms and relaxes the nerves in the brain. <br/><br/>SNP (single nucleotide polymorphism) - A type of genetic polymorphism that causes individual differences in appearance and constitution. Typical examples include "whether or not you are prone to gain weight" and "whether or not you can tolerate alcohol." <br/><br/>Adrenaline - A hormone that causes tension and excitement, supporting the "fight or flight" response. <br/><br/>Estrogen - A hormone that mainly helps the development and function of the female body. <br/><br/>Casein-free: Does not contain casein, a dairy protein. <br/><br/>Citric acid cycle: Part of the cycle that produces energy in cells. <br/><br/>Glutamate: A neurotransmitter in the brain that plays an important role in transmitting nerve signals in the brain. <br/><br/>Gluten-free: Foods and meals that avoid gluten, found in wheat and other foods. <br/><br/>Cytokines: Molecules that regulate the body"s immune system and are involved in responses to infection and inflammation. <br/><br/>Synaptic plasticity: A phenomenon in which connections between nerve cells in the brain change, helping with memory and learning.'}
                 fontSize={12}
             />
             <PageNumber>

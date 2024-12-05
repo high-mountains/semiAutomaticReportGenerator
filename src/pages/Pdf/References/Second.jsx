@@ -9,7 +9,7 @@ const Second = () => {
         <PageWrapper>
             <PageHeader
                 subtitle={"Glossary"}
-                mainTitle={"用語集"}
+                mainTitle={"Glossary"}
                 subTitleStyle={{
                     marginBottom:"5rem",
                     fontSize: "14rem"
@@ -24,7 +24,7 @@ const Second = () => {
                 }}
             />
             <Text
-                textContent={'ニューロン・・・脳や神経の細胞で、体の指令を伝える役割を持つ。<br/><br/>ノルアドレナリン・・・アドレナリンに似た物質で、ストレスや覚醒に関わる。<br/><br/>>ホットフラッシュ・・・急に熱くなったり、汗が出たりする更年期症状。<br/><br/>ホモシステイン・・・体内で作られるアミノ酸で、血管や心臓の健康に関わる。<br/><br/>ホルモンバランス・・・体内でホルモンの量やバランスが保たれている状態。<br/><br/>ホルモン代謝物・・・ホルモンが使われた後にできる物質。<br/><br/>マイコトキシン・・・カビが作る毒素で、健康に悪影響を及ぼすことがある。<br/><br/>メチレーションプロセス・・・細胞がDNAやタンパク質を修飾し、働きを調節する過程。<br/><br/>有害重金属・・・体にとって有害な重金属で、鉛や水銀などが含まれる。<br/><br/>硫黄含有アミノ酸・・・硫黄を含むアミノ酸で、体の解毒や代謝に重要。<br/><br/>神経伝達・・・神経を通じて脳や体に指令を伝えるプロセス。<br/><br/>神経変性疾患・・・神経細胞がゆっくりと失われる病気。<br/><br/>細胞質・・・細胞の中で、核の外側にある液体の部分。<br/><br/>腸内フローラ・・・腸内に住む細菌の集まりで、消化や健康に大切。<br/><br/>酵素・・・体内の化学反応を助けるタンパク質で、消化やエネルギー生成に関わる。<br/><br/>酸化ストレス・・・体にダメージを与える活性酸素が増える状態で、老化や病気に影響する。'}
+                textContent={'Neurons: Brain and nerve cells that transmit commands to the body. <br/><br/>Noradrenaline: A substance similar to adrenaline that is involved in stress and arousal. <br/><br/>Hot flashes: Menopausal symptoms such as sudden heat and sweating. <br/><br/>Homocysteine: An amino acid produced in the body that is involved in the health of blood vessels and the heart. <br/><br/>Hormonal balance: The state in which the amount and balance of hormones is maintained in the body. <br/><br/>Hormonal metabolites: Substances that are produced after hormones are used. <br/><br/>Mycotoxins: Toxins produced by mold that can have adverse effects on health. <br/><br/>Methylation process: The process by which cells modify DNA and proteins to regulate their function. <br/><br/>Toxic heavy metals: Heavy metals that are harmful to the body, including lead and mercury. <br/><br/>Sulfur-containing amino acids: Amino acids that contain sulfur and are important for the body"ss detoxification and metabolism. <br/><br/>Neurotransmission: The process of sending commands to the brain and body via nerves. <br/><br/>Neurodegenerative disease: A disease in which nerve cells are slowly lost. <br/><br/>Cytoplasm: The liquid part of a cell that is outside the nucleus. <br/><br/>Gut flora: A collection of bacteria that live in the intestines and are important for digestion and health. <br/><br/>Enzymes: Proteins that help with chemical reactions in the body and are involved in digestion and energy production.'}
                 fontSize={12}
             />
             <PageNumber>

@@ -6,7 +6,7 @@ const MeritDemerit = (props) => {
     return (
         <div className="flex flex-row items-start gap-[30rem] justify-center">
             <Rit
-                tag="メリット"
+                tag="Merit"
                 data={props.merit}
                 commonStyle={props.commonStyle}
                 inCommonStyle={props.inCommonStyle}
@@ -15,7 +15,7 @@ const MeritDemerit = (props) => {
                 wrapperStyle={props.wrapperStyle}
             ></Rit>
             <Rit
-                tag="デメリット"
+                tag="Disadvantages"
                 data={props.demerit}
                 commonStyle={props.commonStyle}
                 inCommonStyle={props.inCommonStyle}

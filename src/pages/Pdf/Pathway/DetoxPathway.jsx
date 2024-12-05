@@ -9,7 +9,7 @@ const DetoxPathway = () => {
         <PageWrapper>
             <PageHeader
                 subtitle={"Detoxification Pathway"}
-                mainTitle={"デトックス経路"}
+                mainTitle={"Detoxification Pathway"}
                 subTitleStyle={{
                     marginBottom:"5rem",
                     fontSize: "14rem"

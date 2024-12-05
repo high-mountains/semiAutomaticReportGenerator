@@ -30,9 +30,9 @@ const Merit = () => {
                             "It synthesizes histamine by converting the amino acid histidine into histamine. Related gene: HDC",
                         contentLineHeight: 1.448333,  
                         posInfo: {
-                            top: "13.4rem",
-                            left: "76rem",
-                            width: "177rem",
+                            top: "3.4rem",
+                            left: "52rem",
+                            width: "210rem",
                         },
                         fontSize: 12
                     },
@@ -44,9 +44,9 @@ const Merit = () => {
                             "Produces steroids. Related genes: CYP21A2",
                         contentLineHeight: 1.448333,
                         posInfo: {
-                            top: "11rem",
+                            top: "-14rem",
                             right: "106.12rem",
-                            width: "160.79rem"
+                            width: "162.79rem",
                        },
                          
                          
@@ -60,8 +60,8 @@ const Merit = () => {
                             "By neutralizing and excreting histamine, the histamine level in the body is appropriately adjusted. Related genes: HNMT, NAT2, ALDH2, UGT1A4",
                         contentLineHeight: 1.448333,
                         posInfo: {
-                            bottom: "126rem",
-                            right: "0rem",
+                            bottom: "120rem",
+                            right: "-13rem",
                             width: "177rem"
                         },
                         fontSize: 12,
@@ -74,16 +74,16 @@ const Merit = () => {
                         content: `Causes sensitivity or intolerance to gluten and dairy products. Related genes: HLA-DQ2.2, HLA-DQ2.5, HLA-DQ8, MCM6, CACNA1C`,
                         contentLineHeight: 1.448333,
                         posInfo: {
-                            bottom: "1rem",
-                            right: "87.46rem",
-                            width: "304.54rem"
+                            bottom: "-22rem",
+                            right: "64.46rem",
+                            width: "321.54rem",
                         },
                         fontSize: 12,
                         contentClassName: "tracking-tightest"
                     },
                     {
                         wrapperWidth: "181.54rem",
-                        heading: "Receptor-related pathways that mediate the effects of histamine",
+                        heading: "Receptor that the effects of histamine",
                         content: `By binding to specific receptors, it induces various physiological responses, including allergic reactions. Related genes: HRH1, HRH2, HRH3, HRH4`,
                         contentLineHeight: 1.448333,
                         posInfo: {
@@ -108,6 +108,9 @@ const Merit = () => {
         {
             Component: MeritDemerit,
             data: {
+                inCommonStyle:{
+                    gap: "1rem"     // Here is optional instead of default value 3rem
+                },
                 merit: [
                     {
                         title: "Increased alertness and attention",

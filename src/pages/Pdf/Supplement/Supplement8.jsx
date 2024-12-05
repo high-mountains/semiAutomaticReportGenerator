@@ -8,7 +8,7 @@ import { updateDangerValues } from "./updateDangerValues.js";
 // Initial data for the table (in English)
 const initialData = [
     {
-        rowSpan: 5,
+        rowSpan: 3,
         thContent: {
             main: "Reactive Oxygen Species (ROS)",
             sub: "Unstable oxygen molecules that cause cellular damage, involved in aging and disease",

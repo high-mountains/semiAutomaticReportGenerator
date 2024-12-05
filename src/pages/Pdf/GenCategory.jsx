@@ -21,8 +21,8 @@ const GenCategory = () => {
 
     const initialCatecholamineData = [
         { borderstatus: 0, subContent1: "Catecholamine\nType" },
-        { text: "Catecholamine\nSynthesis", tag: "Catecholamine Synthesis" },
-        { text: "Catecholamine Metabolism", tag: "Catecholamine Metabolism" },
+        { text: "Catecholamin\nSynthesis", tag: "Catecholamine Synthesis" },
+        { text: "Catecholamin Metabolism", tag: "Catecholamine Metabolism" },
         { text: "Dopamine\nReceptor", tag: "Dopamine Receptor" },
         { text: "Serotonin", tag: "Serotonin" },
     ];
@@ -54,22 +54,22 @@ const GenCategory = () => {
         { text: "Phase II", subContent1: "Glutathione", subContent2: "Peroxidase", tag: "Phase II Glutathione Peroxidase" },
         { text: "Phase II", subContent1: "N-Acetyltransferase", subContent2: "", tag: "Phase II N-Acetyltransferase" },
         { text: "Phase II", subContent1: "Sulfotransferase", subContent2: "", tag: "Phase II Sulfotransferase" },
-        { text: "Phase II", subContent1: "UDP-Glucuronosyl", subContent2: "Transferase", tag: "Phase II UDP-Glucuronosyl Transferase" },
+        // { text: "Phase II", subContent1: "UDP-Glucuronosyl", subContent2: "Transferase", tag: "Phase II UDP-Glucuronosyl Transferase" },
     ];
 
     const initialDetoxData3 = [
         { borderstatus: 0, text: "" },
-        { text: "Inflammation/Anti-Inflammation", tag: "Inflammation/Anti-Inflammation" },
+        // { text: "Inflammation/Anti-Inflammation", tag: "Inflammation/Anti-Inflammation" },
         { text: "Chemical Sensitivity", tag: "Chemical Sensitivity" },
-        { text: "Reactive Oxygen Species", tag: "Reactive Oxygen Species" },
+        // { text: "Reactive\nOxygen\nSpecies", tag: "Reactive Oxygen Species" },
         { text: "Mercury", tag: "Mercury" },
-        { text: "Organophosphates", tag: "Organophosphates" },
+        { text: "Organopho\nsphates", tag: "Organophosphates" },
     ];
 
     const initialMethylationData = [
         { borderstatus: 0, subContent1: "Methylation\nType" },
         { text: "Methionine\nCycle", tag: "Methionine Cycle" },
-        { text: "Oxidation/Antioxidation", tag: "Oxidation/Antioxidation" },
+        { text: "Oxidation\n/Antioxidation", tag: "Oxidation/Antioxidation" },
         { text: "Folate", tag: "Folate" },
         { text: "Vitamin B12", tag: "Vitamin B12" },
     ];
@@ -96,7 +96,7 @@ const GenCategory = () => {
         { text: "Muscle/Pain", tag: "Muscle/Pain" },
         { text: "Cell Metabolism", tag: "Cell Metabolism" },
         { text: "Pesticides", tag: "Pesticides" },
-        { text: "Neurotransmitters", tag: "Neurotransmitters" },
+        { text: "Neuro\ntransmitters", tag: "Neurotransmitters" },
         { text: "Female Hormones", tag: "Female Hormones" },
         { text: "Gut Microbiota", tag: "Gut Microbiota" },
         { text: "Lead", tag: "Lead" },

@@ -98,7 +98,7 @@ function Page3() {
                                 >
                                     <Text
                                         textContent={
-                                            "Glutamate type\n-Catecholamine type\n-Histamine type"
+                                            "Glutamate type\nCatecholamine type\nHistamine type"
                                         }
                                         className={
                                             "whitespace-pre-wrap font-bold"
@@ -163,7 +163,7 @@ function Page3() {
                             >
                                 <Text
                                     textContent={
-                                        "It is the “blueprint of the human body” that determines physical characteristics. It is known that each person's characteristics differ according to his or her genes.\nFor example, different genes may make one person better at digesting food or more resilient to stress."
+                                        "It is the “Blueprint of the human body” that determines physical characteristics. It is known that each person's characteristics differ according to his or her genes.\nFor example, different genes may make one person better at digesting food or more resilient to stress."
                                     }
                                     bgColor={"FFF"}
                                     fontSize={14}

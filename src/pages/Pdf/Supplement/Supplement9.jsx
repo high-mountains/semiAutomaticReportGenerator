@@ -8,7 +8,7 @@ import { updateDangerValues } from "./updateDangerValues.js";
 // Initial data for the table
 const initialData = [
     {
-        rowSpan: 5,
+        rowSpan: 8,
         thContent: {
             main: "Oxidation/Antioxidation",
             sub: "Cellular damage process / Works to protect cells by suppressing oxidative stress",

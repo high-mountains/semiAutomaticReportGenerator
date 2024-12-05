@@ -43,7 +43,7 @@ const Concept = () => {
                 description: "Detox type characteristics may include:",
                 qualities1: [
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>I'm tired even though I haven't done anything</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Be tired even though I haven't done anything</p>`
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Skin condition easily deteriorates</p>`
@@ -58,18 +58,18 @@ const Concept = () => {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>My stomach feels heavy after eating</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>I like bathing and saunas</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>To like bathing and saunas</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>I often buy organic health foods</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Often buy organic health foods</p>`
                     }
                 ],
                 qualities2: [
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>I get tired when I'm on an airplane or bullet train.</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>To get tired when I'm on an airplane or bullet train.</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>I'm prone to getting sick when staying in a hotel.</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Be prone to getting sick when staying in a hotel.</p>`
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Eating out can make you feel sick</p>`
@@ -81,6 +81,20 @@ const Concept = () => {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Prefers food with lots of condiments</p>`
                     }
                 ],
+                ulStyle1: {
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "1rem",
+                    fontSize: "12rem",
+                    whiteSpace: "pre-wrap",
+                },
+                ulStyle2: {
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "1rem",
+                    fontSize: "12rem",
+                    whiteSpace: "pre-wrap",
+                },
                 sidebarColor: maincolor
             }
         },

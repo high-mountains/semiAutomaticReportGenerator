@@ -29,7 +29,7 @@ const Merit = () => {
                             "A gene that produces the enzymes and proteins necessary to make energy (ATP) in mitochondria. Related genes: NDUFA1, NDUFS1, ATP5F1A",
                         contentLineHeight: 1.448333,  
                         posInfo: {
-                            top: "0rem",
+                            top: "-15rem",
                             left: "0rem",
                             width: "229rem"
                         },
@@ -55,9 +55,9 @@ const Merit = () => {
                             "A gene involved in the process of breaking down fats and sugars and turning them into energy. Related genes: PANK2, G6PD, ACAT1",
                         contentLineHeight: 1.448333,
                         posInfo: {
-                            bottom: "65rem",
-                            right: "0rem",
-                            width: "167rem",
+                            bottom: "52rem",
+                            right: "-25rem",
+                            width: "171rem",
                         },
                         fontSize: 12,
                         contentClassName: "tracking-tightest"
@@ -68,8 +68,8 @@ const Merit = () => {
                         content: `A gene involved in the process of generating energy using oxygen (electron transport chain). Related genes: COX4I2, CYC1, SDHB`,
                         contentLineHeight: 1.448333,
                         posInfo: {
-                            bottom: "1rem",
-                            right: "0rem",
+                            bottom: "-20rem",
+                            right: "34rem",
                             width: "398rem",
                         },
                         fontSize: 12,
@@ -81,9 +81,9 @@ const Merit = () => {
                         content: `A gene that produces coenzyme Q (ubiquinone), which helps generate energy in mitochondria. Related genes: COQ2, COQ7`,
                         contentLineHeight: 1.448333,
                         posInfo: {
-                            top: "130rem",
-                            left: "0rem",
-                            width: "170rem",
+                            top: "137rem",
+                            left: "-9rem",
+                            width: "182rem",
                         },
                         fontSize: 12,
                         contentClassName: "tracking-tightest"
@@ -103,10 +103,10 @@ const Merit = () => {
             Component: MeritDemerit,
             data: {
                 commonStyle:{
-                    gap: "5rem",
+                    gap: "2rem",
                 },
                 inCommonStyle:{
-                    gap: "3rem",
+                    gap: "1rem",
                     fontSize: 1.4477
                 },
                 titleStyle:{
@@ -116,6 +116,7 @@ const Merit = () => {
                     fontSize: "9rem",
                     lineHeight:1.444444,
                 },
+
                 merit: [
                     {
                         title: "Improved cognitive function",

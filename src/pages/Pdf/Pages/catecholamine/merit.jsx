@@ -27,10 +27,10 @@ const Merit = () => {
                         wrapperWidth: "240rem", 
                         heading: "Decomposition and metabolism of catecholamines",
                         content:
-                            "This is an important process that breaks down and metabolizes catecholamines so that the body can return to normal from excessive stress or excitement. Related genes: COMT, MAOA, MAOB, ALDH2, SULT1A3, DBH, SLC6A2",
+                            "This is an important process that\nbreaks down and metabolizes\ncatecholamines.\nRelated genes: COMT, MAOA",
                         contentLineHeight: 1.448333, 
                         posInfo: {
-                            top: "11rem",
+                            top: "0rem",
                             left: "0rem",
                             width: "240rem"
                         },
@@ -40,10 +40,10 @@ const Merit = () => {
                         wrapperWidth: "240rem",
                         heading: "カテコラミン受容体",
                         content:
-                            "Catecholamines bind and transmit signals to cells\n　　This triggers a variety of reactions in the body.\n　　　　　　Related genes:DRD1, DRD2, \n　　　　　　　　　　　　DRD4,ADRA2A",
+                            "Catecholamines bind and transmit signals to cells\n　　This triggers a variety of reactions in \n              the body.\n　　　　　　Related genes:DRD1, DRD2, \n　　         　　　DRD4,ADRA2A",
                         contentLineHeight: 1.448333,
                         posInfo: {
-                            top: "11rem",
+                            top: "0rem",
                             right: "0rem",
                             width: "240rem"
                         },
@@ -51,12 +51,12 @@ const Merit = () => {
                     },
                     {
                         wrapperWidth: "240rem",
-                        heading: "　　　　Nitric oxide (NO) synthesis",
+                        heading: "　　　　 Nitric oxide (NO) \n　　　　synthesis",
                         content:
-                            "　　　　　Regulating blood vessel dilation and neurotransmission. Related genes: NOS2, NOS3",
+                            "　　　　Regulating blood vessel dilation and neurotransmission. Related genes: NOS2, NOS3",
                         contentLineHeight: 1.448333,
                         posInfo: {
-                            bottom: "53rem",
+                            bottom: "34rem",
                             right: "0rem",
                             width: "240rem"
                         },
@@ -65,11 +65,11 @@ const Merit = () => {
                     },
                     {
                         wrapperWidth: "240rem",
-                        heading: "Synthesis of catecholamines",
-                        content: `It is made from amino acids and is produced in the brain and adrenal glands. Related genes: TH, GCH1, DHFR`,
+                        heading: "Synthesis of \ncatecholamines",
+                        content: `It is made from amino acids and is\nproduced in the brain and adrenal glands. Related genes: TH, GCH1, DHFR`,
                         contentLineHeight: 1.448333,
                         posInfo: {
-                            bottom: "51rem",
+                            bottom: "26rem",
                             left: "0rem",
                             width: "240rem"
                         },

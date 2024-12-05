@@ -9,7 +9,7 @@ const MethylationPathway = () => {
         <PageWrapper>
             <PageHeader
                 subtitle={"Methylation Pathway"}
-                mainTitle={"メチレーション経路"}
+                mainTitle={"Methylation Pathway"}
                 subTitleStyle={{
                     marginBottom:"5rem",
                     fontSize: "14rem"

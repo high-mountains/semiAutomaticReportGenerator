@@ -9,7 +9,7 @@ const GenePageNumber = (props) => {
     }, [])
     return (
         <div className="bg-[#F8F8F8]  text-[9rem] text-[#484F51]">
-            <p className="absolute bottom-[39rem] ">※本項目は、科学的研究がまだ充分に進んでいない遺伝子に基づく情報であり、参考情報として提供しています。</p>
+            <p className="absolute bottom-[39rem] ">*This item is information based on genes for which scientific research has not yet been sufficiently advanced and is provided as reference information.</p>
             <p className="absolute bottom-0 left-2/4 translate-x-[-50%] leading-[1.4477]"
                 style={{
                     marginBottom: `${bottom}rem`,

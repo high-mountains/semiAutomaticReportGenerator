@@ -38,9 +38,9 @@ const GeneInformationMiddle = (props) => {
             <table className="geneInfo" style={{ marginBottom: '10rem', fontSize: '12rem', width: '535rem'}}>
                 <thead>
                     <tr>
-                        <th><p style={renderedPdfFlag}>遺伝子</p></th>
+                        <th><p style={renderedPdfFlag}>Gene</p></th>
                         <th><p style={renderedPdfFlag}>rsID / Gene Type</p></th>
-                        <th><p style={renderedPdfFlag}>変異の大きさ</p></th>
+                        <th><p style={renderedPdfFlag}>Magnitude of mutation</p></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -49,7 +49,7 @@ const GeneInformationMiddle = (props) => {
                         <td style={thirdRenderedPdfFlag}>
                             {datas.map((item, index) => (
                                 <p key={index}>
-                                    {item} &nbsp; &nbsp; {data[item] || "未定"}
+                                    {item} &nbsp; &nbsp; {data[item] || "Not Sure"}
                                 </p>
                             ))}
                         </td>

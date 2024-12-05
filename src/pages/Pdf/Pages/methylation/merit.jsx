@@ -26,7 +26,7 @@ const Merit = () => {
                         wrapperWidth: "240rem",
                         heading: "Methylation Cycle",
                         content:
-                            "Genes that assist in producing methionine, an amino acid, from homocysteine as part of the methylation cycle.\nRelated Genes: MTHFR, MTRR, MTR, DHFR, SHMT1",
+                            "Genes that assist in producing methionine, an amino acid, from homocysteine as part of the\nmethylation cycle.\nRelated Genes: MTHFR, MTRR,\nMTR, DHFR, SHMT1",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             top: "0rem",
@@ -39,7 +39,7 @@ const Merit = () => {
                         wrapperWidth: "240rem",
                         heading: "Homocysteine Metabolism",
                         content:
-                            "Genes involved in transforming homocysteine into other substances to maintain balance in the body.\nRelated Genes: AHCY, BHMT, CBS",
+                            "Genes involved in transforming homocysteine \n   into other substances to maintain balance in\n               the body.\n                      Related Genes: AHCY, BHMT, CBS",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             top: "0rem",
@@ -51,12 +51,12 @@ const Merit = () => {
                     },
                     {
                         wrapperWidth: "242rem",
-                        heading: "Sulfur Amino Acid Metabolism",
+                        heading: "                  Sulfur Amino Acid\n                  Metabolism",
                         content:
-                            "Genes that assist in producing cysteine, an amino acid, from cystathionine, maintaining sulfur-containing amino acid balance.\nRelated Genes: CTH",
+                            "                   Genes that assist in producing\n                cysteine, an amino acid, from cystathionine, maintaining sulfur-containing amino acid balance.\nRelated Genes: CTH",
                         contentLineHeight: 1.448,
                         posInfo: {
-                            bottom: "8rem",
+                            bottom: "-27rem",
                             right: "0rem",
                             width: "240rem",
                         },
@@ -70,7 +70,7 @@ const Merit = () => {
                             "Genes that help absorb and utilize folate, an essential vitamin.\nRelated Genes: FOLR1, FOLR2, SLC19A1",
                         contentLineHeight: 1.448333,
                         posInfo: {
-                            bottom: "25rem",
+                            bottom: "5rem",
                             left: "0rem",
                             width: "240rem",
                         },

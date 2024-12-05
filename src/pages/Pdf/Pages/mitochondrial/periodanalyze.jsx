@@ -70,16 +70,16 @@ const Periodanalyze = (props) => {
                             renderedPdfFlag ? "12" : "6"
                         }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Consume foods rich in polyphenols (dark chocolate, apples, tomatoes, onions, cinnamon, oregano, etc.).</p>`,
                     },
-                    {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
-                            renderedPdfFlag ? "12" : "6"
-                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Once you feel better and want to exercise, start doing aerobic exercise and strength training. You will feel more energetic, but be careful not to over-exercise.</p>`,
-                    },
-                    {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
-                            renderedPdfFlag ? "12" : "6"
-                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Make sure you get enough sleep, as lack of sleep can lead to impaired mitochondrial function.</p>`,
-                    },
+                    // {
+                    //     content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
+                    //         renderedPdfFlag ? "12" : "6"
+                    //     }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Once you feel better and want to exercise, start doing aerobic exercise and strength training. You will feel more energetic, but be careful not to over-exercise.</p>`,
+                    // },
+                    // {
+                    //     content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
+                    //         renderedPdfFlag ? "12" : "6"
+                    //     }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Make sure you get enough sleep, as lack of sleep can lead to impaired mitochondrial function.</p>`,
+                    // },
                 ],
                 oneColumnStatus: true,
                 liStyle: { lineHeight: 1.25, fontSize: "12rem" },

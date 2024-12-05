@@ -151,13 +151,6 @@ const initialData = [
             description: "NADPH (Cofactor), Riboflavin (Cofactor), Iron (Cofactor), CoQ10, L-Carnitine, NAD+, NMN, NR, Alpha Lipoic Acid, Vitamin B complex",
         }
     },
-    {
-        tdContent: {
-            gen: "NDUFA10",
-            danger: 0,
-            description: "NADPH (Cofactor), Riboflavin (Cofactor), Iron (Cofactor), CoQ10, L-Carnitine, NAD+, NMN, NR, Alpha Lipoic Acid, Vitamin B complex",
-        }
-    },
 ];
 
 const Supplement3 = () => {
