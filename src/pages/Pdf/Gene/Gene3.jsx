@@ -12,27 +12,27 @@ const Gene3 = () => {
                 geneName={"DAOA"}
                 datas={["rs2391191"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、グルタミン酸の分解が正しく行われず、体内でグルタミン酸がたまりやすくなる可能性があります。DAOA（D-amino acid oxidase activator）は、D-アミノ酸オキシダーゼ（DAO）を活性化するタンパク質をコードしています。DAOは、D-アミノ酸を酸化する酵素であり、特に神経系において重要な役割を果たします。DAOAは、DAOの活性を調節し、D-セリンなどの神経伝達調節因子の代謝に関与しています。"}
+                description={"If this gene has a mutation, the breakdown of glutamate may not function properly, leading to an accumulation of glutamate in the body. DAOA (D-amino acid oxidase activator) encodes a protein that activates D-amino acid oxidase (DAO). DAO is an enzyme that oxidizes D-amino acids and plays an important role, particularly in the nervous system. DAOA regulates DAO activity and is involved in the metabolism of neurotransmitter modulators like D-serine."}
             />
             <GeneInformationMiddle
                 geneName={"GAD1"}
                 datas={["rs769390", "rs2241165"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、グルタミン酸からGABAへの変換が阻害される可能性があります。GAD1（Glutamate Decarboxylase 1）は、グルタミン酸脱炭酸酵素（GAD67）をコードしています。この酵素は、グルタミン酸を脱炭酸してGABA（γ-アミノ酪酸）を生成する役割を担います。"}
+                description={"If this gene has a mutation, the conversion of glutamate to GABA may be inhibited. GAD1 (Glutamate Decarboxylase 1) encodes the enzyme glutamate decarboxylase (GAD67). This enzyme is responsible for decarboxylating glutamate to produce GABA (γ-aminobutyric acid)."}
             />
             
             <GeneInformationMiddle
                 geneName={"GLUD1"}
                 datas={["rs121909730"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、グルタミン酸の代謝や体のエネルギー産生に問題が生じる可能性があります。GLUD1（Glutamate Dehydrogenase 1）は、グルタミン酸デヒドロゲナーゼ1という酵素をコードしています。この酵素は、グルタミン酸を酸化的に脱アミノ化し、α-ケトグルタル酸とアンモニアを生成します。"}
+                description={"If this gene has a mutation, issues may arise in glutamate metabolism or energy production in the body. GLUD1 (Glutamate Dehydrogenase 1) encodes an enzyme called glutamate dehydrogenase 1. This enzyme catalyzes the oxidative deamination of glutamate, producing α-ketoglutarate and ammonia."}
             />
             
             <GeneInformationMiddle
                 geneName={"GLUL"}
                 datas={["rs10911021"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、グルタミン酸からグルタミンへの合成が阻害される可能性があります。GLUL（Glutamine Synthetase）は、グルタミン合成酵素をコードしています。この酵素は、グルタミン酸とアンモニアを基質としてグルタミンを合成します。"}
+                description={"If this gene has a mutation, the synthesis of glutamine from glutamate may be inhibited. GLUL (Glutamine Synthetase) encodes the enzyme glutamine synthetase. This enzyme synthesizes glutamine from glutamate and ammonia as substrates."}
             />
 
             <GenePageNumber>42</GenePageNumber>

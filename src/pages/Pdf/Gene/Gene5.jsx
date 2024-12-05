@@ -8,12 +8,12 @@ import Text from "../../../components/Pdf/Text.jsx";
 const Gene5 = () => {
     return (
         <PageWrapper>
-            <Text sidebar={1} textContent={"GABA代謝"} containerStyle={{marginBottom: '10rem'}} />
+            <Text sidebar={1} textContent={"GABA Metabolism"} containerStyle={{marginBottom: '10rem'}} />
             <GeneInformationMiddle
                 geneName={"ALDH5A1"}
                 datas={["rs3765310", "rs2760118", "rs62621664"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、体内のGABA代謝が正常に行われず、神経系の機能に影響を与える可能性があります。ALDH5A1（Aldehyde Dehydrogenase 5 Family Member A1）は、スキサリルセミアルデヒドデヒドロゲナーゼ（SSADH）という酵素をコードしています。この酵素は、GABA（γ-アミノ酪酸）代謝経路において、スキサリルセミアルデヒドをコハク酸に変換する反応を触媒します。"}
+                description={"If this gene has a mutation, GABA metabolism in the body may not function properly, potentially affecting the nervous system. ALDH5A1 (Aldehyde Dehydrogenase 5 Family Member A1) encodes the enzyme succinate semialdehyde dehydrogenase (SSADH). This enzyme catalyzes the conversion of succinate semialdehyde to succinic acid in the GABA (γ-aminobutyric acid) metabolic pathway."}
             />
 
             <GenePageNumber>44</GenePageNumber>

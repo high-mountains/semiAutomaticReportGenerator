@@ -9,13 +9,13 @@ const Gene1 = () => {
     return (
         <PageWrapper>
 
-            <Text sidebar={1} textContent={"グルタミン酸代謝"} containerStyle={{marginBottom: '10rem'}} />
+            <Text sidebar={1} textContent={"Glutamate Metabolism"} containerStyle={{marginBottom: '10rem'}} />
             
             <GeneInformationMiddle
                 datas={["rs121964962", "rs121964963", "rs121964965", "rs121964967","rs121964972", "rs375846341","rs398123151"]}
                 geneName={"CBS"}
                 level={-1}
-                description={"この遺伝子に変異がある場合、体の中でグルタミン酸の代謝が低下する可能性があります。CBS（Cystathionine Beta-Synthase）は、シスタチオニンβ-シンターゼという酵素をコードしています。この酵素は、メチオニン代謝経路において重要な役割を果たし、ホモシステインをシスタチオニンに変換する反応を触媒します。"}
+                description={"If this gene has a mutation, it may reduce the metabolism of glutamate in the body. CBS (Cystathionine Beta-Synthase) encodes an enzyme called cystathionine β-synthase. This enzyme plays an important role in the methionine metabolic pathway and catalyzes the conversion of homocysteine to cystathionine."}
             />
 
             <GenePageNumber>41</GenePageNumber>

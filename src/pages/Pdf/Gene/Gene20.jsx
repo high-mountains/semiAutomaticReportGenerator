@@ -7,25 +7,29 @@ import GeneInformationMiddle from "../../../components/Pdf/GeneInformationList/G
 const Gene20 = () => {
     return (
         <PageWrapper>
-
             <GeneInformationMiddle
                 geneName={"COQ8B"}
                 datas={["rs398122983", "rs398122981", "rs28493229", "rs398122978", "rs398122979", "rs398122980", "rs398122982"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、CoQ10の生合成が阻害され、エネルギー産生が低下する可能性があります。COQ8B（Coenzyme Q8B, ATPase）は、コエンザイムQの生合成に関与するATPase活性を持つタンパク質をコードしています。このタンパク質は、コエンザイムQの生合成複合体の安定性と機能の調整に関与しており、ミトコンドリアでの電子伝達とエネルギー産生の効率に寄与しています。"}
+                description={
+                    "Variants in this gene may impair the biosynthesis of CoQ10, potentially reducing energy production. COQ8B (Coenzyme Q8B, ATPase) encodes a protein with ATPase activity that is involved in the biosynthesis of coenzyme Q. This protein contributes to the stability and regulation of the coenzyme Q biosynthesis complex and plays a role in mitochondrial electron transport and energy production efficiency."
+                }
             />
             <GeneInformationMiddle
                 geneName={"COQ9"}
                 datas={["rs786205897", "rs267606751"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、CoQ10の生合成が阻害され、エネルギー産生が低下する可能性があります。COQ9（Coenzyme Q9）は、コエンザイムQの生合成複合体で補助的な役割を果たすタンパク質をコードしています。COQ9は、コエンザイムQの構造や安定性に関わり、電子伝達系でのユビキノンの適切な供給を支援します。"}
+                description={
+                    "Variants in this gene may impair the biosynthesis of CoQ10, potentially reducing energy production. COQ9 (Coenzyme Q9) encodes a protein that plays an auxiliary role in the coenzyme Q biosynthesis complex. COQ9 is involved in the structure and stability of coenzyme Q and supports the proper supply of ubiquinone in the electron transport chain."
+                }
             />
-            
             <GeneInformationMiddle
                 geneName={"COQ10A"}
                 datas={["rs199765776"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、CoQ10の生合成が阻害され、エネルギー産生が低下する可能性があります。COQ10AおよびCOQ10B（Coenzyme Q10 Homolog A/B）は、コエンザイムQのホモログとして働くタンパク質をコードしています。これらは、コエンザイムQの生合成や安定性をサポートする役割を果たし、特にミトコンドリアの電子伝達系におけるユビキノンの供給に重要です。COQ10AとCOQ10Bの機能は類似しており、コエンザイムQの適切な濃度を維持することで細胞のエネルギー産生を助けています。"}
+                description={
+                    "Variants in this gene may impair the biosynthesis of CoQ10, potentially reducing energy production. COQ10A and COQ10B (Coenzyme Q10 Homolog A/B) encode proteins that function as homologs of coenzyme Q. These proteins play a role in supporting the biosynthesis and stability of coenzyme Q, particularly in maintaining the supply of ubiquinone in the mitochondrial electron transport chain. The functions of COQ10A and COQ10B are similar and help maintain appropriate concentrations of coenzyme Q to support cellular energy production."
+                }
             />
 
             <GenePageNumber>59</GenePageNumber>

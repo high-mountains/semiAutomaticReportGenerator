@@ -35,7 +35,7 @@ const Gene30 = () => {
                 ]}
                 level={-1}
                 description={
-                    "この遺伝子に変異がある場合、クエン酸回路と電子伝達系の連携が損なわれ、ATP生成が減少する可能性があります。SDHA（Succinate Dehydrogenase Complex Flavoprotein Subunit A）は、ミトコンドリア電子伝達系複合体IIの主要サブユニットで、スクシニン酸デヒドロゲナーゼとしてTCA回路にも関わります。SDHAはスクシニン酸をフマル酸に変換しながら電子をユビキノンに伝達し、エネルギー生成と酸化還元反応において重要な役割を果たします。"
+                    "Variants in this gene may impair the coordination between the citric acid cycle and the electron transport chain, leading to decreased ATP production. SDHA (Succinate Dehydrogenase Complex Flavoprotein Subunit A) is the major subunit of mitochondrial electron transport chain complex II and also participates in the TCA cycle as succinate dehydrogenase. SDHA converts succinate to fumarate while transferring electrons to ubiquinone, playing an important role in energy production and redox reactions."
                 }
             />
 

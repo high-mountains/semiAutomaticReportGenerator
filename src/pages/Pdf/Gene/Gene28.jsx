@@ -38,7 +38,7 @@ const Gene28 = () => {
                 ]}
                 level={-1}
                 description={
-                    "この遺伝子に変異がある場合、クエン酸回路が阻害され、エネルギー産生が減少する可能性があります。OGDH（Oxoglutarate Dehydrogenase）は、オキソグルタル酸デヒドロゲナーゼという酵素をコードしており、TCA回路（クエン酸回路）の中で2-オキソグルタル酸をスクシニルCoAと二酸化炭素に変換する役割を持っています。"
+                    "Variants in this gene may inhibit the citric acid cycle, potentially reducing energy production. OGDH (Oxoglutarate Dehydrogenase) encodes the enzyme responsible for converting 2-oxoglutarate into succinyl-CoA and carbon dioxide in the TCA cycle (Citric Acid Cycle)."
                 }
             />
 

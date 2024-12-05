@@ -7,14 +7,12 @@ import GeneInformationMiddle from "../../../components/Pdf/GeneInformationList/G
 const Gene14 = () => {
     return (
         <PageWrapper>
-
             <GeneInformationMiddle
                 geneName={"CYP21A2"}
                 datas={["rs1330554738", "rs72552757", "rs12530380", "rs7755898"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、ステロイドホルモンの代謝に影響が生じ、ヒスタミン反応の調整が乱れる可能性があります。CYP21A2（Cytochrome P450 Family 21 Subfamily A Member 2）は、ステロイド21-水酸化酵素をコードしており、コルチゾールやアルドステロンなどのステロイドホルモンの合成に関与します。この酵素は、副腎で重要な役割を果たし、ストレス応答や電解質バランスの維持に必要なホルモンの生合成に寄与しています。"}
+                description={"Variants in this gene may affect steroid hormone metabolism, potentially disrupting histamine response regulation. CYP21A2 (Cytochrome P450 Family 21 Subfamily A Member 2) encodes the steroid 21-hydroxylase enzyme, which is crucial for synthesizing steroid hormones such as cortisol and aldosterone. This enzyme plays a vital role in the adrenal glands, contributing to hormone biosynthesis necessary for stress response and maintaining electrolyte balance."}
             />
-            
             <GenePageNumber>53</GenePageNumber>
         </PageWrapper>
     );

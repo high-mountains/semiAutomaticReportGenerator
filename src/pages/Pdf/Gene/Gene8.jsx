@@ -8,26 +8,26 @@ import Text from "../../../components/Pdf/Text.jsx";
 const Gene8 = () => {
     return (
         <PageWrapper>
-            <Text sidebar={1} textContent={"カテコラミン代謝"} containerStyle={{marginBottom: '10rem'}} />
+            <Text sidebar={1} textContent={"Catecholamine Metabolism"} containerStyle={{marginBottom: '10rem'}} />
 
             <GeneInformationMiddle
                 geneName={"COMT"}
                 datas={["rs4680", "rs4633"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、ドーパミンやノルアドレナリンの代謝が阻害される可能性があります。COMT（Catechol-O-Methyltransferase）は、カテコール-O-メチルトランスフェラーゼという酵素をコードしています。この酵素は、カテコール基を持つ神経伝達物質（ドーパミン、ノルアドレナリン、アドレナリンなど）の代謝に関与し、これらの神経伝達物質を不活性化するためにメチル基を付加する反応を触媒します。"}
+                description={"If this gene has a mutation, it may inhibit the metabolism of dopamine and norepinephrine. COMT (Catechol-O-Methyltransferase) encodes the enzyme catechol-O-methyltransferase. This enzyme is involved in the metabolism of catecholamine neurotransmitters (dopamine, norepinephrine, and adrenaline) that have a catechol group. It catalyzes the reaction of adding a methyl group to deactivate these neurotransmitters."}
             />
             <GeneInformationMiddle
                 geneName={"MAOA"}
                 datas={["rs6323", "rs1137070", "rs72554632", "rs796065312"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、ドーパミンやセロトニン、ノルアドレナリンの代謝が阻害される可能性があります。MAOA（Monoamine Oxidase A）は、モノアミンオキシダーゼAという酵素をコードしています。この酵素は、セロトニン、ノルアドレナリン、ドーパミンなどのモノアミン神経伝達物質の分解に関与し、これらの伝達物質を酸化的に脱アミノ化して不活性化します。"}
+                description={"If this gene has a mutation, it may inhibit the metabolism of dopamine, serotonin, and norepinephrine. MAOA (Monoamine Oxidase A) encodes the enzyme monoamine oxidase A. This enzyme is involved in the breakdown of monoamine neurotransmitters such as serotonin, norepinephrine, and dopamine, deactivating them through oxidative deamination."}
             />
             
             <GeneInformationMiddle
                 geneName={"MAOB"}
                 datas={["rs1799836"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、グルタミン酸の代謝や体のエネルギー産生に問題が生じる可能性があります。GLUD1（Glutamate Dehydrogenase 1）は、グルタミン酸デヒドロゲナーゼ1という酵素をコードしています。この酵素は、グルタミン酸を酸化的に脱アミノ化し、α-ケトグルタル酸とアンモニアを生成します。"}
+                description={"If this gene has a mutation, it may cause problems with the metabolism of glutamate and the body's energy production. GLUD1 (Glutamate Dehydrogenase 1) encodes the enzyme glutamate dehydrogenase 1. This enzyme oxidatively deaminates glutamate, producing α-ketoglutarate and ammonia."}
             />
 
             <GenePageNumber>47</GenePageNumber>

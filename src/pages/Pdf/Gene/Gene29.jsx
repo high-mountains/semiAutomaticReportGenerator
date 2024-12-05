@@ -31,7 +31,7 @@ const Gene29 = () => {
                 ]}
                 level={-1}
                 description={
-                    "この遺伝子に変異がある場合、ミトコンドリア内のエネルギー代謝や脂肪酸代謝に影響を与える可能性があります。PANK2（Pantothenate Kinase 2）は、パントテン酸キナーゼ2という酵素をコードしています。この酵素は、補酵素A（CoA）生合成の第一段階でパントテン酸（ビタミンB5）をリン酸化し、CoA生成の調節に寄与します。"
+                    "Variants in this gene may affect mitochondrial energy metabolism and fatty acid metabolism. PANK2 (Pantothenate Kinase 2) encodes the enzyme pantothenate kinase 2, which is involved in the first step of coenzyme A (CoA) biosynthesis by phosphorylating pantothenic acid (vitamin B5), contributing to the regulation of CoA production."
                 }
             />
 

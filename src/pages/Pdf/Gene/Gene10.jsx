@@ -8,19 +8,19 @@ import Text from "../../../components/Pdf/Text.jsx";
 const Gene10 = () => {
     return (
         <PageWrapper>
-            <Text sidebar={1} textContent={"セロトニン"} containerStyle={{marginBottom: '10rem'}} />
+            <Text sidebar={1} textContent={"Serotonin"} containerStyle={{marginBottom: '10rem'}} />
 
             <GeneInformationMiddle
                 geneName={"HTR2A"}
                 datas={["rs6314"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、気分や行動、認知機能に変化を引き起こす可能性があります。HTR2A（5-Hydroxytryptamine Receptor 2A）は、セロトニン2A受容体をコードしています。この受容体は、中枢神経系のGタンパク質共役型受容体で、セロトニンが結合すると、細胞内のシグナル伝達経路を活性化します。"}
+                description={"Variants in this gene may cause changes in mood, behavior, and cognitive function. HTR2A (5-Hydroxytryptamine Receptor 2A) encodes the serotonin 2A receptor. This receptor is a G-protein-coupled receptor in the central nervous system, which activates intracellular signaling pathways when serotonin binds to it."}
             />
             <GeneInformationMiddle
                 geneName={"GAD1"}
                 datas={["rs6323", "rs1137070", "rs72554632", "rs796065312"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、ドーパミンやセロトニン、ノルアドレナリンの代謝が阻害される可能性があります。MAOA（Monoamine Oxidase A）は、モノアミンオキシダーゼAという酵素をコードしています。この酵素は、セロトニン、ノルアドレナリン、ドーパミンなどのモノアミン神経伝達物質の分解に関与し、これらの伝達物質を酸化的に脱アミノ化して不活性化します。"}
+                description={"Variants in this gene may inhibit the metabolism of dopamine, serotonin, and norepinephrine. MAOA (Monoamine Oxidase A) encodes the enzyme monoamine oxidase A. This enzyme is involved in breaking down monoamine neurotransmitters such as serotonin, norepinephrine, and dopamine by oxidatively deaminating them, rendering them inactive."}
             />
 
             <GenePageNumber>49</GenePageNumber>

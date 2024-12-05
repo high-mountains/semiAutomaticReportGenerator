@@ -12,27 +12,35 @@ const Gene26 = () => {
                 geneName={"NDUFS2"}
                 datas={["rs150667550"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、ATP合成効率が低下し、細胞のエネルギー供給が不足する可能性があります。NDUFS2（NADH Oxidoreductase Core Subunit S2）は、複合体Iのもう一つの主要サブユニットで、電子伝達とプロトンポンプ活動に関わっています。NDUFS2は、複合体Iの構造安定性を高め、ミトコンドリア内でのエネルギー生成の効率をサポートします。"}
+                description={
+                    "Variants in this gene may reduce ATP synthesis efficiency and lead to inadequate cellular energy supply. NDUFS2 (NADH Oxidoreductase Core Subunit S2) is another major subunit of Complex I, involved in electron transfer and proton pump activity. NDUFS2 enhances the structural stability of Complex I and supports efficient energy generation in the mitochondria."
+                }
             />
             <GeneInformationMiddle
                 geneName={"NDUFS3"}
                 datas={["rs863224106", "rs863224107", "rs28939714", "rs104894270"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、ATP合成効率が低下し、細胞のエネルギー供給が不足する可能性があります。NDUFS3（NADH Oxidoreductase Core Subunit S3）は、複合体Iのコアサブユニットの一つであり、電子伝達の過程で中心的な役割を果たしています。NDUFS3は、プロトン勾配の形成を補助し、細胞のATP生成に重要です。"}
+                description={
+                    "Variants in this gene may reduce ATP synthesis efficiency and lead to inadequate cellular energy supply. NDUFS3 (NADH Oxidoreductase Core Subunit S3) is one of the core subunits of Complex I and plays a central role in the electron transfer process. NDUFS3 helps assist the formation of the proton gradient, which is crucial for ATP production in the cell."
+                }
             />
             
             <GeneInformationMiddle
                 geneName={"NDUFS4"}
                 datas={["rs104893898", "rs104893899", "rs121908985", "rs587776949"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、ATP合成効率が低下し、細胞のエネルギー供給が不足する可能性があります。NDUFS4（NADH Oxidoreductase Subunit S4）は、複合体Iの補助サブユニットで、プロトンポンプと電子伝達機能の調節に関わります。NDUFS4は、複合体Iの活性維持に寄与し、ミトコンドリアのエネルギー産生を支援しています。"}
+                description={
+                    "Variants in this gene may reduce ATP synthesis efficiency and lead to inadequate cellular energy supply. NDUFS4 (NADH Oxidoreductase Subunit S4) is an auxiliary subunit of Complex I, involved in the regulation of proton pump and electron transfer functions. NDUFS4 contributes to the maintenance of Complex I activity and supports energy production in the mitochondria."
+                }
             />
             
             <GeneInformationMiddle
                 geneName={"NDUFS6"}
                 datas={["rs267606913", "rs863224110", "rs863224111"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、ATP合成効率が低下し、細胞のエネルギー供給が不足する可能性があります。NDUFS6（NADH Oxidoreductase Subunit S6）は、ミトコンドリア電子伝達系の複合体Iの補助サブユニットで、電子伝達とプロトン移動の機能をサポートしています。NDUFS6は、複合体Iの構造を安定させ、ATP合成のためのプロトン勾配形成に寄与しています。"}
+                description={
+                    "Variants in this gene may reduce ATP synthesis efficiency and lead to inadequate cellular energy supply. NDUFS6 (NADH Oxidoreductase Subunit S6) is an auxiliary subunit of Complex I in the mitochondrial electron transport chain, supporting the functions of electron transfer and proton movement. NDUFS6 stabilizes the structure of Complex I and contributes to the formation of the proton gradient necessary for ATP synthesis."
+                }
             />
 
             <GenePageNumber>65</GenePageNumber>

@@ -7,27 +7,31 @@ import GeneInformationMiddle from "../../../components/Pdf/GeneInformationList/G
 const Gene18 = () => {
     return (
         <PageWrapper>
-
             <GeneInformationMiddle
                 geneName={"COQ2"}
                 datas={["rs121918231", "rs121918233", "rs863223936", "rs767298430", "rs121918232"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、CoQ10の生合成が阻害され、エネルギー産生が低下する可能性があります。COQ2（Coenzyme Q2, Polyprenyltransferase）は、コエンザイムQ（ユビキノン）の生合成経路で必要な酵素をコードしています。この酵素は、ポリプレニル基をベンゾキノンに付加する役割を持ち、ミトコンドリアの電子伝達系でのATP生成に重要な役割を果たしています。"}
+                description={
+                    "Variants in this gene may impair the biosynthesis of CoQ10, potentially reducing energy production. COQ2 (Coenzyme Q2, Polyprenyltransferase) encodes an enzyme required in the biosynthetic pathway of coenzyme Q (ubiquinone). This enzyme adds a polyprenyl group to benzoquinone and plays a crucial role in ATP generation in the mitochondrial electron transport chain."
+                }
             />
             <GeneInformationMiddle
                 geneName={"COQ3"}
                 datas={["rs6925344", "rs146934336", "rs6912105", "rs200092962", "rs9483838"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、CoQ10の生合成が阻害され、エネルギー産生が低下する可能性があります。COQ3（Coenzyme Q3, Methyltransferase）は、コエンザイムQの生合成経路に関与し、ベンゾキノン構造のメチル化を行う酵素をコードしています。このメチル化は、ユビキノンの生成に不可欠なステップです。"}
+                description={
+                    "Variants in this gene may impair the biosynthesis of CoQ10, potentially reducing energy production. COQ3 (Coenzyme Q3, Methyltransferase) encodes an enzyme involved in the biosynthetic pathway of coenzyme Q that methylates the benzoquinone structure. This methylation is a crucial step in the production of ubiquinone."
+                }
             />
-            
             <GeneInformationMiddle
                 geneName={"COQ4"}
                 datas={["rs766317663", "rs775607037", "rs758522459", "rs143441644", "rs786204771"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、CoQ10の生合成が阻害され、エネルギー産生が低下する可能性があります。COQ4（Coenzyme Q4, Structural Component）は、コエンザイムQ合成複合体の構造的安定に関与するタンパク質をコードしています。COQ4は、コエンザイムQの生合成酵素複合体を組み立てる際に重要で、生合成の効率を高めています。"}
+                description={
+                    "Variants in this gene may impair the biosynthesis of CoQ10, potentially reducing energy production. COQ4 (Coenzyme Q4, Structural Component) encodes a protein involved in the structural stability of the coenzyme Q biosynthetic complex. COQ4 is important in assembling the coenzyme Q biosynthesis enzyme complex and enhancing the efficiency of its production."
+                }
             />
-            
+
             <GenePageNumber>57</GenePageNumber>
         </PageWrapper>
     );

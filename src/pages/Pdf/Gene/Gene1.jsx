@@ -11,16 +11,16 @@ const Gene2 = () => {
         <PageWrapper>
             <PageHeader
                 subtitle={"Gene Information List"}
-                mainTitle={"あなたの遺伝子情報一覧"}
+                mainTitle={"Your Gene Information Overview"}
             />
 
-            <Text sidebar={1} textContent={"グルタミン酸合成"} containerStyle={{marginBottom: '10rem'}}/>
+            <Text sidebar={1} textContent={"Glutamate Synthesis"} containerStyle={{marginBottom: '10rem'}}/>
             
             <GeneInformationMiddle
                 datas={["rs2657879", "rs2638315"]}
                 geneName={"GLS2"}
                 level={-1}
-                description={"この遺伝子に変異がある場合、体内のグルタミン酸合成を阻害する可能性があります。GLS2 (Glutaminase 2)は、肝臓に特異的なグルタミナーゼをコードする遺伝子です。この酵素は、グルタミンをグルタミン酸とアンモニアに変換する反応を触媒し、グルタミン代謝とエネルギー代謝において重要な役割を果たします。"}
+                description={"If this gene has a mutation, it may inhibit glutamate synthesis in the body. GLS2 (Glutaminase 2) is a gene that encodes a liver-specific glutaminase. This enzyme catalyzes the conversion of glutamine into glutamate and ammonia, playing an important role in glutamine metabolism and energy metabolism."}
             />  
 
             <GenePageNumber>40</GenePageNumber>

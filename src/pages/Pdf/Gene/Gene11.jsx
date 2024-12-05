@@ -8,13 +8,13 @@ import Text from "../../../components/Pdf/Text.jsx";
 const Gene11 = () => {
     return (
         <PageWrapper>
-            <Text sidebar={1} textContent={"ヒスタミン生成"} containerStyle={{marginBottom: '10rem'}} />
+            <Text sidebar={1} textContent={"Histamine Production"} containerStyle={{marginBottom: '10rem'}} />
 
             <GeneInformationMiddle
                 geneName={"HDC"}
                 datas={["rs267606861", "rs2073440"]}
                 level={-1}
-                description={"この遺伝子に変異がある場合、体内のヒスタミン生成が阻害される可能性があります。HDC（Histidine Decarboxylase）は、ヒスチジン脱炭酸酵素をコードしています。この酵素は、ヒスチジンからヒスタミンを生成する反応を触媒します。"}
+                description={"Variants in this gene may inhibit histamine production in the body. HDC (Histidine Decarboxylase) encodes the enzyme histidine decarboxylase. This enzyme catalyzes the reaction that produces histamine from histidine."}
             />
            
             <GenePageNumber>50</GenePageNumber>

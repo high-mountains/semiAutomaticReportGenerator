@@ -8,7 +8,7 @@ import Text from "../../../components/Pdf/Text.jsx";
 const Gene34 = () => {
     return (
         <PageWrapper>
-            <Text sidebar={1} textContent={"栄養"} containerStyle={{marginBottom: '10rem'}} />
+            <Text sidebar={1} textContent={"Nutrition"} containerStyle={{ marginBottom: '10rem' }} />
 
             <GeneInformationMiddle
                 geneName={"ACAT1"}
@@ -37,7 +37,7 @@ const Gene34 = () => {
                 ]}
                 level={-1}
                 description={
-                    "この遺伝子に変異がある場合、ミトコンドリア内でのアセトアセチルCoAの生成が阻害される可能性があります。ACAT1（Acetyl-CoA Acetyltransferase 1）は、アセチル-CoAアセチルトランスフェラーゼ1をコードしています。この酵素は、細胞内でアセチル-CoA分子を結合し、ケトン体合成やコレステロール代謝に関与します。"
+                    "Variants in this gene may inhibit the production of Acetoacetyl-CoA in the mitochondria. ACAT1 (Acetyl-CoA Acetyltransferase 1) encodes an enzyme responsible for acetyl-CoA acetyltransferase 1. This enzyme plays a role in the binding of acetyl-CoA molecules within cells and is involved in ketone body synthesis and cholesterol metabolism."
                 }
             />
 
