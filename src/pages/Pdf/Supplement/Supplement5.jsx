@@ -3,34 +3,34 @@ import PageWrapper from "../../../components/Pdf/PageWrapper";
 import PageNumber from "../../../components/Pdf/PageNumber";
 import TableNew from "../../../components/Pdf/Supplements/TableNew";
 import { useSelector } from "react-redux";
-import {updateDangerValues} from "./updateDangerValues.js";
+import { updateDangerValues } from "./updateDangerValues.js";
 
 const initialData = [
     {
         rowSpan: 7,
         thContent: {
-            main: "栄養",
-            sub: "身体の機能維持と成長に必要なエネルギーや物質を供給する",
+            main: "Nutrient",
+            sub: "Supplies energy and substances necessary for maintaining bodily functions and growth",
         },
         tdContent: {
             gen: "ACAT1",
             danger: 0,
-            description: "コエンザイムA（補因子）, L-カルニチン, MCTオイル, αリポ酸, オメガ3",
+            description: "Coenzyme A (Cofactor), L-Carnitine, MCT Oil, Alpha Lipoic Acid, Omega-3",
         }
     },
     {
-            tdContent: {
-                gen: "ACAT2",
-                danger: 0,
-                description: "αリポ酸, オメガ3, ビタミンE, レスベラトロール",
-            }
-        },
+        tdContent: {
+            gen: "ACAT2",
+            danger: 0,
+            description: "Alpha Lipoic Acid, Omega-3, Vitamin E, Resveratrol",
+        }
+    },
     {
         trHeight: 28,
         tdContent: {
             gen: "BCMO1",
             danger: 0,
-            description: "鉄（補因子）, ビタミンA, ビタミンC, ビタミンE, 亜鉛",
+            description: "Iron (Cofactor), Vitamin A, Vitamin C, Vitamin E, Zinc",
         }
     },
     {
@@ -38,7 +38,7 @@ const initialData = [
         tdContent: {
             gen: "ELOVL2",
             danger: 0,
-            description: "NADPH（補因子）, コエンザイムA（補因子）, CoQ10, L-カルニチン, オメガ3, ビタミンB3, ビタミンE, 亜鉛",
+            description: "NADPH (Cofactor), Coenzyme A (Cofactor), CoQ10, L-Carnitine, Omega-3, Vitamin B3, Vitamin E, Zinc",
         }
     },
     {
@@ -46,7 +46,7 @@ const initialData = [
         tdContent: {
             gen: "SELENOS",
             danger: 0,
-            description: "セレン（補因子）, CoQ10, グルタチオン, ビタミンE",
+            description: "Selenium (Cofactor), CoQ10, Glutathione, Vitamin E",
         }
     },
     {
@@ -54,7 +54,7 @@ const initialData = [
         tdContent: {
             gen: "SLC39A14",
             danger: 0,
-            description: "亜鉛（基質）, ビタミンB6, ビタミンC, マグネシウム, マンガン",
+            description: "Zinc (Substrate), Vitamin B6, Vitamin C, Magnesium, Manganese",
         }
     },
     {
@@ -62,21 +62,21 @@ const initialData = [
         tdContent: {
             gen: "VDR",
             danger: 0,
-            description: "カルシウム, ビタミンD, ビタミンK2, マグネシウム, 亜鉛",
-            etc: "ビタミンD"
+            description: "Calcium, Vitamin D, Vitamin K2, Magnesium, Zinc",
+            etc: "Vitamin D"
         }
     },
     {
         rowSpan: 6,
         thContent: {
             main: "BPA",
-            sub: "プラスチック製品に含まれ、ホルモンの働きに影響を与える",
+            sub: "Found in plastic products and affects hormone functions",
         },
         tdContent: {
             gen: "CAT",
             danger: 0,
-            description: "NAC, SOD, グルタチオン, セレン, ビタミンC, ビタミンE, レスベラトロール",
-            etc: "BPA, フリーラジカル"
+            description: "NAC, SOD, Glutathione, Selenium, Vitamin C, Vitamin E, Resveratrol",
+            etc: "BPA, Free Radicals"
         }
     },
     {
@@ -84,8 +84,8 @@ const initialData = [
         tdContent: {
             gen: "SOD2",
             danger: 0,
-            description: "マンガン（補因子）, NAC, グルタチオン, ビタミンC, ビタミンE",
-            etc: "BPA, フリーラジカル"
+            description: "Manganese (Cofactor), NAC, Glutathione, Vitamin C, Vitamin E",
+            etc: "BPA, Free Radicals"
         }
     },
     {
@@ -93,8 +93,8 @@ const initialData = [
         tdContent: {
             gen: "SULT1A1",
             danger: 0,
-            description: "MSM, NAC, ビタミンB6, ビタミンB12, ビタミンB群, フォレート, メチルフォレート",
-            etc: "BPA, フリーラジカル"
+            description: "MSM, NAC, Vitamin B6, Vitamin B12, Vitamin B complex, Folate, Methyl Folate",
+            etc: "BPA, Free Radicals"
         }
     },
     {
@@ -102,8 +102,8 @@ const initialData = [
         tdContent: {
             gen: "UGT1A1",
             danger: 0,
-            description: "NAC, カルシウムDグルカル酸, グルタチオン, ビタミンD, 胆汁サプリメント",
-            etc: "BPA, 環境毒"
+            description: "NAC, Calcium D-Glucarate, Glutathione, Vitamin D, Bile Supplements",
+            etc: "BPA, Environmental Toxins"
         }
     },
     {
@@ -111,8 +111,8 @@ const initialData = [
         tdContent: {
             gen: "UGT2B15",
             danger: 0,
-            description: "NAC, カルシウムDグルカル酸, グルタチオン, ビタミンD, 胆汁サプリメント",
-            etc: "BPA, 環境毒"
+            description: "NAC, Calcium D-Glucarate, Glutathione, Vitamin D, Bile Supplements",
+            etc: "BPA, Environmental Toxins"
         }
     },
     {
@@ -120,45 +120,45 @@ const initialData = [
         tdContent: {
             gen: "COX2",
             danger: 0,
-            description: "EPA, NAC, αリポ酸, カテキン, クルクミン, グルタチオン",
-            etc:"BPA, フリーラジカル"
+            description: "EPA, NAC, Alpha Lipoic Acid, Catechins, Curcumin, Glutathione",
+            etc: "BPA, Free Radicals"
         }
     },
     {
         thContent: {
             main: "NQO1",
-            sub: "抗酸化作用を持つ酵素で、細胞を酸化ストレスから守る",
+            sub: "An enzyme with antioxidant properties that protects cells from oxidative stress",
         },
         tdContent: {
             gen: "NQO1",
             danger: 0,
-            description: "NAD+（補因子）, NAC, αリポ酸, クルクミン, グルタチオン, ケルセチン, レスベラトロール",
+            description: "NAD+ (Cofactor), NAC, Alpha Lipoic Acid, Curcumin, Glutathione, Quercetin, Resveratrol",
         }
     },
     {
         thContent: {
             main: "PON1",
-            sub: "有害な酸化物質の分解に影響する酵素で、酸化ストレスの解消と心血管系に関わる",
+            sub: "An enzyme that affects the breakdown of harmful oxidative substances and is related to oxidative stress and cardiovascular health",
         },
         tdContent: {
             gen: "PON1",
             danger: 0,
-            description: "NAD+, オメガ3, カルシウム, ビタミンC, ビタミンD, ビタミンE",
-            etc: "有機リン系農薬"
+            description: "NAD+, Omega-3, Calcium, Vitamin C, Vitamin D, Vitamin E",
+            etc: "Organophosphates"
         }
     },
     {
         trHeight: 28,
         rowSpan: 4,
         thContent: {
-            main: "フタル酸エステル",
-            sub: "プラスチック製品に含まれる化学物質で、内分泌システムにかく乱作用に影響するホルモン調節に関わる",
+            main: "Phthalates",
+            sub: "Chemicals found in plastic products that affect hormone regulation and disrupt the endocrine system",
         },
         tdContent: {
             gen: "CYP2B6",
             danger: 0,
-            description: "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
-            etc: "喫煙"
+            description: "NADPH (Cofactor), Heme (Cofactor), EGCG, NAC, Glutathione, Sulforaphane",
+            etc: "Smoking"
         }
     },
     {
@@ -166,7 +166,7 @@ const initialData = [
         tdContent: {
             gen: "GSTP1",
             danger: 0,
-            description: "NAC, クレイ, クロレラ, グルタチオン",
+            description: "NAC, Clay, Chlorella, Glutathione",
         }
     },
     {
@@ -174,7 +174,7 @@ const initialData = [
         tdContent: {
             gen: "HSPA1L",
             danger: 0,
-            description: "NAC, αリポ酸, アシュワガンダ, オメガ3, レスベラトロール",
+            description: "NAC, Alpha Lipoic Acid, Ashwagandha, Omega-3, Resveratrol",
         }
     },
     {
@@ -182,8 +182,8 @@ const initialData = [
         tdContent: {
             gen: "SOD2",
             danger: 0,
-            description: "マンガン（補因子）, NAC, グルタチオン, ビタミンC, ビタミンE",
-            etc: "BPA, フリーラジカル"
+            description: "Manganese (Cofactor), NAC, Glutathione, Vitamin C, Vitamin E",
+            etc: "BPA, Free Radicals"
         }
     },
 ];
@@ -197,12 +197,8 @@ const Supplement5 = () => {
 
     return (
         <PageWrapper>
-            <TableNew
-                tBody={updatedTableData}
-            />
-            <PageNumber>
-                30
-            </PageNumber>
+            <TableNew tBody={updatedTableData} />
+            <PageNumber>30</PageNumber>
         </PageWrapper>
     );
 };

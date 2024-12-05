@@ -24,9 +24,9 @@ const Merit = () => {
                 descriptions: [
                     {
                         wrapperWidth: "229rem",
-                        heading: "エネルギー代謝と生成",
+                        heading: "Energy metabolism and production",
                         content:
-                            "ミトコンドリア内でエネルギー（ATP）を作るために必要な<span class='blue'>酵素</span>やプロテインを作り出す遺伝子。 \n関連遺伝子：NDUFA1, NDUFS1,\n　　　　　　ATP5F1A",
+                            "A gene that produces the enzymes and proteins necessary to make energy (ATP) in mitochondria. Related genes: NDUFA1, NDUFS1, ATP5F1A",
                         contentLineHeight: 1.448333,  
                         posInfo: {
                             top: "0rem",
@@ -37,9 +37,9 @@ const Merit = () => {
                     },
                     {
                         wrapperWidth: "230rem",
-                        heading: "クエン酸回路（TCAサイクル）",
+                        heading: "Citric Acid Cycle (TCA Cycle)",
                         content:
-                            "細胞のエネルギーを生み出すク<span class='blue'>エン酸回路</span>に関与する遺伝子。\n　　　関連遺伝子：OGDH",
+                            "A gene involved in the <span class='blue'>citric acid cycle</span>, which produces energy for cells. \n　Related gene: OGDH",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             top: "0rem",
@@ -50,9 +50,9 @@ const Merit = () => {
                     },
                     {
                         wrapperWidth: "167rem",
-                        heading: "脂肪酸と糖の代謝",
+                        heading: "Fatty acid and sugar metabolism",
                         content:
-                            "脂肪や糖を分解してエネルギー\nに変えるプロセスに関わる遺伝子。\n 関連遺伝子：PANK2, G6PD, \n 　　　　　　ACAT1",
+                            "A gene involved in the process of breaking down fats and sugars and turning them into energy. Related genes: PANK2, G6PD, ACAT1",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             bottom: "65rem",
@@ -64,8 +64,8 @@ const Merit = () => {
                     },
                     {
                         wrapperWidth: "398rem",
-                        heading: "酸化的リン酸化と電子伝達系",
-                        content: `酸素を使ってエネルギーを生成する過程（電子伝達系）に関わる遺伝子。 \n 関連遺伝子：COX4I2, CYC1, SDHB`,
+                        heading: "Oxidative phosphorylation and electron transport",
+                        content: `A gene involved in the process of generating energy using oxygen (electron transport chain). Related genes: COX4I2, CYC1, SDHB`,
                         contentLineHeight: 1.448333,
                         posInfo: {
                             bottom: "1rem",
@@ -77,8 +77,8 @@ const Merit = () => {
                     },
                     {
                         wrapperWidth: "170rem",
-                        heading: "コエンザイムQの合成",
-                        content: `ミトコンドリアでのエネルギー生成を助けるコエンザイムQ（ユビキノン）を作る遺伝子。 \n 関連遺伝子：COQ2, COQ7 `,
+                        heading: "Coenzyme Q synthesis",
+                        content: `A gene that produces coenzyme Q (ubiquinone), which helps generate energy in mitochondria. Related genes: COQ2, COQ7`,
                         contentLineHeight: 1.448333,
                         posInfo: {
                             top: "130rem",
@@ -95,8 +95,8 @@ const Merit = () => {
             Component: MeritIntro,
             data: {
                 maincolor: maincolor,
-                content1: "ミトコンドリアによるエネルギー産生力を良くするメリット",
-                content2: "ミトコンドリアによるエネルギー産生力低下によるデメリット",
+                content1: "Benefits of improving mitochondrial energy production",
+                content2: "Disadvantages of reduced mitochondrial energy production",
             },
         },
         {
@@ -118,49 +118,49 @@ const Merit = () => {
                 },
                 merit: [
                     {
-                        title: "認知機能の向上",
+                        title: "Improved cognitive function",
                         content:
-                            "エネルギー供給が改善されることで、集中力や記憶力、思考力が向上します。",
+                            "Improved energy supply improves concentration, memory and thinking.",
                     },
                     {
-                        title: "気分の安定",
+                        title: "Mood stability",
                         content:
-                            "充分なエネルギーが供給されることで、精神的な安定が保たれ、不安やうつ症状の軽減が期待されます。",
+                            "By providing sufficient energy, mental stability is maintained and anxiety and depression symptoms are expected to be reduced.",
                     },
                     {
-                        title: "疲労感の軽減",
+                        title: "Reduce fatigue",
                         content:
-                            "脳のエネルギーが増えることで、慢性的な疲労感やBrain Fogの症状が緩和されます。",
+                            "Increasing brain energy helps alleviate chronic fatigue and symptoms of brain fog.",
                     },
                     {
-                        title: "免疫力の向上",
+                        title: "Improving immunity",
                         content:
-                            "免疫細胞へのエネルギーが供給され、免疫力が向上します。",
+                            "It provides energy to immune cells and boosts immunity.",
                             contentStyle:{
                                 letterSpacing: "-0.09rem"
                             }
                     },
                     {
-                        title: "代謝機能の向上",
+                        title: "Improved metabolic function",
                         content:
-                            "神経伝達物質の代謝、ホルモン代謝、解毒代謝など体のメカニズムで重要となる代謝が向上し、本来の力を発揮しやすくなります。",
+                            "It improves metabolism, which is important for the body's mechanisms, such as neurotransmitter metabolism, hormone metabolism, and detoxification metabolism, making it easier to exert your true potential.",
                     },
                 ],
                 demerit: [
                     {
-                        title: "ATP不足",
+                        title: "ATP deficiency",
                         content:
-                            "身体のすべての動きや代謝活動がATPに依存しているため、身体機能全般に悪影響を与えます。",
+                            "Since all bodily movement and metabolic activity depends on ATP, this has a negative impact on overall bodily function.",
                     },
                     {
-                        title: "筋力低下",
+                        title: "Muscle weakness",
                         content:
-                            "筋肉のエネルギー不足により、筋力が低下し、運動耐性が減少します。",
+                            "Lack of energy in muscles leads to decreased strength and reduced exercise tolerance.",
                     },
                     {
-                        title: "認知機能の低下",
+                        title: "Cognitive decline",
                         content:
-                            "解毒プロセスは、特に肝臓で行われる重要な生理機能で、体内の有害物質を無毒化し、排出するためにエネルギーを必要とします。",
+                            "The detoxification process is a vital physiological function, particularly in the liver, which requires energy to detoxify and eliminate harmful substances from the body.",
                     },
                 ],
             },
@@ -170,7 +170,7 @@ const Merit = () => {
     <PageWrapper>
         <PageHeader 
             subtitle={"Mitochondrial Type"}
-            mainTitle={"ミトコンドリアタイプ"}>
+            mainTitle={"Mitochondrial Type"}>
         </PageHeader>
         <EnhancedMerit />
         <PageNumber>

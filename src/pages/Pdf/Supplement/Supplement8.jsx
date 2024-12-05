@@ -5,18 +5,19 @@ import TableNew from "../../../components/Pdf/Supplements/TableNew.jsx";
 import { useSelector } from "react-redux";
 import { updateDangerValues } from "./updateDangerValues.js";
 
+// Initial data for the table (in English)
 const initialData = [
     {
-        rowSpan: 3,
+        rowSpan: 5,
         thContent: {
-            main: "活性酸素",
-            sub: "細胞に損傷を与える不安定な酸素分子で、老化や病気の原因に関わる",
+            main: "Reactive Oxygen Species (ROS)",
+            sub: "Unstable oxygen molecules that cause cellular damage, involved in aging and disease",
         },
         tdContent: {
             gen: "SOD1",
             danger: 0,
             description:
-                "亜鉛（補因子）, 銅（補因子）, NAC, αリポ酸, グルタチオン, セレン, ビタミンC, ビタミンE",
+                "Zinc (Cofactor), Copper (Cofactor), NAC, Alpha Lipoic Acid, Glutathione, Selenium, Vitamin C, Vitamin E",
         },
     },
     {
@@ -24,8 +25,8 @@ const initialData = [
             gen: "SOD2",
             danger: 0,
             description:
-                "マンガン（補因子）, NAC, グルタチオン, ビタミンC, ビタミンE",
-            etc: "BPA, フリーラジカル",
+                "Manganese (Cofactor), NAC, Glutathione, Vitamin C, Vitamin E",
+            etc: "BPA, Free Radicals",
         },
     },
     {
@@ -33,42 +34,42 @@ const initialData = [
             gen: "SOD3",
             danger: 0,
             description:
-                "亜鉛（補因子）, 銅（補因子）, NAC, αリポ酸, グルタチオン, セレン, ビタミンC, ビタミンE",
+                "Zinc (Cofactor), Copper (Cofactor), NAC, Alpha Lipoic Acid, Glutathione, Selenium, Vitamin C, Vitamin E",
         },
     },
 
     {
         rowSpan: 2,
         thContent: {
-            main: "水銀",
-            sub: "体内に蓄積された有害な重金属の排出に関わる",
+            main: "Mercury",
+            sub: "Toxic heavy metals accumulated in the body, involved in detoxification",
         },
         tdContent: {
             gen: "CPOX4",
             danger: 0,
             description:
-                "ビタミンB6, ビタミンC, メチルビタミンB12, メチルフォレート, 鉄, 銅",
+                "Vitamin B6, Vitamin C, Methyl Vitamin B12, Methyl Folate, Iron, Copper",
         },
     },
     {
         tdContent: {
             gen: "GSTP1",
             danger: 0,
-            description: "NAC, クレイ, クロレラ, グルタチオン",
+            description: "NAC, Clay, Chlorella, Glutathione",
         },
     },
 
     {
         rowSpan: 3,
         thContent: {
-            main: "有機リン系",
-            sub: "農薬や殺虫剤に含まれる神経毒性を持つ化学物質で、解毒に関わる",
+            main: "Organophosphates",
+            sub: "Chemical substances with neurotoxicity found in pesticides and insecticides, involved in detoxification",
         },
         tdContent: {
             gen: "BCHE",
             danger: 0,
             description:
-                "NAC, ビタミンB群, ビタミンE, ホスファチジルコリン, ミルクシスル",
+                "NAC, Vitamin B Complex, Vitamin E, Phosphatidylcholine, Milk Thistle",
         },
     },
     {
@@ -76,8 +77,8 @@ const initialData = [
             gen: "CYP2B6",
             danger: 0,
             description:
-                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
-            etc: "喫煙",
+                "NADPH (Cofactor), Heme (Cofactor), EGCG, NAC, Glutathione, Sulforaphane",
+            etc: "Smoking",
         },
     },
     {
@@ -85,22 +86,22 @@ const initialData = [
             gen: "PON1",
             danger: 0,
             description:
-                "NAD+, オメガ3, カルシウム, ビタミンC, ビタミンD, ビタミンE",
-            etc: "有機リン系農薬",
+                "NAD+, Omega-3, Calcium, Vitamin C, Vitamin D, Vitamin E",
+            etc: "Organophosphate pesticides",
         },
     },
 
     {
         rowSpan: 8,
         thContent: {
-            main: "メチオニンサイクル",
-            sub: "肝臓で働くアミノ酸代謝経路で、細胞の代謝と解毒に関わる",
+            main: "Methionine Cycle",
+            sub: "Amino acid metabolism pathway in the liver, involved in cellular metabolism and detoxification",
         },
         tdContent: {
             gen: "ACHY",
             danger: 0,
             description:
-                "NAD+（補因子）, ビタミンB6, ビタミンB12, ベタイン, メチルフォレート",
+                "NAD+ (Cofactor), Vitamin B6, Vitamin B12, Betaine, Methyl Folate",
         },
     },
     {
@@ -108,7 +109,7 @@ const initialData = [
             gen: "BHMT",
             danger: 0,
             description:
-                "ベタイン（補因子）, ビタミンB6, メチルビタミンB12, メチルフォレート",
+                "Betaine (Cofactor), Vitamin B6, Methyl Vitamin B12, Methyl Folate",
         },
     },
     {
@@ -116,7 +117,7 @@ const initialData = [
             gen: "CTH",
             danger: 0,
             description:
-                "ビタミンB6（補因子）, NAC, メチルビタミンB12, メチルフォレート",
+                "Vitamin B6 (Cofactor), NAC, Methyl Vitamin B12, Methyl Folate",
         },
     },
     {
@@ -124,30 +125,30 @@ const initialData = [
             gen: "MTHFD1",
             danger: 0,
             description:
-                "NAD+（補因子）, NADPH（補因子）, 5MTHF, ビタミンB6, メチルビタミンB12",
+                "NAD+ (Cofactor), NADPH (Cofactor), 5MTHF, Vitamin B6, Methyl Vitamin B12",
         },
     },
     {
         tdContent: {
-            gen: "MTHFR\nA1298C",
+            gen: "MTHFR A1298C",
             danger: 0,
             description:
-                "NAD+（補因子）, NADPH（補因子）, 5MTHF, ビタミンB6, メチルビタミンB12",
+                "NAD+ (Cofactor), NADPH (Cofactor), 5MTHF, Vitamin B6, Methyl Vitamin B12",
         },
     },
     {
         tdContent: {
-            gen: "MTHFR\nC677T",
+            gen: "MTHFR C677T",
             danger: 0,
             description:
-                "NAD+（補因子）, NADPH（補因子）, 5MTHF, ビタミンB6, メチルビタミンB12",
+                "NAD+ (Cofactor), NADPH (Cofactor), 5MTHF, Vitamin B6, Methyl Vitamin B12",
         },
     },
     {
         tdContent: {
             gen: "MTR",
             danger: 0,
-            description: "メチルビタミンB12（補因子）, 5MTHF, SAMe, ビタミンB6",
+            description: "Methyl Vitamin B12 (Cofactor), 5MTHF, SAMe, Vitamin B6",
         },
     },
     {
@@ -155,22 +156,22 @@ const initialData = [
             gen: "MTRR",
             danger: 0,
             description:
-                "リボフラビン（補因子）, SAMe, ビタミンB6, ビタミンB12, ベタイン, メチルフォレート",
+                "Riboflavin (Cofactor), SAMe, Vitamin B6, Vitamin B12, Betaine, Methyl Folate",
         },
     },
 
     {
         rowSpan: 4,
         thContent: {
-            main: "酸化/抗酸化",
-            sub: "細胞が損傷を受けるプロセス/酸化ストレスを抑えて細胞を保護する働き",
+            main: "Oxidation/Antioxidation",
+            sub: "Process by which cells get damaged / Function of protecting cells from oxidative stress",
         },
         tdContent: {
             gen: "CAT",
             danger: 0,
             description:
-                "NAC, SOD, グルタチオン, セレン, ビタミンC, ビタミンE, レスベラトロール",
-            etc: "BPA, フリーラジカル",
+                "NAC, SOD, Glutathione, Selenium, Vitamin C, Vitamin E, Resveratrol",
+            etc: "BPA, Free Radicals",
         },
     },
     {
@@ -178,7 +179,7 @@ const initialData = [
             gen: "CBS",
             danger: 0,
             description:
-                "ビタミンB6（補因子）, ヘム（補因子）, 5MTHF, NAC, ベタイン, メチルビタミンB12",
+                "Vitamin B6 (Cofactor), Heme (Cofactor), 5MTHF, NAC, Betaine, Methyl Vitamin B12",
         },
     },
     {
@@ -186,14 +187,14 @@ const initialData = [
             gen: "CTH",
             danger: 0,
             description:
-                "ビタミンB6（補因子）, NAC, メチルビタミンB12, メチルフォレート",
+                "Vitamin B6 (Cofactor), NAC, Methyl Vitamin B12, Methyl Folate",
         },
     },
     {
         tdContent: {
             gen: "DUOX1",
             danger: 0,
-            description: "NADPH（補因子）, NAC, セレン, ビタミンC, ビタミンE",
+            description: "NADPH (Cofactor), NAC, Selenium, Vitamin C, Vitamin E",
         },
     },
 ];
@@ -204,10 +205,10 @@ const Supplement8 = () => {
     const updatedTableData = useMemo(() => {
         return updateDangerValues(initialData, geneData || []);
     }, [geneData]);
+
     return (
         <PageWrapper>
             <TableNew tBody={updatedTableData} />
-            {/* Old Table code can be safely removed if no longer needed */}
             <PageNumber>33</PageNumber>
         </PageWrapper>
     );

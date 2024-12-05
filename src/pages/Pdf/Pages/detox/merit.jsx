@@ -13,6 +13,7 @@ const Merit = () => {
     const [maincolor, setMaincolor] = useState(
         useSelector((state) => state.pdfData.detoxColor)
     );
+
     const EnhancedMerit = withPeriodanalyze([
         {
             Component: Ability,
@@ -21,41 +22,39 @@ const Merit = () => {
                 height: "322",
                 imageURL: "bg/abilityDetox.svg",
                 detoxStatus: true,
-                contentFontSize: "10rem",  
+                contentFontSize: "10rem",
                 descriptions: [
                     {
-                         
-                        wrapperWidth: "269rem",  
-                        heading: "<span class='blue'>細胞質</span>の解毒",
+                        wrapperWidth: "269rem",
+                        heading: "<span class='blue'>Cytoplasmic Detoxification</span>",
                         content:
-                            "体内の酸化ストレス管理において中心的な役割を果たし、細胞や組織の健康維持に不可欠です。\n関連遺伝子：SOD1",
-                        contentLineHeight: 1.448333,  
+                            "Plays a central role in managing oxidative stress within the body, essential for maintaining cellular and tissue health.\nRelated genes: SOD1",
+                        contentLineHeight: 1.448333,
                         posInfo: {
                             top: "0rem",
                             left: "0rem",
                             width: "269rem",
                         },
-                        fontSize: 10, 
+                        fontSize: 10,
                     },
                     {
-                         
                         wrapperWidth: "230rem",
-                        heading: "肺の解毒",
+                        heading: "Lung Detoxification",
                         content:
-                            "肺において酸化ストレスの制御と組織保護に不可欠な役割を果たします。\n関連遺伝子：SOD3",
+                            "Crucial for controlling oxidative stress and protecting tissues in the lungs.\nRelated genes: SOD3",
                         contentLineHeight: 1.448,
                         posInfo: {
                             top: "0rem",
                             right: "0rem",
                             width: "230rem",
                         },
-                        fontSize: 10
+                        fontSize: 10,
                     },
                     {
                         wrapperWidth: "169rem",
-                        heading: "肝臓の解毒",
+                        heading: "Liver Detoxification",
                         content:
-                            "体内で最も主要な解毒器官であり、薬物や有害物質を代謝して無害化します。\n関連遺伝子: SULT1A1, UGT1A1, NAT1, 　　　　　　NAT2, CYP450, PON1等",
+                            "The primary detoxification organ in the body, metabolizing drugs and harmful substances to neutralize them.\nRelated genes: SULT1A1, UGT1A1, NAT1, NAT2, CYP450, PON1, etc.",
                         contentLineHeight: 1.448,
                         posInfo: {
                             top: "99rem",
@@ -63,12 +62,13 @@ const Merit = () => {
                             width: "169rem",
                         },
                         fontSize: 10,
-                        contentClassName: "tracking-tightest"
+                        contentClassName: "tracking-tightest",
                     },
                     {
                         wrapperWidth: "240rem",
-                        heading: "腎臓の解毒",
-                        content: `血液をろ過して尿を生成し、毒素や老廃物を体外に排出します。水溶性の物質を効果的に除去する能力が高いです。\n関連遺伝子: GPX3,  NOX4`,
+                        heading: "Kidney Detoxification",
+                        content:
+                            "Filters blood to produce urine, removing toxins and waste products from the body. Highly efficient at eliminating water-soluble substances.\nRelated genes: GPX3, NOX4",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             bottom: "-5rem",
@@ -76,12 +76,13 @@ const Merit = () => {
                             width: "240rem",
                         },
                         fontSize: 10,
-                        contentClassName: "tracking-tightest"
+                        contentClassName: "tracking-tightest",
                     },
                     {
                         wrapperWidth: "240rem",
-                        heading: "腸の解毒",
-                        content: `食物から吸収される有害物質を排出する役割があります。また、腸内細菌も毒素の代謝に寄与します。\n関連遺伝子: GPX2, NOX1`,
+                        heading: "Intestinal Detoxification",
+                        content:
+                            "Responsible for eliminating harmful substances absorbed from food. Gut microbiota also contributes to toxin metabolism.\nRelated genes: GPX2, NOX1",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             bottom: "3rem",
@@ -89,12 +90,13 @@ const Merit = () => {
                             width: "240rem",
                         },
                         fontSize: 10,
-                        contentClassName: "tracking-tightest"
+                        contentClassName: "tracking-tightest",
                     },
                     {
                         wrapperWidth: "173rem",
-                        heading: "ミトコンドリアの解毒",
-                        content: `エネルギー代謝が活発な組織で酸化ストレスを防ぎます。\n関連遺伝子：SOD2`,
+                        heading: "Mitochondrial Detoxification",
+                        content:
+                            "Prevents oxidative stress in tissues with high energy metabolism.\nRelated genes: SOD2",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             top: "102rem",
@@ -102,7 +104,7 @@ const Merit = () => {
                             width: "173rem",
                         },
                         fontSize: 10,
-                        contentClassName: "tracking-tightest"
+                        contentClassName: "tracking-tightest",
                     },
                 ],
             },
@@ -112,7 +114,7 @@ const Merit = () => {
             data: {
                 maincolor: maincolor,
                 content1:
-                    "解毒力が高いことによるメリットと解毒力を低いことによるデメリット",
+                    "Advantages of High Detoxification and Disadvantages of Low Detoxification",
             },
         },
         {
@@ -122,52 +124,53 @@ const Merit = () => {
                     gap: "5rem",
                 },
                 inCommonStyle: {
-                    gap: "2rem", 
+                    gap: "2rem",
                 },
                 contentStyle: {
-                    fontSize: "10rem", 
+                    fontSize: "10rem",
                     lineHeight: 1.444444,
                 },
 
                 merit: [
                     {
-                        title: "炎症の軽減",
+                        title: "Reduction in Inflammation",
                         content:
-                            "毒素の排泄が促進されることで、脳内の炎症が軽減され、認知機能の低下や精神的な不調を予防することができます。",
+                            "Promoting toxin excretion helps reduce brain inflammation, preventing cognitive decline and mental disorders.",
                     },
                     {
-                        title: "認知症のリスク低減",
+                        title: "Lower Risk of Dementia",
                         content:
-                            "脳内の炎症が抑えられることで、認知症の発症リスクを減らすことができます。"
+                            "Suppressing brain inflammation reduces the risk of developing dementia.",
                     },
                     {
-                        title: "精神の安定",
+                        title: "Mental Stability",
                         content:
-                            "毒素の蓄積が減少することで、精神的な健康が向上し、不安やうつ症状の軽減につながります。",
-                    }
+                            "Decreased toxin accumulation improves mental health, alleviating anxiety and depressive symptoms.",
+                    },
                 ],
                 demerit: [
                     {
-                        title: "神経炎症",
+                        title: "Neuroinflammation",
                         content:
-                            "毒素の蓄積により脳内で炎症が発生し、神経細胞が損傷を受けることがあります。"
+                            "Toxin accumulation may cause brain inflammation, damaging nerve cells.",
                     },
                     {
-                        title: "ホルモンバランスの乱れ",
+                        title: "Hormonal Imbalance",
                         content:
-                            "環境ホルモンからの影響で、月経不順・不妊・更年期症状の悪化・がんのリスクが高まることがあります。"
+                            "Exposure to environmental hormones can lead to irregular menstruation, infertility, worsening menopausal symptoms, and increased cancer risks.",
                     },
                 ],
             },
         },
     ]);
+
     return (
         <>
             <PageWrapper>
                 <PageHeader
                     subtitle={"Detoxification Type"}
-                    mainTitle={"デトックスタイプ"}
-                ></PageHeader>
+                    mainTitle={"Detox Type"}
+                />
                 <EnhancedMerit />
                 <PageNumber>19</PageNumber>
             </PageWrapper>

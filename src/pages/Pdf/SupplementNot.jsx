@@ -9,48 +9,48 @@ import pdfData from "../../utils/dummyPdf.json";
 import { useSelector } from "react-redux";
 
 const SupplementNot = () => {
-    const [sidbarColor, setSidebarColor] = useState(pdfData.mainColor);
+    const [sidebarColor, setSidebarColor] = useState(pdfData.mainColor);
     const [tableData, setTableData] = useState([]);
-    const tt = useSelector((state) => state.pdfData.unsupplementedData)
-    
+    const unsupplementedData = useSelector((state) => state.pdfData.unsupplementedData);
+
     useEffect(() => {
-        setTableData(tt)
-    }, [tt]);
+        setTableData(unsupplementedData);
+    }, [unsupplementedData]);
 
     return (
         <PageWrapper>
             <PageHeader
                 subtitle={"Supplement"}
-                mainTitle={"おすすめしないサプリメントや生活習慣"}
+                mainTitle={"Not Recommended Supplements and Lifestyle"}
                 subTitleStyle={{
-                    marginBottom: "5rem"
+                    marginBottom: "5rem",
                 }}
-                mainTitleStyle= {{
+                mainTitleStyle={{
                     fontSize: "28rem",
-                    letterSpacing: "-1.4rem"
+                    letterSpacing: "-1.4rem",
                 }}
             />
             <Text
                 sidebar={1}
-                sidebarColor={sidbarColor}
-                textContent={"おすすめのサプリメントや生活習慣"}
+                sidebarColor={sidebarColor}
+                textContent={"Supplements and Lifestyle Not Recommended"}
             />
             <Table
                 headerData={[
                     {
-                        content: "サプリメント・\n生活習慣",
+                        content: "Supplements/\nLifestyle",
                         width: "129rem",
                     },
                     {
-                        content: "摂取タイミング",
+                        content: "Timing",
                         width: "111.25rem",
                     },
                     {
-                        content: "詳細",
+                        content: "Details",
                         width: "151.25rem",
                     },
                     {
-                        content: "関連するカテゴリー",
+                        content: "Related Categories",
                         width: "131.25rem",
                     },
                 ]}

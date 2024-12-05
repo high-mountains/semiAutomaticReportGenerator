@@ -5,52 +5,52 @@ import PageNumber from "../../components/Pdf/PageNumber";
 import Text from "../../components/Pdf/Text";
 import Table from "../../components/Pdf/Table.jsx";
 
-import pdfData from "../../utils/dummyPdf.json"
+import pdfData from "../../utils/dummyPdf.json";
 import { useSelector } from "react-redux";
 
 const Supplement = () => {
-    const [sidbarColor, setSidebarColor] = useState(pdfData.mainColor);
+    const [sidebarColor, setSidebarColor] = useState(pdfData.mainColor);
     const [tableData, setTableData] = useState([]);
-    const tt = useSelector((state) => state.pdfData.supplementedData)
-    
+    const supplementedData = useSelector((state) => state.pdfData.supplementedData);
+
     useEffect(() => {
-        setTableData(tt)
-    }, [tt]);
-    
+        setTableData(supplementedData);
+    }, [supplementedData]);
+
     return (
         <PageWrapper>
             <PageHeader
                 subtitle={"Supplement"}
-                mainTitle={"あなたにおすすめのサプリメントや生活習慣"}
+                mainTitle={"Recommended Supplements and Lifestyle"}
                 subTitleStyle={{
-                    marginBottom:"5rem"
+                    marginBottom: "5rem",
                 }}
                 mainTitleStyle={{
-                    fontSize:"28rem",
-                    letterSpacing:"-1.4rem"
+                    fontSize: "28rem",
+                    letterSpacing: "-1.4rem",
                 }}
             />
             <Text
                 sidebar={1}
-                sidebarColor={sidbarColor}
-                textContent={"おすすめのサプリメントや生活習慣"}
+                sidebarColor={sidebarColor}
+                textContent={"Recommended Supplements and Lifestyle"}
             />
             <Table
                 headerData={[
                     {
-                        content: "サプリメント・\n生活習慣",
+                        content: "Supplements/\nLifestyle",
                         width: "129rem",
                     },
                     {
-                        content: "摂取タイミング",
+                        content: "Timing",
                         width: "111.25rem",
                     },
                     {
-                        content: "詳細",
+                        content: "Details",
                         width: "151.25rem",
                     },
                     {
-                        content: "関連するカテゴリー",
+                        content: "Related Categories",
                         width: "131.25rem",
                     },
                 ]}

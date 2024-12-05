@@ -25,23 +25,23 @@ const Concept = () => {
             Component: PageHeader,
             data: {
                 subtitle: "Methylation Type",
-                mainTitle: "メチレーションタイプ"
+                mainTitle: "Methylation Type"
             }
         },
         {
             Component: Outline,
             data: {
                 imageURL: "./bg/methylation.png",
-                concept: "メチレーションタイプは、",
+                concept: "The Methylation Type is characterized by",
                 description:
-                    "体内の必須システムであるメチレーションの機能が低下し、ホルモンのバランスが安定しにくい傾向があるタイプです。"
+                    "a tendency for reduced methylation function, which is an essential system in the body, making it challenging to maintain hormonal balance."
             }
         },
         {
             Component: Explanation,
             data: {
-                question: "メチレーションタイプとは",
-                answer: "メチレーションは、<span class='blue'>DNAの調節</span>や<span class='bold'>神経伝達物質</span>の生成など、体内で重要な役割を担う化学反応です。メチレーションが正常に機能していると、心身のバランスが保たれ、感情の安定や精神的な明晰さが維持されると考えられています。\nしかし、メチレーションが弱い遺伝子を持つ人は、ホルモンバランスの乱れや感受性の強さから<span class='bold'>精神的なストレス</span>を感じやすいことがあるかもしれません。また、<span class='bold'>心血管系</span>や<span class='bold'>がん</span>のリスクも存在しています。このタイプの人は、感情が揺れやすく、気分の変動が特徴的である一方で、<span class='bold'>創造的な思考</span>や<span class='bold'>高い感受性</span>が際立つことがあります。そのため、感情や気分の変動に対処するためには、メチレーションをサポートする生活習慣や栄養の摂取が重要です。また、これらの特徴を活かして、<span class='bold'>芸術</span>や<span class='bold'>クリエイティブな活動</span>において優れた才能を発揮することも少なくありません。",
+                question: "What is the Methylation Type?",
+                answer: "Methylation is a chemical reaction that plays a crucial role in the body, including <span class='blue'>DNA regulation</span> and <span class='bold'>neurotransmitter production</span>. When methylation functions normally, mental and physical balance is maintained, contributing to emotional stability and mental clarity.\nHowever, individuals with genes associated with weaker methylation may experience hormonal imbalances and increased sensitivity, leading to <span class='bold'>mental stress</span>. Additionally, there may be risks associated with the <span class='bold'>cardiovascular system</span> and <span class='bold'>cancer</span>. This type of person may experience frequent mood swings and high emotional sensitivity, which can also highlight strengths such as <span class='bold'>creative thinking</span> and <span class='bold'>strong sensitivity</span>. To manage emotional fluctuations, supporting methylation through lifestyle habits and nutrition is essential. Leveraging these traits, individuals often excel in <span class='bold'>artistic</span> or <span class='bold'>creative activities</span>.",
                 sidebarColor: maincolor,
             }
         },
@@ -49,24 +49,24 @@ const Concept = () => {
             Component: Quality,
             data: {
                 description:
-                    "メチレーションタイプの特性には、以下のような可能性があります。",
-                qualities1: [ //7rem is for browsing, 14rem is for pdf(true)
+                    "Characteristics of the Methylation Type may include the following:",
+                qualities1: [
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>気持ちのアップダウンが激しい</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Frequent mood swings</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>エネルギー不足を感じやすい</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Prone to feeling low energy</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>頭がぼんやりする時がある</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Occasionally experiences mental fog</p>`
                     }
                 ],
                 qualities2: [
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>緊張やストレスに弱い</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>More sensitive to tension and stress</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>睡眠の質が下がっていて熟睡できな\nいと感じる</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Poor sleep quality, often feels unrested</p>`
                     }
                 ],
                 sidebarColor: maincolor,

@@ -5,177 +5,166 @@ import TableNew from "../../../components/Pdf/Supplements/TableNew.jsx";
 import { useSelector } from "react-redux";
 import { updateDangerValues } from "./updateDangerValues.js";
 
+// Initial data for the table
 const initialData = [
     {
-        rowSpan: 8,
+        rowSpan: 5,
         thContent: {
-            main: "酸化/抗酸化",
-            sub: "細胞が損傷を受けるプロセス/酸化ストレスを抑えて細胞を保護する働き",
+            main: "Oxidation/Antioxidation",
+            sub: "Cellular damage process / Works to protect cells by suppressing oxidative stress",
         },
         tdContent: {
             gen: "HFE",
             danger: 0,
-            description: "フェチン酸, ポリフェノール",
-            etc: "鉄",
+            description: "Phytic acid, Polyphenols",
+            etc: "Iron",
         },
     },
     {
         tdContent: {
             gen: "KEAP1",
             danger: 0,
-            description:
-                "NAC, スルフォラファン, ビタミンC, ビタミンE, レスベラトロール",
+            description: "NAC, Sulforaphane, Vitamin C, Vitamin E, Resveratrol",
         },
     },
     {
         tdContent: {
             gen: "NOX4",
             danger: 0,
-            description:
-                "FAD（補因子）, NADPH（補因子）, ヘム（補因子）, CoQ10, NAC, ビタミンC, ビタミンE",
+            description: "FAD (Cofactor), NADPH (Cofactor), Heme (Cofactor), CoQ10, NAC, Vitamin C, Vitamin E",
         },
     },
     {
         tdContent: {
             gen: "SHMT1",
             danger: 0,
-            description:
-                "ビタミンB6（補因子）, 5MTHF, NAC, ベタイン, メチルビタミンB12",
+            description: "Vitamin B6 (Cofactor), 5MTHF, NAC, Betaine, Methyl Vitamin B12",
         },
     },
     {
         tdContent: {
             gen: "SHMT2",
             danger: 0,
-            description:
-                "ビタミンB6（補因子）, 5MTHF, NAC, ベタイン, メチルビタミンB12",
+            description: "Vitamin B6 (Cofactor), 5MTHF, NAC, Betaine, Methyl Vitamin B12",
         },
     },
     {
         tdContent: {
             gen: "SLC40A1",
             danger: 0,
-            description: "ビタミンC, ポリフェノール, 銅",
+            description: "Vitamin C, Polyphenols, Copper",
         },
     },
     {
         tdContent: {
             gen: "SOD2",
             danger: 0,
-            description:
-                "マンガン（補因子）, NAC, グルタチオン, ビタミンC, ビタミンE",
-            etc: "BPA, フリーラジカル",
+            description: "Manganese (Cofactor), NAC, Glutathione, Vitamin C, Vitamin E",
+            etc: "BPA, Free radicals",
         },
     },
     {
         tdContent: {
             gen: "SOD3",
             danger: 0,
-            description:
-                "亜鉛（補因子）, 銅（補因子）, NAC, αリポ酸, グルタチオン, セレン, ビタミンC, ビタミンE",
+            description: "Zinc (Cofactor), Copper (Cofactor), NAC, Alpha Lipoic Acid, Glutathione, Selenium, Vitamin C, Vitamin E",
         },
     },
-
     {
         rowSpan: 4,
         thContent: {
-            main: "葉酸",
-            sub: "ビタミンB群のひとつで、DNA合成や赤血球の生成に関わる",
+            main: "Folic Acid",
+            sub: "One of the B vitamins, involved in DNA synthesis and red blood cell production",
         },
         tdContent: {
             gen: "DHFR",
             danger: 0,
-            description: "NAD+（補因子）, ビタミンB12, メチルフォレート",
+            description: "NAD+ (Cofactor), Vitamin B12, Methylfolate",
         },
     },
     {
         tdContent: {
             gen: "FOLR1",
             danger: 0,
-            description: "5MTHF, NAC, ビタミンB6, メチルビタミンB12",
+            description: "5MTHF, NAC, Vitamin B6, Methyl Vitamin B12",
         },
     },
     {
         tdContent: {
             gen: "FOLR2",
             danger: 0,
-            description: "5MTHF, NAC, ビタミンB6, メチルビタミンB12",
+            description: "5MTHF, NAC, Vitamin B6, Methyl Vitamin B12",
         },
     },
     {
         tdContent: {
             gen: "SLC19A1",
             danger: 0,
-            description: "CoQ10, L-カルニチン, オメガ3, ビタミンB群",
+            description: "CoQ10, L-Carnitine, Omega-3, Vitamin B group",
         },
     },
-
     {
         rowSpan: 3,
         thContent: {
-            main: "ビタミンB12",
-            sub: "ビタミンB群のひとつで、神経系の健康と赤血球生成に関わる",
+            main: "Vitamin B12",
+            sub: "One of the B vitamins, involved in nervous system health and red blood cell production",
         },
         tdContent: {
             gen: "AMTRAK",
             danger: 0,
-            description:
-                "リボフラビン（補因子）, SAMe, ビタミンB6, ビタミンB12, ベタイン, メチルフォレート",
+            description: "Riboflavin (Cofactor), SAMe, Vitamin B6, Vitamin B12, Betaine, Methylfolate",
         },
     },
     {
         tdContent: {
             gen: "TCN1",
             danger: 0,
-            description: "ビタミンB12, フォレート, 亜鉛",
-            etc: "ビタミンB12",
+            description: "Vitamin B12, Folate, Zinc",
+            etc: "Vitamin B12",
         },
     },
     {
         tdContent: {
             gen: "TCN2",
             danger: 0,
-            description: "ビタミンB12, フォレート, 亜鉛",
-            etc: "ビタミンB12",
+            description: "Vitamin B12, Folate, Zinc",
+            etc: "Vitamin B12",
         },
     },
-
     {
         thContent: {
             main: "APOE",
-            sub: "脂質代謝に影響する遺伝子で、アルツハイマー病や心血管疾患のリスクに関わる",
+            sub: "A gene affecting lipid metabolism, related to the risk of Alzheimer's disease and cardiovascular diseases",
         },
         tdContent: {
             gen: "APOE",
             danger: 0,
-            description:
-                "DHA, オメガ3, クルクミン, ビタミンB12, フォスファチジルコリン, フォレート, レスベラトロール",
+            description: "DHA, Omega-3, Curcumin, Vitamin B12, Phosphatidylcholine, Folate, Resveratrol",
         },
     },
-
     {
         thContent: {
             main: "BDNF",
-            sub: "タンパク質の合成に影響する遺伝子で、神経細胞の成長や維持に関わる",
+            sub: "A gene that affects protein synthesis, related to the growth and maintenance of nerve cells",
         },
         tdContent: {
             gen: "BDNF",
             danger: 0,
-            description:
-                "DHA, EGCG, オメガ3, ビタミンD, マグネシウムスレオネート",
+            description: "DHA, EGCG, Omega-3, Vitamin D, Magnesium",
         },
     },
 ];
+
 const Supplement9 = (props) => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
     const updatedTableData = useMemo(() => {
         return updateDangerValues(initialData, geneData || []);
     }, [geneData]);
+
     return (
         <PageWrapper>
             <TableNew tBody={updatedTableData} />
-            {/* Old Table code can be safely removed if no longer needed */}
             <PageNumber>34</PageNumber>
         </PageWrapper>
     );

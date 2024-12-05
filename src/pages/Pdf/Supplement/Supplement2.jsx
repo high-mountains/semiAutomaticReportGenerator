@@ -3,31 +3,31 @@ import PageWrapper from "../../../components/Pdf/PageWrapper";
 import PageNumber from "../../../components/Pdf/PageNumber";
 import TableNew from "../../../components/Pdf/Supplements/TableNew";
 import { useSelector } from "react-redux";
-import {updateDangerValues} from "./updateDangerValues.js";
+import { updateDangerValues } from "./updateDangerValues.js";
 
 const initialData = [
     {
         thContent: {
-            main: "ドーパミン受容体",
-            sub: "快楽や覚醒に影響する興奮性神経伝達物質の感度に関わる",
+            main: "Dopamine Receptor",
+            sub: "Involved in sensitivity to excitatory neurotransmitters that affect pleasure and arousal",
         },
         tdContent: {
             gen: "DRD4",
             danger: 0,
             description:
-                "L-チロシン, オメガ3, ビタミンB6, ビタミンD, フォスファチジルコリン, マグネシウム",
+                "L-Tyrosine, Omega-3, Vitamin B6, Vitamin D, Phosphatidylcholine, Magnesium",
         },
     },
     {
         rowSpan: 2,
         thContent: {
-            main: "セロトニン",
-            sub: "感情調整や幸福感に影響する神経伝達物質の調節に関わる",
+            main: "Serotonin",
+            sub: "Involved in the regulation of neurotransmitters that affect emotional regulation and happiness",
         },
         tdContent: {
             gen: "HTR2A",
             danger: 0,
-            description: "5-HTP, オメガ3",
+            description: "5-HTP, Omega-3",
         },
     },
     {
@@ -35,32 +35,32 @@ const initialData = [
             gen: "MAOA",
             danger: 0,
             description:
-                "リボフラビン（補因子）, ビタミンB2, ビタミンB6, ビタミンB12, フォレート, マグネシウム",
+                "Riboflavin (Cofactor), Vitamin B2, Vitamin B6, Vitamin B12, Folate, Magnesium",
         },
     },
     {
         thContent: {
-            main: "ヒスタミン生成",
-            sub: "アレルギー反応や覚醒に影響する物質の生成に関わる",
+            main: "Histamine Synthesis",
+            sub: "Involved in the generation of substances that affect allergic reactions and arousal",
         },
         tdContent: {
             gen: "HDC",
             danger: 0,
-            description: "P5P（補因子）, NAC, ケルセチン",
+            description: "P5P (Cofactor), NAC, Quercetin",
         },
     },
     {
         rowSpan: 8,
         thContent: {
-            main: "ヒスタミン代謝",
-            sub: "アレルギー反応や覚醒に影響する物質の分解に関わる",
+            main: "Histamine Metabolism",
+            sub: "Involved in the breakdown of substances that affect allergic reactions and arousal",
         },
         tdContent: {
             gen: "ALDH2",
             danger: 0,
             description:
-                "NAC, クルクミン, ビタミンB群, ビタミンC, レスベラトロール",
-            etc: "アルコール",
+                "NAC, Curcumin, Vitamin B complex, Vitamin C, Resveratrol",
+            etc: "Alcohol",
         },
     },
     {
@@ -68,7 +68,7 @@ const initialData = [
             gen: "MAOA",
             danger: 0,
             description:
-                "リボフラビン（補因子）, ビタミンB2, ビタミンB6, ビタミンB12, フォレート, マグネシウム",
+                "Riboflavin (Cofactor), Vitamin B2, Vitamin B6, Vitamin B12, Folate, Magnesium",
         },
     },
     {
@@ -76,7 +76,7 @@ const initialData = [
             gen: "MAOB",
             danger: 0,
             description:
-                "ビタミンB2, ビタミンB6, ビタミンB12, フォレート, マグネシウム",
+                "Vitamin B2, Vitamin B6, Vitamin B12, Folate, Magnesium",
         },
     },
     {
@@ -84,8 +84,8 @@ const initialData = [
             gen: "ABP1",
             danger: 0,
             description:
-                "ビタミンB6（補因子）, 銅（補因子）, DAO酵素, ケルセチン, ビタミンD",
-            etc: "ヒスタミン",
+                "Vitamin B6 (Cofactor), Copper (Cofactor), DAO Enzyme, Quercetin, Vitamin D",
+            etc: "Histamine",
         },
     },
     {
@@ -93,8 +93,8 @@ const initialData = [
             gen: "HNMT",
             danger: 0,
             description:
-                "SAMe（補因子）, ケルセチン, ビタミンB6, マグネシウム, メチルビタミンB12, メチルフォレート",
-            etc: "ヒスタミン",
+                "SAMe (Cofactor), Quercetin, Vitamin B6, Magnesium, Methylated Vitamin B12, Methyl Folate",
+            etc: "Histamine",
         },
     },
     {
@@ -102,16 +102,16 @@ const initialData = [
             gen: "NAT2",
             danger: 0,
             description:
-                "アセチルコエンザイムA（補因子）, NAC, クミン, スルフォラファン",
-            etc: "ヒスタミン",
+                "Acetyl-CoA (Cofactor), NAC, Cumin, Sulforaphane",
+            etc: "Histamine",
         },
     },
     {
         tdContent: {
             gen: "ADH1B",
             danger: 0,
-            description: "NAC, クルクミン, ビタミンB群, ビタミンC",
-            etc: "アルコール",
+            description: "NAC, Curcumin, Vitamin B complex, Vitamin C",
+            etc: "Alcohol",
         },
     },
     {
@@ -119,20 +119,20 @@ const initialData = [
             gen: "CYP21A2",
             danger: 0,
             description:
-                "NAD+（補因子）, ヘム（補因子）, マグネシウム（補因子）, αリポ酸, アシュワガンダ, ビタミンB群, 亜鉛",
+                "NAD+ (Cofactor), Heme (Cofactor), Magnesium (Cofactor), Alpha Lipoic Acid, Ashwagandha, Vitamin B complex, Zinc",
         },
     },
     {
         rowSpan: 3,
         thContent: {
-            main: "ヒスタミン受容体",
-            sub: "アレルギー反応や覚醒に影響する物質の感度に関わる",
+            main: "Histamine Receptor",
+            sub: "Involved in sensitivity to substances that affect allergic reactions and arousal",
         },
         tdContent: {
             gen: "HRH1",
             danger: 0,
-            description: "NAC, オメガ3, ケルセチン, マグネシウム",
-            etc: "ヒスタミン",
+            description: "NAC, Omega-3, Quercetin, Magnesium",
+            etc: "Histamine",
         },
     },
     {
@@ -140,8 +140,8 @@ const initialData = [
             gen: "HRH3",
             danger: 0,
             description:
-                "L-テアニン, オメガ3, ビタミンB群, フォスファチジルセリン, ロディオラ",
-            etc: "ヒスタミン",
+                "L-Theanine, Omega-3, Vitamin B complex, Phosphatidylserine, Rhodiola",
+            etc: "Histamine",
         },
     },
     {
@@ -149,42 +149,42 @@ const initialData = [
             gen: "HRH4",
             danger: 0,
             description:
-                "オメガ3, クルクミン, ケルセチン, ビタミンD, マグネシウム",
-            etc: "ヒスタミン",
+                "Omega-3, Curcumin, Quercetin, Vitamin D, Magnesium",
+            etc: "Histamine",
         },
     },
     {
         rowSpan: 6,
         thContent: {
-            main: "ミトコンドリア",
-            sub: "細胞内小器官で、エネルギーの生成と代謝に関わる",
+            main: "Mitochondria",
+            sub: "Cellular organelle involved in energy production and metabolism",
         },
         tdContent: {
             gen: "ACAT1",
             danger: 0,
             description:
-                "コエンザイムA（補因子）, L-カルニチン, MCTオイル, αリポ酸, オメガ3",
+                "Coenzyme A (Cofactor), L-Carnitine, MCT Oil, Alpha Lipoic Acid, Omega-3",
         },
     },
     {
         tdContent: {
             gen: "ACAT2",
             danger: 0,
-            description: "αリポ酸, オメガ3, ビタミンE, レスベラトロール",
+            description: "Alpha Lipoic Acid, Omega-3, Vitamin E, Resveratrol",
         },
     },
     {
         tdContent: {
             gen: "ATP5F1A",
             danger: 0,
-            description: "CoQ10, L-カルニチン, NAD+, αリポ酸, ビタミンB群",
+            description: "CoQ10, L-Carnitine, NAD+, Alpha Lipoic Acid, Vitamin B complex",
         },
     },
     {
         tdContent: {
             gen: "ATP5F1E",
             danger: 0,
-            description: "CoQ10, NAD+, ビタミンB群, リボフラビン",
+            description: "CoQ10, NAD+, Vitamin B complex, Riboflavin",
         },
     },
     {
@@ -192,7 +192,7 @@ const initialData = [
             gen: "COQ2",
             danger: 0,
             description:
-                "CoQ10, L-カルニチン, NAD+, αリポ酸, ビタミンB6, リボフラビン",
+                "CoQ10, L-Carnitine, NAD+, Alpha Lipoic Acid, Vitamin B6, Riboflavin",
         },
     },
     {
@@ -200,7 +200,7 @@ const initialData = [
             gen: "COQ3",
             danger: 0,
             description:
-                "CoQ10, L-カルニチン, NAD+, αリポ酸, ビタミンB6, リボフラビン",
+                "CoQ10, L-Carnitine, NAD+, Alpha Lipoic Acid, Vitamin B6, Riboflavin",
         },
     },
 ];
@@ -212,10 +212,10 @@ const Supplement2 = () => {
     const updatedTableData = useMemo(() => {
         return updateDangerValues(initialData, geneData || []);
     }, [geneData]);
+
     return (
         <PageWrapper>
             <TableNew tBody={updatedTableData} />
-            {/* Old Table code can be safely removed if no longer needed */}
             <PageNumber>27</PageNumber>
         </PageWrapper>
     );

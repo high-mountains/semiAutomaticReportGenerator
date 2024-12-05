@@ -5,103 +5,102 @@ import PageHeader from "../../components/Pdf/PageHeader";
 import Text from "../../components/Pdf/Text";
 import CategoryRow from "../../components/Pdf/GenCategory/CategoryRow";
 import CategoryRow1 from "../../components/Pdf/GenCategory/CategoryRow1";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const GenCategory = () => {
     const categoryData = useSelector((state) => state.pdfData.categoryData);
 
     const initialGlutamateData = [
-        { borderstatus: 0, subContent1: "グルタメート\nタイプ" },
-        { text: "グルタミン酸\n合成", tag: "グルタミン酸代謝" },
-        { text: "グルタミン酸代謝", tag: "グルタミン酸代謝" },
-        { text: "グルタミン酸輸送体", tag: "グルタミン酸輸送体" },
-        { text: "GABA代謝", tag: "GABA代謝" },
-        { text: "GABA受容体", tag: "GABA受容体" }
+        { borderstatus: 0, subContent1: "Glutamate\nType" },
+        { text: "Glutamate\nSynthesis", tag: "Glutamate Metabolism" },
+        { text: "Glutamate Metabolism", tag: "Glutamate Metabolism" },
+        { text: "Glutamate Transporter", tag: "Glutamate Transporter" },
+        { text: "GABA Metabolism", tag: "GABA Metabolism" },
+        { text: "GABA Receptor", tag: "GABA Receptor" },
     ];
 
     const initialCatecholamineData = [
-        { borderstatus: 0, subContent1: "カテコラミン\nタイプ" },
-        { text: "カテコラミン\n合成", tag: "カテコラミン合成" },
-        { text: "カテコラミン代謝", tag: "カテコラミン代謝" },
-        { text: "ドーパミン\n受容体", tag: "ドーパミン\n受容体" },
-        { text: "セロトニン", tag: "セロトニン" }
+        { borderstatus: 0, subContent1: "Catecholamine\nType" },
+        { text: "Catecholamine\nSynthesis", tag: "Catecholamine Synthesis" },
+        { text: "Catecholamine Metabolism", tag: "Catecholamine Metabolism" },
+        { text: "Dopamine\nReceptor", tag: "Dopamine Receptor" },
+        { text: "Serotonin", tag: "Serotonin" },
     ];
 
     const initialHistamineData = [
-        { borderstatus: 0, subContent1: "ヒスタミン\nタイプ" },
-        { text: "ヒスタミン\n生成", tag: "ヒスタミン生成" },
-        { text: "ヒスタミン\n代謝", tag: "ヒスタミン代謝" },
-        { text: "ヒスタミン\n受容体", tag: "ヒスタミン受容体" }
+        { borderstatus: 0, subContent1: "Histamine\nType" },
+        { text: "Histamine\nProduction", tag: "Histamine Production" },
+        { text: "Histamine\nMetabolism", tag: "Histamine Metabolism" },
+        { text: "Histamine\nReceptor", tag: "Histamine Receptor" },
     ];
-    
+
     const initialMitochondriaData = [
-        { borderstatus: 0, subContent1: "ヒスタミン\nタイプ" },
-        { text: "ミトコンドリア", tag: "ミトコンドリア" },
-        { text: "栄養", tag: "栄養" }
+        { borderstatus: 0, subContent1: "Mitochondria\nType" },
+        { text: "Mitochondria", tag: "Mitochondria" },
+        { text: "Nutrition", tag: "Nutrition" },
     ];
 
     const initialDetoxData1 = [
-        { borderstatus: 0, subContent1: ""},
+        { borderstatus: 0, subContent1: "" },
         { text: "BPA", tag: "BPA" },
         { text: "NQO1", tag: "NQO1" },
         { text: "PON1", tag: "PON1" },
-        { text: "フタル酸\nエステル", tag: "フタル酸エステル" },
-        { text: "マイコトキシ\nン", tag: "マイコトキシン" }
+        { text: "Phthalates", tag: "Phthalates" },
+        { text: "Mycotoxins", tag: "Mycotoxins" },
     ];
 
     const initialDetoxData2 = [
-        { borderstatus: 0, subContent1: "デトックス", subContent2: "タイプ"},
-        { text: "フェーズII", subContent1: "グルタチオン", subContent2: "ペルオキシダーゼ", tag: "フェーズII グルタチオンペルオキシダーゼ"},
-        { text: "フェーズII", subContent1: "N-アセチルトラ", subContent2: "ンスフェラーゼ", tag: "フェーズII N-アセチルトランスフェラーゼ"},
-        { text: "フェーズII", subContent1: "N-アセチルトラ", subContent2: "ンスフェラーゼ", tag: "フェーズII N-アセチルトランスフェラーゼ"},
-        { text: "フェーズII", subContent1: "スルフトランス", subContent2: "フェラーゼ", tag: "フェーズII スルフトランスフェラーゼ"},
-        { text: "フェーズII", subContent1: "UDP-グルクロン", subContent2: "酸転移酵素", tag: "フェーズII UDP-グルクロン酸転移酵素"}
+        { borderstatus: 0, subContent1: "Detox", subContent2: "Type" },
+        { text: "Phase II", subContent1: "Glutathione", subContent2: "Peroxidase", tag: "Phase II Glutathione Peroxidase" },
+        { text: "Phase II", subContent1: "N-Acetyltransferase", subContent2: "", tag: "Phase II N-Acetyltransferase" },
+        { text: "Phase II", subContent1: "Sulfotransferase", subContent2: "", tag: "Phase II Sulfotransferase" },
+        { text: "Phase II", subContent1: "UDP-Glucuronosyl", subContent2: "Transferase", tag: "Phase II UDP-Glucuronosyl Transferase" },
     ];
 
     const initialDetoxData3 = [
-        { borderstatus: 0, text: ""},
-        { text: "炎症/抗炎症", tag: "炎症/抗炎症"},
-        { text: "化学物質過敏", tag: "化学物質過敏"},
-        { text: "活性酸素", tag: "活性酸素"},
-        { text: "水銀", tag: "水銀"},
-        { text: "有機リン系", tag: "有機リン系"}
+        { borderstatus: 0, text: "" },
+        { text: "Inflammation/Anti-Inflammation", tag: "Inflammation/Anti-Inflammation" },
+        { text: "Chemical Sensitivity", tag: "Chemical Sensitivity" },
+        { text: "Reactive Oxygen Species", tag: "Reactive Oxygen Species" },
+        { text: "Mercury", tag: "Mercury" },
+        { text: "Organophosphates", tag: "Organophosphates" },
     ];
 
     const initialMethylationData = [
-        { borderstatus: 0, subContent1: "メチレーション\nタイプ"},
-        { text: "メチオニン\nサイクル", tag: "メチオニンサイクル"},
-        { text: "酸化/抗酸化", tag: "酸化/抗酸化"},
-        { text: "葉酸", tag: "葉酸"},
-        { text: "ビタミンB12", tag: "ビタミンB12"}
+        { borderstatus: 0, subContent1: "Methylation\nType" },
+        { text: "Methionine\nCycle", tag: "Methionine Cycle" },
+        { text: "Oxidation/Antioxidation", tag: "Oxidation/Antioxidation" },
+        { text: "Folate", tag: "Folate" },
+        { text: "Vitamin B12", tag: "Vitamin B12" },
     ];
 
     const initialEtcData = [
-        { text: "APOE", tag: "APOE"},
-        { text: "BDNF", tag: "BDNF"},
-        { text: "CYP450", tag: "CYP450"},
-        { text: "Dyslexia", tag: "Dyslexia"},
-        { text: "FN1", tag: "FN1"},
-        { text: "Leaky", tag: "Leaky"},
-        { text: "Longevity\nGenes", tag: "LongevityGenes"},
-        { text: "TREM2", tag: "TREM2"},
-        { text: "アルコール", tag: "アルコール"},
-        { text: "オート\nファジー", tag: "オートファジー"},
-        { text: "カフェイン", tag: "カフェイン"},
-        { text: "グリホサート", tag: "グリホサート"},
-        { text: "グルタチオン\n除去", tag: "グルタチオン除去"},
-        { text: "ミルク", tag: "ミルク"},
-        { text: "メラトニン", tag: "メラトニン"},
-        { text: "ビタミン&\nミネラル", tag: "ビタミン&ミネラル"},
-        { text: "炎症ON", tag: "炎症ON"},
-        { text: "炎症OFF", tag: "炎症OFF"},
-        { text: "筋肉/筋肉痛", tag: "筋肉/筋肉痛"},
-        { text: "細胞代謝", tag: "細胞代謝"},
-        { text: "殺虫剤&農薬", tag: "殺虫剤&農薬"},
-        { text: "神経伝達物質", tag: "神経伝達物質"},
-        { text: "女性ホルモン", tag: "女性ホルモン"},
-        { text: "腸内フローラ", tag: "腸内フローラ"},
-        { text: "鉛", tag: "鉛"}
-    ]
+        { text: "APOE", tag: "APOE" },
+        { text: "BDNF", tag: "BDNF" },
+        { text: "CYP450", tag: "CYP450" },
+        { text: "Dyslexia", tag: "Dyslexia" },
+        { text: "FN1", tag: "FN1" },
+        { text: "Leaky Gut", tag: "Leaky Gut" },
+        { text: "Longevity\nGenes", tag: "Longevity Genes" },
+        { text: "TREM2", tag: "TREM2" },
+        { text: "Alcohol", tag: "Alcohol" },
+        { text: "Autophagy", tag: "Autophagy" },
+        { text: "Caffeine", tag: "Caffeine" },
+        { text: "Glyphosate", tag: "Glyphosate" },
+        { text: "Glutathione\nDepletion", tag: "Glutathione Depletion" },
+        { text: "Milk", tag: "Milk" },
+        { text: "Melatonin", tag: "Melatonin" },
+        { text: "Vitamins &\nMinerals", tag: "Vitamins & Minerals" },
+        { text: "Inflammation ON", tag: "Inflammation ON" },
+        { text: "Inflammation OFF", tag: "Inflammation OFF" },
+        { text: "Muscle/Pain", tag: "Muscle/Pain" },
+        { text: "Cell Metabolism", tag: "Cell Metabolism" },
+        { text: "Pesticides", tag: "Pesticides" },
+        { text: "Neurotransmitters", tag: "Neurotransmitters" },
+        { text: "Female Hormones", tag: "Female Hormones" },
+        { text: "Gut Microbiota", tag: "Gut Microbiota" },
+        { text: "Lead", tag: "Lead" },
+    ];
 
     const [glutamateData, setGlutamateData] = useState(initialGlutamateData);
     const [catecholamineData, setCatecholamineData] = useState(initialCatecholamineData);
@@ -130,34 +129,33 @@ const GenCategory = () => {
         setDetoxData3(updateBorderStatus(initialDetoxData3));
         setMethylationData(updateBorderStatus(initialMethylationData));
         setEtcData(updateBorderStatus(initialEtcData));
-
     }, [categoryData]);
 
     return (
         <PageWrapper>
             <PageHeader
                 subtitle={"Gene Category"}
-                mainTitle={"遺伝子カテゴリー"}
+                mainTitle={"Gene Categories"}
             />
             <Text
                 textContent={
-                    "今回のSNPs検査によると、赤く囲われたカテゴリーに関連する遺伝子について、変異のある可能性があります。 \n遺伝子の変異自体は、誰にでも存在しますが、その内容は人によって様々です。自分の遺伝子・特性にあった健康管理を目指しましょう。"
+                    "Based on the SNPs test, there may be mutations in genes related to categories highlighted in red.\nGene mutations are common to everyone, but their content varies by individual. Let's aim for health management tailored to your genes and characteristics."
                 }
                 fontSize={12}
                 className={"whitespace-pre-wrap my-[18rem]"}
             />
-        <div className="w-[525rem] whitespace-pre-wrap">
-            <CategoryRow bgColor="#FFFDF1" data={glutamateData} />
-            <CategoryRow bgColor="#fff5e9" data={catecholamineData} />
-            <CategoryRow bgColor="#FFEEEE" data={histamineData} />
-            <CategoryRow bgColor="#E3FFE8" data={mitochondriaData} />
-            <CategoryRow bgColor="#FBF5FF" data={detoxData1} />
-            <CategoryRow1 bgColor="#FBF5FF" data={detoxData2} />
-            <CategoryRow bgColor="#FBF5FF" data={detoxData3} />
-            <CategoryRow bgColor="#F0FEFF" data={methylationData} />
-            <CategoryRow bgColor="#FFF" data={etcData} />
-        </div>
-        <PageNumber>23</PageNumber>
+            <div className="w-[525rem] whitespace-pre-wrap">
+                <CategoryRow bgColor="#FFFDF1" data={glutamateData} />
+                <CategoryRow bgColor="#fff5e9" data={catecholamineData} />
+                <CategoryRow bgColor="#FFEEEE" data={histamineData} />
+                <CategoryRow bgColor="#E3FFE8" data={mitochondriaData} />
+                <CategoryRow bgColor="#FBF5FF" data={detoxData1} />
+                <CategoryRow1 bgColor="#FBF5FF" data={detoxData2} />
+                <CategoryRow bgColor="#FBF5FF" data={detoxData3} />
+                <CategoryRow bgColor="#F0FEFF" data={methylationData} />
+                <CategoryRow bgColor="#FFF" data={etcData} />
+            </div>
+            <PageNumber>23</PageNumber>
         </PageWrapper>
     );
 };

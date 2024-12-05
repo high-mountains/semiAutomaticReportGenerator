@@ -22,63 +22,63 @@ const Concept = () => {
     const EnhacedConcept = withPeriodanalyze([
         {Component: PageHeader,
             data:{
-                subtitle: "Detoxification Type",
-                mainTitle: "デトックスタイプ"}},
+                // subtitle: "Detoxification Type",
+                mainTitle: "Detoxification Type"}},
         {Component: Outline,
             data:{
                 imageURL: "./bg/detox.png",
-                concept: "デトックスタイプは、",
-                description: "体内の毒素を排出する、解毒の機能が充分に発揮されにくく、体内に毒素が蓄積しやすい傾向があるタイプです。"
+                concept: "What is Detoxification Type",
+                description: "This type of person has difficulty fully utilizing the detoxification function that expels toxins from the body, and toxins tend to accumulate in the body."
             }
         },
         {Component: Explanation,
             data:{
-                question: "デトックスタイプとは",
-                answer: "デトックスタイプの人は、口や鼻から取り込む排気ガス、殺虫剤、<span class='blue'>有害重金属</span>などの<span class='bold'>環境毒を効果的に排泄する能力</span>が低下している可能性があります。デトックスに関わる遺伝子の中で、特に弱い部分をサポートすることで、身体的にも精神的にも健康状態が大きく改善されることが期待できます。多くの場合、肝臓や腎臓、腸内での<span class='bold'>解毒酵素の働き</span>が遺伝的に低下しているため、体内に毒素が蓄積しやすくなり、慢性疲労や肌荒れ、アレルギー、消化不良などの健康問題に悩まされることがよくあります。また、環境の変化に対して不安を感じることがあり、新しい環境に適応する自分を想像するだけで不安が生じることもあります。しかし、解毒機能が整うことで、急に<span class='bold'>新しいことに挑戦する意欲</span>が湧くことがあり、体の解毒能力が向上すると余力が生まれ、自分でも知らなかった新たな一面に出会う可能性が広がります。",
+                question: "What is Detoxification Type?",
+                answer: "People with detoxification may have a reduced ability to effectively excrete environmental toxins such as exhaust fumes, pesticides, and harmful heavy metals that are taken in through the mouth and nose. Supporting the weaker parts of the genes involved in detoxification can greatly improve physical and mental health. In many cases, the activity of detoxification enzymes in the liver, kidneys, and intestines is genetically reduced, making it easier for toxins to accumulate in the body, and people often suffer from health problems such as chronic fatigue, rough skin, allergies, and indigestion. In addition, people may feel anxious about changes in their environment, and even imagining themselves adapting to a new environment can cause anxiety. However, by improving your detoxification function, you may suddenly feel motivated to try new things, and when your body's detoxification ability improves, you will have more spare energy and the possibility of discovering new sides of yourself that you didn't know existed.",
                 sidebarColor: maincolor
             }
         },
         {Component: Quality,
             data:{
-                description: "デトックスタイプの特性には、以下のような可能性があります。",
+                description: "Detox type characteristics may include:",
                 qualities1: [
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>なにもしていないのに疲れている</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>I'm tired even though I haven't done anything</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>肌の調子が崩れやすい</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Skin condition easily deteriorates</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>アレルギー症状がある</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Have allergies</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>気分が落ち込みやすい</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Feeling depressed easily</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>食後にお腹が重く感じる</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>My stomach feels heavy after eating</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>入浴やサウナが好き</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>I like bathing and saunas</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>オーガニック健康食品をよく買う</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>I often buy organic health foods</p>`
                     }
                 ],
                 qualities2: [
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>飛行機や新幹線などにのると疲れが\nでる</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>I get tired when I'm on an airplane or bullet train.</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>ホテルなどに宿泊すると体調を崩し\nやすい</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>I'm prone to getting sick when staying in a hotel.</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>外食すると体調を壊しやすい</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Eating out can make you feel sick</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>夜間に目が覚める、トイレに行く</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Waking up during the night to go to the toilet</p>`
                     },
                     {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>薬味がおおい食事を好む</p>`
+                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-top: ${ renderedPdfFlag ? '14' : '7' }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Prefers food with lots of condiments</p>`
                     }
                 ],
                 sidebarColor: maincolor
