@@ -23,21 +23,21 @@ const Periodanalyze = (props) => {
         {
             Component: PageHeader,
             data: {
-                subtitle: "Histamine Type",
-                mainTitle: "ヒスタミンタイプ",
+                // subtitle: "Histamine Type",
+                mainTitle: "Histamine Type",
             },
         },
         {
             Component: Fourperiod,
             data: {
                 firstSenctences:
-                    "ヒスタミンタイプの子どもは感受性が豊かで、環境や他人の感情に敏感に反応し、音や光、食べ物にも過敏になることがあります。幼少期から<span class='bold'>アレルギー症状</span>が出やすく、食物アレルギーやアトピー、ぜんそくが発症しやすい傾向があります。ヒスタミン過剰で不安を感じやすく、人見知りしやすくなることもあり、<span class='bold'>繊細な性格</span>のため大人の適切なサポートが重要です。",
+                    "Histamine-type children are highly sensitive, reacting sensitively to the environment and the emotions of others, and may also be hypersensitive to sound, light, and food. They are prone to developing allergic symptoms from an early age, and are prone to food allergies, atopy, and asthma. Histamine excess can make them feel anxious and shy around strangers, and because they have a sensitive personality, it is important for them to receive appropriate support from adults.",
                 secondSenctences:
-                    "ヒスタミンの影響で感情の起伏が激しくなり、不安やイライラが強まりやすく、集中力の維持が難しいこともあります。また、花粉症や鼻炎などアレルギーが悪化しやすく、<span class='bold'>ストレス管理</span>が重要です。特に女性は初潮後、生理痛やPMSが強まることがあります。一方で、<span class='bold'>記憶力</span>や<span class='bold'>スケジュール管理</span>が得意で、メモを取る習慣から効率的に物事を進める力を持っています。",
+                    "The effects of histamine can make emotions fluctuate, making you more anxious and irritable, and making it difficult to maintain concentration. In addition, allergies such as hay fever and rhinitis can easily worsen, so stress management is important. Women may experience more severe menstrual pain and PMS after their first period. On the other hand, they are good at memory and schedule management, and their habit of taking notes allows them to get things done efficiently.",
                 thirdSenctences:
-                    "ヒスタミン関連の遺伝子異常により、胃酸過多や胃炎、胃潰瘍など<span class='bold'>消化器系のトラブル</span>が起こりやすくなります。仕事や家庭でのストレスが過剰になると、不安感や頭痛が頻発しやすく、食物中のヒスタミンに敏感になることで、感覚過敏や匂い・化学物質過敏にも悩まされることがあります。",
+                    "Histamine-related genetic abnormalities can lead to digestive problems such as hyperacidity, gastritis, and stomach ulcers. Excessive stress at work or at home can lead to frequent anxiety and headaches, and sensitivity to histamine in food can lead to sensory hypersensitivity and sensitivity to smells and chemicals.",
                 fourthSenctences:
-                    "ホルモンバランスの変化がヒスタミン代謝に影響し、アレルギーや消化器症状が変動しやすくなります。女性は<span class='blue'>エストロゲン</span>低下で<span class='bold'>ホットフラッシュ</span>や<span class='bold'>不眠</span>が増え、男性も<span class='bold'>睡眠障害</span>や<span class='bold'>胃腸の問題</span>が起こりやすくなります。この時期はストレス管理に加え、アレルギーや消化器のケアが重要です。また、環境や音に敏感になり、化学物質に過敏反応することもあります。ルールへのこだわりが強く、日常生活での配慮が求められる場合もあります。",
+                    "Changes in hormone balance affect histamine metabolism, making allergies and digestive symptoms more likely to fluctuate. Women are more likely to experience hot flashes and insomnia due to a drop in estrogen, while men are more likely to experience sleep disorders and gastrointestinal problems. During this time, it is important to manage stress as well as take care of allergies and digestive issues. Children may also become more sensitive to the environment and sounds, and may have hypersensitive reactions to chemicals. They may also be very particular about rules, so you may need to be considerate in your daily life.",
             },
         },
         {
@@ -45,42 +45,42 @@ const Periodanalyze = (props) => {
             data: {
                 wrapperWidth: "525rem",
                 mainColor: mainColor,
-                description: "ヒスタミンタイプのおすすめ生活改善",
+                description: "Recommended lifestyle improvements for histamine types",
                 qualities1: [
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
                             renderedPdfFlag ? "12" : "4"
-                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>ヒスタミンを多く含む食品（熟成チーズ、加工肉、発酵食品、アルコール、特定の魚類など\nを控える。</p>`,
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Avoid foods high in histamine (such as aged cheeses, processed meats, fermented foods, alcohol, and certain fish).</p>`,
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
                             renderedPdfFlag ? "12" : "4"
-                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>なるべく飲酒を控える</p>`,
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Avoid drinking alcohol as much as possible</p>`,
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
                             renderedPdfFlag ? "12" : "4"
-                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>新鮮な食材や、保存料や添加物が少ない食品、抗ヒスタミン作用を持つ食品（だいこん、ター\nメリック、ニンジンなど）を積極的に摂取する。</p>`,
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Actively consume fresh ingredients, foods with few preservatives and additives, and foods with antihistamine properties (radish, turmeric, carrots, etc.).</p>`,
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
                             renderedPdfFlag ? "12" : "4"
-                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>グルテンフリー、<span class='blue'>カゼインフリー</span>を心掛け、腸内フローラを整える。</p>`,
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Aim for a gluten-free and casein-free diet to help regulate your intestinal flora.</p>`,
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
                             renderedPdfFlag ? "12" : "4"
-                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>こまめな清掃や空気清浄機の使用により、環境中のアレルゲンを減らしてアレルギー反応を抑\nえる。</p>`,
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>By cleaning frequently and using air purifiers, you can reduce allergens in the environment and prevent allergic reactions.</p>`,
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
                             renderedPdfFlag ? "12" : "4"
-                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p><span class='blue'>マイコトキシン</span>（カビ毒）の原因となるような汚染された穀類や住居、エアコンなどを避け\nる。</p>`,
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p><span class='blue'>Avoid contaminated grains, housing, air conditioning, etc. that may cause mycotoxins.</p>`,
                     },
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
                             renderedPdfFlag ? "12" : "4"
-                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>寝室にスマートフォンなどを持ち込まない、機内モードにしておく。寝室とWifiルーターの距\n離を取る。</p>`,
+                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Do not bring your smartphone into the bedroom, and keep it in airplane mode. Keep the bedroom away from the Wi-Fi router.</p>`,
                     },
                 ],
                 oneColumnStatus: true,

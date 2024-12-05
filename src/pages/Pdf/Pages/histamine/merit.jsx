@@ -25,9 +25,9 @@ const Merit = () => {
                     {
                          
                         wrapperWidth: "177rem",  
-                        heading: "ヒスタミンの合成",
+                        heading: "Histamine synthesis",
                         content:
-                            "アミノ酸であるヒスチジンをヒスタミンに変換することでヒスタミンを合成する。 \n 　　　関連遺伝子：HDC",
+                            "It synthesizes histamine by converting the amino acid histidine into histamine. Related gene: HDC",
                         contentLineHeight: 1.448333,  
                         posInfo: {
                             top: "13.4rem",
@@ -39,9 +39,9 @@ const Merit = () => {
                     {
                          
                         wrapperWidth: "160.79rem",
-                        heading: "抗炎症作用",
+                        heading: "Anti-inflammatory properties",
                         content:
-                            "<span class='blue'>ステロイド</span>の産出を行う。 \n 関連遺伝子：CYP21A2",
+                            "Produces steroids. Related genes: CYP21A2",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             top: "11rem",
@@ -55,9 +55,9 @@ const Merit = () => {
                     {
                          
                         wrapperWidth: "177rem",
-                        heading: "ヒスタミンの代謝・分解",
+                        heading: "Histamine metabolism and decomposition",
                         content:
-                            "ヒスタミンを無効化し、排出することで、体内のヒスタミンレベルが適切に調整する。 \n 関連遺伝子：HNMT, NAT2, \n 　　　　　　ALDH2, UGT1A4",
+                            "By neutralizing and excreting histamine, the histamine level in the body is appropriately adjusted. Related genes: HNMT, NAT2, ALDH2, UGT1A4",
                         contentLineHeight: 1.448333,
                         posInfo: {
                             bottom: "126rem",
@@ -70,8 +70,8 @@ const Merit = () => {
                     {
                          
                         wrapperWidth: "304.54rem",
-                        heading: "グルテン過敏症/乳糖不耐性/電磁波感受性",
-                        content: `グルテンや乳製品に対して過敏性や不耐症をおこす。 \n 関連遺伝子：HLA-DQ2.2,  HLA-DQ2.5 , HLA-DQ8,  \n 　　　　　　MCM6, CACNA1C`,
+                        heading: "Gluten sensitivity/lactose intolerance/electromagnetic sensitivity",
+                        content: `Causes sensitivity or intolerance to gluten and dairy products. Related genes: HLA-DQ2.2, HLA-DQ2.5, HLA-DQ8, MCM6, CACNA1C`,
                         contentLineHeight: 1.448333,
                         posInfo: {
                             bottom: "1rem",
@@ -83,8 +83,8 @@ const Merit = () => {
                     },
                     {
                         wrapperWidth: "181.54rem",
-                        heading: "ヒスタミンの作用を \n 仲介する受容体関連",
-                        content: `特定の受容体に結合することで、 \n アレルギー反応などさまざまな \n 生理的反応を引き起こす。 \n 関連遺伝子：HRH1, HRH2, \n 　　　　　　HRH3, HRH4`,
+                        heading: "Receptor-related pathways that mediate the effects of histamine",
+                        content: `By binding to specific receptors, it induces various physiological responses, including allergic reactions. Related genes: HRH1, HRH2, HRH3, HRH4`,
                         contentLineHeight: 1.448333,
                         posInfo: {
                             bottom: "75rem",
@@ -101,8 +101,8 @@ const Merit = () => {
             Component: MeritIntro,
             data: {
                 maincolor: maincolor,
-                content1: "ヒスタミンが脳で高いことによるメリットと",
-                content2: "ヒスタミンが脳で増えすぎることによるデメリット"
+                content1: "The benefits of having high levels of histamine in the brain",
+                content2: "Disadvantages of excess histamine in the brain"
             },
         },
         {
@@ -110,35 +110,35 @@ const Merit = () => {
             data: {
                 merit: [
                     {
-                        title: "覚醒と注意力の向上",
+                        title: "Increased alertness and attention",
                         content:
-                            "ヒスタミンは覚醒状態を維持し、注意力や集中力を高めます。"
+                            "Histamine keeps you awake and increases your alertness and concentration."
                     },
                     {
-                        title: "記憶と学習のサポート",
+                        title: "Supports memory and learning",
                         content:
-                            "ヒスタミンは脳のシナプス可塑性に影響を与え、記憶の形成と学習能力を支援します。"
+                            "Histamine affects synaptic plasticity in the brain, aiding in memory formation and learning ability."
                     }
                 ],
                 demerit: [
                     {
-                        title: "神経系の影響",
+                        title: "Nervous system effects",
                         content:
-                            "ヒスタミンが過剰になると、不安症状、頭痛、睡眠障害などを引き起こすことがあります。",
+                            "Excess histamine can cause anxiety, headaches, and sleep problems.",
                         className: "tracking-tightest",
                         contentStyle: {
                             letterSpacing: "-0.6rem"
                         }
                     },
                     {
-                        title: "アレルギー反応の悪化",
+                        title: "Worsening allergic reactions",
                         content:
-                            "ヒスタミンが多すぎると、アレルギー反応が過剰に起こり、慢性的な鼻炎、皮膚炎、喘息などの症状が悪化します。"
+                            "Too much histamine can cause excessive allergic reactions and worsen symptoms such as chronic rhinitis, dermatitis, and asthma."
                     },
                     {
-                        title: "消化器症状の悪化",
+                        title: "Worsening gastrointestinal symptoms",
                         content:
-                            "ヒスタミンの過剰分泌により、胃酸が増加し、胃痛や胃炎、胃潰瘍のリスクが高まります。",
+                            "Excessive secretion of histamine increases stomach acid, which increases the risk of stomach pain, gastritis, and stomach ulcers.",
                             className: "tracking-tightest",
                             contentStyle: {
                                 letterSpacing: "-0.6rem"
@@ -151,8 +151,8 @@ const Merit = () => {
     return(<>
     <PageWrapper>
         <PageHeader 
-            subtitle={"Histamine Type"}
-            mainTitle={"ヒスタミンタイプ"}>
+            // subtitle={"Histamine Type"}
+            mainTitle={"Histamine Type"}>
         </PageHeader>
         <EnhancedMerit />
         <PageNumber>
