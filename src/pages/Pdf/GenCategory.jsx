@@ -45,15 +45,15 @@ const GenCategory = () => {
         { text: "BPA", tag: "BPA" },
         { text: "NQO1", tag: "NQO1" },
         { text: "PON1", tag: "PON1" },
-        { text: "Phthalates", tag: "Phthalates" },
-        { text: "Mycotoxins", tag: "Mycotoxins" },
+        { text: "Phthalates", tag: "フタル酸エステル" },
+        { text: "Mycotoxins", tag: "マイコトキシン" },
     ];
 
     const initialDetoxData2 = [
         { borderstatus: 0, subContent1: "Detox", subContent2: "Type" },
-        { text: "Phase II", subContent1: "Glutathione", subContent2: "Peroxidase", tag: "Phase II Glutathione Peroxidase" },
-        { text: "Phase II", subContent1: "N-Acetyltransferase", subContent2: "", tag: "Phase II N-Acetyltransferase" },
-        { text: "Phase II", subContent1: "Sulfotransferase", subContent2: "", tag: "Phase II Sulfotransferase" },
+        { text: "Phase II", subContent1: "Glutathione", subContent2: "Peroxidase", tag: "フェーズII グルタチオンペルオキシダーゼ" },
+        { text: "Phase II", subContent1: "N-Acetyltransferase", subContent2: "", tag: "フェーズII グルタチオントランスフェラーゼ" },
+        { text: "Phase II", subContent1: "Sulfotransferase", subContent2: "", tag: "フェーズII N-アセチルトランスフェラーゼ" },
         // { text: "Phase II", subContent1: "UDP-Glucuronosyl", subContent2: "Transferase", tag: "Phase II UDP-Glucuronosyl Transferase" },
     ];
 

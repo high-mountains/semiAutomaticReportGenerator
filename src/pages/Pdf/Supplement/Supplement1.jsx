@@ -186,27 +186,27 @@ const initialData = [
                 "Vitamin B2, Vitamin B6, Vitamin B12, Folate, Magnesium",
         },
     },
-    {
-        rowSpan: 2,
-        thContent: {
-            main: "Dopamine Receptor",
-            sub: "Involved in sensitivity to excitatory neurotransmitters influencing pleasure and arousal",
-        },
-        tdContent: {
-            gen: "DRD1",
-            danger: 0,
-            description:
-                "L-Tyrosine, Omega-3, Vitamin B6, Vitamin D, Phosphatidylcholine, Magnesium",
-        },
-    },
-    {
-        tdContent: {
-            gen: "DRD2",
-            danger: 0,
-            description:
-                "L-Tyrosine, Omega-3, Vitamin B6, Vitamin D, Phosphatidylcholine, Magnesium",
-        },
-    },
+    // {
+    //     rowSpan: 2,
+    //     thContent: {
+    //         main: "Dopamine Receptor",
+    //         sub: "Involved in sensitivity to excitatory neurotransmitters influencing pleasure and arousal",
+    //     },
+    //     tdContent: {
+    //         gen: "DRD1",
+    //         danger: 0,
+    //         description:
+    //             "L-Tyrosine, Omega-3, Vitamin B6, Vitamin D, Phosphatidylcholine, Magnesium",
+    //     },
+    // },
+    // {
+    //     tdContent: {
+    //         gen: "DRD2",
+    //         danger: 0,
+    //         description:
+    //             "L-Tyrosine, Omega-3, Vitamin B6, Vitamin D, Phosphatidylcholine, Magnesium",
+    //     },
+    // },
 ];
 
 const Supplement1 = () => {

@@ -195,14 +195,14 @@ const initialData = [
                 "CoQ10, L-Carnitine, NAD+, Alpha Lipoic Acid, Vitamin B6, Riboflavin",
         },
     },
-    {
-        tdContent: {
-            gen: "COQ3",
-            danger: 0,
-            description:
-                "CoQ10, L-Carnitine, NAD+, Alpha Lipoic Acid, Vitamin B6, Riboflavin",
-        },
-    },
+    // {
+    //     tdContent: {
+    //         gen: "COQ3",
+    //         danger: 0,
+    //         description:
+    //             "CoQ10, L-Carnitine, NAD+, Alpha Lipoic Acid, Vitamin B6, Riboflavin",
+    //     },
+    // },
 ];
 
 const Supplement2 = () => {
