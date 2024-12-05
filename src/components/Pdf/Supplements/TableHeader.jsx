@@ -15,11 +15,11 @@ const TableHeader = () => {
     
     return (
         <tr>
-            <th><p style={renderedPdfFlag}>カテゴリー</p></th>
-            <th><p style={renderedPdfFlag}>遺伝子</p></th>
-            <th><p style={renderedPdfFlag}>変異の大きさ</p></th>
-            <th><p style={renderedPdfFlag}>摂取すべきもの</p></th>
-            <th><p style={renderedPdfFlag}>避けるべきもの</p></th>
+            <th><p style={renderedPdfFlag}>Category</p></th>
+            <th><p style={renderedPdfFlag}>Gene</p></th>
+            <th><p style={renderedPdfFlag}>Mutation size</p></th>
+            <th><p style={renderedPdfFlag}>What to eat</p></th>
+            <th><p style={renderedPdfFlag}>Things to avoid</p></th>
         </tr>
     );
 };

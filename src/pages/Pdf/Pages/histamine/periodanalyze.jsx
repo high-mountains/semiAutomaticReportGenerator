@@ -23,7 +23,6 @@ const Periodanalyze = (props) => {
         {
             Component: PageHeader,
             data: {
-                // subtitle: "Histamine Type",
                 mainTitle: "Histamine Type",
             },
         },
@@ -38,6 +37,8 @@ const Periodanalyze = (props) => {
                     "Histamine-related genetic abnormalities can lead to digestive problems such as hyperacidity, gastritis, and stomach ulcers. Excessive stress at work or at home can lead to frequent anxiety and headaches, and sensitivity to histamine in food can lead to sensory hypersensitivity and sensitivity to smells and chemicals.",
                 fourthSenctences:
                     "Changes in hormone balance affect histamine metabolism, making allergies and digestive symptoms more likely to fluctuate. Women are more likely to experience hot flashes and insomnia due to a drop in estrogen, while men are more likely to experience sleep disorders and gastrointestinal problems. During this time, it is important to manage stress as well as take care of allergies and digestive issues. Children may also become more sensitive to the environment and sounds, and may have hypersensitive reactions to chemicals. They may also be very particular about rules, so you may need to be considerate in your daily life.",
+                addStyle:
+                    {marginBottom: "15rem"}
             },
         },
         {
@@ -60,11 +61,6 @@ const Periodanalyze = (props) => {
                     {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
                             renderedPdfFlag ? "12" : "4"
-                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Actively consume fresh ingredients, foods with few preservatives and additives, and foods with antihistamine properties (radish, turmeric, carrots, etc.).</p>`,
-                    },
-                    {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
-                            renderedPdfFlag ? "12" : "4"
                         }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Aim for a gluten-free and casein-free diet to help regulate your intestinal flora.</p>`,
                     },
                     {
@@ -76,11 +72,6 @@ const Periodanalyze = (props) => {
                         content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
                             renderedPdfFlag ? "12" : "4"
                         }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p><span class='blue'>Avoid contaminated grains, housing, air conditioning, etc. that may cause mycotoxins.</p>`,
-                    },
-                    {
-                        content: `<div style='width: 5rem; aspect-ratio: 1/1; margin-left: 3rem; margin-top: ${
-                            renderedPdfFlag ? "12" : "4"
-                        }rem; border-radius: 50%; background-color: rgba(72,79,81,1); margin-right: 8rem'></div><p>Do not bring your smartphone into the bedroom, and keep it in airplane mode. Keep the bedroom away from the Wi-Fi router.</p>`,
                     },
                 ],
                 oneColumnStatus: true,

@@ -3,7 +3,7 @@ import Eachperiod from './Eachperiod.jsx';
 
 const Fourperiod = (props) => {
     return (
-        <div className='flex flex-col gap-[0rem] my-[30rem] items-center justify-center'>
+        <div className='flex flex-col gap-[0rem] my-[30rem] items-center justify-center' style={props.addStyle}>
             <Eachperiod
                 imgURL={"./bg/guy.svg"}
                 sentences={props.firstSenctences}
