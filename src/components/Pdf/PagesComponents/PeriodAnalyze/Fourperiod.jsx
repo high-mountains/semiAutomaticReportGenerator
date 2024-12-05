@@ -5,14 +5,14 @@ const Fourperiod = (props) => {
     return (
         <div className='flex flex-col gap-[0rem] my-[30rem] items-center justify-center' style={props.addStyle}>
             <Eachperiod
-                imgURL={"./bg/guy.svg"}
+                imgURL={"./bg/child.svg"}
                 sentences={props.firstSenctences}
                 style={{
                     paddingTop: "0rem"
                 }}
             />
             <Eachperiod
-                imgURL={"./bg/young.svg"}
+                imgURL={"./bg/pub.svg"}
                 sentences={props.secondSenctences}
             />
             <Eachperiod
