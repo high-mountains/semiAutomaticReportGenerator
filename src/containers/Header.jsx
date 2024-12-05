@@ -129,7 +129,7 @@ function Header() {
     }
 
     // Save the PDF
-    pdf.save("遺伝子検査報告書.pdf");
+    pdf.save("GeneReport.pdf");
 
     // Reset current page after processing
     setCurrentPage(0);
@@ -172,7 +172,7 @@ function Header() {
       notification['success']({
         message: 'Success',
         description:
-          'File is Downloaded',
+          'File is Uploaded',
           key: new Date().getTime(), // Use a unique key each time
       });
 

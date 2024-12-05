@@ -12,32 +12,32 @@ const GenCategory = () => {
 
     const initialGlutamateData = [
         { borderstatus: 0, subContent1: "Glutamate\nType" },
-        { text: "Glutamate\nSynthesis", tag: "Glutamate Metabolism" },
-        { text: "Glutamate Metabolism", tag: "Glutamate Metabolism" },
-        { text: "Glutamate Transporter", tag: "Glutamate Transporter" },
-        { text: "GABA Metabolism", tag: "GABA Metabolism" },
-        { text: "GABA Receptor", tag: "GABA Receptor" },
+        { text: "Glutamate\nSynthesis", tag: "グルタミン酸合成" },
+        { text: "Glutamate Metabolism", tag: "グルタミン酸代謝" },
+        { text: "Glutamate Transporter", tag: "グルタミン酸輸送体" },
+        { text: "GABA Metabolism", tag: "GABA代謝" },
+        { text: "GABA Receptor", tag: "GABA受容体" },
     ];
 
     const initialCatecholamineData = [
         { borderstatus: 0, subContent1: "Catecholamine\nType" },
-        { text: "Catecholamin\nSynthesis", tag: "Catecholamine Synthesis" },
-        { text: "Catecholamin Metabolism", tag: "Catecholamine Metabolism" },
-        { text: "Dopamine\nReceptor", tag: "Dopamine Receptor" },
-        { text: "Serotonin", tag: "Serotonin" },
+        { text: "Catecholamin\nSynthesis", tag: "カテコラミン合成" },
+        { text: "Catecholamin Metabolism", tag: "カテコラミン代謝" },
+        { text: "Dopamine\nReceptor", tag: "ドーパミン受容体" },
+        { text: "Serotonin", tag: "セロトニン" },
     ];
 
     const initialHistamineData = [
         { borderstatus: 0, subContent1: "Histamine\nType" },
-        { text: "Histamine\nProduction", tag: "Histamine Production" },
-        { text: "Histamine\nMetabolism", tag: "Histamine Metabolism" },
-        { text: "Histamine\nReceptor", tag: "Histamine Receptor" },
+        { text: "Histamine\nProduction", tag: "ヒスタミン生成" },
+        { text: "Histamine\nMetabolism", tag: "ヒスタミン代謝" },
+        { text: "Histamine\nReceptor", tag: "ヒスタミン受容体" },
     ];
 
     const initialMitochondriaData = [
         { borderstatus: 0, subContent1: "Mitochondria\nType" },
-        { text: "Mitochondria", tag: "Mitochondria" },
-        { text: "Nutrition", tag: "Nutrition" },
+        { text: "Mitochondria", tag: "ミトコンドリア" },
+        { text: "Nutrition", tag: "栄養" },
     ];
 
     const initialDetoxData1 = [
