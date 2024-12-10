@@ -43,7 +43,7 @@ export const AuthProvider = ({ children }) => {
         } catch (error) {
             console.log(error)
             handleError()
-            toast.error('ログインに失敗しました。')
+            toast.error('Login failed.')
         }
         return
     }

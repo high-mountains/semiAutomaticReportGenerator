@@ -37,7 +37,7 @@ function Login() {
                 setErrorMessage('')
             },
             () => {
-                setErrorMessage('メールアドレスまたはパスワードが正しくありません。')
+                setErrorMessage('Incorrect email address or password.')
             },
         )
         if (setPending) setPending(false)

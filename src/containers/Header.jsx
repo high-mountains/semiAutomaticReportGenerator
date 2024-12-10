@@ -125,7 +125,7 @@ function Header() {
 
       // Optional: Adding a short delay to avoid freezing the browser
       await new Promise((resolve) => setTimeout(resolve, 200));
-      // console.log(`Processed batch ${i / batchSize + 1}`);
+    // console.log(`Processed batch ${i / batchSize + 1}`);
     }
 
     // Save the PDF
