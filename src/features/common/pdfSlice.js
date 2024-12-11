@@ -40,7 +40,8 @@ export const pdfDataSlice = createSlice({
   initialState: {
     clientName: "XX XX",// clientName
     clientId: "98236",
-    
+    reportDate: "2024年10月1日",
+
     mainColor: "#00C3D0",// mainColor (tag color) cyan
     mainTextColor: "#484F51",// mainTextColor (text color)
     
@@ -110,6 +111,12 @@ export const pdfDataSlice = createSlice({
       const geneData = payload.find(file => file.fileName === "gene_data.csv").data;
       // console.log("geneData in store==>", geneData);
       state.geneData = geneData;
+
+      const userData = payload.find(file => file.fileName === "user_data.csv").data[0];
+      console.log("userData==>", userData);
+      state.clientId = userData.ID;
+      state.clientName = userData.name;
+      state.reportDate = userData.date;
     }
   },
 

@@ -4,9 +4,15 @@ import pdfData from "../../utils/dummyPdf.json";
 import { useSelector } from "react-redux";
 
 function Page1() {
+    
+    const userName = useSelector((state) =>  state.pdfData.clientName);
+    const userId = useSelector((state) =>  state.pdfData.clientId);
+    const date = useSelector((state) =>  state.pdfData.reportDate);
+
     const initialData = {
-        clientName: pdfData.clientName,
-        clientId: pdfData.clientId,
+        clientName: userName,
+        clientId: userId,
+        date: date,
         mainColor: pdfData.mainColor,
         mainTextColor: pdfData.mainTextColor,
     };
@@ -20,11 +26,12 @@ function Page1() {
     }, [renderFlag]);
 
     useEffect(() => {
-        setData((pervState) => {
+        setData((prevState) => {
             return {
-                ...pervState,
-                clientName: pdfData.clientName,
-                clientId: pdfData.clientId,
+                ...prevState,
+                clientName: userName,
+                clientId: userId,
+                date: date,
                 mainColor: pdfData.mainColor,
                 mainTextColor: pdfData.mainTextColor,
             };
@@ -32,7 +39,7 @@ function Page1() {
         return () => {
             // optional cleanup code (only if needed)
         };
-    }, [pdfData]);
+    }, [userName, userId, date]);
 
     return (
         <>
@@ -69,7 +76,7 @@ function Page1() {
                 />
 
                 <Text
-                    textContent={`${data.clientName}様   (ID:${data.clientId})\n検査結果通知日 ：2024年10月1日`}
+                    textContent={`${data.clientName}様   (ID:${data.clientId})\n検査結果通知日 ：${data.date}`}
                     textColor={"#00C3D0"}
                     className={
                         "font-bold text-center mb-[162rem] pt-[21rem] whitespace-pre-wrap"
