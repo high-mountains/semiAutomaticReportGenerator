@@ -103,7 +103,7 @@ function Header() {
     const files = Array.from(event.target.files);
 
         // Define the specific file names we want to select
-        const allowedFileNames = ["category_data.csv", "gene_data.csv", "recommend_data.csv", "not_recommend_data.csv", "rsid_data.csv", "type_data.csv"];
+        const allowedFileNames = ["category_data.csv", "gene_data.csv", "recommend_data.csv", "not_recommend_data.csv", "rsid_data.csv", "type_data.csv", "user_data.csv"];
 
         // Filter for only the specific files we're interested in
         const specificCsvFiles = files.filter(file => 

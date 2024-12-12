@@ -1,6 +1,6 @@
 import PageContent from "./PageContent";
 import { useSelector, useDispatch } from "react-redux";
-import RightSidebar from "./RightSidebar";
+// import RightSidebar from "./RightSidebar";
 import { useEffect } from "react";
 import { NotificationContainer } from "react-notifications";
 import "react-notifications/lib/notifications.css";
@@ -39,7 +39,7 @@ function Layout() {
       </div>
 
       {/* Right drawer - containing secondary content like notifications list etc.. */}
-      <RightSidebar />
+      {/* <RightSidebar /> */}
 
       {/** Notification layout container */}
       <NotificationContainer />

@@ -6,11 +6,12 @@ import pdfData from "../../utils/dummyPdf.json";
 import SpiderChart from "../../components/Pdf/SpiderChart";
 
 function Page3() {
+    
+    const highlightState = useSelector((state) => state.pdfData.typeHighlight);
     const initialData = {
-        clientName: pdfData.clientName,
-        clientId: pdfData.clientId,
         mainColor: pdfData.mainColor,
-        mainTextColor: pdfData.mainTextColor
+        mainTextColor: pdfData.mainTextColor,
+        highlightState: highlightState
     };
 
     const [data, setData] = useState(initialData);
@@ -19,14 +20,20 @@ function Page3() {
         setData((pervState) => {
             return {
                 ...pervState,
-                clientName: pdfData.clientName,
-                clientId: pdfData.clientId,
                 mainColor: pdfData.mainColor,
-                mainTextColor: pdfData.mainTextColor
+                mainTextColor: pdfData.mainTextColor,
+                highlightState: highlightState
             };
         });
+        console.log("data===>", {
+            ...data,
+            mainColor: pdfData.mainColor,
+            mainTextColor: pdfData.mainTextColor,
+            highlightState: highlightState
+        });
+        
         return () => {};
-    }, [pdfData]);
+    }, [pdfData, highlightState]);
 
     const pdfFlag = useSelector((state) => state.pdfData.pdfFlag);
     const [renderedPdfFlag, setRenderedPdfFlag] = useState(pdfFlag);
@@ -59,7 +66,7 @@ function Page3() {
                                 textContent={"Genetic Types"}
                                 textColor={`${data.mainColor}`}
                                 fontSize={14}
-                                className={"font-bold"}
+                                className={""}
                                 style={{
                                     marginLeft: "30rem",
                                 }}
@@ -100,7 +107,7 @@ function Page3() {
                                 >
                                     <Text
                                         textContent={
-                                            "グルタメートタイプ\nカテコラミンタイプ\nヒスタミンタイプ "
+                                            `<span ${data.highlightState[0]==0 ? 'class="opacity-50"' : ''}}>グルタメートタイプ</span><br/><span ${data.highlightState[1]==0 ? 'class="opacity-50"' : ''}>カテコラミンタイプ</span><br/><span ${data.highlightState[2]==0 ? 'class="opacity-50"' : ''}>ヒスタミンタイプ</span>`
                                         }
                                         className={
                                             "whitespace-pre-wrap font-bold"
@@ -113,7 +120,7 @@ function Page3() {
                                     />
                                     <Text
                                         textContent={
-                                            "ミトコンドリアタイプ\nデトックスタイプ\nメチレーションタイプ "
+                                            `<span ${data.highlightState[3]==0 ? 'class="opacity-50"' : ''}>ミトコンドリアタイプ</span><br/><span ${data.highlightState[4]==0 ? 'class="opacity-50"' : ''}>デトックスタイプ</span><br/><span ${data.highlightState[5]==0 ? 'class="opacity-50"' : ''}>メチレーションタイプ</span> `
                                         }
                                         className={
                                             "whitespace-pre-wrap font-bold"
