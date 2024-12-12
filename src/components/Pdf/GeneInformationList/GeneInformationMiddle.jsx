@@ -49,7 +49,7 @@ const GeneInformationMiddle = (props) => {
                         <td style={thirdRenderedPdfFlag}>
                             {datas.map((item, index) => (
                                 <p key={index}>
-                                    {item} &nbsp; &nbsp; {data[item] || "未定"}
+                                    {item} &nbsp; &nbsp; {data[item] || "-"}
                                 </p>
                             ))}
                         </td>
