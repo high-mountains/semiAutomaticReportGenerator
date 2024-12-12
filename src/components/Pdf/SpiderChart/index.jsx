@@ -45,7 +45,6 @@ const SpiderChart = ({ size = 50, color = "black" }) => {
     // ==============================================================
     const inputValues = useSelector((state) => state.pdfData.typeData);
     const [renderNumber, setRenderNumber] = useState(useSelector((state) => state.pdfData.typeData))
-
     
     // const inputValues = [10, 1, 0, 7, 3, 8]; // Example input
     useEffect(() => {

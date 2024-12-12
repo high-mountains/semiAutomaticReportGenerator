@@ -55,6 +55,7 @@ export const pdfDataSlice = createSlice({
     categoryData: [],
     geneInformationListData: {},
     typeData: [0,0,0,0,0,0],
+    typeHighlight: ["0", "0", "0", "0", "0", "0"],
 
     supplementedData: [{Lifestyle: "未定", When: "未定", Explanation: "未定", Categories: "未定"}],
     unsupplementedData: [{Lifestyle: "未定", When: "未定", Explanation: "未定", Categories: "未定"}],
@@ -87,12 +88,11 @@ export const pdfDataSlice = createSlice({
       const type_Data = payload.find(file => file.fileName === "type_data.csv");
       const typeDatas = type_Data.data;
       const order = [
-        "Methylation ",
-        "Catecholamine",
+        "Methylation",
         "Detox",
         "Mitochondria",
         "Histamine",
-        "Catecholamine"
+        "Catecholamine",
       ];
       const glutamateScore = typeDatas.find(item => item.Type === "Glutamate").Score;
       const sortedScores = typeDatas
@@ -100,6 +100,10 @@ export const pdfDataSlice = createSlice({
         .sort((a, b) => order.indexOf(a.Type) - order.indexOf(b.Type))
         .map(item => item.Score); // Extract scores only
       const finalScores = [glutamateScore, ...sortedScores];
+      const highlight = typeDatas.map(item => item.Result);
+      state.typeHighlight = highlight;
+      console.log("highlight in store==>", highlight);
+      
       state.typeData = finalScores;
 
       const supplementedData = payload.find(file => file.fileName === "recommend_data.csv").data;
@@ -113,7 +117,6 @@ export const pdfDataSlice = createSlice({
       state.geneData = geneData;
 
       const userData = payload.find(file => file.fileName === "user_data.csv").data[0];
-      console.log("userData==>", userData);
       state.clientId = userData.ID;
       state.clientName = userData.name;
       state.reportDate = userData.date;
