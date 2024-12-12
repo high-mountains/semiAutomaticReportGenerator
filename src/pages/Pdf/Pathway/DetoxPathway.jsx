@@ -19,10 +19,10 @@ const DetoxPathway = ({deltaPageCount}) => {
                     marginBottom: "0rem"
                 }}
             />
-            <div className='w-[535rem] h-[565rem]'>
-                <img src="bg/detoxPathway.png" alt="" className="w-full h-full" />
+            <div className='w-[535rem] h-[676rem]'>
+                <img src="bg/detoxPathway.svg" alt="" className="w-full h-full" />
             </div>
-            <PageNumber>{153+deltaPageCount}</PageNumber>
+            <PageNumber>{157+deltaPageCount}</PageNumber>
         </PageWrapper>
     );
 };

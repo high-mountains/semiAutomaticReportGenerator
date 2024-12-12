@@ -26,7 +26,7 @@ const initialGeneData = [
   },
   {
     geneName: "MAOB",
-    datas: ["rs179983"],
+    datas: ["rs1799836"],
     level: 0,
     description:
       "この遺伝子に変異がある場合、ヒスタミンを代謝するプロセスが阻害される可能性があります。MAOB（Monoamine Oxidase B）は、モノアミンオキシダーゼBという酵素をコードしています。この酵素は、ドーパミンやフェネチルアミンなどのモノアミン神経伝達物質を分解する役割を持ち、神経伝達物質の濃度を調節します。",
