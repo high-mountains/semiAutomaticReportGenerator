@@ -71,7 +71,6 @@ function Header() {
           if (i < batch.length - 1 || batch.index !== elements.length - 1) {
             pdf.addPage();
           }
-
         } catch (error) {
           console.error(`Error processing element ${i}`, error);
         }
@@ -192,7 +191,7 @@ function Header() {
               className="font bg-[#00C3D0] text-[#fff] hover:bg-[#b4eeef] hover:text-[#00C3D0] rounded-[5rem] flex flex-row items-center justify-center p-[8rem]"
               onClick={() => handleDownloadPdf()}
           >
-              <ArrowDownTrayIcon className={"fill-current w-[28rem] h-[25rem]"}/><p className="ml-[3rem] text-[14rem]">PDFダウンロード</p>
+              <ArrowDownTrayIcon className={"fill-current w-[28rem] h-[25rem]"}/><p className="ml-[3rem] text-[14rem]">PDF Download</p>
           </button>
         </div>
       </div >
