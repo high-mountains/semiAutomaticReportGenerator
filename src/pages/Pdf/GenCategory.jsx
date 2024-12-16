@@ -5,7 +5,7 @@ import PageHeader from "../../components/Pdf/PageHeader";
 import Text from "../../components/Pdf/Text";
 import CategoryRow from "../../components/Pdf/GenCategory/CategoryRow";
 import CategoryRow1 from "../../components/Pdf/GenCategory/CategoryRow1";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const GenCategory = () => {
     const categoryData = useSelector((state) => state.pdfData.categoryData);

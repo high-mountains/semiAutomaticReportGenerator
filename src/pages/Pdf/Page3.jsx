@@ -25,12 +25,6 @@ function Page3() {
                 highlightState: highlightState
             };
         });
-        console.log("data===>", {
-            ...data,
-            mainColor: pdfData.mainColor,
-            mainTextColor: pdfData.mainTextColor,
-            highlightState: highlightState
-        });
         
         return () => {};
     }, [pdfData, highlightState]);
@@ -98,16 +92,13 @@ function Page3() {
                                         backgroundColor: "#F8F8F8",
                                         marginLeft: "35rem",
                                         marginRight: "35rem",
-
                                         paddingBottom: "11.5rem",
-                                        // paddingTop: "-8rem",
-                                        // paddingTop: `${ renderedPdfFlag ? '-8' : '11.5' }rem`,
                                     }}
                                     className={"whitespace-pre-wrap"}
                                 >
                                     <Text
                                         textContent={
-                                            `<span ${data.highlightState[0]==0 ? 'class="opacity-50"' : ''}}>グルタメートタイプ</span><br/><span ${data.highlightState[1]==0 ? 'class="opacity-50"' : ''}>カテコラミンタイプ</span><br/><span ${data.highlightState[2]==0 ? 'class="opacity-50"' : ''}>ヒスタミンタイプ</span>`
+                                            `<span ${data.highlightState[0]==1 ? 'class="opacity-50"' : ''}}>グルタメートタイプ</span><br/><span ${data.highlightState[1]==1 ? 'class="opacity-50"' : ''}>カテコラミンタイプ</span><br/><span ${data.highlightState[2]==1 ? 'class="opacity-50"' : ''}>ヒスタミンタイプ</span>`
                                         }
                                         className={
                                             "whitespace-pre-wrap font-bold"
@@ -120,7 +111,7 @@ function Page3() {
                                     />
                                     <Text
                                         textContent={
-                                            `<span ${data.highlightState[3]==0 ? 'class="opacity-50"' : ''}>ミトコンドリアタイプ</span><br/><span ${data.highlightState[4]==0 ? 'class="opacity-50"' : ''}>デトックスタイプ</span><br/><span ${data.highlightState[5]==0 ? 'class="opacity-50"' : ''}>メチレーションタイプ</span> `
+                                            `<span ${data.highlightState[3]==1 ? 'class="opacity-50"' : ''}>ミトコンドリアタイプ</span><br/><span ${data.highlightState[4]==1 ? 'class="opacity-50"' : ''}>デトックスタイプ</span><br/><span ${data.highlightState[5]==1 ? 'class="opacity-50"' : ''}>メチレーションタイプ</span> `
                                         }
                                         className={
                                             "whitespace-pre-wrap font-bold"
@@ -202,10 +193,8 @@ function Page3() {
                             <PageNumber bottom={11.75}>03</PageNumber>
                         </div>
                     </div>
-                    {/* <div className={`page font border-[1rem] border-[rgba(0,0,0,0.1)] rounded-[2rem] relative printUnit`}> */}
                 </div>
             </div>
-            {/* </div> */}
         </>
     );
 }

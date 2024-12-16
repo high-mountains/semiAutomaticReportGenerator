@@ -55,14 +55,14 @@ const SupplementNot = ({ onExceedHeight, unsupplementalData, isFirstPage, pageNu
             {isFirstPage && (
                 <>
                     <PageHeader
-                        subtitle={"Supplement"}
+                        subtitle={"Supplement & Lifestyle"}
                         mainTitle={"おすすめしないサプリメントや生活習慣"}
                         subTitleStyle={{
-                            marginBottom: "5rem",
+                            marginBottom: "5rem"
                         }}
                         mainTitleStyle={{
                             fontSize: "28rem",
-                            letterSpacing: "-1.4rem",
+                            letterSpacing: "-1.4rem"
                         }}
                     />
                     <Text
@@ -76,16 +76,16 @@ const SupplementNot = ({ onExceedHeight, unsupplementalData, isFirstPage, pageNu
                 headerData={[
                     {
                         content: "生活習慣",
-                        width: "100rem",
+                        width: "100rem"
                     },
                     {
                         content: "詳細",
-                        width: "315rem",
+                        width: "315rem"
                     },
                     {
                         content: "関連するカテゴリー",
-                        width: "120rem",
-                    },
+                        width: "120rem"
+                    }
                 ]}
                 bodyData={tableData}
                 onHeightExceed={handleTableHeightExceed}

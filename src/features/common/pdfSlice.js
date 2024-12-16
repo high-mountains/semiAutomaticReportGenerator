@@ -102,7 +102,6 @@ export const pdfDataSlice = createSlice({
       const finalScores = [glutamateScore, ...sortedScores];
       const highlight = typeDatas.map(item => item.Result);
       state.typeHighlight = highlight;
-      console.log("highlight in store==>", highlight);
       
       state.typeData = finalScores;
 
@@ -136,9 +135,6 @@ export const pdfDataSlice = createSlice({
       state.pdfFlag = payload;
     },
 
-    [setCurrentRunningPage.pending]: (state, {payload}) => {
-      // state.currentRunningPage = payload;
-    },
     [setCurrentRunningPage.fulfilled]: (state, {payload}) => {
       state.currentRunningPage = payload;
     },
