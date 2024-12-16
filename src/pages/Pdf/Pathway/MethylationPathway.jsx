@@ -31,7 +31,7 @@ const MethylationPathway = ({deltaPageCount}) => {
                 fontSize={9}
                 className={"whitespace-pre-wrap my-[20rem] color-[#484F51]"}
             />
-            <PageNumber>{153+deltaPageCount}</PageNumber>
+            <PageNumber>{144+deltaPageCount}</PageNumber>
         </PageWrapper>
     );
 };

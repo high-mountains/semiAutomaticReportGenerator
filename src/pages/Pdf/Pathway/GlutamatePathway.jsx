@@ -31,7 +31,7 @@ const GlutamatePathway = ({deltaPageCount}) => {
                 fontSize={9}
                 className={"whitespace-pre-wrap mt-[25rem] color-[#484F51]"}
             />
-            <PageNumber>{155+deltaPageCount}</PageNumber>
+            <PageNumber>{146+deltaPageCount}</PageNumber>
         </PageWrapper>
     );
 };

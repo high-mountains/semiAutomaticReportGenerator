@@ -180,25 +180,28 @@ table.geneInfo td:nth-child(3) {
 
 span.dots {
     position: relative;
-    height: 2rem; /* Height of the line */
-    margin-left: 20rem 0; /* Margin for spacing */
-    margin-right: 15rem 0; /* Margin for spacing */
+    height: 1rem; /* Height of the line */
+    margin-left: 34rem; /* Margin for spacing */
+    margin-right: 15rem; /* Margin for spacing */
     overflow: hidden; /* Hide overflow */
 }
 
 span.dots::before {
     content: '';
     position: absolute;
-    height: 2rem; /* Height of the line */
-    width: 100%; /* Full width */
+    height: 1rem; /* Height of the line */
     background: repeating-linear-gradient(
         to right,
-        #000000,
-        #000000 2.5rem, /* Dot width */
-        transparent 5rem,
-        transparent 15rem /* Gap width */
-    );
-    margin: 20rem, 0rem
+        /* #646869, */
+        #484F51,
+        #484F51 2rem, /* Dot width */
+        #fff 2rem,
+        #fff 5rem 
+        /* Gap width */
+        );
+    background-position: center;
+    width: 100%; /* Full width */
+    /* margin: 20rem, 0rem */
 }
 
 #file {
