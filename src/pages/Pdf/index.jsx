@@ -59,7 +59,7 @@ const Pdf = () => {
 
     useEffect(() => {
         const deltaPage = extraSupplements.length + extraSupplementsForUnSupplement.length;
-        dispatch(setDeltaPage(deltaPage))
+        dispatch(setDeltaPage(deltaPage));
     }, [extraSupplements, extraSupplementsForUnSupplement])
     useEffect(() => {
         setRenderedPdfFlag(pdfFlag);
@@ -146,7 +146,7 @@ const Pdf = () => {
                 <div className="pdfcontainer py-[20rem]">
                     <div className="pdfwrapper">
                         <Page1 />
-                        <Page2 />
+                        <Page2 extraSupplementsLength={extraSupplements.length}/>
                         <Page3 />
                         <Page4 />
                         <TypeByType />
@@ -156,7 +156,7 @@ const Pdf = () => {
                         {extraSupplements.map((data, index) => (
                             <Supplement onExceedHeight={handleExtraPage} key={index + 1} supplementalData={data} isFirstPage={false} pageNum={25 + index}/>
                         ))}
-                        <SupplementNot key={100} onExceedHeight={handleExtraPageForUnSupplement} isFirstPage={ true } pageNum={extraSupplements.length ? 25+extraSupplements.length : 25}/>
+                        <SupplementNot key={100} onExceedHeight={handleExtraPageForUnSupplement} isFirstPage={true} pageNum={extraSupplements.length ? 25 + extraSupplements.length : 25}/>
                         {extraSupplementsForUnSupplement.map((data, index) => (
                             <SupplementNot onExceedHeight={handleExtraPageForUnSupplement} key={index + 100} unsupplementalData={data} isFirstPage={false}  pageNum={26 + extraSupplements.length + index}/>
                         ))}

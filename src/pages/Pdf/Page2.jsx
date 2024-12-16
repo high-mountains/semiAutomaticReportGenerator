@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import Text from "../../components/Pdf/Text";
 import pdfData from "../../utils/dummyPdf.json";
+import { useSelector } from "react-redux";
+import { update } from "lodash";
 
-function Page2() {
+function Page2({extraSupplementsLength}) {
     const initialData = {
         clientName: pdfData.clientName,
         clientId: pdfData.clientId,
@@ -11,7 +13,29 @@ function Page2() {
     };
     const [data, setData] = useState(initialData);
 
-    const pageContent = ["P03", "P04","P05", "P08","P11", "P14","P17", "P20", "P23","P24", "P25", "P40","P142", "P144",];
+    const [deltaPage, setDeltaPage] = useState(
+            useSelector((state) => state.pdfData.deltaPage)
+        );
+    const flagDeltaPage = useSelector((state) => state.pdfData.deltaPage);
+
+    useEffect(() => {
+        setDeltaPage(flagDeltaPage);
+    }, [flagDeltaPage]);
+
+    const [pageContent, setPageContent] = useState(["P03", "P04", "P05", "P08", "P11", "P14", "P17", "P20", "P23", "P24", "P25", "P40", "P142", "P144"]);
+    
+    useEffect(() => {
+        // Update the fourth element of the array
+        setPageContent((prevContent) => {
+          const updatedContent = [...prevContent];  // Create a shallow copy of the array
+          updatedContent[10] = "P" + (25 + extraSupplementsLength); // Update the fourth element (index 3)
+          updatedContent[11] = "P" + (40 + deltaPage);
+          updatedContent[12] = "P" + (142 + deltaPage);
+          updatedContent[13] = "P" + (144 + deltaPage);
+          return updatedContent;
+        });
+      }, [extraSupplementsLength, deltaPage]);
+
     useEffect(() => {
         setData((pervState) => {
             return {

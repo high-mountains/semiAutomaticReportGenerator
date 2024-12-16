@@ -53,7 +53,7 @@ const Supplement = ({ onExceedHeight, supplementalData, isFirstPage, pageNum }) 
             {isFirstPage && (
                 <>
                     <PageHeader
-                        subtitle={"Supplement"}
+                        subtitle={"Supplement & Lifestyle"}
                         mainTitle={"あなたにおすすめのサプリメントや生活習慣"}
                         subTitleStyle={{ marginBottom: "5rem" }}
                         mainTitleStyle={{ fontSize: "28rem", letterSpacing: "-1.4rem" }}

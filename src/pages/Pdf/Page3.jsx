@@ -25,12 +25,6 @@ function Page3() {
                 highlightState: highlightState
             };
         });
-        console.log("data===>", {
-            ...data,
-            mainColor: pdfData.mainColor,
-            mainTextColor: pdfData.mainTextColor,
-            highlightState: highlightState
-        });
         
         return () => {};
     }, [pdfData, highlightState]);
