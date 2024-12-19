@@ -60,7 +60,7 @@ function Login() {
             <LandingIntro />
           </div>
           <div className="py-[96px] px-[40px]">
-            <h2 className="text-[30px] font-semibold mb-[8px]} text-center">ログイン</h2>
+            <h2 className="text-[30px] font-semibold mb-[8px]} text-center">ログインVersion2</h2>
             <form onSubmit={(e) => submitForm(e)}>
               <div className="mb-[12px]">
                 <InputText
