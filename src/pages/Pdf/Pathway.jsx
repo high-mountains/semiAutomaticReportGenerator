@@ -20,6 +20,7 @@ const Pathway = () => {
 
     return (
         <>
+        
             <MethylationPathway deltaPageCount={deltaPageCount}/>
             <MitochondriaPathway deltaPageCount={deltaPageCount}/>
             <GlutamatePathway deltaPageCount={deltaPageCount}/>
