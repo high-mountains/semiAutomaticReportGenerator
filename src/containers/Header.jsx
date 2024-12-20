@@ -187,7 +187,7 @@ function Header() {
         </div>
 
               <div>
-                <p>DNA報告書半自動生成システム(V1.0)</p>
+                <p className="text-[18rem] text-[#00C3D0]">DNA報告書半自動生成システム (V1.0)</p>
               </div>
         <div className="mr-[10rem]">
           <button
