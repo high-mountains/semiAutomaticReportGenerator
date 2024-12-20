@@ -79,12 +79,47 @@ export const processInitialData = (data) => {
 
     while (i < updatedData.length) {
         const item = updatedData[i];
-        let tempRowSpan = item.rowSpan && item.rowSpan;
-        let tempThContent = item.thContent && item.thContent;
 
         if (item?.tdContent?.danger === 0) {
             if (item.rowSpan && item.thContent) {
-                console.log("item==>", i);
+                let originalSpan = item.rowSpan;
+                let calculatedOriginalSpan = originalSpan - 1;
+                let moved = false;
+
+                for (let j = 1; j <= calculatedOriginalSpan ; j++) {
+                    const nextIndex = i + j;
+                    if (nextIndex >= updatedData.length) break; // Stop if out of bounds
+
+                    const nextItem = updatedData[nextIndex];
+                    if (!nextItem || nextItem?.tdContent?.danger === 0) {
+                        // Skip elements with danger 0
+                        // if(nextItem?.tdContent?.danger === 0) {
+                        //     nextItem.rowSpan = (nextItem.rowSpan || 0) + item.rowSpan - 1;
+                        // }
+                        nextItem.rowSpan = (nextItem.rowSpan || 0) + item.rowSpan - 1;
+                        nextItem.thContent = item.thContent;
+                        updatedData.splice(i, 1);
+                        continue;
+                    }
+
+                    // Move thContent and rowSpan to the next valid item
+                    
+                    nextItem.rowSpan = (nextItem.rowSpan || 0) + item.rowSpan - 1;
+                    console.log("item.rowSpan==>", nextItem.rowSpan);
+                    
+                    nextItem.thContent = item.thContent;
+ 
+                    // Remove the current item
+                    updatedData.splice(i, 1);
+                    moved = true;
+                    break;
+                }
+
+                // If no valid element found within rowSpan bounds, discard the element
+                if (!moved) {
+                    updatedData.splice(i, 1);
+                    continue;
+                }
             } else if (item.thContent) {
                 // Reduce rowSpan and move rowSpan/thContent to the next valid element
                 let remainingSpan = item.rowSpan - 1;
@@ -142,44 +177,3 @@ export const processInitialData = (data) => {
 
     return updatedData;
 };
-
-// export const processInitialData = (initialData) => {
-//     const result = [];
-//     let carryForward = null;
-
-//     for (let i = 0; i < initialData.length; i++) {
-//         const current = { ...initialData[i] };
-
-//         if (current.tdContent && current.tdContent.danger === 0) {
-//             if (carryForward) {
-//                 carryForward.rowSpan--;
-//             }
-
-//             if (current.rowSpan && current.thContent) {
-//                 carryForward = {
-//                     rowSpan: current.rowSpan,
-//                     thContent: current.thContent,
-//                 };
-//             }
-//             continue; // Skip adding this element to the result
-//         }
-
-//         if (carryForward && !current.thContent) {
-//             current.rowSpan = carryForward.rowSpan;
-//             current.thContent = carryForward.thContent;
-//             carryForward = null;
-//         }
-
-//         result.push(current);
-//     }
-
-//     if (carryForward) {
-//         // If carryForward remains, it means there were no valid elements to transfer to.
-//         result.push({
-//             rowSpan: carryForward.rowSpan,
-//             thContent: carryForward.thContent,
-//         });
-//     }
-
-//     return result.filter((item) => !(item.rowSpan && item.rowSpan <= 0));
-// }

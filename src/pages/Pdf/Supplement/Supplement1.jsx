@@ -216,6 +216,9 @@ const Supplement1 = ({deltaPageCount}) => {
   const updatedTableData = useMemo(() => {
     const updatedData = updateDangerValues(initialData, geneData || []);
     // return updatedData;
+    const tt = processInitialData(updatedData);
+    console.log("tt==>", tt);
+    
     return processInitialData(updatedData);
   }, [geneData]);
 
