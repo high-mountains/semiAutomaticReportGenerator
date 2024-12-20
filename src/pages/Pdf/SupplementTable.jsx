@@ -28,7 +28,7 @@ const SupplementTable = () => {
     return (
         <>
             <Supplement1 deltaPageCount={deltaPageCount} />
-            <Supplement2 deltaPageCount={deltaPageCount} />
+            {/* <Supplement2 deltaPageCount={deltaPageCount} />
             <Supplement3 deltaPageCount={deltaPageCount} />
             <Supplement4 deltaPageCount={deltaPageCount} />
             <Supplement5 deltaPageCount={deltaPageCount} />
@@ -40,7 +40,7 @@ const SupplementTable = () => {
             <Supplement11 deltaPageCount={deltaPageCount} />
             <Supplement12 deltaPageCount={deltaPageCount} />
             <Supplement13 deltaPageCount={deltaPageCount} />
-            <Supplement14 deltaPageCount={deltaPageCount} />
+            <Supplement14 deltaPageCount={deltaPageCount} /> */}
         </>
     );
 };
