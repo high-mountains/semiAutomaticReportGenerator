@@ -152,7 +152,7 @@ const Pdf = () => {
                         <TypeByType />
                         <GenCategory />
                         {/* Pass `isFirstPage` to the first Supplement */}
-                        {/* <Supplement key={0} onExceedHeight={handleExtraPage} isFirstPage={ true } pageNum={24} />
+                        <Supplement key={0} onExceedHeight={handleExtraPage} isFirstPage={ true } pageNum={24} />
                         {extraSupplements.map((data, index) => (
                             <Supplement onExceedHeight={handleExtraPage} key={index + 1} supplementalData={data} isFirstPage={false} pageNum={25 + index}/>
                         ))}
@@ -163,7 +163,7 @@ const Pdf = () => {
                         <SupplementTable />
                         <GeneInformationList />
                         <References />
-                        <Pathway /> */}
+                        <Pathway />
                     </div>
                 </div>
             </>

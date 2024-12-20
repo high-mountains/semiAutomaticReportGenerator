@@ -98,7 +98,7 @@ function Login() {
                   "btn mt-[8px] w-full btn-primary bg-[#00C3D0] border-[#00C3D0] h-[44px] text-[20px] rounded-[4px]"
                 }
               >
-                ログイン
+                ログイン(V2.0)
               </button>
 
               {/* <div className="text-center  mt-[16px]">
