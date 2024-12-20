@@ -38,6 +38,8 @@ function LandingIntro() {
                         DNA報告書
                         <br />
                         半自動生成システム{" "}
+                        <br />
+                        <span className="text-[12rem]">(Version 1.0)</span>
                     </h1>
 
                     <div

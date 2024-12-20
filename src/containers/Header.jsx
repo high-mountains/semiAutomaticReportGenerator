@@ -186,6 +186,9 @@ function Header() {
             ><DocumentPlusIcon className={"fill-current w-[28rem] h-[25rem]"}/><p className="ml-[3rem] text-[14rem]">CSVファイルのインポート</p></label>
         </div>
 
+              <div>
+                <p>DNA報告書半自動生成システム(V1.0)</p>
+              </div>
         <div className="mr-[10rem]">
           <button
               className="font bg-[#00C3D0] text-[#fff] hover:bg-[#b4eeef] hover:text-[#00C3D0] rounded-[5rem] flex flex-row items-center justify-center p-[8rem]"
