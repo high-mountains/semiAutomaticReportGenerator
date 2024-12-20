@@ -25,7 +25,9 @@ function LandingIntro() {
             >
                 <div
                     style={{
-                        maxWidth: "448px"
+                        maxWidth: "448px",
+                        display: "flex",
+                        flexDirection: "column"
                     }}
                 >
                     <h1
@@ -38,9 +40,11 @@ function LandingIntro() {
                         DNA報告書
                         <br />
                         半自動生成システム{" "}
-                        <br />
-                        <span>(Version 2.0)</span>
                     </h1>
+
+                    <span className="text-[20px]" style={{
+                        alignSelf:"center"
+                    }}>(Version 2.0)</span>
 
                     <div
                         style={{
