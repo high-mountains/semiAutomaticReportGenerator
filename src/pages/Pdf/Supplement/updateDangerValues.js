@@ -30,48 +30,6 @@ export const updateDangerLevel = (data, geneData) => {
     });
 };
 
-// export const processInitialData = (data) => {
-//     let updatedData = [...data];
-//     let i = 0;
-
-//     while (i < updatedData.length) {
-//         const item = updatedData[i];
-//         if (item.rowSpan) {
-//             // Handle rows with rowSpan
-//             let remainingSpan = item.rowSpan;
-//             let hasValidChild = false;
-
-//             // Check and update child rows
-//             for (let j = i + 1; j <= i + remainingSpan; j++) {
-//                 if (updatedData[j]?.tdContent?.danger !== 0) {
-//                     hasValidChild = true;
-//                     break;
-//                 } else {
-//                     updatedData.splice(j, 1);
-//                     remainingSpan--;
-//                     j--;
-//                 }
-//             }
-
-//             // Update rowSpan or move rowSpan/thContent to the next valid child
-//             if (!hasValidChild) {
-//                 updatedData.splice(i, 1);
-//                 continue;
-//             } else {
-//                 item.rowSpan = remainingSpan;
-//             }
-//         } else if (item?.tdContent?.danger === 0) {
-//             // Handle standalone elements with danger = 0
-//             updatedData.splice(i, 1);
-//             continue;
-//         }
-
-//         i++;
-//     }
-
-//     return updatedData;
-// };
-
 export const processInitialData = (data) => {
     let updatedData = data;
 
@@ -84,41 +42,38 @@ export const processInitialData = (data) => {
             if (item.rowSpan && item.thContent) {
                 let originalSpan = item.rowSpan;
                 let calculatedOriginalSpan = originalSpan - 1;
-                let moved = false;
 
-                for (let j = 1; j <= calculatedOriginalSpan ; j++) {
+                let j = 1; // To keep track of the next index within the rowSpan bounds
+                while (j <= calculatedOriginalSpan) {
                     const nextIndex = i + j;
                     if (nextIndex >= updatedData.length) break; // Stop if out of bounds
 
                     const nextItem = updatedData[nextIndex];
+                    console.log("nextIndex-->", nextIndex);
+                    console.log("nextItem-->", nextItem);
+
                     if (!nextItem || nextItem?.tdContent?.danger === 0) {
-                        // Skip elements with danger 0
-                        // if(nextItem?.tdContent?.danger === 0) {
-                        //     nextItem.rowSpan = (nextItem.rowSpan || 0) + item.rowSpan - 1;
-                        // }
-                        nextItem.rowSpan = (nextItem.rowSpan || 0) + item.rowSpan - 1;
-                        nextItem.thContent = item.thContent;
-                        updatedData.splice(i, 1);
-                        continue;
+                        // Keep transferring rowSpan and thContent to the next valid item
+                        if (nextItem) {
+                            nextItem.rowSpan = (nextItem.rowSpan || 0) + item.rowSpan - 1;
+                            nextItem.thContent = item.thContent;
+                        }
+                        updatedData.splice(i, 1); // Remove current item
+                        break; // Exit the loop to avoid redundant processing
+                        // j++;
+                        // continue;
+                    } else if(nextItem && nextItem?.tdContent?.danger !== 0) {
+                        
                     }
 
-                    // Move thContent and rowSpan to the next valid item
-                    
-                    nextItem.rowSpan = (nextItem.rowSpan || 0) + item.rowSpan - 1;
-                    console.log("item.rowSpan==>", nextItem.rowSpan);
-                    
-                    nextItem.thContent = item.thContent;
- 
-                    // Remove the current item
-                    updatedData.splice(i, 1);
-                    moved = true;
-                    break;
-                }
+                    // Move rowSpan and thContent to the next valid item
+                    if (nextItem) {
+                        nextItem.rowSpan = (nextItem.rowSpan || 0) + calculatedOriginalSpan;
+                        nextItem.thContent = item.thContent;
+                    }
 
-                // If no valid element found within rowSpan bounds, discard the element
-                if (!moved) {
                     updatedData.splice(i, 1);
-                    continue;
+                    break;
                 }
             } else if (item.thContent) {
                 // Reduce rowSpan and move rowSpan/thContent to the next valid element
@@ -128,7 +83,7 @@ export const processInitialData = (data) => {
                 // Find next valid element
                 while (nextIndex < updatedData.length) {
                     const nextItem = updatedData[nextIndex];
-                    if (nextItem.thContent || nextItem.rowSpan) {
+                    if (nextItem?.thContent || nextItem?.rowSpan) {
                         break;
                     }
                     nextIndex++;
@@ -143,25 +98,18 @@ export const processInitialData = (data) => {
 
                 // Move rowSpan/thContent if possible
                 if (nextIndex < updatedData.length) {
-                    console.log("nextIndex===>", nextIndex);
-
                     updatedData[nextIndex] = {
                         ...updatedData[nextIndex],
-                        rowSpan: updatedData[nextIndex].rowSpan + 1 || 0,
-                        thContent:
-                            updatedData[nextIndex].thContent || item.thContent,
+                        rowSpan: (updatedData[nextIndex].rowSpan || 0) + 1,
+                        thContent: updatedData[nextIndex].thContent || item.thContent,
                     };
-
-                    // delete item.thContent; // Clear moved thContent
-                    // delete item.tdContent; // Clear moved thContent
-                    // delete item.rowSpan; // Clear moved thContent
                 }
             } else {
                 // Handle standalone tdContent
                 let prevIndex = i - 1;
 
                 // Find closest preceding element with rowSpan
-                while (prevIndex >= 0 && !updatedData[prevIndex].rowSpan) {
+                while (prevIndex >= 0 && !updatedData[prevIndex]?.rowSpan) {
                     prevIndex--;
                 }
 

@@ -3,7 +3,10 @@ import PageWrapper from "../../../components/Pdf/PageWrapper.jsx";
 import PageNumber from "../../../components/Pdf/PageNumber.jsx";
 import TableNew from "../../../components/Pdf/Supplements/TableNew.jsx";
 import { useSelector } from "react-redux";
-import { updateDangerValues } from "./updateDangerValues.js";
+import {
+    updateDangerValues,
+    processInitialData,
+} from "./updateDangerValues.js";
 
 const initialData = [
     {
@@ -14,7 +17,7 @@ const initialData = [
         },
         tdContent: {
             gen: "UGT1A1",
-            danger: 0,
+            danger: "-",
             description:
                 "NAC, カルシウムDグルカル酸, グルタチオン, ビタミンD, 胆汁サプリメント",
             etc: "BPA, 環境毒",
@@ -23,7 +26,7 @@ const initialData = [
     {
         tdContent: {
             gen: "UGT1A3",
-            danger: 0,
+            danger: "-",
             description:
                 "NAC, オメガ3, カルシウムDグルカル酸, スルフォラファン, タンポポ茶, ミルクシスル",
         },
@@ -31,7 +34,7 @@ const initialData = [
     {
         tdContent: {
             gen: "UGT1A4",
-            danger: 0,
+            danger: "-",
             description:
                 "NAC, オメガ3, カルシウムDグルカル酸, スルフォラファン, タンポポ茶, ミルクシスル",
         },
@@ -39,14 +42,14 @@ const initialData = [
     {
         tdContent: {
             gen: "UGT1A6",
-            danger: 0,
+            danger: "-",
             description: "NAC, ビタミンC, ミルクシスル",
         },
     },
     {
         tdContent: {
             gen: "UGT1A7",
-            danger: 0,
+            danger: "-",
             description: "NAC, ビタミンC, ミルクシスル",
         },
     },
@@ -58,7 +61,7 @@ const initialData = [
         },
         tdContent: {
             gen: "GPX1",
-            danger: 0,
+            danger: "-",
             description:
                 "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
         },
@@ -66,7 +69,7 @@ const initialData = [
     {
         tdContent: {
             gen: "GPX2",
-            danger: 0,
+            danger: "-",
             description:
                 "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
         },
@@ -74,7 +77,7 @@ const initialData = [
     {
         tdContent: {
             gen: "GPX3",
-            danger: 0,
+            danger: "-",
             description:
                 "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
         },
@@ -82,7 +85,7 @@ const initialData = [
     {
         tdContent: {
             gen: "GPX4",
-            danger: 0,
+            danger: "-",
             description:
                 "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
         },
@@ -90,7 +93,7 @@ const initialData = [
     {
         tdContent: {
             gen: "GSTM3",
-            danger: 0,
+            danger: "-",
             description:
                 "グルタチオン（基質）, NAC, クルクミン, セレン, ミルクシスル",
         },
@@ -98,7 +101,7 @@ const initialData = [
     {
         tdContent: {
             gen: "GSTP1",
-            danger: 0,
+            danger: "-",
             description: "NAC, クレイ, クロレラ, グルタチオン",
         },
     },
@@ -110,7 +113,7 @@ const initialData = [
         },
         tdContent: {
             gen: "CAT",
-            danger: 0,
+            danger: "-",
             description:
                 "NAC, SOD, グルタチオン, セレン, ビタミンC, ビタミンE, レスベラトロール",
             etc: "BPA, フリーラジカル",
@@ -119,7 +122,7 @@ const initialData = [
     {
         tdContent: {
             gen: "CYP2C9",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, レスベラトロール",
             etc: "環境毒, 発がん物質",
@@ -128,14 +131,14 @@ const initialData = [
     {
         tdContent: {
             gen: "GSTP1",
-            danger: 0,
+            danger: "-",
             description: "NAC, クレイ, クロレラ, グルタチオン",
         },
     },
     {
         tdContent: {
             gen: "NOS3",
-            danger: 0,
+            danger: "-",
             description:
                 "BH4（補因子）, FAD（補因子）, NADPH（補因子）, L-アルギニン, NAC",
         },
@@ -143,7 +146,7 @@ const initialData = [
     {
         tdContent: {
             gen: "SOD2",
-            danger: 0,
+            danger: "-",
             description:
                 "マンガン（補因子）, NAC, グルタチオン, ビタミンC, ビタミンE",
             etc: "BPA, フリーラジカル",
@@ -157,7 +160,7 @@ const initialData = [
         },
         tdContent: {
             gen: "G6PD",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, NAC, ビタミンE, セレン, αリポ酸, CoQ10",
         },
@@ -165,7 +168,7 @@ const initialData = [
     {
         tdContent: {
             gen: "GSR",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, NAC, αリポ酸, グルタチオン, セレン, ビタミンC, ビタミンE",
         },
@@ -176,7 +179,8 @@ const Supplement7 = ({ deltaPageCount }) => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
     const updatedTableData = useMemo(() => {
-        return updateDangerValues(initialData, geneData || []);
+        const updatedData = updateDangerValues(initialData, geneData || []);
+        return processInitialData(updatedData);
     }, [geneData]);
 
     return (

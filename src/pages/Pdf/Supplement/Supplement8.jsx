@@ -3,7 +3,10 @@ import PageWrapper from "../../../components/Pdf/PageWrapper.jsx";
 import PageNumber from "../../../components/Pdf/PageNumber.jsx";
 import TableNew from "../../../components/Pdf/Supplements/TableNew.jsx";
 import { useSelector } from "react-redux";
-import { updateDangerValues } from "./updateDangerValues.js";
+import {
+    updateDangerValues,
+    processInitialData,
+} from "./updateDangerValues.js";
 
 const initialData = [
     {
@@ -14,7 +17,7 @@ const initialData = [
         },
         tdContent: {
             gen: "SOD1",
-            danger: 0,
+            danger: "-",
             description:
                 "亜鉛（補因子）, 銅（補因子）, NAC, αリポ酸, グルタチオン, セレン, ビタミンC, ビタミンE",
         },
@@ -22,7 +25,7 @@ const initialData = [
     {
         tdContent: {
             gen: "SOD2",
-            danger: 0,
+            danger: "-",
             description:
                 "マンガン（補因子）, NAC, グルタチオン, ビタミンC, ビタミンE",
             etc: "BPA, フリーラジカル",
@@ -31,7 +34,7 @@ const initialData = [
     {
         tdContent: {
             gen: "SOD3",
-            danger: 0,
+            danger: "-",
             description:
                 "亜鉛（補因子）, 銅（補因子）, NAC, αリポ酸, グルタチオン, セレン, ビタミンC, ビタミンE",
         },
@@ -45,7 +48,7 @@ const initialData = [
         },
         tdContent: {
             gen: "CPOX4",
-            danger: 0,
+            danger: "-",
             description:
                 "ビタミンB6, ビタミンC, メチルビタミンB12, メチルフォレート, 鉄, 銅",
         },
@@ -53,7 +56,7 @@ const initialData = [
     {
         tdContent: {
             gen: "GSTP1",
-            danger: 0,
+            danger: "-",
             description: "NAC, クレイ, クロレラ, グルタチオン",
         },
     },
@@ -66,7 +69,7 @@ const initialData = [
         },
         tdContent: {
             gen: "BCHE",
-            danger: 0,
+            danger: "-",
             description:
                 "NAC, ビタミンB群, ビタミンE, ホスファチジルコリン, ミルクシスル",
         },
@@ -74,7 +77,7 @@ const initialData = [
     {
         tdContent: {
             gen: "CYP2B6",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
             etc: "喫煙",
@@ -83,7 +86,7 @@ const initialData = [
     {
         tdContent: {
             gen: "PON1",
-            danger: 0,
+            danger: "-",
             description:
                 "NAD+, オメガ3, カルシウム, ビタミンC, ビタミンD, ビタミンE",
             etc: "有機リン系農薬",
@@ -98,7 +101,7 @@ const initialData = [
         },
         tdContent: {
             gen: "ACHY",
-            danger: 0,
+            danger: "-",
             description:
                 "NAD+（補因子）, ビタミンB6, ビタミンB12, ベタイン, メチルフォレート",
         },
@@ -106,7 +109,7 @@ const initialData = [
     {
         tdContent: {
             gen: "BHMT",
-            danger: 0,
+            danger: "-",
             description:
                 "ベタイン（補因子）, ビタミンB6, メチルビタミンB12, メチルフォレート",
         },
@@ -114,7 +117,7 @@ const initialData = [
     {
         tdContent: {
             gen: "CTH",
-            danger: 0,
+            danger: "-",
             description:
                 "ビタミンB6（補因子）, NAC, メチルビタミンB12, メチルフォレート",
         },
@@ -122,7 +125,7 @@ const initialData = [
     {
         tdContent: {
             gen: "MTHFD1",
-            danger: 0,
+            danger: "-",
             description:
                 "NAD+（補因子）, NADPH（補因子）, 5MTHF, ビタミンB6, メチルビタミンB12",
         },
@@ -130,7 +133,7 @@ const initialData = [
     {
         tdContent: {
             gen: "MTHFR\nA1298C",
-            danger: 0,
+            danger: "-",
             description:
                 "NAD+（補因子）, NADPH（補因子）, 5MTHF, ビタミンB6, メチルビタミンB12",
         },
@@ -138,7 +141,7 @@ const initialData = [
     {
         tdContent: {
             gen: "MTHFR\nC677T",
-            danger: 0,
+            danger: "-",
             description:
                 "NAD+（補因子）, NADPH（補因子）, 5MTHF, ビタミンB6, メチルビタミンB12",
         },
@@ -146,14 +149,14 @@ const initialData = [
     {
         tdContent: {
             gen: "MTR",
-            danger: 0,
+            danger: "-",
             description: "メチルビタミンB12（補因子）, 5MTHF, SAMe, ビタミンB6",
         },
     },
     {
         tdContent: {
             gen: "MTRR",
-            danger: 0,
+            danger: "-",
             description:
                 "リボフラビン（補因子）, SAMe, ビタミンB6, ビタミンB12, ベタイン, メチルフォレート",
         },
@@ -167,7 +170,7 @@ const initialData = [
         },
         tdContent: {
             gen: "CAT",
-            danger: 0,
+            danger: "-",
             description:
                 "NAC, SOD, グルタチオン, セレン, ビタミンC, ビタミンE, レスベラトロール",
             etc: "BPA, フリーラジカル",
@@ -176,7 +179,7 @@ const initialData = [
     {
         tdContent: {
             gen: "CBS",
-            danger: 0,
+            danger: "-",
             description:
                 "ビタミンB6（補因子）, ヘム（補因子）, 5MTHF, NAC, ベタイン, メチルビタミンB12",
         },
@@ -184,7 +187,7 @@ const initialData = [
     {
         tdContent: {
             gen: "CTH",
-            danger: 0,
+            danger: "-",
             description:
                 "ビタミンB6（補因子）, NAC, メチルビタミンB12, メチルフォレート",
         },
@@ -192,7 +195,7 @@ const initialData = [
     {
         tdContent: {
             gen: "DUOX1",
-            danger: 0,
+            danger: "-",
             description: "NADPH（補因子）, NAC, セレン, ビタミンC, ビタミンE",
         },
     },
@@ -202,7 +205,8 @@ const Supplement8 = ({ deltaPageCount }) => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
     const updatedTableData = useMemo(() => {
-        return updateDangerValues(initialData, geneData || []);
+        const updatedData = updateDangerValues(initialData, geneData || []);
+        return processInitialData(updatedData);
     }, [geneData]);
     return (
         <PageWrapper>

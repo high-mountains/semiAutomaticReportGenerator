@@ -3,7 +3,10 @@ import PageWrapper from "../../../components/Pdf/PageWrapper";
 import PageNumber from "../../../components/Pdf/PageNumber";
 import TableNew from "../../../components/Pdf/Supplements/TableNew";
 import { useSelector } from "react-redux";
-import { updateDangerValues } from "./updateDangerValues.js";
+import {
+    updateDangerValues,
+    processInitialData,
+} from "./updateDangerValues.js";
 
 const initialData = [
     {
@@ -14,7 +17,7 @@ const initialData = [
         },
         tdContent: {
             gen: "NDUFA11",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, リボフラビン（補因子）, 鉄（補因子）, CoQ10, L-カルニチン, NAD+, NMN, NR, αリポ酸, ビタミンB群",
         },
@@ -22,7 +25,7 @@ const initialData = [
     {
         tdContent: {
             gen: "NDUFB11",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, リボフラビン（補因子）, 鉄（補因子）, CoQ10, L-カルニチン, NAD+, NMN, NR, αリポ酸, ビタミンB群",
         },
@@ -30,7 +33,7 @@ const initialData = [
     {
         tdContent: {
             gen: "NDUFS1",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, リボフラビン（補因子）, 鉄（補因子）, CoQ10, L-カルニチン, NAD+, NMN, NR, αリポ酸, ビタミンB群",
         },
@@ -38,7 +41,7 @@ const initialData = [
     {
         tdContent: {
             gen: "NDUFS2",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, リボフラビン（補因子）, 鉄（補因子）, CoQ10, L-カルニチン, NAD+, NMN, NR, αリポ酸, ビタミンB群",
         },
@@ -46,7 +49,7 @@ const initialData = [
     {
         tdContent: {
             gen: "NDUFS3",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, リボフラビン（補因子）, 鉄（補因子）, CoQ10, L-カルニチン, NAD+, NMN, NR, αリポ酸, ビタミンB群",
         },
@@ -54,7 +57,7 @@ const initialData = [
     {
         tdContent: {
             gen: "NDUFS4",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, リボフラビン（補因子）, 鉄（補因子）, CoQ10, L-カルニチン, NAD+, NMN, NR, αリポ酸, ビタミンB群",
         },
@@ -62,7 +65,7 @@ const initialData = [
     {
         tdContent: {
             gen: "NDUFS6",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, リボフラビン（補因子）, 鉄（補因子）, CoQ10, L-カルニチン, NAD+, NMN, NR, αリポ酸, ビタミンB群",
         },
@@ -70,7 +73,7 @@ const initialData = [
     {
         tdContent: {
             gen: "NDUFS7",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, リボフラビン（補因子）, 鉄（補因子）, CoQ10, L-カルニチン, NAD+, NMN, NR, αリポ酸, ビタミンB群",
         },
@@ -78,7 +81,7 @@ const initialData = [
     {
         tdContent: {
             gen: "NDUFS8",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, リボフラビン（補因子）, 鉄（補因子）, CoQ10, L-カルニチン, NAD+, NMN, NR, αリポ酸, ビタミンB群",
         },
@@ -86,7 +89,7 @@ const initialData = [
     {
         tdContent: {
             gen: "NDUFV2",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, リボフラビン（補因子）, 鉄（補因子）, CoQ10, L-カルニチン, NAD+, NMN, NR, αリポ酸, ビタミンB群",
         },
@@ -94,7 +97,7 @@ const initialData = [
     {
         tdContent: {
             gen: "OGDH",
-            danger: 0,
+            danger: "-",
             description:
                 "NAD+（補因子）, ビタミンB1（補因子）, CoQ10, L-カルニチン, αリポ酸",
         },
@@ -102,14 +105,14 @@ const initialData = [
     {
         tdContent: {
             gen: "PANK2",
-            danger: 0,
+            danger: "-",
             description: "ATP（補因子）, CoQ10, パントテン酸, ビタミンB群",
         },
     },
     {
         tdContent: {
             gen: "SDHA",
-            danger: 0,
+            danger: "-",
             description:
                 "リボフラビン（補因子）, 鉄（補因子）, CoQ10, L-カルニチン, αリポ酸",
         },
@@ -117,7 +120,7 @@ const initialData = [
     {
         tdContent: {
             gen: "SDHB",
-            danger: 0,
+            danger: "-",
             description:
                 "リボフラビン（補因子）, 鉄（補因子）, CoQ10, L-カルニチン, αリポ酸",
         },
@@ -125,7 +128,7 @@ const initialData = [
     {
         tdContent: {
             gen: "SDHC",
-            danger: 0,
+            danger: "-",
             description:
                 "リボフラビン（補因子）, 鉄（補因子）, CoQ10, L-カルニチン, αリポ酸",
         },
@@ -133,14 +136,14 @@ const initialData = [
     {
         tdContent: {
             gen: "SLC16A1",
-            danger: 0,
+            danger: "-",
             description: "CoQ10, L-カルニチン, オメガ3, ビタミンB群",
         },
     },
     {
         tdContent: {
             gen: "UQCRB",
-            danger: 0,
+            danger: "-",
             description:
                 "ヘム（補因子）, ユビキノール（補因子）, CoQ10, L-カルニチン, αリポ酸, ビタミンB群, ビタミンC",
         },
@@ -148,7 +151,7 @@ const initialData = [
     {
         tdContent: {
             gen: "UQCRQ",
-            danger: 0,
+            danger: "-",
             description:
                 "ヘム（補因子）, ユビキノール（補因子）, CoQ10, L-カルニチン, αリポ酸, ビタミンB群, ビタミンC",
         },
@@ -159,7 +162,8 @@ const Supplement4 = ({ deltaPageCount }) => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
     const updatedTableData = useMemo(() => {
-        return updateDangerValues(initialData, geneData || []);
+        const updatedData = updateDangerValues(initialData, geneData || []);
+        return processInitialData(updatedData);
     }, [geneData]);
 
     return (

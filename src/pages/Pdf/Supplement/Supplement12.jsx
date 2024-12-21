@@ -3,7 +3,10 @@ import PageWrapper from "../../../components/Pdf/PageWrapper.jsx";
 import PageNumber from "../../../components/Pdf/PageNumber.jsx";
 import TableNew from "../../../components/Pdf/Supplements/TableNew.jsx";
 import { useSelector } from "react-redux";
-import { updateDangerValues } from "./updateDangerValues.js";
+import {
+    updateDangerValues,
+    processInitialData,
+} from "./updateDangerValues.js";
 
 const initialData = [
     {
@@ -13,7 +16,7 @@ const initialData = [
         },
         tdContent: {
             gen: "SELENOS",
-            danger: 0,
+            danger: "-",
             description: "セレン（補因子）, CoQ10, グルタチオン, ビタミンE",
         },
     },
@@ -25,42 +28,42 @@ const initialData = [
         },
         tdContent: {
             gen: "IL1B",
-            danger: 0,
+            danger: "-",
             description: "NAC, オメガ3, ビタミンD, プロバイオティクス",
         },
     },
     {
         tdContent: {
             gen: "IL2",
-            danger: 0,
+            danger: "-",
             description: "NAC, オメガ3, ビタミンD, プロバイオティクス",
         },
     },
     {
         tdContent: {
             gen: "IL4",
-            danger: 0,
+            danger: "-",
             description: "NAC, オメガ3, ビタミンD, プロバイオティクス",
         },
     },
     {
         tdContent: {
             gen: "IL5",
-            danger: 0,
+            danger: "-",
             description: "NAC, オメガ3, ビタミンD, プロバイオティクス",
         },
     },
     {
         tdContent: {
             gen: "IL6R",
-            danger: 0,
+            danger: "-",
             description: "NAC, オメガ3, ビタミンD, プロバイオティクス",
         },
     },
     {
         tdContent: {
             gen: "IL10",
-            danger: 0,
+            danger: "-",
             description: "オメガ3, ビタミンD, プロバイオティクス, 亜鉛",
             etc: "グルテン, カゼイン",
         },
@@ -68,21 +71,21 @@ const initialData = [
     {
         tdContent: {
             gen: "IL13",
-            danger: 0,
+            danger: "-",
             description: "NAC, オメガ3, ビタミンD, プロバイオティクス",
         },
     },
     {
         tdContent: {
             gen: "IL23R",
-            danger: 0,
+            danger: "-",
             description: "NAC, オメガ3, ビタミンD, プロバイオティクス",
         },
     },
     {
         tdContent: {
             gen: "TNF",
-            danger: 0,
+            danger: "-",
             description:
                 "NAC, オメガ3, クルクミン, ビタミンD, レスベラトロール",
         },
@@ -95,14 +98,14 @@ const initialData = [
         },
         tdContent: {
             gen: "CTLA4",
-            danger: 0,
+            danger: "-",
             description: "オメガ3, ビタミンD, プロバイオティクス",
         },
     },
     {
         tdContent: {
             gen: "DRD2",
-            danger: 0,
+            danger: "-",
             description:
                 "L-チロシン, オメガ3, ビタミンB6, ビタミンD, フォスファチジルコリン, マグネシウム",
         },
@@ -110,14 +113,14 @@ const initialData = [
     {
         tdContent: {
             gen: "SOCS1",
-            danger: 0,
+            danger: "-",
             description: "NAC, オメガ3, ビタミンD, プロバイオティクス",
         },
     },
     {
         tdContent: {
             gen: "TNF",
-            danger: 0,
+            danger: "-",
             description:
                 "NAC, オメガ3, クルクミン, ビタミンD, レスベラトロール",
         },
@@ -128,7 +131,8 @@ const Supplement12 = ({ deltaPageCount }) => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
     const updatedTableData = useMemo(() => {
-        return updateDangerValues(initialData, geneData || []);
+        const updatedData = updateDangerValues(initialData, geneData || []);
+        return processInitialData(updatedData);
     }, [geneData]);
 
     return (

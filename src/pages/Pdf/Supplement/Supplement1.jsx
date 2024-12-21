@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useMemo } from "react";
 import PageWrapper from "../../../components/Pdf/PageWrapper";
 import PageNumber from "../../../components/Pdf/PageNumber";
 import PageHeader from "../../../components/Pdf/PageHeader";
@@ -15,7 +15,7 @@ const initialData = [
         },
         tdContent: {
             gen: "GLS2",
-            danger: 100, // Dynamically updated based on state
+            danger: "-", // Dynamically updated based on state
             description: "L-グルタミン, NAC, グルタミン, ビタミンB群",
         },
     },
@@ -27,7 +27,7 @@ const initialData = [
         },
         tdContent: {
             gen: "CBS",
-            danger: 100,
+            danger: "-",
             description:
                 "ビタミンB6（補因子）, ヘム（補因子）, 5MTHF, NAC, ベタイン, メチルビタミンB12",
         },
@@ -35,7 +35,7 @@ const initialData = [
     {
         tdContent: {
             gen: "CTH",
-            danger: 100,
+            danger: "-",
             description:
                 "ビタミンB6（補因子）, NAC, メチルビタミンB12, メチルフォレート",
         },
@@ -43,7 +43,7 @@ const initialData = [
     {
         tdContent: {
             gen: "DAO",
-            danger: 100,
+            danger: "-",
             description:
                 "リボフラビン（補因子）, NAC, オメガ3, セレン, ビタミンB6",
         },
@@ -51,7 +51,7 @@ const initialData = [
     {
         tdContent: {
             gen: "DAOA",
-            danger: 100,
+            danger: "-",
             description:
                 "リボフラビン（補因子）, NAC, オメガ3, セレン, ビタミンB6",
         },
@@ -59,7 +59,7 @@ const initialData = [
     {
         tdContent: {
             gen: "GAD1",
-            danger: 100,
+            danger: "-",
             description:
                 "P5P（補因子）, GABA, L-グルタミン, L-テアニン, マグネシウム",
         },
@@ -67,14 +67,14 @@ const initialData = [
     {
         tdContent: {
             gen: "GLUD1",
-            danger: 100,
+            danger: "-",
             description: "NAD+（補因子）, L-グルタミン, NAC, ビタミンB群",
         },
     },
     {
         tdContent: {
             gen: "GLUL",
-            danger: 100,
+            danger: "-",
             description: "NAC, αリポ酸, ビタミンB群",
         },
     },
@@ -85,7 +85,7 @@ const initialData = [
         },
         tdContent: {
             gen: "SLC1A1",
-            danger: 100,
+            danger: "-",
             description:
                 "オメガ3, カリウム, ナトリウム, ビタミンB群, マグネシウム",
         },
@@ -97,7 +97,7 @@ const initialData = [
         },
         tdContent: {
             gen: "ALDH5A1",
-            danger: 100, // Dynamically updated based on state
+            danger: "-", // Dynamically updated based on state
             description:
                 "CoQ10, L-カルニチン, NAD+, αリポ酸, ビタミンB群, リボフラビン, 鉄, 銅",
         },
@@ -110,21 +110,21 @@ const initialData = [
         },
         tdContent: {
             gen: "GABRA1",
-            danger: 100,
+            danger: "-",
             description: "GABA, L-テアニン, タウリン, マグネシウム",
         },
     },
     {
         tdContent: {
             gen: "GABRA2",
-            danger: 100,
+            danger: "-",
             description: "GABA, L-テアニン, タウリン, マグネシウム",
         },
     },
     {
         tdContent: {
             gen: "GABRG2",
-            danger: 100,
+            danger: "-",
             description: "GABA, L-テアニン, タウリン, マグネシウム",
         },
     },
@@ -136,14 +136,14 @@ const initialData = [
         },
         tdContent: {
             gen: "DHFR",
-            danger: 100,
+            danger: "-",
             description: "NAD+（補因子）, ビタミンB12, メチルフォレート",
         },
     },
     {
         tdContent: {
             gen: "GCH1",
-            danger: 100,
+            danger: "-",
             description:
                 "5-HTP, L-チロシン, L-フェニルアラニン, NAC, ビタミンB群",
         },
@@ -151,7 +151,7 @@ const initialData = [
     {
         tdContent: {
             gen: "TH",
-            danger: 100,
+            danger: "-",
             description:
                 "BH4（補因子）, L-チロシン, ビタミンB群, メチルフォレート",
         },
@@ -164,7 +164,7 @@ const initialData = [
         },
         tdContent: {
             gen: "COMT",
-            danger: 100,
+            danger: "-",
             description:
                 "SAMe（補因子）, NAC, ビタミンB6, ビタミンB12, マグネシウム, メチルフォレート",
             etc: "便秘, ピル",
@@ -173,7 +173,7 @@ const initialData = [
     {
         tdContent: {
             gen: "MAOA",
-            danger: 100,
+            danger: "-",
             description:
                 "リボフラビン（補因子）, ビタミンB2, ビタミンB6, ビタミンB12, フォレート, マグネシウム",
         },
@@ -181,7 +181,7 @@ const initialData = [
     {
         tdContent: {
             gen: "MAOB",
-            danger: 100,
+            danger: "-",
             description:
                 "ビタミンB2, ビタミンB6, ビタミンB12, フォレート, マグネシウム",
         },
@@ -194,7 +194,7 @@ const initialData = [
         },
         tdContent: {
             gen: "DRD1",
-            danger: 100,
+            danger: "-",
             description:
                 "L-チロシン, オメガ3, ビタミンB6, ビタミンD, フォスファチジルコリン, マグネシウム",
         },
@@ -202,7 +202,7 @@ const initialData = [
     {
         tdContent: {
             gen: "DRD2",
-            danger: 100,
+            danger: "-",
             description:
                 "L-チロシン, オメガ3, ビタミンB6, ビタミンD, フォスファチジルコリン, マグネシウム",
         },
@@ -215,10 +215,6 @@ const Supplement1 = ({deltaPageCount}) => {
   // Memoized updated data
   const updatedTableData = useMemo(() => {
     const updatedData = updateDangerValues(initialData, geneData || []);
-    // return updatedData;
-    const tt = processInitialData(updatedData);
-    console.log("tt==>", tt);
-    
     return processInitialData(updatedData);
   }, [geneData]);
 

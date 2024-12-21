@@ -3,7 +3,10 @@ import PageWrapper from "../../../components/Pdf/PageWrapper.jsx";
 import PageNumber from "../../../components/Pdf/PageNumber.jsx";
 import TableNew from "../../../components/Pdf/Supplements/TableNew.jsx";
 import { useSelector } from "react-redux";
-import { updateDangerValues } from "./updateDangerValues.js";
+import {
+    updateDangerValues,
+    processInitialData,
+} from "./updateDangerValues.js";
 
 const initialData = [
     {
@@ -14,7 +17,7 @@ const initialData = [
         },
         tdContent: {
             gen: "IL10",
-            danger: 0,
+            danger: "-",
             description: "オメガ3, ビタミンD, プロバイオティクス, 亜鉛",
             etc: "グルテン, カゼイン",
         },
@@ -22,7 +25,7 @@ const initialData = [
     {
         tdContent: {
             gen: "ZO-2(TJP2)",
-            danger: 0,
+            danger: "-",
             description:
                 "L-グルタミン, オメガ3, ビタミンD, プロバイオティクス, 亜鉛",
             etc: "グルテン, カゼイン",
@@ -36,7 +39,7 @@ const initialData = [
         },
         tdContent: {
             gen: "COMT",
-            danger: 0,
+            danger: "-",
             description:
                 "SAMe（補因子）, NAC, ビタミンB6, ビタミンB12, マグネシウム, メチルフォレート",
             etc: "便秘, ピル",
@@ -45,7 +48,7 @@ const initialData = [
     {
         tdContent: {
             gen: "CYP2B6",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
             etc: "喫煙",
@@ -54,7 +57,7 @@ const initialData = [
     {
         tdContent: {
             gen: "IGF1R",
-            danger: 0,
+            danger: "-",
             description:
                 "L-アルギニン, ゴロストラム（初乳）, ビタミンD, ビタミンD, 亜鉛",
         },
@@ -62,7 +65,7 @@ const initialData = [
     {
         tdContent: {
             gen: "IMPK",
-            danger: 0,
+            danger: "-",
             description:
                 "ATP, CoQ10, Dリボース, ビタミンB6, ビタミンB12, マグネシウム",
         },
@@ -74,7 +77,7 @@ const initialData = [
         },
         tdContent: {
             gen: "TREM2",
-            danger: 0,
+            danger: "-",
             description: "NAC, オメガ3, クルクミン, ビタミンD",
         },
     },
@@ -86,7 +89,7 @@ const initialData = [
         },
         tdContent: {
             gen: "ADH1B",
-            danger: 0,
+            danger: "-",
             description: "NAC, クルクミン, ビタミンB群, ビタミンC",
             etc: "アルコール",
         },
@@ -94,7 +97,7 @@ const initialData = [
     {
         tdContent: {
             gen: "ADH1C",
-            danger: 0,
+            danger: "-",
             description:
                 "NAD+（補因子）, NAC, クルクミン, ビタミンB群, ビタミンC",
             etc: "アルコール",
@@ -103,7 +106,7 @@ const initialData = [
     {
         tdContent: {
             gen: "ALDH2",
-            danger: 0,
+            danger: "-",
             description:
                 "NAC, クルクミン, ビタミンB群, ビタミンC, レスベラトロール",
             etc: "アルコール",
@@ -117,7 +120,7 @@ const initialData = [
         },
         tdContent: {
             gen: "ATG16L1",
-            danger: 0,
+            danger: "-",
             description: "EGCG, オメガ3, プロバイオティクス",
             etc: "断食",
         },
@@ -125,7 +128,7 @@ const initialData = [
     {
         tdContent: {
             gen: "ATG5",
-            danger: 0,
+            danger: "-",
             description: "EGCG, NAC, オメガ3, クルクミン, レスベラトロール",
         },
     },
@@ -137,14 +140,14 @@ const initialData = [
         },
         tdContent: {
             gen: "ADORA2A",
-            danger: 0,
+            danger: "-",
             description: "L-テアニン, ビタミンB群, マグネシウム, メラトニン",
         },
     },
     {
         tdContent: {
             gen: "CYP1A2",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
             etc: "過剰なカフェイン, 喫煙, 焦げた肉",
@@ -159,7 +162,7 @@ const initialData = [
         },
         tdContent: {
             gen: "CYP1A1",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
             etc: "グルテン, カゼイン, 環境毒",
@@ -172,7 +175,7 @@ const initialData = [
         },
         tdContent: {
             gen: "GLRX",
-            danger: 0,
+            danger: "-",
             description:
                 "グルタチオン（補因子）, NAC, αリポ酸, セレン, ビタミンC, ビタミンE",
         },
@@ -184,16 +187,17 @@ const initialData = [
         },
         tdContent: {
             gen: "TMPRSS6",
-            danger: 0,
+            danger: "-",
             description: "銅（補因子）, NAC, ビタミンB群",
         },
     },
 ];
-const Supplement11 = ({deltaPageCount}) => {
+const Supplement11 = ({ deltaPageCount }) => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
     const updatedTableData = useMemo(() => {
-        return updateDangerValues(initialData, geneData || []);
+        const updatedData = updateDangerValues(initialData, geneData || []);
+        return processInitialData(updatedData);
     }, [geneData]);
 
     return (
