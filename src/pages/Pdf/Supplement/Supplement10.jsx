@@ -10,7 +10,7 @@ import {
 
 const initialData = [
     {
-        rowSpan: 12,
+        rowSpan: 14,
         thContent: {
             main: "CYP450",
             sub: "肝臓に存在する酵素群で、薬物や毒素の代謝に関わる",
@@ -20,6 +20,9 @@ const initialData = [
             danger: "-",
             description:
                 "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
+            descriptionAddStyle: {
+                letterSpacing: "-0.5rem"
+            },
             etc: "グルテン, カゼイン, 環境毒",
         },
     },
@@ -29,6 +32,9 @@ const initialData = [
             danger: "-",
             description:
                 "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
+            descriptionAddStyle: {
+                letterSpacing: "-0.5rem"
+            },
             etc: "過剰なカフェイン, 喫煙, 焦げた肉",
         },
     },
@@ -56,6 +62,9 @@ const initialData = [
             danger: "-",
             description:
                 "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
+            descriptionAddStyle: {
+                letterSpacing: "-0.5rem"
+            },
             etc: "喫煙",
         },
     },
@@ -65,6 +74,9 @@ const initialData = [
             danger: "-",
             description:
                 "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, レスベラトロール",
+            descriptionAddStyle: {
+                letterSpacing: "-0.5rem"
+            },
             etc: "環境毒, 発がん物質",
         },
     },
@@ -74,6 +86,9 @@ const initialData = [
             danger: "-",
             description:
                 "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, レスベラトロール",
+            descriptionAddStyle: {
+                letterSpacing: "-0.5rem"
+            },
             etc: "環境毒, 発がん物質",
         },
     },
@@ -119,6 +134,22 @@ const initialData = [
         },
     },
     {
+        tdContent: {
+            gen: "CYP3A7",
+            danger: "-",
+            description:
+                "胎児期の解毒",
+        },
+    },
+    {
+        tdContent: {
+            gen: "CYP4F2",
+            danger: "-",
+            description:
+                "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, ビタミンE, ビタミンK2, レスベラトロール",
+        },
+    },
+    {
         rowSpan: 2,
         thContent: {
             main: "Dyslexia",
@@ -139,7 +170,6 @@ const initialData = [
                 "DHA, ビタミンB6, ビタミンB12, フォスファチジルコリン, フォスファチジルセリン, マグネシウム, 葉酸",
         },
     },
-
     {
         thContent: {
             main: "FN1",
@@ -149,6 +179,38 @@ const initialData = [
             gen: "FN1",
             danger: "-",
             description: "アルギニン, ビタミンC, 亜鉛",
+        },
+    },
+    {
+        rowSpan: 3,
+        thContent: {
+            main: "Leaky",
+            sub: "腸の免疫反応やバリア機能の調整に関わる",
+        },
+        tdContent: {
+            gen: "HLA-DQ2.2",
+            danger: "-",
+            description:
+                "DAO酵素, L-グルタミン, オメガ3, ビタミンD, プロバイオティクス, 亜鉛",
+                etc: "グルテン, カゼイン"
+        },
+    },
+    {
+        tdContent: {
+            gen: "HLA-DQ8",
+            danger: "-",
+            description:
+                "DAO酵素, L-グルタミン, オメガ3, ビタミンD, プロバイオティクス, 亜鉛",
+                etc: "グルテン, カゼイン"
+        },
+    },
+    {
+        tdContent: {
+            gen: "HLA-DQA1",
+            danger: "-",
+            description:
+                "DAO酵素, L-グルタミン, オメガ3, ビタミンD, プロバイオティクス, 亜鉛",
+                etc: "グルテン, カゼイン"
         },
     },
 ];

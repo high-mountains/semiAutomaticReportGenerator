@@ -32,11 +32,19 @@ const initialData = [
         },
     },
     {
-        rowSpan: 4,
+        rowSpan: 8,
         thContent: {
             main: "Longevity Genes",
             sub: "長寿に影響する遺伝子群で、老化の遅延や疾病予防に関わる",
         },
+        tdContent: {
+            gen: "CETP",
+            danger: "-",
+            description:
+                "EPA, ビタミンB3",
+        },
+    },
+    {
         tdContent: {
             gen: "COMT",
             danger: "-",
@@ -51,7 +59,18 @@ const initialData = [
             danger: "-",
             description:
                 "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
+            descriptionAddStyle: {
+                letterSpacing: "-0.5rem"
+            },
             etc: "喫煙",
+        },
+    },
+    {
+        tdContent: {
+            gen: "FOXO3A",
+            danger: "-",
+            description:
+                "NAC, NAD+, グルタチオン, ビタミンC, メラトニン",
         },
     },
     {
@@ -64,10 +83,26 @@ const initialData = [
     },
     {
         tdContent: {
+            gen: "IL-6",
+            danger: "-",
+            description:
+                "EGCG, EPA, クルクミン, ビタミンD, レスベラトロール, 亜鉛",
+        },
+    },
+    {
+        tdContent: {
             gen: "IMPK",
             danger: "-",
             description:
                 "ATP, CoQ10, Dリボース, ビタミンB6, ビタミンB12, マグネシウム",
+        },
+    },
+    {
+        tdContent: {
+            gen: "TP53",
+            danger: "-",
+            description:
+                "NAC, NAD+, グルタチオン, セレン, ビタミンC, メラトニン",
         },
     },
     {
@@ -150,6 +185,9 @@ const initialData = [
             danger: "-",
             description:
                 "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
+            descriptionAddStyle: {
+                letterSpacing: "-0.5rem"
+            },
             etc: "過剰なカフェイン, 喫煙, 焦げた肉",
             etcClassName: "tracking-[-0.5rem]",
         },
@@ -165,6 +203,9 @@ const initialData = [
             danger: "-",
             description:
                 "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
+            descriptionAddStyle: {
+                letterSpacing: "-0.5rem"
+            },
             etc: "グルテン, カゼイン, 環境毒",
         },
     },
@@ -189,6 +230,18 @@ const initialData = [
             gen: "TMPRSS6",
             danger: "-",
             description: "銅（補因子）, NAC, ビタミンB群",
+        },
+    },
+    {
+        thContent: {
+            main: "メラトニン",
+            sub: "睡眠と覚醒リズムを調整する",
+        },
+        tdContent: {
+            gen: "MTNR1A",
+            danger: "-",
+            description: "5-HTP, L-トリプトファン, バレリアンルート, ビタミンB6, メラトニン",
+            etc: "過剰なカフェイン,喫煙,焦げた肉",
         },
     },
 ];

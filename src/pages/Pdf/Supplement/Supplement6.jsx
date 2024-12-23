@@ -10,7 +10,7 @@ import {
 
 const initialData = [
     {
-        rowSpan: 5,
+        rowSpan: 7,
         thContent: {
             main: "マイコトキシン",
             sub: "カビが産生する有害物質で、食品汚染や毒性物質の解毒や代謝に関わる",
@@ -30,6 +30,20 @@ const initialData = [
             description:
                 "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, クルクミン, グルタチオン, ビタミンC, レスベラトロール",
             etc: "グレープフルーツ",
+        },
+    },
+    {
+        tdContent: {
+            gen: "GSTA1",
+            danger: "-",
+            description: "グルタチオン（基質）, NAC, αリポ酸, クミン, スルフォラファン",
+        },
+    },
+    {
+        tdContent: {
+            gen: "GSTM1",
+            danger: "-",
+            description: "グルタチオン（基質）, NAC, αリポ酸, クミン, スルフォラファン",
         },
     },
     {
@@ -93,6 +107,7 @@ const initialData = [
         },
     },
     {
+        rowSpan: 3,
         thContent: {
             main: "フェーズII グルタチオントランスフェラーゼ",
             sub: "肝臓に存在し、有害物質の排出を促進する酵素で、解毒に関わる",
@@ -101,6 +116,22 @@ const initialData = [
             gen: "GSTA1",
             danger: "-",
             description: "NAC, クレイ, クロレラ, グルタチオン",
+        },
+    },
+    {
+        tdContent: {
+            gen: "GSTM1",
+            danger: "-",
+            description:
+                "グルタチオン（基質）, セレン（補因子）, NAC, αリポ酸, ビタミンC, ビタミンE",
+        },
+    },
+    {
+        tdContent: {
+            gen: "GSTP1",
+            danger: "-",
+            description:
+                "NAC, クレイ, クロレラ, グルタチオン",
         },
     },
     {
@@ -126,7 +157,7 @@ const initialData = [
         },
     },
     {
-        rowSpan: 5,
+        rowSpan: 6,
         thContent: {
             main: "フェーズII スルフトランスフェラーゼ",
             sub: "肝臓に存在し、化学物質に硫酸基を付与する酵素で、解毒に関わる",
@@ -159,6 +190,13 @@ const initialData = [
             danger: "-",
             description:
                 "DIM（ブロッコリー）, MSM, NAC, クルクミン, スルフォラファン",
+        },
+    },
+    {
+        tdContent: {
+            gen: "SULT2A1",
+            danger: "-",
+            description: "MSM, NAC, クルクミン, 亜鉛",
         },
     },
     {

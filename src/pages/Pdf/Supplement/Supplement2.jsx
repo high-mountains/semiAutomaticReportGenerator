@@ -123,7 +123,7 @@ const initialData = [
         },
     },
     {
-        rowSpan: 3,
+        rowSpan: 4,
         thContent: {
             main: "ヒスタミン受容体",
             sub: "アレルギー反応や覚醒に影響する物質の感度に関わる",
@@ -132,6 +132,15 @@ const initialData = [
             gen: "HRH1",
             danger: "-",
             description: "NAC, オメガ3, ケルセチン, マグネシウム",
+            etc: "ヒスタミン",
+        },
+    },
+    {
+        tdContent: {
+            gen: "HRH2",
+            danger: "-",
+            description:
+                "オメガ3, プロバイオティクス, マグネシウム, 亜鉛, 甘草",
             etc: "ヒスタミン",
         },
     },

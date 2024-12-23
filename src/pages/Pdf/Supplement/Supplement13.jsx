@@ -10,6 +10,18 @@ import {
 
 const initialData = [
     {
+        thContent: {
+            main: "炎症OFF",
+            sub: "炎症性疾患や回復プロセスに影響し、炎症反応の抑制・終了に関わる",
+        },
+        tdContent: {
+            gen: "TNF",
+            danger: "-",
+            description:
+                "NAC, オメガ3, クルクミン, ビタミンD, レスベラトロール",
+        },
+    },
+    {
         rowSpan: 2,
         thContent: {
             main: "筋肉/筋肉痛",
@@ -185,6 +197,9 @@ const initialData = [
             danger: "-",
             description:
                 "BH4（補因子）, 鉄（補因子）, 5-HTP, オメガ3, ビタミンB6, フォレート, マグネシウム",
+            descriptionAddStyle: {
+                letterSpacing: "-0.5rem"
+            },
         },
     },
     {
@@ -193,6 +208,9 @@ const initialData = [
             danger: "-",
             description:
                 "BH4（補因子）, 鉄（補因子）, 5-HTP, オメガ3, ビタミンB6, フォレート, マグネシウム",
+            descriptionAddStyle: {
+                letterSpacing: "-0.5rem"
+            },
         },
     },
 ];

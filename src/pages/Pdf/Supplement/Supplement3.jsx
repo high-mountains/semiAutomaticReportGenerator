@@ -7,7 +7,7 @@ import {updateDangerValues, processInitialData} from "./updateDangerValues.js";
 
 const initialData = [
     {
-        rowSpan: 21,
+        rowSpan: 22,
         thContent: {
             main: "ミトコンドリア",
             sub: "細胞内小器官で、エネルギーの生成と代謝に関わる",
@@ -62,6 +62,14 @@ const initialData = [
     {
         tdContent: {
             gen: "COQ10A",
+            danger: "-",
+            description:
+                "CoQ10, L-カルニチン, NAD+, αリポ酸, ビタミンB6, リボフラビン",
+        },
+    },
+    {
+        tdContent: {
+            gen: "COQ10B",
             danger: "-",
             description:
                 "CoQ10, L-カルニチン, NAD+, αリポ酸, ビタミンB6, リボフラビン",

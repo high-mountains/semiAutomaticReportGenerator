@@ -10,31 +10,31 @@ import {
 
 const initialData = [
     {
-        rowSpan: 7,
+        rowSpan: 9,
         thContent: {
             main: "栄養",
             sub: "身体の機能維持と成長に必要なエネルギーや物質を供給する",
         },
         tdContent: {
-            gen: "ACAT1",
+            gen: "ADRA2A",
             danger: "-",
             description:
-                "コエンザイムA（補因子）, L-カルニチン, MCTオイル, αリポ酸, オメガ3",
+                "GABA, L-チロシン, アシュワガンダ, ビタミンB群, マグネシウム",
         },
     },
     {
         tdContent: {
-            gen: "ACAT2",
+            gen: "BCMO1",
             danger: "-",
-            description: "αリポ酸, オメガ3, ビタミンE, レスベラトロール",
+            description: "鉄（補因子）, ビタミンA, ビタミンC, ビタミンE, 亜鉛",
         },
     },
     {
         trHeight: 28,
         tdContent: {
-            gen: "BCMO1",
+            gen: "CHKA",
             danger: "-",
-            description: "鉄（補因子）, ビタミンA, ビタミンC, ビタミンE, 亜鉛",
+            description: "ATP（補因子）, オメガ3, ビタミンB群, ベタイン, ホスファチジルコリン",
         },
     },
     {
@@ -49,9 +49,26 @@ const initialData = [
     {
         trHeight: 28,
         tdContent: {
+            gen: "PEMT",
+            danger: "-",
+            description: "SAMe（補因子）, ビタミンB6, フォスファチジルコリン, ベタイン, メチルビタミンB12, メチルフォレート",
+        },
+    },
+    {
+        trHeight: 28,
+        tdContent: {
             gen: "SELENOS",
             danger: "-",
             description: "セレン（補因子）, CoQ10, グルタチオン, ビタミンE",
+        },
+    },
+    {
+        trHeight: 28,
+        tdContent: {
+            gen: "SLC30A3",
+            danger: "-",
+            description:
+                "亜鉛（補因子）, ビタミンB6, ビタミンC, ビタミンE, マグネシウム",
         },
     },
     {
@@ -164,7 +181,7 @@ const initialData = [
     },
     {
         trHeight: 28,
-        rowSpan: 4,
+        rowSpan: 5,
         thContent: {
             main: "フタル酸エステル",
             sub: "プラスチック製品に含まれる化学物質で、内分泌システムにかく乱作用に影響するホルモン調節に関わる",
@@ -175,6 +192,14 @@ const initialData = [
             description:
                 "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
             etc: "喫煙",
+        },
+    },
+    {
+        trHeight: 29,
+        tdContent: {
+            gen: "GSTM1",
+            danger: "-",
+            description: "グルタチオン（基質）, NAC, αリポ酸, クミン, スルフォラファン",
         },
     },
     {

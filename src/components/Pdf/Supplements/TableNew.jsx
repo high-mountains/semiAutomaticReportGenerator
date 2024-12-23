@@ -47,7 +47,7 @@ const TableNew = (props) => {
                                                 ? "red"
                                                 : "inherit"
                                     }}><p style={renderedPdfFlag}>{item.tdContent.danger}</p></td>
-                            <td><p style={renderedPdfFlag}>{item.tdContent.description}</p></td>
+                            <td><p style={{ ...renderedPdfFlag, ...(item.tdContent.descriptionAddStyle || {}) }}>{item.tdContent.description}</p></td>
                             <td className={`${item.tdContent.etcClassName && item.tdContent.etcClassName}`}><p style={renderedPdfFlag}>{item.tdContent.etc || "-"}</p></td>
                         </tr>
                     ))}

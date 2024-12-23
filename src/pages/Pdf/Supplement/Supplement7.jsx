@@ -54,11 +54,19 @@ const initialData = [
         },
     },
     {
-        rowSpan: 6,
+        rowSpan: 9,
         thContent: {
             main: "炎症/抗炎症",
             sub: "組織の損傷や感染に対する体の防御反応/体の炎症を抑えて健康を維持する",
         },
+        tdContent: {
+            gen: "BDKRB2",
+            danger: "-",
+            description:
+                "アルギニン, オメガ3, ビタミンD, マグネシウム, レスベラトロール",
+        },
+    },
+    {
         tdContent: {
             gen: "GPX1",
             danger: "-",
@@ -92,6 +100,22 @@ const initialData = [
     },
     {
         tdContent: {
+            gen: "GSTA1",
+            danger: "-",
+            description:
+                "グルタチオン（基質）, NAC, αリポ酸, クミン, スルフォラファン",
+        },
+    },
+    {
+        tdContent: {
+            gen: "GSTM1",
+            danger: "-",
+            description:
+                "グルタチオン（基質）, NAC, αリポ酸, クミン, スルフォラファン",
+        },
+    },
+    {
+        tdContent: {
             gen: "GSTM3",
             danger: "-",
             description:
@@ -106,7 +130,7 @@ const initialData = [
         },
     },
     {
-        rowSpan: 5,
+        rowSpan: 6,
         thContent: {
             main: "化学物質過敏",
             sub: "化学物質に対して異常に強い反応を示す",
@@ -126,6 +150,13 @@ const initialData = [
             description:
                 "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, レスベラトロール",
             etc: "環境毒, 発がん物質",
+        },
+    },
+    {
+        tdContent: {
+            gen: "GSTM1",
+            danger: "-",
+            description: "グルタチオン（基質）, NAC, αリポ酸, クミン, スルフォラファン",
         },
     },
     {
@@ -153,7 +184,7 @@ const initialData = [
         },
     },
     {
-        rowSpan: 2,
+        rowSpan: 4,
         thContent: {
             main: "活性酸素",
             sub: "細胞に損傷を与える不安定な酸素分子で、老化や病気の原因に関わる",
@@ -163,6 +194,22 @@ const initialData = [
             danger: "-",
             description:
                 "NADPH（補因子）, NAC, ビタミンE, セレン, αリポ酸, CoQ10",
+        },
+    },
+    {
+        tdContent: {
+            gen: "GCLC",
+            danger: "-",
+            description:
+                "ATP（補因子）, NAC, αリポ酸, グルタチオン, セレン",
+        },
+    },
+    {
+        tdContent: {
+            gen: "GCLM",
+            danger: "-",
+            description:
+                "ATP（補因子）, NAC, αリポ酸, グルタチオン",
         },
     },
     {

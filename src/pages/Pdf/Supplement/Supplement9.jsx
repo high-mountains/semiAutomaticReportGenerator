@@ -10,11 +10,25 @@ import {
 
 const initialData = [
     {
-        rowSpan: 8,
+        rowSpan: 11,
         thContent: {
             main: "酸化/抗酸化",
             sub: "細胞が損傷を受けるプロセス/酸化ストレスを抑えて細胞を保護する働き",
         },
+        tdContent: {
+            gen: "GCLC",
+            danger: "-",
+            description: "ATP（補因子）, NAC, αリポ酸, グルタチオン, セレン",
+        },
+    },
+    {
+        tdContent: {
+            gen: "CALM",
+            danger: "-",
+            description: "ATP（補因子）, NAC, αリポ酸, グルタチオン",
+        },
+    },
+    {
         tdContent: {
             gen: "HFE",
             danger: "-",
@@ -32,10 +46,18 @@ const initialData = [
     },
     {
         tdContent: {
-            gen: "NOX4",
+            gen: "NOX1",
             danger: "-",
             description:
                 "FAD（補因子）, NADPH（補因子）, ヘム（補因子）, CoQ10, NAC, ビタミンC, ビタミンE",
+        },
+    },
+    {
+        tdContent: {
+            gen: "NOX4",
+            danger: "-",
+            description:
+                "FAD（補因子）, NADPH（補因子）, ヘム（補因子）, NAC, αリポ酸, クルクミン, ビタミンE, レスベラトロール",
         },
     },
     {

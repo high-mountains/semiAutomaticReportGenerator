@@ -10,11 +10,19 @@ import {
 
 const initialData = [
     {
-        rowSpan: 3,
+        rowSpan: 4,
         thContent: {
             main: "活性酸素",
             sub: "細胞に損傷を与える不安定な酸素分子で、老化や病気の原因に関わる",
         },
+        tdContent: {
+            gen: "NOX1",
+            danger: "-",
+            description:
+                "FAD（補因子）, NADPH（補因子）, ヘム（補因子）, NAC, αリポ酸, クルクミン, ビタミンE, レスベラトロール",
+        },
+    },
+    {
         tdContent: {
             gen: "SOD1",
             danger: "-",
@@ -41,7 +49,7 @@ const initialData = [
     },
 
     {
-        rowSpan: 2,
+        rowSpan: 4,
         thContent: {
             main: "水銀",
             sub: "体内に蓄積された有害な重金属の排出に関わる",
@@ -51,6 +59,20 @@ const initialData = [
             danger: "-",
             description:
                 "ビタミンB6, ビタミンC, メチルビタミンB12, メチルフォレート, 鉄, 銅",
+        },
+    },
+    {
+        tdContent: {
+            gen: "GCLM",
+            danger: "-",
+            description: "ATP（補因子）, NAC, αリポ酸, グルタチオン",
+        },
+    },
+    {
+        tdContent: {
+            gen: "GSTM1",
+            danger: "-",
+            description: "グルタチオン（基質）, NAC, αリポ酸, クミン, スルフォラファン",
         },
     },
     {
@@ -128,6 +150,7 @@ const initialData = [
             danger: "-",
             description:
                 "NAD+（補因子）, NADPH（補因子）, 5MTHF, ビタミンB6, メチルビタミンB12",
+            trHeight: 30
         },
     },
     {
@@ -137,6 +160,7 @@ const initialData = [
             danger: "-",
             description:
                 "NAD+（補因子）, NADPH（補因子）, 5MTHF, ビタミンB6, メチルビタミンB12",
+            trHeight: 30
         },
     },
     {
@@ -146,6 +170,7 @@ const initialData = [
             danger: "-",
             description:
                 "NAD+（補因子）, NADPH（補因子）, 5MTHF, ビタミンB6, メチルビタミンB12",
+            trHeight: 30
         },
     },
     {
@@ -153,6 +178,7 @@ const initialData = [
             gen: "MTR",
             danger: "-",
             description: "メチルビタミンB12（補因子）, 5MTHF, SAMe, ビタミンB6",
+            trHeight: 30
         },
     },
     {
@@ -183,7 +209,10 @@ const initialData = [
             gen: "CBS",
             danger: "-",
             description:
-                "ビタミンB6（補因子）, ヘム（補因子）, 5MTHF, NAC, ベタイン, メチルビタミンB12",
+                "ビタミンB6（補因子）,ヘム（補因子）,5MTHF,NAC,ベタイン,メチルビタミンB12",
+            descriptionAddStyle: {
+                letterSpacing: "-1rem"
+            }
         },
     },
     {

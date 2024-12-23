@@ -10,22 +10,67 @@ import {
 
 const initialData = [
     {
+        rowSpan: 2,
         thContent: {
             main: "ビタミン&ミネラル",
             sub: "体の機能を維持するために不可欠な栄養素の利用に関わる",
         },
         tdContent: {
-            gen: "SELENOS",
+            gen: "PEMT",
             danger: "-",
-            description: "セレン（補因子）, CoQ10, グルタチオン, ビタミンE",
+            description: "SAMe（補因子）, ビタミンB6, フォスファチジルコリン, ベタイン, メチルビタミンB12, メチルフォレート",
         },
     },
     {
-        rowSpan: 9,
+        tdContent: {
+            gen: "SELENOS",
+            danger: "-",
+            description: "セレン（補因子）, CoQ10, グルタチオン, ビタミンE",
+        },   
+    },
+    {
+        rowSpan: 17,
         thContent: {
             main: "炎症ON",
             sub: "炎症性疾患や免疫応答の制御に影響し、炎症反応の開始・促進に関わる",
         },
+        tdContent: {
+            gen: "ACE",
+            danger: "-",
+            description: "亜鉛（補因子）, オメガ3, カリウム, クルクミン, ニンニクエキス, マグネシウム, レスベラトロール",
+            etc: "ナトリウム"
+        },
+    },
+    {
+        tdContent: {
+            gen: "C3",
+            danger: "-",
+            description: "NAC, オメガ3, ビタミンD, プロバイオティクス",
+        },
+    },
+    {
+        tdContent: {
+            gen: "CACNA1C",
+            danger: "-",
+            description: "オメガ3, タウリン, ビタミンD, マグネシウム",
+            etc: "電磁波"
+        },
+    },
+    {
+        tdContent: {
+            gen: "CD14",
+            danger: "-",
+            description: "ビタミンD, プロバイオティクス",
+        },
+    },
+    {
+        tdContent: {
+            gen: "IDO1",
+            danger: "-",
+            description: "ヘム（補因子）, EGCG, オメガ3, クルクミン, ビタミンD, レスベラトロール",
+        },
+    },
+    {
         tdContent: {
             gen: "IL1B",
             danger: "-",
@@ -49,6 +94,13 @@ const initialData = [
     {
         tdContent: {
             gen: "IL5",
+            danger: "-",
+            description: "NAC, オメガ3, ビタミンD, プロバイオティクス",
+        },
+    },
+    {
+        tdContent: {
+            gen: "IL6",
             danger: "-",
             description: "NAC, オメガ3, ビタミンD, プロバイオティクス",
         },
@@ -84,10 +136,25 @@ const initialData = [
     },
     {
         tdContent: {
+            gen: "STAT4",
+            danger: "-",
+            description: "NAC, オメガ3, クルクミン, ビタミンD, レスベラトロール",
+        },
+    },
+    {
+        tdContent: {
             gen: "TNF",
             danger: "-",
             description:
                 "NAC, オメガ3, クルクミン, ビタミンD, レスベラトロール",
+        },
+    },
+    {
+        tdContent: {
+            gen: "TRAF1",
+            danger: "-",
+            description:
+                "BH4（補因子）, 鉄（補因子）, 5-HTP, オメガ3, ビタミンB6, フォレート, マグネシウム",
         },
     },
     {

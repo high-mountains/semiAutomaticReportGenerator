@@ -156,6 +156,28 @@ const initialData = [
                 "ヘム（補因子）, ユビキノール（補因子）, CoQ10, L-カルニチン, αリポ酸, ビタミンB群, ビタミンC",
         },
     },
+    {
+        rowSpan: 2,
+        thContent: {
+            main: "栄養",
+            sub: "身体の機能維持と成長に必要なエネルギーや物質を供給する",
+        },
+        tdContent: {
+            gen: "ACAT1",
+            danger: "-",
+            description:
+                "コエンザイムA（補因子）, L-カルニチン, MCTオイル, αリポ酸, オメガ3",
+        },
+    },
+    {
+        tdContent: {
+            gen: "ACAT2",
+            danger: "-",
+            description:
+                "αリポ酸, オメガ3, ビタミンE, レスベラトロール",
+        },
+    },
+
 ];
 
 const Supplement4 = ({ deltaPageCount }) => {
