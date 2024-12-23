@@ -161,8 +161,8 @@ const Pdf = () => {
                             <SupplementNot onExceedHeight={handleExtraPageForUnSupplement} key={index + 100} unsupplementalData={data} isFirstPage={false}  pageNum={26 + extraSupplements.length + index}/>
                         ))} */}
                         <SupplementTable />
-                        {/* <GeneInformationList />
-                        <References /> */}
+                        <GeneInformationList />
+                        {/* <References /> */}
                         {/* <Pathway /> */}
                     </div>
                 </div>
