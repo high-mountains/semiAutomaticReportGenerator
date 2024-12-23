@@ -13,7 +13,8 @@ const GeneInformationList = () => {
     }, [storeDelta]);
 
     // Create an array of component numbers
-    const geneComponents = Array.from({ length: 113 }, (_, i) => i + 1).filter(num => num !== 37 && num !== 54 && num !== 56 && num !== 80 && num !== 82 && num !==83 && num !==91 && num !==94 && num !==97 && num !==110 && num !==111); // Exclude Gene34 and Gene35 if needed
+    // const geneComponents = Array.from({ length: 113 }, (_, i) => i + 1).filter(num => num !== 37 && num !== 54 && num !== 56 && num !== 80 && num !== 82 && num !==83 && num !==91 && num !==94 && num !==97 && num !==110 && num !==111); // Exclude Gene34 and Gene35 if needed
+    const geneComponents = Array.from({ length: 117 }, (_, i) => i + 1); // Exclude Gene34 and Gene35 if needed
 
     return (
         <>

@@ -22,16 +22,16 @@ function Page2({extraSupplementsLength}) {
         setDeltaPage(flagDeltaPage);
     }, [flagDeltaPage]);
 
-    const [pageContent, setPageContent] = useState(["P03", "P04", "P05", "P08", "P11", "P14", "P17", "P20", "P23", "P24", "P25", "P40", "P142", "P144"]);
+    const [pageContent, setPageContent] = useState(["P03", "P04", "P05", "P08", "P11", "P14", "P17", "P20", "P23", "P24", "P26", "P41", "P158", "P160"]);
     
     useEffect(() => {
         // Update the fourth element of the array
         setPageContent((prevContent) => {
           const updatedContent = [...prevContent];  // Create a shallow copy of the array
-          updatedContent[10] = "P" + (25 + extraSupplementsLength); // Update the fourth element (index 3)
-          updatedContent[11] = "P" + (40 + deltaPage);
-          updatedContent[12] = "P" + (142 + deltaPage);
-          updatedContent[13] = "P" + (144 + deltaPage);
+          updatedContent[10] = "P" + (26 + extraSupplementsLength); // Update the fourth element (index 3)
+          updatedContent[11] = "P" + (41 + deltaPage);
+          updatedContent[12] = "P" + (158 + deltaPage);
+          updatedContent[13] = "P" + (160 + deltaPage);
           return updatedContent;
         });
       }, [extraSupplementsLength, deltaPage]);

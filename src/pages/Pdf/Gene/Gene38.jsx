@@ -12,14 +12,14 @@ import { updateDangerLevel } from "../Supplement/updateDangerValues.js";
 const initialGeneData = [
   {
     geneName: "CAT",
-    datas: ["rs7943316"],
+    datas: ["rs769217", "rs1001179", "rs7943316"],
     level: 0,
     description:
       "この遺伝子に変異がある場合、BPAによって引き起こされる酸化ストレスに対する体内の防御機構が弱まる可能性があります。CAT（Catalase）は、カタラーゼという抗酸化酵素をコードしています。この酵素は、細胞内で過酸化水素を水と酸素に分解する反応を触媒し、酸化ストレスから細胞を保護する役割を果たします。",
   },
   {
     geneName: "SOD2",
-    datas: ["rs4880"],
+    datas: ["rs5746136", "rs4880"],
     level: 0,
     description:
       "この遺伝子に変異がある場合、BPAによる酸化ストレスが蓄積しやすくなる可能性があります。\nSOD2（Superoxide Dismutase 2）は、スーパーオキシドジスムターゼ2をコードしており、ミトコンドリア内で活性酸素種の一つであるスーパーオキシドラジカルを過酸化水素に変換する役割を持っています。",
@@ -27,7 +27,7 @@ const initialGeneData = [
   {
     geneName: "SULT1A1",
     datas: [
-      "rs9282861", "rs1968752", "rs1042028", "rs1042157"
+      "i6018900", "rs9282861", "rs1968752", "rs1042028", "rs1042157"
     ],
     level: 0,
     description:
@@ -59,7 +59,7 @@ const Gene38 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+76}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+77}</GenePageNumber>
     </PageWrapper>
   );
 };

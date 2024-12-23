@@ -19,7 +19,14 @@ const initialGeneData = [
   },
   {
     geneName: "GPX1",
-    datas: ["rs1050450"],
+    datas: ["rs3448", "rs1050450"],
+    level: 0,
+    description:
+      "この遺伝子に変異がある場合、鉛の影響による酸化ストレスが増加する可能性があります。GPX1（Glutathione Peroxidase 1）は、抗酸化酵素であるグルタチオンペルオキシダーゼ1をコードしており、細胞内の過酸化水素や有機過酸化物をグルタチオンを用いて水やアルコールに還元する役割を果たします。",
+  },
+  {
+    geneName: "GSTM1",
+    datas: ["rs366631"],
     level: 0,
     description:
       "この遺伝子に変異がある場合、鉛の影響による酸化ストレスが増加する可能性があります。GPX1（Glutathione Peroxidase 1）は、抗酸化酵素であるグルタチオンペルオキシダーゼ1をコードしており、細胞内の過酸化水素や有機過酸化物をグルタチオンを用いて水やアルコールに還元する役割を果たします。",
@@ -31,17 +38,15 @@ const initialGeneData = [
     description:
       "この遺伝子に変異がある場合、体内での鉛の蓄積のリスクが高まる可能性があります。HFE（Homeostatic Iron Regulator）は、鉄の取り込みと貯蔵の調整に関与するタンパク質をコードしています。このタンパク質は、トランスフェリン受容体と相互作用し、細胞への鉄の取り込みを調節することで、体内の鉄のバランスを維持します。",
   },
-  {
-    geneName: "SLC11A2",
-    datas: ["rs224589"],
-    level: 0,
-    description:
-      "この遺伝子に変異がある場合、体内での鉛の蓄積のリスクが高まる可能性があります。SLC11A2は、二価金属イオン輸送タンパク質DMT1（Divalent Metal Transporter 1）をコードしており、特に腸管細胞での鉄の吸収や細胞内での鉄の輸送に関与しています。この輸送タンパク質は、鉄イオンを細胞内に取り込み、体内での鉄の利用を促進します。",
-  },
 ];
 
 const Gene112 = ({deltaPageCount}) => {
   // Fetch gene data from Redux store
+  <Text
+        sidebar={1}
+        textContent={"鉛"}
+        containerStyle={{ marginBottom: "10rem" }}
+      />
   const geneData = useSelector((state) => state.pdfData?.geneData || []);
 
   // Memoize the updated gene data to avoid unnecessary recalculations
@@ -68,7 +73,7 @@ const Gene112 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+140}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+151}</GenePageNumber>
     </PageWrapper>
   );
 };

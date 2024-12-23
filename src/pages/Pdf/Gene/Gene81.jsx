@@ -11,6 +11,13 @@ import { updateDangerLevel } from "../Supplement/updateDangerValues.js";
 // Centralized initial gene data
 const initialGeneData = [
   {
+    geneName: "CETP",
+    datas: ["rs5882"],
+    level: 0,
+    description:
+      "この遺伝子に変異がある場合、血中HDLコレステロールレベルに影響を与える可能性があります。CETPは、コレステリルエステル転送タンパク質をコードしており、リポタンパク質間でコレステロールエステルとトリグリセリドを交換する役割を持ちます。このタンパク質は、HDL（高密度リポタンパク質）とLDL（低密度リポタンパク質）の間でのコレステロールの移動を促進し、血中の脂質バランスを調節します。",
+  },
+  {
     geneName: "COMT",
     datas: ["rs4680", "rs4633"],
     level: 0,
@@ -34,13 +41,6 @@ const initialGeneData = [
     level: 0,
     description:
       "この遺伝子に変異がある場合、特定の薬物や化学物質の代謝が不十分となる可能性があります。\nCYP2B6（Cytochrome P450 Family 2 Subfamily B Member 6）は、シトクロムP450酵素ファミリーの一員で、薬物や環境毒素、内因性物質の代謝に関与しています。CYP2B6は、肝臓で発現が高く、特定の薬物を水溶性に変換して排泄を促進する役割を果たしています。",
-  },
-  {
-    geneName: "IGF1R",
-    datas: ["rs2229765"],
-    level: 0,
-    description:
-      "この遺伝子に変異がある場合、細胞の成長や代謝調整が影響を受ける可能性があります。IGF1Rは、インスリン様成長因子1（IGF0）受容体をコードしており、成長、発達、細胞増殖、代謝に重要な役割を果たします。この受容体はIGF0と結合して細胞増殖シグナルを活性化し、骨や筋肉の成長、組織の修復を促進します。",
   },
 ];
 
@@ -72,7 +72,7 @@ const Gene81 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+116}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+120}</GenePageNumber>
     </PageWrapper>
   );
 };

@@ -22,7 +22,7 @@ const DetoxPathway = ({deltaPageCount}) => {
             <div className='w-[535rem] h-[676rem]'>
                 <img src="bg/detoxPathway.svg" alt="" className="w-full h-full" />
             </div>
-            <PageNumber>{148+deltaPageCount}</PageNumber>
+            <PageNumber>{164+deltaPageCount}</PageNumber>
         </PageWrapper>
     );
 };

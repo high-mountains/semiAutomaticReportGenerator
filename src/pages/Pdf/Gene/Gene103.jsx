@@ -19,7 +19,7 @@ const initialGeneData = [
   },
   {
     geneName: "DAO",
-    datas: ["rs2111902"],
+    datas: ["rs3741775", "rs2070586", "rs2111902"],
     level: 0,
     description:
       "この遺伝子に変異がある場合、グルタミン酸の分解が正しく行われず、体内でグルタミン酸がたまりやすくなる可能性があります。DAO（D-amino Acid Oxidase）は、D-アミノ酸オキシダーゼという酵素をコードしています。この酵素は、D-型アミノ酸、特にD-セリンやD-グルタミン酸などを分解する役割を持ち、神経伝達物質の調節に関与します。",
@@ -68,7 +68,7 @@ const Gene103 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+133}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+142}</GenePageNumber>
     </PageWrapper>
   );
 };

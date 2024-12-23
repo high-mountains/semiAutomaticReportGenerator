@@ -12,7 +12,7 @@ import { updateDangerLevel } from "../Supplement/updateDangerValues.js";
 const initialGeneData = [
   {
     geneName: "SULT1A1",
-    datas: ["rs9282861", "rs1968752", "rs1042028", "rs1042157"],
+    datas: ["i6018900", "rs9282861", "rs1968752", "rs1042028", "rs1042157"],
     level: 0,
     description:
       "この遺伝子に変異がある場合、体内のフェノール類やホルモンの代謝が不十分となる可能性があります。SULT1A1（Sulfotransferase Family 1A Member 1）は、フェノール性化合物やホルモン、薬物に硫酸基を転移するスルホトランスフェラーゼ酵素をコードしています。この酵素は、主に肝臓で高く発現し、化合物の水溶性を高めて体外への排出を促進する役割を担います。",
@@ -57,7 +57,7 @@ const Gene48 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+86}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+87}</GenePageNumber>
     </PageWrapper>
   );
 };

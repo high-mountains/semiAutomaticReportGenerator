@@ -18,6 +18,13 @@ const initialGeneData = [
       "この遺伝子に変異がある場合、ホモシステイン代謝やメチオニンサイクルに影響を与える可能性があります。MTRR（Methionine Synthase Reductase）は、メチオニンシンターゼの活性を維持するための補助酵素で、MTRが反応を繰り返し行えるように再活性化する役割を持っています。MTRRは、ビタミンB12を必要とする反応を介してMTRの活性状態を維持し、ホモシステインの再メチル化とメチル供給において重要です。",
   },
   {
+    geneName: "TCN1",
+    datas: ["rs526934", "rs34324219"],
+    level: 0,
+    description:
+      "この遺伝子に変異がある場合、ビタミンB12の吸収や利用効率が低下する可能性があります。TCN1（Transcobalamin 1）は、コバラミン（ビタミンB12）を結合し、血中での輸送を助けるタンパク質であり、ハプトコリンとしても知られます。TCN1は、ビタミンB12が胃から小腸に運ばれる際に結合し、ビタミンB12の安定性を保つ役割を果たします。",
+  },
+  {
     geneName: "TCN2",
     datas: ["rs1801198", "rs1461973241", "rs9606756"],
     level: 0,
@@ -54,7 +61,7 @@ const Gene70 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+106}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+109}</GenePageNumber>
     </PageWrapper>
   );
 };

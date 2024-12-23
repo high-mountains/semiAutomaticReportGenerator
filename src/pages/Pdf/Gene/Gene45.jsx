@@ -12,14 +12,14 @@ import { updateDangerLevel } from "../Supplement/updateDangerValues.js";
 const initialGeneData = [
   {
     geneName: "GPX1",
-    datas: ["rs1050450"],
+    datas: ["rs3448", "rs1050450"],
     level: 0,
     description:
       "この遺伝子に変異がある場合、細胞内の過酸化物の除去能力が弱まる可能性があります。\nGPX1（Glutathione Peroxidase 1）は、抗酸化酵素であるグルタチオンペルオキシダーゼ1をコードしており、細胞内の過酸化水素や有機過酸化物をグルタチオンを用いて水やアルコールに還元する役割を果たします。",
   },
   {
     geneName: "GPX2",
-    datas: ["rs4902346"],
+    datas: ["rs2071566", "rs4902346"],
     level: 0,
     description:
       "この遺伝子に変異がある場合、酸化ストレスへの防御機能が減少し、腸の健康や免疫機能に影響を与える可能性があります。GPX2（Glutathione Peroxidase 2）は、腸管に多く発現するグルタチオンペルオキシダーゼ2という抗酸化酵素をコードしています。この酵素は、腸内で発生する過酸化物を還元して、酸化ストレスを軽減し、腸の上皮細胞を保護します。",
@@ -64,7 +64,7 @@ const Gene45 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+83}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+84}</GenePageNumber>
     </PageWrapper>
   );
 };
