@@ -100,7 +100,11 @@ const GenCategory = () => {
         { text: "神経伝達物質", tag: "神経伝達物質"},
         { text: "女性ホルモン", tag: "女性ホルモン"},
         { text: "腸内フローラ", tag: "腸内フローラ"},
-        { text: "鉛", tag: "鉛"}
+        { text: "鉛", tag: "鉛"},
+        { text: "ADHD", tag: "ADHD"},
+        { text: "BMI", tag: "BMI"},
+        { text: "トラウマ", tag: "トラウマ"},
+        { text: "夜更かし", tag: "夜更かし"},
     ]
 
     const [glutamateData, setGlutamateData] = useState(initialGlutamateData);
