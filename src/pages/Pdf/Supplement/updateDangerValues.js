@@ -32,50 +32,37 @@ export const updateDangerLevel = (data, geneData) => {
 
 export const processInitialData = (data) => {
     let updatedData = data;
-
     let i = 0;
-
     while (i < updatedData.length) {
-        const item = updatedData[i];
-
+        let item = updatedData[i];
+        let loopFlat = false;
         if (item?.tdContent?.danger === 0) {
             if (item.rowSpan && item.thContent) {
-                let originalSpan = item.rowSpan;
-                let calculatedOriginalSpan = originalSpan - 1;
-
-                let j = 1; // To keep track of the next index within the rowSpan bounds
-                while (j <= calculatedOriginalSpan) {
-                    const nextIndex = i + j;
-                    if (nextIndex >= updatedData.length) break; // Stop if out of bounds
-
-                    const nextItem = updatedData[nextIndex];
-                    console.log("nextIndex-->", nextIndex);
-                    console.log("nextItem-->", nextItem);
-
-                    if (!nextItem || nextItem?.tdContent?.danger === 0) {
-                        // Keep transferring rowSpan and thContent to the next valid item
-                        if (nextItem) {
-                            nextItem.rowSpan = (nextItem.rowSpan || 0) + item.rowSpan - 1;
-                            nextItem.thContent = item.thContent;
-                        }
-                        updatedData.splice(i, 1); // Remove current item
-                        break; // Exit the loop to avoid redundant processing
-                        // j++;
-                        // continue;
-                    } else if(nextItem && nextItem?.tdContent?.danger !== 0) {
-                        
+                let delta = 0;
+                const caledTempRowSpan = i + item.rowSpan - 1;
+                let flag = false;
+                for (let j = i + 1; j <= caledTempRowSpan; j++) {
+                    if (updatedData[j]?.tdContent?.danger === 0) {
+                        delta++;
+                        continue;
+                    } else if(updatedData[j]?.tdContent?.danger !== 0) {
+                        updatedData[j] = {
+                            ...updatedData[j],
+                            rowSpan: item.rowSpan - delta - 1,
+                            thContent: item.thContent
+                        };
+                        updatedData.splice(i, (delta + 1));
+                        loopFlat = true;
+                        flag = true;
+                        break;
                     }
-
-                    // Move rowSpan and thContent to the next valid item
-                    if (nextItem) {
-                        nextItem.rowSpan = (nextItem.rowSpan || 0) + calculatedOriginalSpan;
-                        nextItem.thContent = item.thContent;
-                    }
-
-                    updatedData.splice(i, 1);
-                    break;
                 }
-            } else if (item.thContent) {
+
+                if(!flag) {
+                    loopFlat = true;
+                    updatedData.splice(i, item?.rowSpan);
+                }
+            } else if (item.thContent && !item.rowSpan) {
                 // Reduce rowSpan and move rowSpan/thContent to the next valid element
                 let remainingSpan = item.rowSpan - 1;
                 let nextIndex = i + 1;
@@ -92,6 +79,7 @@ export const processInitialData = (data) => {
                 if (remainingSpan > 0) {
                     item.rowSpan = remainingSpan;
                 } else {
+                    loopFlat = true;
                     updatedData.splice(i, 1); // Remove element if rowSpan reaches 0
                     continue;
                 }
@@ -116,11 +104,16 @@ export const processInitialData = (data) => {
                 if (prevIndex >= 0) {
                     updatedData[prevIndex].rowSpan -= 1; // Reduce rowSpan of preceding element
                 }
+                loopFlat = true;
                 updatedData.splice(i, 1); // Remove current element
                 continue;
             }
         }
-        i++;
+        if(loopFlat) {
+
+        } else {
+            i++;
+        }
     }
 
     return updatedData;

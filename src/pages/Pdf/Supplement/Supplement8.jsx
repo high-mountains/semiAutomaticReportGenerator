@@ -132,7 +132,8 @@ const initialData = [
     },
     {
         tdContent: {
-            gen: "MTHFR\nA1298C",
+            disGen: "MTHFR\nA1298C",
+            gen: "MTHFR A1298C",
             danger: "-",
             description:
                 "NAD+（補因子）, NADPH（補因子）, 5MTHF, ビタミンB6, メチルビタミンB12",
@@ -140,7 +141,8 @@ const initialData = [
     },
     {
         tdContent: {
-            gen: "MTHFR\nC677T",
+            disGen: "MTHFR\nC677T",
+            gen: "MTHFR C677T",
             danger: "-",
             description:
                 "NAD+（補因子）, NADPH（補因子）, 5MTHF, ビタミンB6, メチルビタミンB12",

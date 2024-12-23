@@ -40,7 +40,7 @@ const TableNew = (props) => {
                                     <span>{item.thContent.sub}</span>
                                 </p>
                             </td>)}
-                            <td className="text-center"><p style={renderedPdfFlag}>{item.tdContent.gen}</p></td>
+                            <td className="text-center"><p style={renderedPdfFlag}>{item.tdContent.disGen ?item.tdContent.disGen : item.tdContent.gen}</p></td>
                             <td className="text-center flexs" style={{
                                         color:
                                         item.tdContent.danger !== 0
