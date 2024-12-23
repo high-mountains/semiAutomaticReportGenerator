@@ -3,7 +3,7 @@ import PageWrapper from "../../../components/Pdf/PageWrapper";
 import PageNumber from "../../../components/Pdf/PageNumber";
 import TableNew from "../../../components/Pdf/Supplements/TableNew";
 import { useSelector } from "react-redux";
-import {updateDangerValues} from "./updateDangerValues.js";
+import {updateDangerValues, processInitialData} from "./updateDangerValues.js";
 
 const initialData = [
     {
@@ -13,7 +13,7 @@ const initialData = [
         },
         tdContent: {
             gen: "DRD4",
-            danger: 0,
+            danger: "-",
             description:
                 "L-チロシン, オメガ3, ビタミンB6, ビタミンD, フォスファチジルコリン, マグネシウム",
         },
@@ -26,14 +26,14 @@ const initialData = [
         },
         tdContent: {
             gen: "HTR2A",
-            danger: 0,
+            danger: "-",
             description: "5-HTP, オメガ3",
         },
     },
     {
         tdContent: {
             gen: "MAOA",
-            danger: 0,
+            danger: "-",
             description:
                 "リボフラビン（補因子）, ビタミンB2, ビタミンB6, ビタミンB12, フォレート, マグネシウム",
         },
@@ -45,7 +45,7 @@ const initialData = [
         },
         tdContent: {
             gen: "HDC",
-            danger: 0,
+            danger: "-",
             description: "P5P（補因子）, NAC, ケルセチン",
         },
     },
@@ -57,7 +57,7 @@ const initialData = [
         },
         tdContent: {
             gen: "ALDH2",
-            danger: 0,
+            danger: "-",
             description:
                 "NAC, クルクミン, ビタミンB群, ビタミンC, レスベラトロール",
             etc: "アルコール",
@@ -66,7 +66,7 @@ const initialData = [
     {
         tdContent: {
             gen: "MAOA",
-            danger: 0,
+            danger: "-",
             description:
                 "リボフラビン（補因子）, ビタミンB2, ビタミンB6, ビタミンB12, フォレート, マグネシウム",
         },
@@ -74,7 +74,7 @@ const initialData = [
     {
         tdContent: {
             gen: "MAOB",
-            danger: 0,
+            danger: "-",
             description:
                 "ビタミンB2, ビタミンB6, ビタミンB12, フォレート, マグネシウム",
         },
@@ -82,7 +82,7 @@ const initialData = [
     {
         tdContent: {
             gen: "ABP1",
-            danger: 0,
+            danger: "-",
             description:
                 "ビタミンB6（補因子）, 銅（補因子）, DAO酵素, ケルセチン, ビタミンD",
             etc: "ヒスタミン",
@@ -91,7 +91,7 @@ const initialData = [
     {
         tdContent: {
             gen: "HNMT",
-            danger: 0,
+            danger: "-",
             description:
                 "SAMe（補因子）, ケルセチン, ビタミンB6, マグネシウム, メチルビタミンB12, メチルフォレート",
             etc: "ヒスタミン",
@@ -100,7 +100,7 @@ const initialData = [
     {
         tdContent: {
             gen: "NAT2",
-            danger: 0,
+            danger: "-",
             description:
                 "アセチルコエンザイムA（補因子）, NAC, クミン, スルフォラファン",
             etc: "ヒスタミン",
@@ -109,7 +109,7 @@ const initialData = [
     {
         tdContent: {
             gen: "ADH1B",
-            danger: 0,
+            danger: "-",
             description: "NAC, クルクミン, ビタミンB群, ビタミンC",
             etc: "アルコール",
         },
@@ -117,28 +117,37 @@ const initialData = [
     {
         tdContent: {
             gen: "CYP21A2",
-            danger: 0,
+            danger: "-",
             description:
                 "NAD+（補因子）, ヘム（補因子）, マグネシウム（補因子）, αリポ酸, アシュワガンダ, ビタミンB群, 亜鉛",
         },
     },
     {
-        rowSpan: 3,
+        rowSpan: 4,
         thContent: {
             main: "ヒスタミン受容体",
             sub: "アレルギー反応や覚醒に影響する物質の感度に関わる",
         },
         tdContent: {
             gen: "HRH1",
-            danger: 0,
+            danger: "-",
             description: "NAC, オメガ3, ケルセチン, マグネシウム",
             etc: "ヒスタミン",
         },
     },
     {
         tdContent: {
+            gen: "HRH2",
+            danger: "-",
+            description:
+                "オメガ3, プロバイオティクス, マグネシウム, 亜鉛, 甘草",
+            etc: "ヒスタミン",
+        },
+    },
+    {
+        tdContent: {
             gen: "HRH3",
-            danger: 0,
+            danger: "-",
             description:
                 "L-テアニン, オメガ3, ビタミンB群, フォスファチジルセリン, ロディオラ",
             etc: "ヒスタミン",
@@ -147,7 +156,7 @@ const initialData = [
     {
         tdContent: {
             gen: "HRH4",
-            danger: 0,
+            danger: "-",
             description:
                 "オメガ3, クルクミン, ケルセチン, ビタミンD, マグネシウム",
             etc: "ヒスタミン",
@@ -161,7 +170,7 @@ const initialData = [
         },
         tdContent: {
             gen: "ACAT1",
-            danger: 0,
+            danger: "-",
             description:
                 "コエンザイムA（補因子）, L-カルニチン, MCTオイル, αリポ酸, オメガ3",
         },
@@ -169,28 +178,28 @@ const initialData = [
     {
         tdContent: {
             gen: "ACAT2",
-            danger: 0,
+            danger: "-",
             description: "αリポ酸, オメガ3, ビタミンE, レスベラトロール",
         },
     },
     {
         tdContent: {
             gen: "ATP5F1A",
-            danger: 0,
+            danger: "-",
             description: "CoQ10, L-カルニチン, NAD+, αリポ酸, ビタミンB群",
         },
     },
     {
         tdContent: {
             gen: "ATP5F1E",
-            danger: 0,
+            danger: "-",
             description: "CoQ10, NAD+, ビタミンB群, リボフラビン",
         },
     },
     {
         tdContent: {
             gen: "COQ2",
-            danger: 0,
+            danger: "-",
             description:
                 "CoQ10, L-カルニチン, NAD+, αリポ酸, ビタミンB6, リボフラビン",
         },
@@ -198,7 +207,7 @@ const initialData = [
     {
         tdContent: {
             gen: "COQ3",
-            danger: 0,
+            danger: "-",
             description:
                 "CoQ10, L-カルニチン, NAD+, αリポ酸, ビタミンB6, リボフラビン",
         },
@@ -210,8 +219,9 @@ const Supplement2 = ({deltaPageCount}) => {
 
     // Memoized updated data
     const updatedTableData = useMemo(() => {
-        return updateDangerValues(initialData, geneData || []);
-    }, [geneData]);
+        const updatedData = updateDangerValues(initialData, geneData || []);
+        return processInitialData(updatedData);
+      }, [geneData]);
     return (
         <PageWrapper>
             <TableNew tBody={updatedTableData} />

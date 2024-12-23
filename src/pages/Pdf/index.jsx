@@ -145,25 +145,25 @@ const Pdf = () => {
 
                 <div className="pdfcontainer py-[20rem]">
                     <div className="pdfwrapper">
-                        <Page1 />
-                        <Page2 extraSupplementsLength={extraSupplements.length}/>
+                        {/* <Page1 /> */}
+                        {/* <Page2 extraSupplementsLength={extraSupplements.length}/>
                         <Page3 />
                         <Page4 />
-                        <TypeByType />
-                        <GenCategory />
+                        <TypeByType /> */}
+                        {/* <GenCatesgory /> */}
                         {/* Pass `isFirstPage` to the first Supplement */}
-                        <Supplement key={0} onExceedHeight={handleExtraPage} isFirstPage={ true } pageNum={24} />
+                        {/* <Supplement key={0} onExceedHeight={handleExtraPage} isFirstPage={ true } pageNum={24} />
                         {extraSupplements.map((data, index) => (
                             <Supplement onExceedHeight={handleExtraPage} key={index + 1} supplementalData={data} isFirstPage={false} pageNum={25 + index}/>
                         ))}
                         <SupplementNot key={100} onExceedHeight={handleExtraPageForUnSupplement} isFirstPage={true} pageNum={extraSupplements.length ? 25 + extraSupplements.length : 25}/>
                         {extraSupplementsForUnSupplement.map((data, index) => (
                             <SupplementNot onExceedHeight={handleExtraPageForUnSupplement} key={index + 100} unsupplementalData={data} isFirstPage={false}  pageNum={26 + extraSupplements.length + index}/>
-                        ))}
+                        ))} */}
                         <SupplementTable />
                         <GeneInformationList />
-                        <References />
-                        <Pathway />
+                        {/* <References /> */}
+                        {/* <Pathway /> */}
                     </div>
                 </div>
             </>

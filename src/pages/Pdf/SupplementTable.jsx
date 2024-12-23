@@ -14,6 +14,7 @@ import Supplement11 from "./Supplement/Supplement11.jsx";
 import Supplement12 from "./Supplement/Supplement12.jsx";
 import Supplement13 from "./Supplement/Supplement13.jsx";
 import Supplement14 from "./Supplement/Supplement14.jsx";
+import Supplement15 from "./Supplement/Supplement15.jsx";
 
 const SupplementTable = () => {
     const [deltaPageCount, setDeltaPageCount] = useState(
@@ -30,7 +31,7 @@ const SupplementTable = () => {
             <Supplement1 deltaPageCount={deltaPageCount} />
             <Supplement2 deltaPageCount={deltaPageCount} />
             <Supplement3 deltaPageCount={deltaPageCount} />
-            <Supplement4 deltaPageCount={deltaPageCount} />
+            <Supplement4 deltaPageCount={deltaPageCount} /> 
             <Supplement5 deltaPageCount={deltaPageCount} />
             <Supplement6 deltaPageCount={deltaPageCount} />
             <Supplement7 deltaPageCount={deltaPageCount} />
@@ -41,6 +42,7 @@ const SupplementTable = () => {
             <Supplement12 deltaPageCount={deltaPageCount} />
             <Supplement13 deltaPageCount={deltaPageCount} />
             <Supplement14 deltaPageCount={deltaPageCount} />
+            <Supplement15 deltaPageCount={deltaPageCount} />
         </>
     );
 };

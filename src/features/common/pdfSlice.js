@@ -112,7 +112,6 @@ export const pdfDataSlice = createSlice({
       state.unsupplementedData = unsupplementedData;
 
       const geneData = payload.find(file => file.fileName === "gene_data.csv").data;
-      // console.log("geneData in store==>", geneData);
       state.geneData = geneData;
 
       const userData = payload.find(file => file.fileName === "user_data.csv").data[0];
@@ -124,7 +123,6 @@ export const pdfDataSlice = createSlice({
 
   extraReducers: {
     [setPdfFlag.pending]: (state, {payload}) => {
-      // state.isLoading = true;
       state.pdfFlag = payload;
     },
     [setPdfFlag.fulfilled]: (state, { payload }) => {
@@ -138,9 +136,6 @@ export const pdfDataSlice = createSlice({
     [setCurrentRunningPage.fulfilled]: (state, {payload}) => {
       state.currentRunningPage = payload;
     },
-    // [setCurrentRunningPage.rejected]: (state, {payload}) => {
-    //   state.currentRunningPage = payload;
-    // },
     
     [setTotalPage.fulfilled]: (state, {payload}) => {
       state.totalPage = payload;

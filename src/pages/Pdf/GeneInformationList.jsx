@@ -21,7 +21,7 @@ const GeneInformationList = () => {
                 const Gene = React.lazy(() => import(`./Gene/Gene${num}.jsx`)); // Dynamically import components
                 return (
                     <React.Suspense fallback={<div style={{fontSize: 16}}>Loading Gene{num}...</div>} key={num}>
-                        <Gene deltaPageCount={deltaPageCount}/>
+                        <Gene deltaPageCount={deltaPageCount+1}/>
                     </React.Suspense>
                 );
             })}

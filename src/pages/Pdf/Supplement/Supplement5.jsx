@@ -3,42 +3,45 @@ import PageWrapper from "../../../components/Pdf/PageWrapper";
 import PageNumber from "../../../components/Pdf/PageNumber";
 import TableNew from "../../../components/Pdf/Supplements/TableNew";
 import { useSelector } from "react-redux";
-import { updateDangerValues } from "./updateDangerValues.js";
+import {
+    updateDangerValues,
+    processInitialData,
+} from "./updateDangerValues.js";
 
 const initialData = [
     {
-        rowSpan: 7,
+        rowSpan: 9,
         thContent: {
             main: "栄養",
             sub: "身体の機能維持と成長に必要なエネルギーや物質を供給する",
         },
         tdContent: {
-            gen: "ACAT1",
-            danger: 0,
+            gen: "ADRA2A",
+            danger: "-",
             description:
-                "コエンザイムA（補因子）, L-カルニチン, MCTオイル, αリポ酸, オメガ3",
+                "GABA, L-チロシン, アシュワガンダ, ビタミンB群, マグネシウム",
         },
     },
     {
-        tdContent: {
-            gen: "ACAT2",
-            danger: 0,
-            description: "αリポ酸, オメガ3, ビタミンE, レスベラトロール",
-        },
-    },
-    {
-        trHeight: 28,
         tdContent: {
             gen: "BCMO1",
-            danger: 0,
+            danger: "-",
             description: "鉄（補因子）, ビタミンA, ビタミンC, ビタミンE, 亜鉛",
         },
     },
     {
         trHeight: 28,
         tdContent: {
+            gen: "CHKA",
+            danger: "-",
+            description: "ATP（補因子）, オメガ3, ビタミンB群, ベタイン, ホスファチジルコリン",
+        },
+    },
+    {
+        trHeight: 28,
+        tdContent: {
             gen: "ELOVL2",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, コエンザイムA（補因子）, CoQ10, L-カルニチン, オメガ3, ビタミンB3, ビタミンE, 亜鉛",
         },
@@ -46,16 +49,33 @@ const initialData = [
     {
         trHeight: 28,
         tdContent: {
+            gen: "PEMT",
+            danger: "-",
+            description: "SAMe（補因子）, ビタミンB6, フォスファチジルコリン, ベタイン, メチルビタミンB12, メチルフォレート",
+        },
+    },
+    {
+        trHeight: 28,
+        tdContent: {
             gen: "SELENOS",
-            danger: 0,
+            danger: "-",
             description: "セレン（補因子）, CoQ10, グルタチオン, ビタミンE",
         },
     },
     {
         trHeight: 28,
         tdContent: {
+            gen: "SLC30A3",
+            danger: "-",
+            description:
+                "亜鉛（補因子）, ビタミンB6, ビタミンC, ビタミンE, マグネシウム",
+        },
+    },
+    {
+        trHeight: 28,
+        tdContent: {
             gen: "SLC39A14",
-            danger: 0,
+            danger: "-",
             description:
                 "亜鉛（基質）, ビタミンB6, ビタミンC, マグネシウム, マンガン",
         },
@@ -64,7 +84,7 @@ const initialData = [
         trHeight: 28,
         tdContent: {
             gen: "VDR",
-            danger: 0,
+            danger: "-",
             description:
                 "カルシウム, ビタミンD, ビタミンK2, マグネシウム, 亜鉛",
             etc: "ビタミンD",
@@ -78,7 +98,7 @@ const initialData = [
         },
         tdContent: {
             gen: "CAT",
-            danger: 0,
+            danger: "-",
             description:
                 "NAC, SOD, グルタチオン, セレン, ビタミンC, ビタミンE, レスベラトロール",
             etc: "BPA, フリーラジカル",
@@ -88,7 +108,7 @@ const initialData = [
         trHeight: 29,
         tdContent: {
             gen: "SOD2",
-            danger: 0,
+            danger: "-",
             description:
                 "マンガン（補因子）, NAC, グルタチオン, ビタミンC, ビタミンE",
             etc: "BPA, フリーラジカル",
@@ -98,7 +118,7 @@ const initialData = [
         trHeight: 29,
         tdContent: {
             gen: "SULT1A1",
-            danger: 0,
+            danger: "-",
             description:
                 "MSM, NAC, ビタミンB6, ビタミンB12, ビタミンB群, フォレート, メチルフォレート",
             etc: "BPA, フリーラジカル",
@@ -108,7 +128,7 @@ const initialData = [
         trHeight: 29,
         tdContent: {
             gen: "UGT1A1",
-            danger: 0,
+            danger: "-",
             description:
                 "NAC, カルシウムDグルカル酸, グルタチオン, ビタミンD, 胆汁サプリメント",
             etc: "BPA, 環境毒",
@@ -118,7 +138,7 @@ const initialData = [
         trHeight: 29,
         tdContent: {
             gen: "UGT2B15",
-            danger: 0,
+            danger: "-",
             description:
                 "NAC, カルシウムDグルカル酸, グルタチオン, ビタミンD, 胆汁サプリメント",
             etc: "BPA, 環境毒",
@@ -128,7 +148,7 @@ const initialData = [
         trHeight: 29,
         tdContent: {
             gen: "COX2",
-            danger: 0,
+            danger: "-",
             description:
                 "EPA, NAC, αリポ酸, カテキン, クルクミン, グルタチオン",
             etc: "BPA, フリーラジカル",
@@ -141,7 +161,7 @@ const initialData = [
         },
         tdContent: {
             gen: "NQO1",
-            danger: 0,
+            danger: "-",
             description:
                 "NAD+（補因子）, NAC, αリポ酸, クルクミン, グルタチオン, ケルセチン, レスベラトロール",
         },
@@ -153,7 +173,7 @@ const initialData = [
         },
         tdContent: {
             gen: "PON1",
-            danger: 0,
+            danger: "-",
             description:
                 "NAD+, オメガ3, カルシウム, ビタミンC, ビタミンD, ビタミンE",
             etc: "有機リン系農薬",
@@ -161,14 +181,14 @@ const initialData = [
     },
     {
         trHeight: 28,
-        rowSpan: 4,
+        rowSpan: 5,
         thContent: {
             main: "フタル酸エステル",
             sub: "プラスチック製品に含まれる化学物質で、内分泌システムにかく乱作用に影響するホルモン調節に関わる",
         },
         tdContent: {
             gen: "CYP2B6",
-            danger: 0,
+            danger: "-",
             description:
                 "NADPH（補因子）, ヘム（補因子）, EGCG, NAC, グルタチオン, スルフォラファン",
             etc: "喫煙",
@@ -177,8 +197,16 @@ const initialData = [
     {
         trHeight: 29,
         tdContent: {
+            gen: "GSTM1",
+            danger: "-",
+            description: "グルタチオン（基質）, NAC, αリポ酸, クミン, スルフォラファン",
+        },
+    },
+    {
+        trHeight: 29,
+        tdContent: {
             gen: "GSTP1",
-            danger: 0,
+            danger: "-",
             description: "NAC, クレイ, クロレラ, グルタチオン",
         },
     },
@@ -186,7 +214,7 @@ const initialData = [
         trHeight: 29,
         tdContent: {
             gen: "HSPA1L",
-            danger: 0,
+            danger: "-",
             description:
                 "NAC, αリポ酸, アシュワガンダ, オメガ3, レスベラトロール",
         },
@@ -195,7 +223,7 @@ const initialData = [
         trHeight: 29,
         tdContent: {
             gen: "SOD2",
-            danger: 0,
+            danger: "-",
             description:
                 "マンガン（補因子）, NAC, グルタチオン, ビタミンC, ビタミンE",
             etc: "BPA, フリーラジカル",
@@ -207,7 +235,8 @@ const Supplement5 = ({ deltaPageCount }) => {
     const geneData = useSelector((state) => state.pdfData.geneData);
 
     const updatedTableData = useMemo(() => {
-        return updateDangerValues(initialData, geneData || []);
+        const updatedData = updateDangerValues(initialData, geneData || []);
+        return processInitialData(updatedData);
     }, [geneData]);
 
     return (
