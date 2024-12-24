@@ -51,11 +51,11 @@ const Gene96 = ({deltaPageCount}) => {
 
   return (
     <PageWrapper>
-      <Text
+      {/* <Text
         sidebar={1}
         textContent={"炎症ON"}
         containerStyle={{ marginBottom: "10rem" }}
-      />
+      /> */}
 
       {/* Render each gene information dynamically */}
       {updatedGeneData.map((item, index) => (
