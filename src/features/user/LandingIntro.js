@@ -53,7 +53,7 @@ function LandingIntro() {
                         }}
                     >
                         <img
-                            src="./bg/DNA_login_logo_f.png"
+                            src="./bg/version2_banner.png"
                             alt="Dashwind Admin Template"
                             style={{
                                 width: "90%",
