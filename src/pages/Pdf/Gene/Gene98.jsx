@@ -37,6 +37,15 @@ const initialGeneData = [
     description:
       "この遺伝子に変異がある場合、免疫系の調整に影響を及ぼす可能性があります。SOCS1は、サイトカインシグナル抑制因子で、特定のサイトカインシグナルを負のフィードバックで調節するタンパク質です。SOCS1は、主にJAK-STAT経路の活性化を抑制し、炎症応答や免疫細胞の過剰な活性化を防ぎます。",
   },
+  {
+    geneName: "STAT4",
+    datas: [
+      "rs10181656",
+    ],
+    level: 0,
+    description:
+      "この遺伝子に変異がある場合、炎症シグナル伝達の調整が不十分となる可能性があります。STAT4は、サイトカインシグナルを細胞内で伝達する転写因子で、特にIL12やIL23シグナルを介してT細胞の分化を促進します。STAT4の活性化は、Th1型免疫応答の誘導や炎症性サイトカインの発現を調節し、細胞性免疫の応答に重要な役割を果たします。",
+  },
 ];
 
 const Gene98 = ({deltaPageCount}) => {
@@ -67,7 +76,7 @@ const Gene98 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+128}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+137}</GenePageNumber>
     </PageWrapper>
   );
 };

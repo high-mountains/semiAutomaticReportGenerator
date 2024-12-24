@@ -11,7 +11,10 @@ import { updateDangerLevel } from "../Supplement/updateDangerValues.js";
 const initialGeneData = [
   {
     geneName: "UGT1A6",
-    datas: ["rs1105879", "rs1105880", "rs17863783"],
+    datas: [
+      "rs3806597", "rs11891311", "rs6759892", "rs2070959", "rs1042708", 
+      "rs1105879", "rs1105880", "rs17863783"
+    ],
     level: 0,
     description:
       "この遺伝子に変異がある場合、フェノール類や他の有害化学物質のグルクロン酸抱合が低下する可能性があります。UGT1A6（UDP Glucuronosyltransferase Family 1 Member A6）は、フェノール性化合物や環境毒素に対してグルクロン酸を転移し、解毒や排泄を助ける酵素をコードしています。",
@@ -47,7 +50,7 @@ const Gene51 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+89}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+90}</GenePageNumber>
     </PageWrapper>
   );
 };

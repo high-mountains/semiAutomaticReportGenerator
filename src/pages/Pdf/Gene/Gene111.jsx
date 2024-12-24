@@ -47,7 +47,7 @@ const Gene111 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+144}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+150}</GenePageNumber>
     </PageWrapper>
   );
 };

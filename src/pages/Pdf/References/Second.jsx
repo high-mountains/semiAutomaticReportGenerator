@@ -38,7 +38,7 @@ const Second = () => {
                 fontSize={12}
             />
             <PageNumber>
-                {deltaPageCount+143}
+                {deltaPageCount+159}
             </PageNumber>
         </PageWrapper>
     );

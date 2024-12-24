@@ -37,6 +37,8 @@ const initialGeneData = [
     {
         geneName: "DAO",
         datas: [
+            "rs3741775",
+            "rs2070586",
             "rs2111902"
         ],
         level: 0,

@@ -11,6 +11,20 @@ import { updateDangerLevel } from "../Supplement/updateDangerValues.js";
 // Centralized initial gene data
 const initialGeneData = [
   {
+    geneName: "GSTM1",
+    datas: ["rs366631"],
+    level: 0,
+    description:
+      "この遺伝子に変異がある場合、マイコトキシンへの解毒能力が不十分となる可能性があります。\nGSTM1（Glutathione S-Transferase Mu 1）は、グルタチオンS-トランスフェラーゼ（GST）ファミリーに属し、グルタチオンを用いて有害物質や環境毒素を無毒化する酵素です。GSTM1は、肝臓をはじめとする解毒に重要な組織で発現し、特に発がん性物質や毒素の解毒に特化しています。",
+  },
+  {
+    geneName: "GSTP1",
+    datas: ["rs1695"],
+    level: 0,
+    description:
+      "この遺伝子に変異がある場合、マイコトキシンの代謝と解毒能力が不十分となる可能性があります。\nGSTP1（Glutathione S-Transferase Pi 1）は、主に腫瘍抑制と酸化ストレス防御に関与するGSTファミリーの酵素です。この酵素は、グルタチオンと結合して有害物質を解毒し、細胞を酸化ストレスや発がん性物質から保護します。",
+  },
+  {
     geneName: "SLCO1B1",
     datas: ["rs4149056"],
     level: 0,
@@ -50,7 +64,7 @@ const Gene44 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+82}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+83}</GenePageNumber>
     </PageWrapper>
   );
 };

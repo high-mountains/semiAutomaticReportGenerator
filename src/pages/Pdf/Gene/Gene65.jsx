@@ -12,7 +12,7 @@ import { updateDangerLevel } from "../Supplement/updateDangerValues.js";
 const initialGeneData = [
   {
     geneName: "CAT",
-    datas: ["rs7943316"],
+    datas: ["rs769217", "rs1001179", "rs7943316"],
     level: 0,
     description:
       "この遺伝子に変異がある場合、過酸化水素の分解が不十分となり、酸化ストレスに対する体内の防御が弱まる可能性があります。CAT（Catalase）は、カタラーゼという抗酸化酵素をコードしています。この酵素は、細胞内で過酸化水素を水と酸素に分解する反応を触媒し、酸化ストレスから細胞を保護する役割を果たします。",
@@ -69,7 +69,7 @@ const Gene65 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+101}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+104}</GenePageNumber>
     </PageWrapper>
   );
 };

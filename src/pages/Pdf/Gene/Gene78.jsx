@@ -12,7 +12,7 @@ import { updateDangerLevel } from "../Supplement/updateDangerValues.js";
 const initialGeneData = [
   {
     geneName: "FN1",
-    datas: ["rs116558455", "rs140926439"],
+    datas: ["rs1250229", "rs116558455", "rs140926439"],
     level: 0,
     description:
       "この遺伝子に変異がある場合、組織の修復や細胞の移動、血管の形成などに影響を与える可能性があります。FN1（Fibronectin 1）は、細胞外マトリックスの主要構成要素であるフィブロネクチンをコードしており、細胞接着、成長、移動、組織の修復などにおいて中心的な役割を果たします。FN1は、細胞外マトリックスの形成とリモデリングに関わり、組織の再生や創傷治癒に寄与しています。",
@@ -47,7 +47,7 @@ const Gene78 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+114}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+117}</GenePageNumber>
     </PageWrapper>
   );
 };

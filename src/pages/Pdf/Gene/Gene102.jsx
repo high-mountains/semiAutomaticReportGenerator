@@ -13,6 +13,7 @@ const initialGeneData = [
   {
     geneName: "BCHE",
     datas: [
+      "rs2668207",
       "rs1803274",
       "rs1799807",
       "rs28933389",
@@ -53,7 +54,7 @@ const Gene102 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+132}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+141}</GenePageNumber>
     </PageWrapper>
   );
 };

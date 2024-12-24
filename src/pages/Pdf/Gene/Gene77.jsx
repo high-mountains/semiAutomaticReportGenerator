@@ -12,7 +12,7 @@ import { updateDangerLevel } from "../Supplement/updateDangerValues.js";
 const initialGeneData = [
   {
     geneName: "DCDC2",
-    datas: ["rs807701"],
+    datas: ["rs793862", "rs807701"],
     level: 0,
     description:
       "この遺伝子に変異がある場合、脳の発達に関与する神経細胞の移動や配置に影響を及ぼす可能性があります。DCDC2（Doublecortin Domain Containing 2）は、神経発達に関与するタンパク質をコードしており、特に脳内で神経細胞の移動や配列に関わっています。DCDC2は、読字や言語処理能力と関連があるとされ、遺伝的変異が言語や読字能力に影響を及ぼす可能性が指摘されています。",
@@ -54,7 +54,7 @@ const Gene77 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+113}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+116}</GenePageNumber>
     </PageWrapper>
   );
 };

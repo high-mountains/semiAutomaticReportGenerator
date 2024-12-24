@@ -36,7 +36,7 @@ const initialGeneData = [
   },
   {
     geneName: "CYP2C19",
-    datas: ["rs6413438", "rs55752064"],
+    datas: ["rs113164681", "rs140278421", "rs12248560", "rs6413438", "rs55752064"],
     level: 0,
     description:
       "この遺伝子に変異がある場合、特定の薬物の代謝が遅くなる可能性があります。CYP2C19（Cytochrome P450 Family 2 Subfamily C Member 19）は、プロトンポンプ阻害薬や抗うつ薬など、さまざまな薬物の代謝を担う酵素です。CYP2C19も主に肝臓で発現し、化合物の酸化による解毒と排泄を助けます。",
@@ -65,7 +65,7 @@ const Gene74 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+110}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+113}</GenePageNumber>
     </PageWrapper>
   );
 };

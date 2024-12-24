@@ -19,7 +19,7 @@ const initialGeneData = [
   {
     geneName: "SLC39A14",
     datas: [
-      "rs121909791", "rs121909798", "rs121909799", "rs121909792", "rs121909800", "rs121909793", "rs121909790"
+      "rs879253763"
     ],
     level: 0,
     description:
@@ -27,7 +27,10 @@ const initialGeneData = [
   },
   {
     geneName: "VDR",
-    datas: ["rs12325817"],
+    datas: [
+      "rs121909791", "rs121909798", "rs121909799", "rs121909792", 
+      "rs121909800", "rs121909793", "rs121909790"
+    ],
     level: 0,
     description:
       "この遺伝子に変異がある場合、カルシウム吸収や骨の健康、免疫調整に影響を与える可能性があります。VDR（Vitamin D Receptor）は、ビタミンD受容体をコードしています。この受容体は、ビタミンDが結合することで活性化され、カルシウムとリンの代謝を調節するための遺伝子発現を誘導します。",
@@ -56,7 +59,7 @@ const Gene37 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+Gene37}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+76}</GenePageNumber>
     </PageWrapper>
   );
 };

@@ -19,7 +19,7 @@ const initialGeneData = [
   },
   {
     geneName: "GABRA2",
-    datas: ["rs279871"],
+    datas: ["rs279871", "rs279858"],
     level: 0,
     description:
       "この遺伝子に変異がある場合、GABA受容体の機能が低下し、興奮と抑制のバランスが崩れる可能性があります。GABRA2（Gamma-Aminobutyric Acid Type A Receptor Subunit Alpha2）は、GABRA2受容体のα2サブユニットをコードしています。このサブユニットは、特定の脳領域で発現が多く、GABRA2受容体の構造に組み込まれて、神経抑制作用を担います。α2サブユニットは、GABAの作用を受けて神経伝達の抑制的な制御に寄与し、神経の過剰な興奮を抑える役割を持ちます。",

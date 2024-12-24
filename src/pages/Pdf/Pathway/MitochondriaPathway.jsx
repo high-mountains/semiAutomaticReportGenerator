@@ -31,7 +31,7 @@ const MitochondriaPathway = ({deltaPageCount}) => {
                 fontSize={9}
                 className={"whitespace-pre-wrap mt-[25rem] color-[#484F51]"}
             />
-            <PageNumber>{145+deltaPageCount}</PageNumber>
+            <PageNumber>{161+deltaPageCount}</PageNumber>
         </PageWrapper>
     );
 };

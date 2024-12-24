@@ -10,20 +10,32 @@ import { updateDangerLevel } from "../Supplement/updateDangerValues.js";
 // Centralized initial gene data
 const initialGeneData = [
   {
-    geneName: "SLC39A14",
-    datas: ["rs879253763"],
+    geneName: "CHKA",
+    datas: ["rs10791957"],
     level: 0,
     description:
-      "この遺伝子に変異がある場合、鉄やマンガンの細胞内取り込みに問題が生じる可能性があります。\nSLC39A14（Solute Carrier Family 39 Member 14）は、亜鉛およびマンガンの輸送体をコードしており、細胞外から細胞内への金属イオンの取り込みを促進します。",
+      "この遺伝子に変異がある場合、コリンの代謝や細胞膜リン脂質の合成が低下する可能性があります。\nCHKA（Choline Kinase Alpha）は、コリンキナーゼαという酵素をコードしており、コリンをホスホコリンに変換する反応を触媒します。",
   },
   {
-    geneName: "VDR",
-    datas: [
-      "rs121909791", "rs121909798", "rs121909799", "rs121909792", "rs121909800", "rs121909793", "rs121909790"
-    ],
+    geneName: "ELOVL2",
+    datas: ["rs953413"],
     level: 0,
     description:
-      "この遺伝子に変異がある場合、カルシウム吸収や骨の健康、免疫調整に影響を与える可能性があります。VDR（Vitamin D Receptor）は、ビタミンD受容体をコードしています。この受容体は、ビタミンDが結合することで活性化され、カルシウムとリンの代謝を調節するための遺伝子発現を誘導します。",
+      "この遺伝子に変異がある場合、長鎖不飽和脂肪酸の合成が阻害される可能性があります。ELOVL2（Elongation of Very Long Chain Fatty Acids Protein 2）は、非常に長鎖の脂肪酸を延長する酵素をコードしています。この酵素は、脂肪酸合成経路において、特に長鎖ポリ不飽和脂肪酸（PUFA）の生成に関与し、細胞膜の構造や機能、シグナル伝達に重要です。",
+  },
+  {
+    geneName: "PEMT",
+    datas: ["rs12325817"],
+    level: 0,
+    description:
+      "この遺伝子に変異がある場合、肝臓の脂質代謝に影響を与える可能性があります。PEMT（Phosphatidylethanolamine N-Methyltransferase）は、ホスファチジルエタノールアミンN-メチルトランスフェラーゼという酵素をコードしています。この酵素は、ホスファチジルエタノールアミンをホスファチジルコリンに変換する反応を触媒し、肝臓でのホスファチジルコリンの内因性合成に関わります。",
+  },
+  {
+    geneName: "SELENOS",
+    datas: ["rs34713741", "rs28665122", "rs28665122"],
+    level: 0,
+    description:
+      "この遺伝子に変異がある場合、抗酸化作用を持つセレンタンパク質の機能が低下する可能性があります。SELENOS（Selenoprotein S）は、セレノプロテインSをコードしており、細胞内の小胞体に存在して、タンパク質の品質管理とストレス応答に関与します。SELENOSは、異常なタンパク質の分解をサポートし、炎症反応の調節にも寄与しています。",
   },
 ];
 

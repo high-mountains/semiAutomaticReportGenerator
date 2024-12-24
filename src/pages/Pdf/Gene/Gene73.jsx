@@ -19,7 +19,7 @@ const initialGeneData = [
   },
   {
     geneName: "CYP1A2",
-    datas: ["rs72547517", "rs72547515"],
+    datas: ["rs762551", "rs12720461", "rs72547517", "rs72547515"],
     level: 0,
     description:
       "この遺伝子に変異がある場合、カフェインや特定の薬物の代謝が遅くなる可能性があります。CYP1A2（Cytochrome P450 Family 1 Subfamily A Member 2）は、主に肝臓で発現するシトクロムP450酵素で、カフェインや特定の薬物、環境毒素の代謝に関与しています。",
@@ -68,7 +68,7 @@ const Gene73 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+109}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+112}</GenePageNumber>
     </PageWrapper>
   );
 };

@@ -13,7 +13,8 @@ const initialGeneData = [
   {
     geneName: "PON1",
     datas: [
-      "rs854560", "rs854571", "rs662", "rs854555", "rs854552"
+      "rs854569", "rs854566", "rs854570", "rs854572", "rs854560", 
+      "rs854571", "rs662", "rs854555", "rs854552"
     ],
     level: 0,
     description:
@@ -45,7 +46,7 @@ const Gene40 = ({deltaPageCount}) => {
         />
       ))}
 
-      <GenePageNumber>{deltaPageCount+78}</GenePageNumber>
+      <GenePageNumber>{deltaPageCount+79}</GenePageNumber>
     </PageWrapper>
   );
 };
