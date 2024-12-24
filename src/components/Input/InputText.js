@@ -11,8 +11,8 @@ function InputText({ labelTitle, labelStyle, type, containerStyle, defaultValue,
 
     return (
         <div className={`form-control w-full ${containerStyle}`}>
-            <label className="">
-                <span className={"text-base-content text-[16px]" + labelStyle}>{labelTitle}</span>
+            <label className={labelStyle && labelStyle}>
+                <span className={"text-[16px]"}>{labelTitle}</span>
             </label>
             <input autoFocus = {autoFocus}type={type || "text"} placeholder={placeholder || ""} onChange={(e) => updateInputValue(e.target.value)} className="h-[50px] rounded-lg px-[20px] w-full dark:bg-[#303841] bg-[#e6ebf5] outline-none" />
         </div>

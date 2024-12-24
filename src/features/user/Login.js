@@ -55,12 +55,18 @@ function Login() {
   return (
     <div className="min-h-screen bg-pic flex items-center">
       <div className="card mx-auto w-full max-w-[1024px]  shadow-xl">
-        <div className="grid  md:grid-cols-2 grid-cols-1 opacity-80 bg-base-100 rounded-xl">
+        <div className="grid md:grid-cols-2 grid-cols-1 opacity-80 bg-base-100 rounded-[6rem] ">
           <div>
             <LandingIntro />
           </div>
-          <div className="py-[96px] px-[40px]">
-            <h2 className="text-[30px] font-semibold mb-[8px]} text-center">ログイン</h2>
+          <div className="py-[96px] px-[40px]" style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center"
+          }}>
+            <h2 className="text-[30px] font-semibold mb-[8px]} text-center" style={{
+              color: "#00C3D0"
+            }}>ログイン</h2>
             <form onSubmit={(e) => submitForm(e)}>
               <div className="mb-[12px]">
                 <InputText
@@ -68,7 +74,7 @@ function Login() {
                   type="emailId"
                   defaultValue={loginObj.userId}
                   updateType="userId"
-                  containerStyle="mt-[12px]"
+                  containerStyle="mt-[12px] text-[#00C3D0]"
                   labelTitle="ユーザーID"
                   updateFormValue={updateFormValue}
                 />
@@ -77,7 +83,7 @@ function Login() {
                   defaultValue={loginObj.password}
                   type="password"
                   updateType="password"
-                  containerStyle="mt-[12px]"
+                  containerStyle="mt-[12px] text-[#00C3D0]"
                   labelTitle="パスワード"
                   updateFormValue={updateFormValue}
                 />

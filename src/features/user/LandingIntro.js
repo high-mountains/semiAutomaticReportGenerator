@@ -27,7 +27,8 @@ function LandingIntro() {
                     style={{
                         maxWidth: "448px",
                         display: "flex",
-                        flexDirection: "column"
+                        flexDirection: "column",
+                        color: "#00C3D0"
                     }}
                 >
                     <h1
@@ -49,7 +50,7 @@ function LandingIntro() {
                     <div
                         style={{
                             textAlign: "center",
-                            marginTop: "15px"
+                            // marginTop: "15px"
                         }}
                     >
                         <img
